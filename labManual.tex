@@ -1,0 +1,144 @@
+\documentclass[12pt,twoside]{book}
+\usepackage{layout}
+%\usepackage{makeidx}
+\RequirePackage{verbatim}
+%\RequirePackage{alltt}
+\usepackage{hyperref}
+\usepackage{ifpdf}
+
+\ifpdf 
+   \pdfcompresslevel=9
+   \pdfoutput=1
+                                                                                            
+                       
+   \usepackage[pdftex]{graphicx}
+   \usepackage[pdftex]{geometry}
+   \usepackage[pdftex]{color}
+   \usepackage{hyperref}
+   \hypersetup{
+     pdftitle={Recitation Activities for the Introduction to Differential Equations},
+     pdfsubject={ODE},
+     pdfauthor={Kelly Black},
+     pdfkeywords={classroom activities},
+     anchorcolor = {red},
+     colorlinks = {true},
+     %pdfpagemode={FullScreen}
+   }
+\else
+   \usepackage{epsfig}
+   \usepackage{color}
+\fi
+
+
+
+\pagestyle{myheadings}
+
+%\setlength{\basicoddside}{\oddsidemargin}
+%\setlength{\basicevenside}{\evensidemargin}
+%\setlength{\basicwidth}{\textwidth}
+%\setlength{\basictop}{\topmargin}
+%\setlength{\basicheight}{\textheight}
+
+
+\input{header}
+\setcounter{activity}{0}
+
+
+\newcommand{\arrayTwo}[4]{
+  \left[
+  \begin{array}{rr}
+    #1 & #2 \\
+    #3 & #4
+  \end{array}
+  \right]
+}
+
+
+\newcommand{\vecTwo}[2]{
+  \left[
+  \begin{array}{r}
+    #1 \\  #2
+  \end{array}
+  \right]
+}
+
+\newcommand{\stateTwo}[2]{
+  \begin{array}{rr}
+    \mbox{\fontsize{6}{6}\selectfont $#1$} \\  \mbox{\fontsize{6}{6}\selectfont $#2$}
+  \end{array}
+}
+
+
+\newcommand{\startRowOpsTwo}{
+  \left[
+    \begin{array}{rr|rr}
+}
+
+\newcommand{\oneRowOpsTwo}[4] {
+      #1 & #2 & #3 & #4 \\
+}
+
+
+\newcommand{\startRowOpsThree}{
+  \left[
+    \begin{array}{rrr|rrr}
+}
+
+
+\newcommand{\stopRowOps}{
+    \end{array}
+  \right]
+}
+
+
+\newcommand{\vecFour}[4]{
+  \left[
+  \begin{array}{r}
+    #1 \\  #2 \\ #3 \\ #4
+  \end{array}
+  \right]
+}
+
+
+
+
+\begin{document}
+
+
+\title{Recitation Activities for the Introduction to Differential
+  Equations}
+\author{Kelly Black\\Clarkson University\\Division of Mathematics and
+  Computer ScienceR}
+
+\maketitle
+
+
+
+\begin{center}
+  
+  \includegraphics{ccV3}
+
+  Recitation Activities for the Introduction to Differential Equations
+  by Kelly Black is licensed under a Creative Commons
+  Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+
+  \url{http://creativecommons.org/licenses/by-nc-sa/3.0/ }
+
+\end{center}
+
+
+\clearpage
+
+\include{week1}
+\include{week2}
+\include{week3}
+\include{week4}
+\include{week5}
+\include{week6}
+\include{week7}
+\include{week8}
+\include{week9}
+\include{week10}
+
+
+\end{document}
