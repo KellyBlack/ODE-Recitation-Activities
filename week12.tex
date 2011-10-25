@@ -1,0 +1,153 @@
+
+\preClass{Laplace Transforms}
+
+\begin{problem}
+\item Find the following integrals:
+
+  \begin{subproblem}
+  \item 
+    \begin{eqnarray*}
+      \int \frac{1}{t^2-1} ~ dt 
+    \end{eqnarray*}
+    \vfill
+
+  \item 
+    \begin{eqnarray*}
+      \int \frac{t}{t^2-5t+6} ~ dt
+    \end{eqnarray*}
+    \vfill
+
+  \item 
+    \begin{eqnarray*}
+      \int t e^{-3t} ~ dt
+    \end{eqnarray*}
+    \vfill
+      
+  \end{subproblem}
+\end{problem}
+
+\actTitle{Laplace Transforms}
+\begin{problem}
+\item In each problem treat the parameter $s$ as a constant and find
+  the following integrals:
+  \begin{subproblem}
+    \item 
+      \begin{eqnarray*}
+        \int^\infty_0 e^{-st} ~ dt
+      \end{eqnarray*}
+      \vfill
+
+    \item 
+      \begin{eqnarray*}
+        \int^\infty_0 te^{-st} ~ dt
+      \end{eqnarray*}
+      \vfill
+
+
+    \item In the following problem the parameter $a$ is a constant and
+      $s>a$:
+      \begin{eqnarray*}
+        \int^\infty_0 e^{at} e^{-st} ~ dt & = & ?
+      \end{eqnarray*}
+      \vfill
+
+  \end{subproblem}
+
+
+  \clearpage
+
+\item We examine the last problem on the previous page and will
+  explore the result for different values if $a$.
+
+  \begin{subproblem}
+  \item In the last problem on the previous page replace the constant
+    $a$ with $a=bi$. Using the previous result determine the value of
+    \begin{eqnarray*}
+      \int^\infty_0 e^{ibt} e^{-st} ~ dt.
+    \end{eqnarray*}
+    \vfill
+
+  \item In the last problem on the previous page replace the constant
+    $a$ with $a=-bi$. Using the previous result determine the value of
+    \begin{eqnarray*}
+      \int^\infty_0 e^{-ibt} e^{-st} ~ dt.
+    \end{eqnarray*}
+    \vfill
+
+  \item What is the value of the  integral
+    \begin{eqnarray*}
+      \int^\infty_0 \lp e^{ibt} + e^{-ibt} \rp e^{-st} ~ dt?
+    \end{eqnarray*}
+    \vfill
+
+  \item Using Euler's formula determine the value of the integral
+    \begin{eqnarray*}
+      \int^\infty_0 \cos(bt) e^{-st} ~ dt.
+    \end{eqnarray*}
+    \vfill
+
+
+  \end{subproblem}
+
+
+  \end{problem}
+
+
+  \actTitle{Laplace Transforms}
+  \begin{problem}
+
+    
+
+  \item Given any function, $f(t)$, we can define the following
+    operation 
+    \begin{eqnarray*}
+      \mathcal{L}\left\{ f(\cdot) \right\} & = & 
+      \int^\infty_0 f(t) e^{-st} ~ dt.
+    \end{eqnarray*}
+
+    \begin{subproblem}
+      \item Determine $\mathcal{L}\left\{ 1 \right\}$.
+        \vfill
+
+      \item Determine $\mathcal{L}\left\{ t \right\}$.
+        \vfill
+
+    \item Show that $\mathcal{L}\left\{ f(t) + g(t) \right\} =
+      \mathcal{L}\left\{ f(t) \right\} + \mathcal{L}\left\{ g(t) \right\}$
+
+        \vspace{3em}
+
+    \end{subproblem}
+
+    \clearpage
+
+  \item You are given that $\mathcal{L}\left\{ e^{at} \right\} =
+    \frac{1}{s-a}$. Determine the function, $f(t)$, that satisfies the
+    relationships for each problem given below.
+    
+    \begin{subproblem}
+      
+
+
+      \item $\mathcal{L}\left\{ f(t) \right\}=\frac{1}{s-4}$
+
+        \vfill
+
+      \item $\mathcal{L}\left\{ f(t) \right\}=\frac{1}{s-1}$
+
+        \vfill
+
+      \item $\mathcal{L}\left\{ f(t) \right\}=\frac{1}{s+3}$
+
+        \vfill
+
+      \item $\mathcal{L}\left\{ f(t) \right\}=\frac{1}{s+10}$
+
+        \vfill
+
+
+    \end{subproblem}
+
+
+\end{problem}
+
