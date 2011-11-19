@@ -1,0 +1,248 @@
+\documentclass{beamer}
+
+\mode<presentation>
+
+
+
+
+
+\usetheme{Frankfurt}%
+\usecolortheme{seagull}
+\logo{\includegraphics[height=.25in]{clarksonGreen}}
+
+\definecolor{garnet}{RGB}{136,0,0}
+%\definecolor{clarksonGreen}{RGB}{0,71,28}
+\definecolor{clarksonGreen}{RGB}{0,52,21}
+\setbeamercolor{palette primary}{fg=clarksonGreen,bg=white}
+\setbeamercolor{palette secondary}{fg=clarksonGreen,bg=white}
+\setbeamercolor{palette tertiary}{fg=clarksonGreen,bg=white}
+\setbeamercolor{palette quaternary}{bg=clarksonGreen,fg=white}
+\setbeamercolor{block title}{fg=black,bg=black!15}
+\setbeamercolor{block body}{fg=black,bg=black!10}
+\setbeamercolor{titlelike}{bg=clarksonGreen,fg=white} % parent=palette quaternary}
+
+\newcommand{\half}{\mbox{$\frac{1}{2}$}}
+\newcommand{\deltat}{\mbox{$\triangle t$}}
+\newcommand{\deltax}{\mbox{$\triangle x$}}
+\newcommand{\deltay}{\mbox{$\triangle y$}}
+
+\newcommand{\deriv}[2]{\frac{d}{d#2}#1}
+\newcommand{\derivTwo}[2]{\frac{d^2}{d#2^2}#1}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+
+
+
+\begin{document}
+
+\title{Ordinary Differential Equations}
+\subtitle{Math 232 - Week 3, Day 2}
+
+\author{Kelly Black}
+\institute{Clarkson University}
+\date{14 Sep 2011}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[pausesection,hideallsubsections]
+\end{frame}
+
+
+\section{Solutions to DEs}
+
+
+\begin{frame}
+  \frametitle{What is a solution to a DE?}
+
+  What is the solution to the DE
+
+  \begin{eqnarray*}
+    y' & = & t^2 + y^2?
+  \end{eqnarray*}
+
+  \uncover<2->{I do not know!}
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Slope Field}
+
+  Look at the slope field:
+  \begin{eqnarray*}
+    y' & = & t^2 + y^2?
+  \end{eqnarray*}
+
+
+  \includegraphics[height=6cm]{week3-D3SlopeExample}
+
+  Look at equilibria, stability, and look for straight line solutions.
+
+\end{frame}
+
+
+\section{Autonomous DEs}
+
+\begin{frame}
+  \frametitle{Autonomous DEs}
+
+  A differential equation is \textit{autonomous} if it can be
+  expressed in the form
+  \begin{eqnarray*}
+    y' & = & f(y).
+  \end{eqnarray*}
+
+  i.e. the DE does not have a time term explicitly given in the
+  equation.
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{The Phase Line}
+
+  The phase line for a differential equation is a vertical line that
+  indicates whether the slope is positive, negative, or zero for
+  different values of $y$.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+  \begin{eqnarray*}
+    y' & = & 2y(3-y), \\
+    \Rightarrow f(y) & = & 2y(3-y)
+  \end{eqnarray*}
+
+
+  \includegraphics[height=6cm]{week3PhaseLineExample1}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Examples}
+  
+  \includegraphics[height=6cm]{week3PhaseLine}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Examples}
+
+
+  \begin{eqnarray*}
+    y' & = & y(2-y)(4-y), \\
+    \Rightarrow f(y) & = & y(2-y)(4-y)
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    y' & = & y(2-y^2), \\
+    \Rightarrow f(y) & = & y(2-y^2)
+  \end{eqnarray*}
+
+  (phase lines drawn on board)
+
+\end{frame}
+
+
+\section{Logistic Growth}
+
+\begin{frame}
+  \frametitle{Logistic Growth}
+
+  \vspace*{-4em}
+  \begin{eqnarray*}
+    y' & = & ky,
+  \end{eqnarray*}
+  
+  If $y$ is ``small'' $k$ should be positive.
+
+  If $y$ is ``big'' $k$ should be negative.
+
+  \includegraphics[height=4cm]{week3GrowthRate}
+
+  Let 
+  \begin{eqnarray*}
+    k & = & r \lp 1 - \frac{y}{L} \rp
+  \end{eqnarray*}
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Logistic Equation}
+
+  \begin{eqnarray*}
+    y' & = & r y \lp 1 - \frac{y}{L} \rp
+  \end{eqnarray*}
+
+  Stationary points: $y=0$ and $y=L$. 
+
+  ($L$ is called the ``carrying capacity'')
+
+  \includegraphics[height=6cm]{week3PhaseLineExample1}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Analytic Solution}
+
+  \begin{eqnarray*}
+    y' & = & r y \lp 1 - \frac{y}{L} \rp, \\
+    \uncover<2->{
+      \frac{y'}{y \lp 1 - \frac{y}{L} \rp} & = & r \\
+      \int \frac{y'}{y \lp 1 - \frac{y}{L} \rp} ~ dt & = & \int r ~ dt       
+    }
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+
+
+  \begin{eqnarray*}
+    \frac{1}{y \lp 1 - \frac{y}{L} \rp} & = & \frac{a}{1 - \frac{y}{L}} + \frac{b}{y} \\
+    \Rightarrow 1 & = & a y + b \lp 1 - \frac{y}{L} \rp \\
+    b & = & 1, \\
+    a & = & \frac{1}{L}
+  \end{eqnarray*}
+
+    
+\end{frame}
+
+  \begin{frame}
+
+  \begin{eqnarray*}
+      \int \frac{1}{y \lp 1 - \frac{y}{L} \rp} ~ dy & = & \int r ~ dt \\
+      \int \frac{1}{L} \cdot \frac{1}{1 - \frac{y}{L}} + \frac{1}{y} ~ dy & = & \int r ~ dt \\
+      -\ln\lp 1 - \frac{y}{L}\rp + \ln(y) & = & rt + C \\
+      \ln\lp\frac{y}{1 - \frac{y}{L}}\rp & = & rt + C \\
+      \frac{y}{1 - \frac{y}{L}} & = & k e^{rt} \\
+      \Rightarrow y & = & \frac{k e^{rt}}{1 + \frac{1}{L} k e^{rt}}  
+  \end{eqnarray*}
+
+
+  From the initial condition,
+  \begin{eqnarray*}
+    y(0) & = & y_0, \\
+    k & = & \frac{y_0}{1 - \frac{y_0}{L}}
+  \end{eqnarray*}
+  
+
+\end{frame}
+
+
+
+\end{document}
+
+% LocalWords:  Clarkson pausesection hideallsubsections

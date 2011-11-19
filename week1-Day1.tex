@@ -1,0 +1,169 @@
+\documentclass{beamer}
+
+\mode<presentation>
+
+
+
+
+
+\usetheme{Frankfurt}%
+\usecolortheme{seagull}
+\logo{\includegraphics[height=.25in]{clarksonGreen}}
+
+\definecolor{garnet}{RGB}{136,0,0}
+%\definecolor{clarksonGreen}{RGB}{0,71,28}
+\definecolor{clarksonGreen}{RGB}{0,52,21}
+\setbeamercolor{palette primary}{fg=clarksonGreen,bg=white}
+\setbeamercolor{palette secondary}{fg=clarksonGreen,bg=white}
+\setbeamercolor{palette tertiary}{fg=clarksonGreen,bg=white}
+\setbeamercolor{palette quaternary}{bg=clarksonGreen,fg=white}
+\setbeamercolor{block title}{fg=black,bg=black!15}
+\setbeamercolor{block body}{fg=black,bg=black!10}
+\setbeamercolor{titlelike}{bg=clarksonGreen,fg=white} % parent=palette quaternary}
+
+\newcommand{\half}{\mbox{$\frac{1}{2}$}}
+\newcommand{\deltat}{\mbox{$\triangle t$}}
+\newcommand{\deltax}{\mbox{$\triangle x$}}
+\newcommand{\deltay}{\mbox{$\triangle y$}}
+
+\newcommand{\deriv}[2]{\frac{d}{d#2}#1}
+\newcommand{\derivTwo}[2]{\frac{d^2}{d#2^2}#1}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+
+
+
+\begin{document}
+
+\title{Ordinary Differential Equations}
+\subtitle{Math 232 - Week 1, Day 1}
+
+\author{Kelly Black}
+\institute{Clarkson University}
+\date{28 Aug 2011}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[pausesection,hideallsubsections]
+\end{frame}
+
+
+\section{What is a Differential Equation}
+
+
+\begin{frame}
+  \frametitle{What is a DE?}
+
+  Given
+  \begin{eqnarray*}
+    y' & = & y,
+  \end{eqnarray*}
+  what is $y(x)=?$
+
+  \begin{eqnarray*}
+    \deriv{y(x)}{x} & = & y(x)
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  Given
+  \begin{eqnarray*}
+    y'' + 3y' +2y & = & 0
+  \end{eqnarray*}
+
+  what is $y(x)$?
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Notation}
+  \begin{eqnarray*}
+    \dot{y} & = & \deriv{y}{t} \\
+    \ddot{y} & = & \derivTwo{y}{t} \\
+    y' & = & \mathrm{depends.... usually ~~} \deriv{y(x)}{x} \\
+    y'' & = & \derivTwo{y(x)}{x}
+  \end{eqnarray*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Nomenclature}
+  
+  \vfill
+
+  $\deriv{y}{x}$ - then ``ordinary differential equation.''
+
+  \vfill
+
+  $\frac{\partial y}{\partial x}$ - then ``partial differential
+  equation.''
+
+  \vfill
+
+  Order is the highest number of derivatives:
+  \begin{eqnarray*}
+    y'' - 3 y' + 2y & = & 0, \mathrm{second~order} \\
+    y'  & = & 4y, \mathrm{first~order} 
+  \end{eqnarray*}
+
+  \vfill
+
+
+\end{frame}
+
+\section{Modeling}
+
+
+\begin{frame}
+  \frametitle{Modeling}
+
+  Why bother?
+
+  Many ``mathematical models'' provide a relationship between rates.
+
+  ex: Newton's Second Law, ``$\vec{F} = m \vec{a}$'' In 1 dimension:
+  \begin{eqnarray*}
+    m\mathrm{~(acceleration)} & = & \sum_i \lp F_x \rp_i, \\
+    m \ddot{x} & = & \sum_i \lp f_x \rp_i
+  \end{eqnarray*}
+
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Circuit}
+  
+  The voltage across a resistor is proportional to the current flowing
+  through it.
+
+  There is some number, R, where
+  \begin{eqnarray*}
+    V & = & IR
+  \end{eqnarray*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Proportionality}
+  
+  If $a$ is proportional to $b$ then there is a constant, $k$, where 
+  \begin{eqnarray*}
+    a  & = & k \cdot b
+  \end{eqnarray*}
+
+  if $a$ is inversely proportional to $b$ then there is a constant $c$
+  where 
+  \begin{eqnarray*}
+    a & = & c \frac{1}{b}
+  \end{eqnarray*}
+\end{frame}
+
+\end{document}
+
+% LocalWords:  Clarkson pausesection hideallsubsections
