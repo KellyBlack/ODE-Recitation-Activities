@@ -4,7 +4,6 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Introduction}
-
 \date{28 Aug 2011}
 
 \begin{frame}
@@ -50,9 +49,9 @@
   \frametitle{Notation}
   \begin{eqnarray*}
     \dot{y} & = & \deriv{y}{t} \\
-    \ddot{y} & = & \derivTwo{y}{t} \\
-    y' & = & \mathrm{depends.... usually ~~} \deriv{y(x)}{x} \\
-    y'' & = & \derivTwo{y(x)}{x}
+    \only<2->{\ddot{y} & = & \derivTwo{y}{t} }\\
+    \only<3->{y' & = & \mathrm{depends.... usually ~~} \deriv{y(x)}{x} }\\
+    \only<4->{y'' & = & \derivTwo{y(x)}{x} }
   \end{eqnarray*}
 \end{frame}
 
@@ -107,10 +106,13 @@
   The voltage across a resistor is proportional to the current flowing
   through it.
 
-  There is some number, R, where
-  \begin{eqnarray*}
-    V & = & IR
-  \end{eqnarray*}
+  \only<2->
+  {
+    There is some number, R, where
+    \begin{eqnarray*}
+      V & = & IR
+    \end{eqnarray*}
+  }
 \end{frame}
 
 \begin{frame}
@@ -129,4 +131,4 @@
 \end{frame}
 
 
-% LocalWords:  Clarkson pausesection hideallsubsections
+% LocalWords:  Clarkson pausesection hideothersubsections
