@@ -1,5 +1,5 @@
 \documentclass{beamer}
-
+\usepackage{etoolbox}
 \mode<presentation>
 
 
@@ -33,12 +33,18 @@
 \newcommand{\rp}{\right)}
 
 
-\includeonlylecture{The-Unit-Step-Function}
-\includeonly{week14-Day2}
+\includeonlylecture{Introduction}
+\includeonly{week1-Day1}
+
+\newtoggle{clicker}
+\toggletrue{clicker}
+%\togglefalse{clicker}
 
 
 \begin{document}
 
+\author{Kelly Black}
+\institute{Clarkson University}
 
 
 \include{week1-Day1}
