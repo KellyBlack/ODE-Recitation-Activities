@@ -1,0 +1,192 @@
+\part{Complex-Numbers-II}
+\lecture{Complex Numbers II}{Complex-Numbers-II}
+\section{Complex Numbers II}
+
+\title{Ordinary Differential Equations}
+\subtitle{Math 232 - Week 5, Day 1}
+\date{26 Sep 2011}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[pausesection,hideothersubsections]
+\end{frame}
+
+
+\subsection{Root Finding}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  Find the cubic roots of $2+2i$.
+
+  \begin{eqnarray*}
+    2 + 2i & = & 2\sqrt{2} e^{i\pi/4}
+  \end{eqnarray*}
+
+  Let $z=re^{i\theta}$ so $z^3=r^3e^{i3\theta}$:
+  \begin{eqnarray*}
+    r^3e^{i3\theta} & = & 2\sqrt{2} e^{i\pi/4}, ~ 2\sqrt{2} e^{i9\pi/4}, ~ 2\sqrt{2} e^{i17\pi/4}
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    r &  = & (2\sqrt{2})^{1/3} \\
+    \theta & = & \frac{\pi}{12}, ~ \frac{9\pi}{12}, ~ \frac{17\pi}{12} \\
+    z & = &  (2\sqrt{2})^{1/3} e^{i\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i9\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i17\pi/12}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  Find the square roots of $\sqrt{3}+i$
+
+  \begin{eqnarray*}
+    \sqrt{3} + i & = & 2 e^{\pi/6} 
+  \end{eqnarray*}
+
+  Let $z=re^{i\theta}$ so $z^2=r^2e^{i2\theta}$:
+  \begin{eqnarray*}
+    r^2e^{i2\theta} & = & 2 e^{\pi/6} , ~ 2 e^{13\pi/6} 
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    r & = & \sqrt{2} \\
+    \theta & = & \frac{\pi}{12}, ~ \frac{13\pi}{12}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Important Properties}
+
+  Euler's Formula
+  \begin{eqnarray*}
+    e^{it} & = & \cos(t) + i\sin(t). 
+  \end{eqnarray*}
+
+  Note:
+  \begin{eqnarray*}
+    e^{-it} & = & \cos(-t) + i\sin(-t) \\
+    & = & \cos(t) - i\sin(t)
+  \end{eqnarray*}
+
+  So...
+  \begin{eqnarray*}
+    e^{it} + e^{-it} & = & 2 \cos(t), \\
+    \frac{e^{it} + e^{-it}}{2} & = & \cos(t).
+  \end{eqnarray*}
+
+  Also,
+  \begin{eqnarray*}
+    e^{it} - e^{-it} & = & 2 i \sin(t), \\
+    \frac{e^{it} - e^{-it}}{2i} & = & \sin(t).
+  \end{eqnarray*}
+
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Quick Example}
+
+  \begin{eqnarray*}
+    \cos(3t) & = & \frac{e^{i3t}+e^{-i3t}}{2} \\
+    \sin(4t) & = & \frac{e^{i4t}-e^{-i4t}}{2i}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Another thing...}
+
+  \begin{eqnarray*}
+    e^{a+ib} & = & e^a e^{ib} \\
+    & = & e^a \lp \cos(b) + i \sin(b) \rp.
+  \end{eqnarray*}
+
+  Thusly...
+  \begin{eqnarray*}
+    e^{a-ib} & = & e^a \lp \cos(b) - i \sin(b) \rp.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{What do we have here?}
+
+  \begin{eqnarray*}
+    e^a \cos(b) & = & e^a \lp \frac{e^{ib}+e^{-ib}}{2} \rp \\
+    & = & \half e^a e^{ib} +\half e^a  e^{-ib} \\
+    e^a \sin(b) & = & e^a \lp \frac{e^{ib}-e^{-ib}}{2i} \rp \\
+    & = & \frac{1}{2i} e^a e^{ib} - \frac{1}{2i} e^a e^{-ib}
+  \end{eqnarray*}
+
+\end{frame}
+
+\subsection{Derivatives and Integrals}
+
+\begin{frame}
+  \frametitle{Derivatives and Integrals}
+
+  \begin{eqnarray*}
+    f(t) & = & u(t) + i v(t) \\
+    f'(t) & = & u'(t) + i v'(t),
+  \end{eqnarray*}
+
+  and
+  \begin{eqnarray*}
+    \int f(t) ~ dt & = & \int u(t) + i v(t) ~ dt, \\
+    & = & \int u(t) ~ dt + i \int v(t) ~ dt.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Examples}
+
+  \begin{eqnarray*}
+    \frac{d}{dt} \lp \sin(t) + i e^{2t} \cos(t) \rp & = & 
+    \cos(t) + i \lp 2 e^{2t} \cos(t) - e^{2t} \sin(t) \rp.
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    \int \sin(t) + i t \cos(t) ~ dt & = & 
+    \int \sin(t) ~ dt + i \int t \cos(t) ~ dt \\
+    \cos(t) + i \lp t\sin(t) + \cos(t) \rp + C
+  \end{eqnarray*}
+
+  Note that ``$C$'' is a complex number!
+  \begin{eqnarray*}
+    C & = & C_1 + i C_2.
+  \end{eqnarray*}
+
+\end{frame}
+
+\subsection{What does this have to do with DEs?}
+
+\begin{frame}
+  \frametitle{Why do we care?}
+
+  Show that $y=C_1 e^{(-3+i)t} + C_2 e^{(-3-)t}$ is a solution to the DE
+  \begin{eqnarray*}
+    y'' + 6y' + 10y & = & 0.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+
+
+% LocalWords:  Clarkson pausesection hideothersubsections

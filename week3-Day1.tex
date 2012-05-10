@@ -1,0 +1,408 @@
+\part{Conservation}
+\lecture{Conservation}{Conservation}
+\section{Conservation}
+
+\title{Ordinary Differential Equations}
+\subtitle{Math 232 - Week 3, Day 1}
+\date{12 Sep 2011}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[pausesection,hideothersubsections]
+\end{frame}
+
+
+\subsection{Mixing Problems}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  Brine is pumped into a tank at 50 liters per hour and has .5 kg per
+  liter of salt. The volume of the tank is 500 liters, and initially
+  the tank contains pure water. The well mixed solution is pumped out
+  at 50 liters per hour.
+
+  What is the concentration of the tank at any time?
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Conservation of Mass}
+
+  Mass is conserved.
+
+  \uncover<2->{Let $A(t)$ be the amount of ``stuff'' in the tank (kg).}
+
+  \uncover<3->{
+
+    \begin{eqnarray*}
+      \Rightarrow ~ \frac{dA}{dt} & = & \mathrm{Rate ~ it ~ changes ~
+        (kg/hr)} \\
+      & = & \mathrm{rate ~ in ~ - ~ rate ~ out}.
+    \end{eqnarray*}
+
+  }
+
+\end{frame}
+
+
+\begin{frame}
+
+  \begin{eqnarray*}
+    \mathrm{rate~in~kg/hr} & = & \uncover<2->{.5 \frac{kg}{l} \cdot 50 \frac{l}{hour} \\
+    & = & 25 \frac{kg}{hour}}
+  \end{eqnarray*}
+
+  \uncover<3->{
+
+    \begin{eqnarray*}
+      \mathrm{rate~out~kg/hr} & = & \uncover<4->{A~kg \cdot
+        \frac{1}{500~l} \cdot 50 \frac{l}{hr} \\
+        & = & \frac{1}{10}A}
+    \end{eqnarray*}
+
+  }
+
+  \uncover<5->{
+
+    \begin{eqnarray*}
+      A' & = & 25 - \frac{1}{10} A, \\
+      A(0) & = & 0
+    \end{eqnarray*}
+
+  }
+
+\end{frame}
+
+
+\begin{frame}
+
+  \begin{eqnarray*}
+    \frac{1}{25 - \frac{1}{10}A} A' & = & 1, \\
+    \int \frac{1}{25 - \frac{1}{10}A} A' ~ dt & = & \int 1 ~ dt, \\
+    -10 \ln\lp25 - \frac{1}{10}A\rp & = & t + c \\
+     \ln\lp25 - \frac{1}{10}A\rp & = & -\frac{t + c}{10} \\
+     25 - \frac{1}{10} A & = & ke^{-t/10}, \\
+     A & = & 250 - 10ke^{-t/10}, \\
+     A(0) & = & 0 \\
+     & = & 250-10k, \\
+     k & = & 25, \\
+     A(t) & = & 250-250e^{-t/10}
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+
+  Concentration:
+  \begin{eqnarray*}
+    C(t) & = & A(t)/500 \\
+    & = & \frac{1}{2} - \frac{1}{2} e^{-t/10}.
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+
+  A 2000 liter tank initially contains water with a solution of 0.2 kg
+  per liter of salt. Brine is pumped in at a rate of 100 liters per
+  hour with a concentration of 0.3 kg per liter. The well mixed
+  solution is pumped out at a rate of 100 liters per hour. Determine
+  the amount of salt in the tank at any time.
+
+\end{frame}
+
+
+\begin{frame}
+
+  Let $A(t)$ be the amount of salt in the tank at time $t$.
+
+  \begin{eqnarray*}
+    A' & = & \mathrm{rate~in~} - \mathrm{~rate~out}.
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    \mathrm{rate~in} & = & 100 \frac{l}{hr} \cdot .3 \frac{kg}{l} \\
+    & = & 30 \frac{kg}{hr}
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    \mathrm{rate~out} & = & A ~ kg \cdot \frac{1}{2000 l} \cdot 100 \frac{l}{hr} \\
+    & = & \frac{1}{20} A
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+   
+  \begin{eqnarray*}
+    A' & = & 30 - \frac{1}{20} A, \\
+    A(0) & = & 2000 l \cdot .2 \frac{kg}{l} \\
+    & = & 400 ~ kg
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+
+  \begin{eqnarray*}
+    A' + \frac{1}{20} A & = & 30 \\
+    \uncover<2->{
+      A' e^{t/20} + \frac{1}{20} e^{t/20} A & = & 30 e^{t/20} \\
+      \frac{d}{dt} \lp A e^{t/20} \rp  & = & 30 e^{t/20} \\
+      A e^{t/20}  & = & 600 e^{t/20} + C \\
+      A  & = & 600 + C e^{-t/20} \\
+      A(0) & = & 400 \\
+      & = & 600 + C \\
+      \Rightarrow C & = & -200 \\
+      A(t) & = & 600-200 e^{-t/20}
+    }
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  A 500 liter tank initially contains fresh water. Brine with a
+  concentration of 0.1 kg per liter is pumped into the tank at a rate
+  of 20 liters per hour. The well mixed solution is pumped out at a
+  rate of 30 liters per hour. What will the concentration be at the
+  moment the tank is half full?
+
+\end{frame}
+
+
+\begin{frame}
+
+  \begin{eqnarray*}
+    A' & = & \mathrm{rate~in~} - \mathrm{~rate~out}
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    \mathrm{Rate~in} & = & .1 \frac{kg}{l} \cdot 20 \frac{l}{hr} \\
+    & = & 2 \frac{kg}{l}
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    v(t) & = & 500-10t
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    \mathrm{rate~out} & = & A kg \cdot \frac{1}{500-10t ~ l} \cdot 30 \frac{l}{hr} \\
+    & = & A \frac{30}{500-10t}
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    A' & = & 2 - A \frac{30}{500-10t}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+
+  \begin{eqnarray*}
+    A' + A \frac{30}{500-10t} & = & 2 \\
+    (500-10t)^{-3} A' + 30(500-10t)^{-4} A & = & 2 (500-10t)^{-3} \\
+    \frac{d}{dt} \lp (500-10t)^{-3} A \rp & = & 2 (500-10t)^{-3} \\
+    (500-10t)^{-3} A  & = & \int 2 (500-10t)^{-3} ~ dt  \\
+    (500-10t)^{-3} A  & = & \frac{1}{10} (500-10t)^{-2} + C  \\
+    A(0) & = & 0 \\
+    & = & \frac{1}{10} 500^{-2} + C \\
+    C & = & -\frac{1}{10\cdot500^{-2}}
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    A(t) & = & \frac{1}{10} (500-10t) - \frac{1}{10\cdot500^{-2}} (500-10t)^3
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+
+  The tank is empty at 50 hours:
+  \begin{eqnarray*}
+    v(t) & = & 0 \\
+    & = & 500-10t \\
+    \Rightarrow t & = & 50.
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    A(25) & = & \frac{1}{10} (500-10\cdot 25) - \frac{1}{10\cdot500^{-2}} (500-10\cdot 25)^3 \\
+    & \approx & 18.75 ~ kg
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    \mathrm{Concentration} & = & A(25)/250 \\
+    & \approx & 0.75 kg/l
+  \end{eqnarray*}
+
+\end{frame}
+
+\subsection{Newton's Law of Cooling}
+
+\begin{frame}
+  \frametitle{Newton's Law of Cooling}
+
+  the rate of change of the temperature of an object is proportional
+  to the difference in the objects temperature and the difference in
+  the object's surroundings.
+
+  Let M be the ambient temperature
+
+  Let $T(t)$ be the temperature
+
+  \begin{eqnarray*}
+    T'(t) & = & k (M-T)
+  \end{eqnarray*}
+
+
+\end{frame}
+
+\subsection{Examples of Newton's Law of Cooling}
+
+\begin{frame}
+  \frametitle{Example}
+
+  A brick is pulled out of a furnace and is 350 degrees Celsius. It is
+  placed outside where the temperature is 20 degrees Celsius. After
+  one hour the temperature of the brick is 280 degrees Celsius. What
+  will the temperature of the brick be after 6 hours?
+
+  \uncover<2->{
+    
+    \begin{eqnarray*}
+      T' & = & k(M-T) \\
+      T(0) & = & 350 \\
+      M & = & 20 \\
+      T(1) & = & 280 \\
+      T(6) & = & ??
+    \end{eqnarray*}
+
+  }
+
+\end{frame}
+
+
+\begin{frame}
+
+  \begin{eqnarray*}
+    T' & = & k (20-T) \\
+    \frac{T'}{20-T} & = & k \\
+    -\ln(20-T) & = & kt + C \\
+    T & = & 20 - A e^{-kt}
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    T(0) & = & 350 \\
+    & = & 20 - A \\
+    A & = & -330, \\
+    T(t) & = & 20 + 330 e^{-kt}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+
+  \begin{eqnarray*}
+    T(1) & = & 280 \\
+    & = & 20 + 330 e^{-k} \\
+    k & = & -\ln\lp\frac{26}{33}\rp \\
+    T(t) & = & 20 + 330 e^{t\ln\lp\frac{26}{33}\rp}
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    T(6) & = & 20 + 330 e^{6\ln\lp\frac{26}{33}\rp} \\
+    & \approx & 98.9 ~C
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  A cup of coffee is found. The temperature when it is found is 70
+  degrees Celsius. Thirty minutes later it's temperature is 65 degrees
+  Celsius. The temperature in the room is 18 degrees Celsius. When the
+  coffee was poured the temperature was 85 degrees Celsius. When was
+  the coffee poured?
+
+  \uncover<2->{
+    
+    \begin{eqnarray*}
+      t_0 & = & \mathrm{time~when~the~coffee~was~found.} \\
+      M & = & 18 \\
+      T(t_0) & = & 70 \\
+      T(t_0+30) & = & 65.
+    \end{eqnarray*}
+
+  }
+
+\end{frame}
+
+
+\begin{frame}
+
+  \begin{eqnarray*}
+    T' & = & k(18-T) \\
+    \frac{T'}{18-T} & = & k \\
+    -\ln(18-T) & = & kt + C \\
+    T & = & 18 - A e^{-kt} 
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+
+  At time $t_0$:
+  \begin{eqnarray*}
+    T(t_0) & = & 70 \\
+    & = & 18 - Ae^{-kt_0} \\
+    \Rightarrow Ae^{-kt_0} & = & -52
+  \end{eqnarray*}
+
+  At time $t_0+30$:
+  \begin{eqnarray*}
+    A(t_0+30) & = & 65 \\
+    & = & 18 - A e^{-kt_0-30k} \\
+    & = & 18 - A e^{-kt_0} e^{-30k} \\
+    & = & 18 + 52 e^{30k} \\
+    \Rightarrow k & = & -\frac{1}{30} \ln\lp\frac{47}{52}\rp.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+
+  \begin{eqnarray*}
+    T(0) & = & 85 \\
+    & = & 18 - A e^{0} \\
+    \Rightarrow A & = & -67
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    T(t)  & = & 18 + 67 e^{\frac{t}{30} \ln\lp\frac{47}{52}\rp} \\
+    T(t_0)& = & 70 \\
+    & = & 18 + 67 e^{\frac{t_0}{30} \ln\lp\frac{47}{52}\rp} \\
+    \Rightarrow t_0 & = & \frac{30\ln\lp\frac{52}{67}\rp}{\ln\lp\frac{47}{52}\rp}.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+
+% LocalWords:  Clarkson pausesection hideothersubsections
