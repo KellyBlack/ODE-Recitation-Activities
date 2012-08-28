@@ -20,5 +20,5 @@ force:
 
 
 clean:
-	rm -f *.aux *.nav *.snm *.toc *.log DifferentialEquations.pdf
+	rm -f *.aux *.nav *.snm *.toc *.log *.dvi *.out
 
