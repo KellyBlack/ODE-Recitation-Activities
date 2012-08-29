@@ -5,7 +5,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 2, Day 1}
-\date{5 Sep 2011}
+\date{3 Sep 2012}
 
 \begin{frame}
   \titlepage
@@ -119,7 +119,7 @@
     a_n(t) \frac{d^n}{dt^n}y(t) & = & f(t).
   \end{eqnarray*}
 
-  if $f(t)$ is zero the equation is homogeneous.
+  if $f(t)$ is zero the equation is \textbf{homogeneous}.
 
 \end{frame}
 
@@ -183,19 +183,27 @@
 \begin{frame}
   \frametitle{Example}
 
+  Solutions to the second order equation,
   \begin{eqnarray*}
-    y'' + y & = & 0, \\
+    y'' + y & = & 0,
+  \end{eqnarray*}
+  are
+  \begin{eqnarray*}
     y_1(t) & = & \cos(t) \\
     y_2(t) & = & \sin(t).
   \end{eqnarray*}
 
-  Because:
-  \begin{eqnarray*}
-    y''_1(t) & = & -\cos(t), \\
-    \Rightarrow y''_1(t) + y_1(t) & = & -\cos(t)+\cos(t), \\
-    y''_2(t) & = & -\sin(t), \\
-    \Rightarrow y''_2(t) + y_2(t) & = & -\sin(t)+\sin(t).
-  \end{eqnarray*}
+  \uncover<2->{%
+
+    Because:
+    \begin{eqnarray*}
+      y''_1(t) & = & -\cos(t), \\
+      \Rightarrow y''_1(t) + y_1(t) & = & -\cos(t)+\cos(t), \\
+      y''_2(t) & = & -\sin(t), \\
+      \Rightarrow y''_2(t) + y_2(t) & = & -\sin(t)+\sin(t).
+    \end{eqnarray*}
+
+  }
 
 \end{frame}
 
@@ -416,8 +424,12 @@
 
   \begin{eqnarray*}
     y & = & -\frac{1}{3} t^2 - \frac{2}{9} + k e^{\frac{3}{2}t^2} \\
-    y' & = & -\frac{2}{3} t + 3t k e^{\frac{3}{2}t^2} \\
-    -\frac{2}{3} t + 3t k e^{\frac{3}{2}t^2} - 3t \lp -\frac{1}{3} t^2 - \frac{2}{9} + k e^{\frac{3}{2}t^2} \rp & = & t^3
+    y' & = & -\frac{2}{3} t + 3t k e^{\frac{3}{2}t^2} 
+  \end{eqnarray*}
+
+  Substituting back into the equation we get
+  \begin{eqnarray*}
+    -\frac{2}{3} t + 3t k e^{\frac{3}{2}t^2} - 3t \lp -\frac{1}{3} t^2 - \frac{2}{9} + k e^{\frac{3}{2}t^2} \rp & = & t^3.
   \end{eqnarray*}
 
 \end{frame}
