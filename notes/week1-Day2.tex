@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 1, Day 2}
-\date{30 Aug 2011}
+\date{29 Aug 2012}
 
 \begin{frame}
   \titlepage
@@ -26,9 +26,22 @@
     y' & = & y
   \end{eqnarray*}
 
-  Solution: $y=3e^t$
+   \uncover<2->{
+     Solution: $y=3e^t$
+   }
 
-  \uncover<2->{
+  \uncover<3->{
+
+    How do you check? 
+    \begin{itemize}
+    \item Substitute into the left hand side.
+    \item Substitute into the right hand side.
+    \item See if they are the same.
+    \end{itemize}
+
+  }
+
+  \uncover<4->{
     Check: 
     \begin{eqnarray*}
       y' & = & 3e^t \\
@@ -69,22 +82,22 @@
 
   \begin{eqnarray*}
     y' & = & y, \\
-    y(0) & = & 1
+    y(0) & = & 4
   \end{eqnarray*}
 
   Neither is a solution! 
 
   \uncover<2->{
-    Solution: $y=e^t$
+    Solution: $y=4e^t$
 
     Check: 
     \begin{eqnarray*}
-      y' & = & e^t \\
-      y  & = & e^t \\
-      y(0) & = & 1
+      y' & = & 4e^t \\
+      y  & = & 4e^t \\
+      y(0) & = & 4
     \end{eqnarray*}
 
-    This is the solution.
+    This is \textbf{the} solution.
   }
 
 \end{frame}
@@ -130,9 +143,10 @@
   \uncover<2->{
     \begin{eqnarray*}
       y' & = & e^{2t} \\
-      2y+1 & = & 2(\half e^{2t} - \half) +1 \\
+      2y+1 & = & 2\lp\half e^{2t} - \half\rp +1 \\
       & = & e^{2t} \\
-      y(0) & = & 0
+      y(0) & = & \half e^0 - \half \\
+      & = & 0
     \end{eqnarray*}
   }
 
@@ -167,13 +181,15 @@
     \uncover<2->{y & = & \frac{5}{2} t^2 + 3t + C}
   \end{eqnarray*}
 
-  We get a ``family of solutions.'' 
+  \uncover<2->{We get a ``family of solutions.'' }
 
-  If $y(0)=2$ then
-  \begin{eqnarray*}
-    y(0) & = & \frac{5}{2} (0)^2 + 3(0) + C, \\
-    2    & = & C
-  \end{eqnarray*}
+  \uncover<3->{
+    If $y(0)=2$ then
+    \begin{eqnarray*}
+      y(0) & = & \frac{5}{2} (0)^2 + 3(0) + C, \\
+      2    & = & C
+    \end{eqnarray*}
+  }
 
 
 \end{frame}
@@ -191,6 +207,16 @@
   \end{eqnarray*}
   then if we know that the function goes through a point, $t=a$ and
   $y(a)=v$, then we can calculate the slope of the tangent line.
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Slope Fields}
+
+  \includegraphics<1| handout:1>[height=8cm]{img/singlePointInSlopeField}
+
+  \includegraphics<2| handout:2>[height=8cm]{img/singlePointWithSlopeField}
 
 \end{frame}
 
@@ -272,4 +298,4 @@
 
 
 
-% LocalWords:  Clarkson pausesection hideothersubsections isocline
+% LocalWords:  Clarkson pausesection hideothersubsections isocline DEs
