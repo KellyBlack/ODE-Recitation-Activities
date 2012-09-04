@@ -5,7 +5,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 2, Day 1}
-\date{5 Sep 2011}
+\date{3 Sep 2012}
 
 \begin{frame}
   \titlepage
@@ -18,6 +18,67 @@
 
 
 \subsection{Linear Equations}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+       Determine the solution to the differential equation
+       \begin{eqnarray*}
+         y' & = & y + 1.
+       \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y=-1 + e^t + C$. \\
+         B: & $y=-1+ke^t$. \\
+         C: & $y=ke^t$. \\
+         D: & $y=1+ke^t$. \\
+       \end{tabular}
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+       Determine the solution to the differential equation
+       \begin{eqnarray*}
+         y' & = & ty.
+       \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y=\half ke^{t^2}$. \\
+         B: & $y=ke^{t}$. \\
+         C: & $y=ke^{t^2/2}$. \\
+         D: & $y=e^{t^2/2} + C$. \\
+       \end{tabular}
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+       \begin{eqnarray*}
+       \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y=$. \\
+         B: & $y=$. \\
+         C: & $y=$. \\
+         D: & $y=$. \\
+       \end{tabular}
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+}
+
 
 
 \begin{frame}
@@ -58,7 +119,7 @@
     a_n(t) \frac{d^n}{dt^n}y(t) & = & f(t).
   \end{eqnarray*}
 
-  if $f(t)$ is zero the equation is homogeneous.
+  if $f(t)$ is zero the equation is \textbf{homogeneous}.
 
 \end{frame}
 
@@ -122,19 +183,27 @@
 \begin{frame}
   \frametitle{Example}
 
+  Solutions to the second order equation,
   \begin{eqnarray*}
-    y'' + y & = & 0, \\
+    y'' + y & = & 0,
+  \end{eqnarray*}
+  are
+  \begin{eqnarray*}
     y_1(t) & = & \cos(t) \\
     y_2(t) & = & \sin(t).
   \end{eqnarray*}
 
-  Because:
-  \begin{eqnarray*}
-    y''_1(t) & = & -\cos(t), \\
-    \Rightarrow y''_1(t) + y_1(t) & = & -\cos(t)+\cos(t), \\
-    y''_2(t) & = & -\sin(t), \\
-    \Rightarrow y''_2(t) + y_2(t) & = & -\sin(t)+\sin(t).
-  \end{eqnarray*}
+  \uncover<2->{%
+
+    Because:
+    \begin{eqnarray*}
+      y''_1(t) & = & -\cos(t), \\
+      \Rightarrow y''_1(t) + y_1(t) & = & -\cos(t)+\cos(t), \\
+      y''_2(t) & = & -\sin(t), \\
+      \Rightarrow y''_2(t) + y_2(t) & = & -\sin(t)+\sin(t).
+    \end{eqnarray*}
+
+  }
 
 \end{frame}
 
@@ -152,6 +221,60 @@
 
 
 \end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        The function $y=-2e^{3t} + 4 e^{2t}$ is a solution to the
+        equation
+        \begin{eqnarray*}
+          y'' - 5 y' + 6y & = & 0.
+        \end{eqnarray*}
+
+        Is the function $y=5e^{3t} - e^{2t}$ also a solution?
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & Yes, it is a solution. \\
+         B: & No, it is not a solution.
+       \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        The function $y=\frac{-1}{t+3}$ is a solution to the
+        equation
+        \begin{eqnarray*}
+          y' & = & y^2.
+        \end{eqnarray*}
+
+        Is the function $y=\frac{2}{t+3}$ also a solution?
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & Yes, it is a solution. \\
+         B: & No, it is not a solution.
+       \end{tabular}
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+}
+
 
 
 \subsection{Nonhomogeneous Solutions and Homogeneous Solutions}
@@ -301,8 +424,12 @@
 
   \begin{eqnarray*}
     y & = & -\frac{1}{3} t^2 - \frac{2}{9} + k e^{\frac{3}{2}t^2} \\
-    y' & = & -\frac{2}{3} t + 3t k e^{\frac{3}{2}t^2} \\
-    -\frac{2}{3} t + 3t k e^{\frac{3}{2}t^2} - 3t \lp -\frac{1}{3} t^2 - \frac{2}{9} + k e^{\frac{3}{2}t^2} \rp & = & t^3
+    y' & = & -\frac{2}{3} t + 3t k e^{\frac{3}{2}t^2} 
+  \end{eqnarray*}
+
+  Substituting back into the equation we get
+  \begin{eqnarray*}
+    -\frac{2}{3} t + 3t k e^{\frac{3}{2}t^2} - 3t \lp -\frac{1}{3} t^2 - \frac{2}{9} + k e^{\frac{3}{2}t^2} \rp & = & t^3.
   \end{eqnarray*}
 
 \end{frame}

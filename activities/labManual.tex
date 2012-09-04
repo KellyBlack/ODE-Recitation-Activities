@@ -5,6 +5,11 @@
 %\RequirePackage{alltt}
 \usepackage{hyperref}
 \usepackage{ifpdf}
+\usepackage{etoolbox}
+
+\newtoggle{solutions}
+\toggletrue{solutions}
+%\togglefalse{solutions}
 
 \ifpdf 
    \pdfcompresslevel=9

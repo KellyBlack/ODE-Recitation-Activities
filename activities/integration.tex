@@ -8,12 +8,47 @@
   associated with each indefinite integral!)
   \begin{subproblem}
     \item $y = \int \cos(3t) ~ dt$
+
+      \iftoggle{solutions}{%
+        \begin{eqnarray*}
+          y & = & \frac{1}{3} \sin(3t) + C.
+        \end{eqnarray*}
+      }
+
       \vfill
     \item $y = \int t^2 + e^{5t} ~ dt$
+
+      \iftoggle{solutions}{%
+        \begin{eqnarray*}
+          y & = & \frac{1}{3} t^3 + \frac{1}{5} e^{5t} + C.
+        \end{eqnarray*}        
+      }
+
       \vfill
     \item $t = \int \frac{1}{y} ~ dy$
+
+      \iftoggle{solutions}{%
+        \begin{eqnarray*}
+          t & = & \ln(y) + C, \\
+          \ln(y) & = & t-C, \\
+          y & = & e^{t-c}, \\
+          y & = & e^t e^{-c}, \\
+          y & = & k e^t.
+        \end{eqnarray*}
+      }
+
       \vfill
     \item $t = \int y^2 ~ dy$
+
+      \iftoggle{solutions}{%
+        \begin{eqnarray*}
+          t & = & \frac{1}{3} y^3 + C, \\
+          \frac{1}{3} y^3 & = & t - C, \\
+          y^3 & = & 3(t - C), \\
+          y & = & \sqrt[3]{3(t-C)}.
+        \end{eqnarray*}
+      }
+
       \vfill
   \end{subproblem}  
 \end{problem}
@@ -26,12 +61,32 @@
   associated with each indefinite integral!)
   \begin{subproblem}
     \item $y = \int t\cos(3t) ~ dt$
+
+      \iftoggle{solutions}{%
+        
+      }
+
       \vfill
     \item $y = \int t e^{5t} ~ dt$
+
+      \iftoggle{solutions}{%
+        
+      }
+
       \vfill
     \item $y = \int t^2 \ln(t) ~ dt$
+
+      \iftoggle{solutions}{%
+        
+      }
+
       \vfill
     \item $t = \int \frac{\ln(y)}{y} ~ dy$
+
+      \iftoggle{solutions}{%
+        
+      }
+
       \vfill
   \end{subproblem}
 
@@ -69,16 +124,29 @@
   $3t+C=\ln(y(t))$ where $C$ is a constant. Solve the equation for
   $y(t)$.
 
+      \iftoggle{solutions}{%
+
+      }
+
     \vfill
 
   \item The function $y(t)$ depends on $t$. Use the chain rule to find
     the derivative of the expression $\ln(y(t))$.
+
+      \iftoggle{solutions}{%
+        
+      }
+
     \vfill
 
     \clearpage
 
   \item Show that the relationship $3t+C=\ln(y(t))$ can also be
     expressed as $y'=3y$.
+
+      \iftoggle{solutions}{%
+        
+      }
 
     \vfill
 
@@ -90,6 +158,11 @@
     \begin{eqnarray*}
       y' & = & 5y.
     \end{eqnarray*}
+
+      \iftoggle{solutions}{%
+        
+      }
+
     \vfill
 
 \end{problem}

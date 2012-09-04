@@ -1,6 +1,10 @@
-\documentclass{beamer}
+\documentclass{beamer}   % {article} [handout]
 \usepackage{etoolbox}
-\mode<presentation>
+%\setbeameroption{show notes}
+%\usepackage{beamerarticle}
+\usepackage{graphicx}
+%\mode<handout>{Differential Equations Notes}
+
 
  
 
@@ -33,19 +37,18 @@
 \newcommand{\rp}{\right)}
 
 
-\includeonlylecture{Introduction}
-\includeonly{week1-Day1}
+\includeonlylecture{Separable-Equations}
+\includeonly{week1-Day3}
 %test
 
 \newtoggle{clicker}
 \toggletrue{clicker}
 %\togglefalse{clicker}
 \newcounter{clickerQuiz}      % Create a counter to determine which clicker quiz to give
-\setcounter{clickerQuiz}{2}   % Set the counter to 1, 2, or 3 for the section number
+\setcounter{clickerQuiz}{3}   % Set the counter to 1, 2, or 3 for the section number
 
 
 \begin{document}
-
 \author{Kelly Black and Guangming Yao}
 \institute{Clarkson University}
 
