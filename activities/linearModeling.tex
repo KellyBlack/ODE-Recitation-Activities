@@ -14,20 +14,75 @@
   \begin{eqnarray*}
     y_h' + ty_h & = & 0.
   \end{eqnarray*}
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y'_h & = & -t y_h, \\
+          \frac{y'_h}{y_h} & = & -t, \\
+          \ln\lp y_h \rp & = & -\half t^2 + C, \\
+          y_h & = & k e^{-t^2/2}.
+        \end{eqnarray*}
+        
+      }
+
     \vfill
 
   \item Assume that the solution to equation
     \ref{eqn:nonhomogeneousPreClass} is in the form $y(t) = u(t)
     y_h(t)$ where $y_h(t)$ is your solution to the homogenous
     equation. Take the derivative of $y(t)$. (Use the product rule!)
-    \vspace{8em}
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y & = & u \cdot y_h, \\
+          y' & = & u' y_h + u y_h'.
+        \end{eqnarray*}
+        
+      }{%
+
+        \vspace*{6em}
+
+      }
+
 
     (See the next page.)
     \clearpage
 
   \item Substitute the function $y(t)$ into the original differential
-    equation and solve for $u(t)$.
-    \vfill
+    equation and solve for $u(t)$. (Do not forget the ``+C'' after
+    integrating.)
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          u' y_h + u y_h' + t u y_h & = & t, \\
+          u' k e^{-t^2/2} + u (-t) k e^{-t^2/2} + t u k e^{-t^2/2} & = & t, \\
+          u' k e^{-t^2/2} & = & t, \\
+          u' & = & \frac{1}{k} e^{t^2/2} + C.
+        \end{eqnarray*}
+        
+      }
+
+      \vfill
+
+  \item Substitute the solution, $u(t)$, into your definition,
+    $y=u\cdot y_h$, to get the solution to the differential equation.
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          u y_h & = & k e^{-t^2/2} \lp \frac{1}{k} e^{t^2/2} + C \rp, \\
+          & = & 1 + \bar{C} e^{-t^2/2}
+        \end{eqnarray*}
+        
+      }{%
+
+        \vspace*{6em}
+
+      }
+
 
   \end{subproblem}
 \end{problem}
