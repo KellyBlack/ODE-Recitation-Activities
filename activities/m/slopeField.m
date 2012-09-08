@@ -51,7 +51,7 @@
 % Specify the bounds on the values of t and y.
 % Bounds specified in the form:
 %    bounds   = [ [lowx highx] ; [lowy highy]];
-bounds   = [ [0 5] ; [-5 5]];
+bounds   = [ [0 5] ; [-1 4]];
 
 
 % Specify the number of slope indicators to plot.
@@ -96,7 +96,8 @@ for numt = 0:1:number(1),
         % slope = 4-2*y;
         % slope = cos(pi*t)*y;
         % slope = -0+0.4*t+0.7*y;
-        slope = -0.4*(y+2)*(y-2);
+        % slope = -0.4*(y+2)*(y-2);
+        slope = -y*y + 3*y - 2 ;
         
         
         if((abs(slope) > 1.0e6) || (abs(slope) == Inf) || (slope == NaN)),
