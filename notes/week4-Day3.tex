@@ -3,8 +3,8 @@
 \section{Complex Numbers}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 4, Day 3}
-\date{23 Sep 2012}
+\subtitle{Math 232 - Week 4, Day 2}
+\date{19 Sep 2012}
 
 \begin{frame}
   \titlepage
@@ -100,16 +100,15 @@
   found by reversing the sign of the imaginary part.
   
   Example:
-  For the numbers given below:
+  For each of the numbers given below:
   \begin{eqnarray*}
-    z_1 & = & 3 + 2i \\
-    z_2 & = & 5 - 6i 
+    z_1 & = & 3 + 2i, \\
+    z_2 & = & 5 - 6i, 
   \end{eqnarray*}
-
-  Their complex conjugates are the following:
+  the complex conjugates are the following:
   \begin{eqnarray*}
-    \bar{z_1} & = & 3 - 2i \\
-    \bar{z_2} & = & 5 + 6i 
+    \bar{z_1} & = & 3 - 2i, \\
+    \bar{z_2} & = & 5 + 6i.
   \end{eqnarray*}
 
 
@@ -156,9 +155,9 @@
 
 \begin{frame}
   \frametitle{Graphical View of Complex Numbers}
- 
-  $z=a+bi$.
 
+  \only<1>{\centerline{\includegraphics[width=4cm]{img/complexPlane}}}
+  \only<2>{\centerline{\includegraphics[width=4cm]{img/complexPlanePolar}}}
   
   \begin{eqnarray*}
     a & = & r\cos(\theta) \\
@@ -166,6 +165,7 @@
     r & = & \sqrt{a^2+b^2} \\
     \tan(\theta) & = & \frac{b}{a}
   \end{eqnarray*}
+  (Be careful about the arctangent. Your calculator lies!)
 
 \end{frame}
 
@@ -177,17 +177,72 @@
     x & = &  2 + 2i
   \end{eqnarray*}
 
+  \uncover<2->
+  {%
+
+    \begin{eqnarray*}
+      r & = & \sqrt{2^2+2^2}, \\
+        & = & 2\sqrt{2}, \\
+      \tan(\theta) & = & \frac{2}{2}, \\
+      \theta       & = & \frac{\pi}{4}.
+    \end{eqnarray*}
+
+  }
+
 \end{frame}
 
 
+\iftoggle{clicker}{%
 \begin{frame}
-  \frametitle{Example}
-
-  \begin{eqnarray*}
-    z & = & -2 + 2i
-  \end{eqnarray*}
+  \frametitle{Clicker Quiz}
     
+      \ifnum\value{clickerQuiz}=1{%
+
+        Determine the radius and angle for the following complex number:
+          \begin{eqnarray*}
+            z & = & -2 + 2i
+          \end{eqnarray*}
+
+
+          \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
+            A: &  $r=2$, & $\theta= -\pi/4$ \\
+            B: &  $r=2$, & $\theta= 3\pi/4$ \\
+            C: &  $r=2\sqrt{2}$, & $\theta= -\pi/4$ \\
+            D: &  $r=2\sqrt{2}$, & $\theta= 3\pi/4$ \\ 
+          \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        Determine the radius and angle for the following complex number:
+          \begin{eqnarray*}
+            z & = & 2 - 2i
+          \end{eqnarray*}
+
+
+          \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
+            A: &  $r=2$, & $\theta= -\pi/4$ \\
+            B: &  $r=2$, & $\theta= 5\pi/4$ \\
+            C: &  $r=2\sqrt{2}$, & $\theta= -\pi/4$ \\
+            D: &  $r=2\sqrt{2}$, & $\theta= 5\pi/4$ \\ 
+          \end{tabular}
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
 \end{frame}
+
+}
+
+    
 
 \subsection{Euler's Formula}
 
@@ -263,25 +318,69 @@
   
   \begin{eqnarray*}
     z & = & 2 + 2i \\
-    & = & 2\sqrt{2} \cos(\pi/4) + i 2\sqrt{2} \sin(\pi/4) \\
-    & = & 2\sqrt{2} \lp \cos(\pi/4) + i\sin(pi/4) \rp \\
-    & = & 2\sqrt{2} e^{i\pi/4}
+    \uncover<2->
+    {%
+       & = & 2\sqrt{2} \cos(\pi/4) + i 2\sqrt{2} \sin(\pi/4) \\
+       & = & 2\sqrt{2} \lp \cos(\pi/4) + i\sin(pi/4) \rp \\
+       & = & 2\sqrt{2} e^{i\pi/4}
+    }
   \end{eqnarray*}
 \end{frame}
 
 \begin{frame}
   \frametitle{Example}
   \begin{eqnarray*}
-    z & = & \sqrt{3} + i 
+    z & = & \sqrt{3} + i  \\
+    \uncover<2->
+    {%
+         & = & 2 \cos\lp\frac{\pi}{6}\rp + i 2 \sin\lp\frac{\pi}{6}\rp, \\
+         & = & 2 e^{i\frac{\pi}{6}}.
+    }
   \end{eqnarray*}
 \end{frame}
 
+\iftoggle{clicker}{%
 \begin{frame}
-  \frametitle{Example}
-  \begin{eqnarray*}
-    z & = & -1
-  \end{eqnarray*}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        Express -1 in Euler form.
+
+          \begin{tabular}{l@{\hspace{3em}}l}
+            A: &  $e^{-i\pi}$, \\
+            B: &  $e^{-i\pi/2}$, \\
+            C: &  $e^{-i}$, \\
+            D: &  $-1$, \\ 
+          \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        Express -1 in Euler form.
+
+          \begin{tabular}{l@{\hspace{3em}}l}
+            A: &  $e^{-i\pi}$, \\
+            B: &  $e^{-i\pi/2}$, \\
+            C: &  $e^{-i}$, \\
+            D: &  $-1$, \\ 
+          \end{tabular}
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
 \end{frame}
+
+}
 
 
 \subsection{Root Finding}
