@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Introduction}
-\date{28 Aug 2011}
+\date{27 Aug 2012}
 
 \begin{frame}
   \titlepage
@@ -15,6 +15,134 @@
   \tableofcontents[pausesection,hideothersubsections,sectionstyle=show/hide]
 \end{frame}
 
+\subsection{Syllabus}
+\begin{frame}
+  \frametitle{Syllabus}
+
+  Read the syllabus! The syllabus will take precedence over any
+  discrepancies here. It includes \textbf{all} of our policies. We
+  will not cover them all here.
+
+  Faculty: \\
+  \begin{tabular}{l@{\hspace{3em}}l@{\hspace{3em}}l}
+    Kelly Black                      & Guangming Yao    \\
+    361B Science Center              & 363 Science Center   \\
+    268-3831                         & 268- 6496\\
+    kjblack@gmail.com                &  gyao@clarkson.edu\\ [10pt]
+  \end{tabular}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Materials}
+
+  \begin{itemize}
+  \item {\em Differential Equations and Linear Algebra}, second
+    edition
+  \item Recitation manual \\
+    The UPS Store, \\
+    200 Market St, \\
+    315.265.4565, \\
+    store5986$@$theupsstore.com
+  \item Turning Point Technologies ResponseCard RF LCD clicker \\
+    \url{https://store.turningtechnologies.com} \\
+    The Clarkson University promotional code is Z0k0.
+  \end{itemize}
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Test Dates}
+
+   The tests will be given 18 September, 30 October,
+  and 29 November. The exams will take place in the evenings from
+  7:00pm to 8:20pm. You should bring your own pencils.  The professor
+  will not have any spare materials. The location will vary depending
+  on your recitation section, and your room assignments will be given
+  prior to the exams.
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Grading}
+
+   \begin{tabular}[t]{rl}
+    45\% & 3 Tests. \\
+    20\% & Final Exam. \\
+    15\% & Homework and Webwork. \\
+    15\% & Quiz. \\
+     5\% & Clickers
+  \end{tabular}
+
+  \begin{itemize}
+  \item The right to miss a scheduled exam and take a make up exam can
+    be awarded only by your professor.
+  \item If for some reason you must miss an exam, you must apply in
+    writing {\bf before} the exam.
+  \item In case of emergency contact the professor as soon as possible
+    and provide documentation to confirm why you cannot take part in
+    the exam. 
+  \item An unexcused absence will result in a grade of zero on the
+    exam.
+  \end{itemize}
+
+
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Academic Accommodations}
+
+  If you require any kind of special
+  accommodation please see your professor.  Requests for academic
+  accommodations must be made during the first three weeks of the
+  semester, except for unusual circumstances.  Students must register
+  with the Office of Accommodative Services, located in the Student
+  Success Center, 110 ERC, to verify their eligibility for appropriate
+  accommodations.
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Clickers}
+
+  We will start using the clickers this Friday. Each day one or more
+  questions will be asked.
+
+  You need to register your clicker. Go to our course page on moodle:
+  \begin{enumerate}
+  \item Choose the ``clicker ID'' option at the top of the page.
+  \item Enter your clicker Device ID (found on the back of the
+    clicker.)
+  \item Click on the submit button.
+  \item Click on the ``next'' button.
+  \item Click on ``Submit all and finish.''
+  \item Confirm your choice.
+  \item Click on ``Finish Review'' at the bottom of the page.
+  \end{enumerate}
+
+  If you do not click on ``Finish Review'' your device ID may not be saved.
+   
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Recitations}
+
+  \begin{itemize}
+  \item Take place every Thursday.
+  \item Will have a quiz almost every session.
+  \item Some days the quiz will consist of the pre-class activity in
+    your lab manual. (Random!)
+  \item The recitation is where you \textbf{DO} things. It is where
+    you will learn the most in this class.
+  \end{itemize}
+\end{frame}
 
 \subsection{What is a Differential Equation}
 
@@ -24,7 +152,7 @@
 
   Given
   \begin{eqnarray*}
-    y' & = & y,
+    y'(x) & = & y(x),
   \end{eqnarray*}
   what is $y(x)=?$
 
@@ -35,13 +163,21 @@
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}{Question:}
   Given
   \begin{eqnarray*}
     y'' + 3y' +2y & = & 0
   \end{eqnarray*}
 
   what is $y(x)$?
+
+  \uncover<2->{
+    Note: we leave often leave off the function notation.
+    }
+
+  \uncover<3->{
+    Why? We are lazy!
+    }
 
 \end{frame}
 
@@ -92,8 +228,8 @@
 
   ex: Newton's Second Law, ``$\vec{F} = m \vec{a}$'' In 1 dimension:
   \begin{eqnarray*}
-    m\mathrm{~(acceleration)} & = & \sum_i \lp F_x \rp_i, \\
-    m \ddot{x} & = & \sum_i \lp f_x \rp_i
+    m\mathrm{~(acceleration)} & = & \sum_i \lp F \rp_i, \\
+    m \ddot{x} & = & \sum_i \lp F \rp_i
   \end{eqnarray*}
 
   
@@ -130,5 +266,56 @@
   \end{eqnarray*}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Example - Newton's Law of Cooling}
 
-% LocalWords:  Clarkson pausesection hideothersubsections
+  The rate of change of the temperature of an object is proportional
+  to the difference between the object and its surroundings (the
+  ambient temperature).
+
+  \uncover<2->
+  {
+
+    Define:
+    \begin{itemize}
+    \item $T(t)$ is the temperature at a time $t$.
+    \item $A$ is the ambient temperature (the temperature of the
+      surroundings).
+    \item The rate of change of the temperature is $\frac{dT(t)}{dt}$.
+    \end{itemize}
+
+  }
+
+  \uncover<3->
+  {
+
+    There is some constant number, $k$, where 
+    \begin{eqnarray*}
+      \frac{dT(t)}{dt} & = & -k (T-A).
+    \end{eqnarray*}
+
+  }
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Newton's Law of Cooling}
+
+  The rate of change of the temperature of an object is proportional
+  to the difference between the object and its surroundings (the
+  ambient temperature).
+
+    There is some constant number, $k$, where 
+    \begin{eqnarray*}
+      \frac{dT(t)}{dt} & = & -k (T-A).
+    \end{eqnarray*}
+
+    Question: What is the temperature at any given time?
+
+\end{frame}
+
+
+% LocalWords:  Clarkson pausesection hideothersubsections sectionstyle Yao
+% LocalWords:  Guangming ResponseCard Webwork moodle

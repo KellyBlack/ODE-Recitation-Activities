@@ -2,18 +2,51 @@
 \preClass{Integral Calculus Review}
 
 \begin{problem}
-\item Expand each expression using partial fractions. (See the
-  opposite page.)
+\item Expand each expression using partial fractions. Find the general
+  expansion and then solve for the constants.(See the opposite page.)
   \begin{subproblem}
   \item $\frac{y}{y^2-4}$
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          \frac{y}{y^2-4} & = & \frac{y}{(y-2)(y+2)}, \\
+          & = &  \frac{A}{y-2} + \frac{B}{y+2}, \\
+          & = & \frac{\half}{y-2} + \frac{\half}{y+2}.
+        \end{eqnarray*}
+        
+      }
+
     \vfill
 
   \item $\frac{4}{y^2-2y}$.
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          \frac{4}{y^2-2y} & = & \frac{4}{y(y-2)}, \\
+          & = & \frac{a}{y} + \frac{b}{y-2}, \\
+          & = & \frac{-2}{y} + \frac{2}{y-2}.
+        \end{eqnarray*}
+        
+      }
+
     \vfill
 
     \clearpage
       
   \item $\frac{3}{y^2-3y+2}$
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          \frac{3}{y^2-3y+2} & = & \frac{3}{(y-2)(y-1)}, \\
+          & = & \frac{a}{y-2} + \frac{b}{y-2}, \\
+          & = & \frac{3}{y-2} - \frac{3}{y-1}.
+        \end{eqnarray*}
+        
+      }
+
     \vfill
 
   \end{subproblem}
@@ -22,29 +55,133 @@
 
   \actTitle{Separable ODEs}
   \begin{problem}
-  \item Expand each expression using partial fractions:
+  \item Expand each expression using partial fractions and solve for
+    the constants:
     \begin{subproblem}
     \item $\frac{3}{y^2-5y-6}$
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          \frac{3}{y^2-5y-6} & = & \frac{a}{y-6} + \frac{b}{y+1}, \\
+          & = & \frac{3/7}{y-6} - \frac{3/7}{y+1}.
+        \end{eqnarray*}
+        
+      }
+
       \vfill
 
     \item $\frac{-5}{y^3-y^2}$.
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          \frac{-5}{y^3-y^2} & = & \frac{a}{y} + \frac{b}{y^2} + \frac{c}{y-1}, \\
+          & = & \frac{5}{y} + \frac{5}{y^2} - \frac{5}{y-1}.
+        \end{eqnarray*}
+        
+      }
+
       \vfill
       
-    \item $\frac{y}{y^3+2y^2+y}$
+    \item $\frac{1}{y^3+2y^2+y}$
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          \frac{1}{y^3+2y^2+y} & = & \frac{a}{y} + \frac{b}{y+1} + \frac{c}{(y+1)^2}, \\
+          & = & \frac{1}{y} - \frac{1}{y+1} - \frac{1}{(y+1)^2}.
+        \end{eqnarray*}
+        
+      }
+
       \vfill
 
     \end{subproblem}
+
     \clearpage
+
   \item Find the solutions to the following ODEs. 
     \begin{subproblem}
     \item $y' = y^2 + 1$, $y(0)=3$.
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y' & = & y^2 + 1, \\
+          \frac{y'}{y^2+1} & = & 1, \\
+          \int \frac{y'}{y^2+1} ~ dt & = & \int 1 ~ dt, \\
+          \arctan(y) & = & t + C, \\
+          \arctan(3) & = & C, \\
+          y & = & \tan\lp t + \arctan(3)\rp.
+        \end{eqnarray*}
+        
+      }
+
       \vfill
     \item $y' = yt - t$, $y(0)=4$.
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y' & = & yt - t, \\
+          y' - yt & = & -t, \\
+          y' e^{-t^2/2} - e^{-t^2/2} t y & = & - t e^{-t^2/2}, \\
+          \frac{d}{dt} \lp y e^{-t^2/2} \rp & = & \int -t e^{-t^2/2} ~ dt, \\
+          y e^{-t^2/2} & = & e^{-t^2/2} + C, \\
+          4 & = & 1 + C, \\
+          C & = & 3, \\
+          y & = & 1 + 3e^{t^2/2}.
+        \end{eqnarray*}
+        
+      }
+
       \vfill
-    \item $y'=y(y-1)$, $y(0)=5$.
+
+      \clearpage
+
+    \item $y' = 3 \lp y^2 - 5y - 6 \rp$, $y(0)=10$.
+
+      \iftoggle{solutions}{%
+        
+
+        See the pre-class activity for the partial fraction expansion.
+        \begin{eqnarray*}
+          y' & = & 3 \lp y^2 - 5y - 6 \rp, \\
+          \frac{y'}{y^2 - 5y - 6} & = & 3, \\
+          \int \frac{3/7}{y-6} - \frac{3/7}{y+1} ~ dt & = & \int 3 ~ dt, \\
+          \frac{3}{7} \ln(y-6) - \frac{3}{7} \ln(y+1) & = & 3t + C, \\
+          \ln\lp\frac{y-6}{y+1}\rp & = & 7t + \frac{7}{3} C, \\
+          \frac{y-6}{y+1} & = & k e^{7t}, \\
+          \frac{4}{11} & = & k, \\
+          \frac{y-6}{y+1} & = & \frac{4}{11} e^{7t}, \\
+          y & = & \frac{6+\frac{4}{11} e^{7t}}{1-\frac{4}{11} e^{7t}}.
+        \end{eqnarray*}
+
+      }
+
       \vfill
-    \item $y' = y^2(y+1)$, $y(0)=10$.
+
+    \item $y' = y^3 + 2y^2 + y$, $y(0)=5$.
+
+      \iftoggle{solutions}{%
+        
+
+        See the pre-class activity for the partial fraction expansion.
+        \begin{eqnarray*}
+          y' & = & y^3 + 2y^2 + y, \\
+          \frac{y'}{y^3 + 2y^2 + y} & = & 1, \\
+          \int \frac{1}{y} - \frac{1}{y+1} - \frac{1}{(y+1)^2} ~ dt & = & \int 1 ~ dt, \\
+          \ln(y) - \ln(y+1) - \frac{1}{y+1} & = & t + C, \\
+          \ln(5) - \ln(6) - \frac{1}{6} & = & C, \\
+          \ln(y) - \ln(y+1) - \frac{1}{y+1} & = & t + \ln\lp\frac{5}{6}\rp - \frac{1}{6}.
+        \end{eqnarray*}
+        the solution is an implicit function of $y(t)$.
+
+      }
+
       \vfill
+
     \end{subproblem}
 
   \end{problem}
@@ -56,10 +193,32 @@
 
   \item Show that $y=C_1 e^{3t}-\frac{1}{3}$ is a solution to the
     differential equation $y'=3y+1$.
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y' & = & 3 C_1 e^{3t}, \\
+          3y + 1 & = & 3C_1 e^{3t} - 1 + 1, \\
+                 & = & C_1 e^{3t}.
+        \end{eqnarray*}
+        
+      }
+
     \vfill
 
-  \item Show that $y=C_1 e^{t} + C_2 e^{-2t}$ is a solution to the
+  \item Show that $y=C_1 e^{-t} + C_2 e^{-2t}$ is a solution to the
     differential equation $y''+3y'+2y=0$.
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y   & = &  C_1 e^{-t} +   C_2 e^{-2t}, \\
+          y'  & = & -C_1 e^{-t} - 2 C_2 e^{-2t}, \\
+          y'' & = &  C_1 e^{-t} + 4 C_2 e^{-2t}, \\
+          C_1 e^{-t} + 4C_2 e^{-2t} - 3C_1 e^{-t} - 6 C_2 e^{-2t} + 2C_1 e^{-t} + 2C_2 e^{-2t} & = & 0.
+        \end{eqnarray*}
+        
+      }
 
     \vfill
 
@@ -72,23 +231,71 @@
     Take the antiderivative of each side and express the result
     without any derivatives. (Do not forget the constant of
     integration.)  
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y e^{3t} & = & \int e^{3t} ~ dt, \\
+          y e^{3t} & = & \frac{1}{3} e^{3t} + C.
+        \end{eqnarray*}
+        
+      }
+
     
     \vfill
 
   \item Simplify the expression and solve for $y(t)$. 
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y & = & \frac{1}{3} + C  e^{-3t}.
+        \end{eqnarray*}
+        
+      }
+
     \vfill
 
     \clearpage
 
   \item Suppose that $y$ is a function of $t$. Use the product rule to
     find the derivative of the function $\left(y(t) e^{3t}\right)$.
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y' e^{3t} + 3 y e^{3t}
+        \end{eqnarray*}
+        
+      }
+
     \vfill
 
   \item Suppose that your final expression in the previous problem is
     equal to $e^{3t}$.  Set that expression equal to $e^{3t}$ and
-    simplify. What is the new differential equation?  \vfill
+    simplify. What is the new differential equation?  
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y' e^{3t} + 3 y e^{3t} & = & e^{3t}, \\
+          y' + 3y & = & 1.
+        \end{eqnarray*}        
+        
+      }
+
+      \vfill
 
   \item What is the solution to the differential equation?
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y & = & \frac{1}{3} + C e^{-3t}.
+        \end{eqnarray*}
+        
+      }
+
 
 \end{problem}
 

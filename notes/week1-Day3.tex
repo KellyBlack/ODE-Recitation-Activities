@@ -5,7 +5,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 1, Day 3}
-\date{2 Sep 2011}
+\date{31 August 2012}
 
 \begin{frame}
   \titlepage
@@ -18,6 +18,69 @@
 
 
 \subsection{The Chain Rule}
+
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    \iftoggle{clicker}{%
+    
+      \ifnum\value{clickerQuiz}=1%
+
+       Which function is a solution to the differential equation
+       \begin{eqnarray*}
+         y' & = & y\sin(t)?
+       \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y=3e^{-\sin(t)}$. \\
+         B: & $y=2e^{\sin(t)}$. \\
+         C: & $y=4e^{-\cos(t)}$. \\
+         D: & $y=7e^{\cos(t)}$. \\
+       \end{tabular}
+      \fi
+
+      \ifnum\value{clickerQuiz}=2%
+       Which function is a solution to the differential equation
+       \begin{eqnarray*}
+         y' & = & y\cdot t?
+       \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y=4e^{\half t^2}$. \\
+         B: & $y=2e^{t^2}$. \\
+         C: & $y=7e^{2 t}$. \\
+         D: & $y=3e^{t}$. \\
+       \end{tabular}
+      \fi
+
+      \ifnum\value{clickerQuiz}=3%
+       Which function is a solution to the differential equation
+       \begin{eqnarray*}
+         y' & = & ?
+       \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $?$. \\
+         B: & $?$. \\
+         C: & $?$. \\
+         D: & $?$. \\
+       \end{tabular}
+      \fi
+
+    \vfill
+    \vfill
+    \vfill
+
+}
+
+\end{frame}
+
+
 
 
 \begin{frame}
@@ -100,8 +163,11 @@
     \begin{eqnarray*}
       \frac{1}{y} y' & = & 2
     \end{eqnarray*}
-    I can get all the ``$y$''s on the left and the ``t''s on the
-    right.
+
+    The left side looks like $($function of $y)$ times $y'$.
+
+    The right side is solely a function of $t$.
+
   }
 
 \end{frame}
@@ -255,6 +321,71 @@
 \end{frame}
 
 
+
+
+\begin{frame}
+    \iftoggle{clicker}{%
+      \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1%
+      Find the general solution to the equation
+       \begin{eqnarray*}
+         y' & = & y^2t.
+       \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $\lp\half t^2\rp^{1/3} +C$. \\ [10pt]
+         B: & $\sqrt[3]{\half t^2+C}$. \\  [10pt]
+         C: & $e^{\half t^2 + C}$. \\   [10pt]
+         D: & $\frac{-1}{\half t^2 + C}$. \\  [10pt]
+       \end{tabular}
+
+    \fi
+
+    \ifnum\value{clickerQuiz}=2%
+       Find the general solution to the equation
+       \begin{eqnarray*}
+         y' & = & \frac{1}{yt}.
+       \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y=\pm\sqrt{2\ln(t)}+C$. \\ [10pt]
+         B: & $y=\pm\sqrt{2\ln(t)+C}$. \\  [10pt]
+         C: & $y=t+C$. \\   [10pt]
+         D: & $y=\ln(t)+C$. \\  [10pt]
+       \end{tabular}
+
+    \fi
+
+    \ifnum\value{clickerQuiz}=3%
+       Find the general solution to the equation
+       \begin{eqnarray*}
+         y' & = & ?
+       \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $$. \\ [10pt]
+         B: & $$. \\  [10pt]
+         C: & $$. \\   [10pt]
+         D: & $$. \\  [10pt]
+       \end{tabular}
+
+    \fi
+
+    \vfill
+    \vfill
+    \vfill
+
+}
+
+\end{frame}
+
 \begin{frame}
   \frametitle{Example}
 
@@ -347,4 +478,4 @@
  
 
 
-% LocalWords:  Clarkson pausesection hideothersubsections
+% LocalWords:  Clarkson pausesection hideothersubsections dt dy du

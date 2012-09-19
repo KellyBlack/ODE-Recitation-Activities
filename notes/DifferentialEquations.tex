@@ -1,8 +1,12 @@
-\documentclass{beamer}
+\documentclass{beamer}   % {article}
 \usepackage{etoolbox}
-\mode<presentation>
+%\setbeameroption{show notes}
+%\usepackage{beamerarticle}
+\usepackage{graphicx}
+%\mode<handout>{Differential Equations Notes}
 
 
+ 
 
 
 
@@ -33,17 +37,19 @@
 \newcommand{\rp}{\right)}
 
 
-\includeonlylecture{Introduction}
-\includeonly{week1-Day1}
+\includeonlylecture{Complex-Numbers-II}
+\includeonly{week5-Day1}
+%test
 
 \newtoggle{clicker}
 \toggletrue{clicker}
 %\togglefalse{clicker}
+\newcounter{clickerQuiz}      % Create a counter to determine which clicker quiz to give
+\setcounter{clickerQuiz}{2}   % Set the counter to 1, 2, or 3 for the section number
 
 
 \begin{document}
-
-\author{Kelly Black}
+\author{Kelly Black and Guangming Yao}
 \institute{Clarkson University}
 
 
@@ -74,7 +80,7 @@
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{week4-Day1}
+\include{week4-Day3}
 
 \include{week5-Day1}
 
