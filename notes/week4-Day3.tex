@@ -64,11 +64,17 @@
   \frametitle{Addition}
 
   \begin{eqnarray*}
-    (3+2i) + (5-7i) & = & (3+5) + (2-7)i \\
-    & = & 8 - 5i\\
+    (3+2i) + (5-7i) & = & 
+    \uncover<2->{%
+      (3+5) + (2-7)i \\
+      & = & 8 - 5i\\
+    }
     ~ \\
-    (4-2i) + (6-3i) & = & (4+6) + (-2-3)i \\
-    & = & 10 - 5i \\
+    (4-2i) + (6-3i) & = & 
+    \uncover<3->{%
+      (4+6) + (-2-3)i \\
+      & = & 10 - 5i
+    } 
   \end{eqnarray*}
 
 \end{frame}
@@ -77,15 +83,21 @@
   \frametitle{Multiplication}
 
   \begin{eqnarray*}
-    (3+2i)(5-7i) & = & 15 + 10i - 21i - 14 i^2 \\
-    & = & 15 - 11i + 14 \\
-    & = & 29 - 11 i
+    (3+2i)(5-7i) & = & 
+    \uncover<2->{%
+      15 + 10i - 21i - 14 i^2 \\
+      & = & 15 - 11i + 14 \\
+      & = & 29 - 11 i
+    }
   \end{eqnarray*}
 
   \begin{eqnarray*}
-    (4-2i)(6+3i) & = & 24 - 12i + 12 i - 6i^2 \\
-    & = & 24 + 6 \\
-    & = & 30
+    (4-2i)(6+3i) & = & 
+    \uncover<3->{%
+      24 - 12i + 12 i - 6i^2 \\
+      & = & 24 + 6 \\
+      & = & 30
+    }
   \end{eqnarray*}
 
 \end{frame}
@@ -131,10 +143,13 @@
   \frametitle{So What?}
 
   \begin{eqnarray*}
-    \frac{5-3i}{2+3i} & = & \frac{(5-3i)(2-3i)}{(2+3i)(2-3i)} \\
-    & = & \frac{10-6i-15i+9i^2}{4+6i-6i-9i^2} \\
-    & = & \frac{1-21i}{13} \\
-    & = & \frac{1}{13} - \frac{21}{13} i
+    \frac{5-3i}{2+3i} & = & 
+    \uncover<2->{%
+      \frac{(5-3i)(2-3i)}{(2+3i)(2-3i)} \\
+      & = & \frac{10-6i-15i+9i^2}{4+6i-6i-9i^2} \\
+      & = & \frac{1-21i}{13} \\
+      & = & \frac{1}{13} - \frac{21}{13} i
+    }
   \end{eqnarray*}
 
 \end{frame}
@@ -143,10 +158,13 @@
   \frametitle{Example}
 
   \begin{eqnarray*}
-    \frac{2+3i}{5-3i} & = & \frac{(2+3i)(5+3i)}{(5-3i)(5+3i)} \\
-    & = & \frac{10+15i+6i+9i^2}{25-15i+15i-9i^2} \\
-    & = & \frac{1+21i}{34} \\
-    & = & \frac{1}{34} + \frac{21}{34}i
+    \frac{2+3i}{5-3i} & = & 
+    \uncover<2->{%
+      \frac{(2+3i)(5+3i)}{(5-3i)(5+3i)} \\
+      & = & \frac{10+15i+6i+9i^2}{25-15i+15i-9i^2} \\
+      & = & \frac{1+21i}{34} \\
+      & = & \frac{1}{34} + \frac{21}{34}i
+    }
   \end{eqnarray*}
 
 \end{frame}
@@ -217,7 +235,7 @@
 
         Determine the radius and angle for the following complex number:
           \begin{eqnarray*}
-            z & = & 2 - 2i
+            z & = & -2 -2i
           \end{eqnarray*}
 
 
@@ -325,6 +343,8 @@
        & = & 2\sqrt{2} e^{i\pi/4}
     }
   \end{eqnarray*}
+
+  % TODO - add a picture of the point in the complex plane
 \end{frame}
 
 \begin{frame}
@@ -337,6 +357,7 @@
          & = & 2 e^{i\frac{\pi}{6}}.
     }
   \end{eqnarray*}
+  % TODO - add a picture of the point in the complex plane
 \end{frame}
 
 \iftoggle{clicker}{%
@@ -382,91 +403,6 @@
 
 }
 
-
-\subsection{Root Finding}
-
-\begin{frame}
-  \frametitle{So What?}
-
-  What is the cube root of 1?
-  \begin{eqnarray*}
-    \uncover<2->{1,~e^{i2\pi/3},~e^{i4\pi/3}}.
-  \end{eqnarray*}
-
-  \uncover<3->
-  {
-    Cuz....
-    \begin{eqnarray*}
-      1^3 & = & 1. \\
-      \lp e^{i2\pi/3} \rp^3 & = &  e^{i2\pi} \\
-      \lp e^{i4\pi/3} \rp^3 & = & e^{i4\pi}
-    \end{eqnarray*}
-
-  }
-
-  
-\end{frame}
-
-\begin{frame}
-  \frametitle{lol wut?}
-
-  Find the cube root of 3.
-  \begin{eqnarray*}
-    z^3 & = & 1 \\
-    z & = & r e^{i\theta} \\
-    z^3 & = & r^3 e^{i3\theta} \\
-    z^3 & = & e^{i0} \\
-    z^3 & = & e^{i2\pi} \\
-    z^3 & = & e^{i4\pi}
-  \end{eqnarray*}
-  
-\end{frame}
-
-\begin{frame}
-  \frametitle{Root Finding}
-  To find the n\textsuperscript{th} root:
-  \begin{itemize}
-  \item n\textsuperscript{th} root of $a+bi$
-  \item Convert $a+bi=re^{i\theta}$ 
-  \item Find $z^n=re^{i\theta}$
-    \begin{eqnarray*}
-      z^n & = & re^{i\theta} \\
-      z^n & = & re^{i(\theta+2\pi)} \\
-      z^n & = & re^{i(\theta+4\pi)} \\
-      z^n & = & re^{i(\theta+6\pi)} \\
-      \vdots & & \vdots \\
-      z^n & = & re^{i(\theta+2(n-1)\pi)} \\
-    \end{eqnarray*}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  If 
-  \begin{eqnarray*}
-    z & = & R e^{i\alpha} \\
-    z^n & = & R^n e^{i n\alpha} \\
-    R & = & r^{1/n} \\
-    \alpha & = & \frac{\theta}{n}, ~ \frac{\theta+2\pi}{n}, ~
-    \frac{\theta+4\pi}{n}, \ldots, ~ \frac{\theta+2(n-1)\pi}{n}
-  \end{eqnarray*}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Example}
-
-  Find the fourth root of 16.
-  \begin{eqnarray*}
-    z^4 & = & 16 e^{i0}, ~ 16 e^{i2\pi}, ~ 16 e^{i4\pi}, ~ 16 e^{i6\pi} \\
-    R^4 e^{i4\alpha} & = & 16 e^{i0}, ~ 16 e^{i2\pi}, ~ 16 e^{i4\pi}, ~ 16 e^{i6\pi} 
-  \end{eqnarray*}
-
-  Then
-  \begin{eqnarray*}
-    R & = & 2 \\
-    \alpha & = & 0, ~ \frac{\pi}{2}, ~ \pi, ~ \frac{3\pi}{2}
-  \end{eqnarray*}
-
-\end{frame}
 
 
 % LocalWords:  Clarkson pausesection hideothersubsections
