@@ -91,9 +91,16 @@
   \begin{eqnarray*}
     z & = & R e^{i\alpha} \\
     z^n & = & R^n e^{i n\alpha} \\
-    R & = & r^{1/n} \\
-    \alpha & = & \frac{\theta}{n}, ~ \frac{\theta+2\pi}{n}, ~
-    \frac{\theta+4\pi}{n}, \ldots, ~ \frac{\theta+2(n-1)\pi}{n}
+  \end{eqnarray*}
+  but
+  \begin{eqnarray*}
+    z^n & = & re^{i\theta}, \\
+    \uncover<2->{%
+      \Rightarrow
+      R & = & r^{1/n} \\
+      \alpha & = & \frac{\theta}{n}, ~ \frac{\theta+2\pi}{n}, ~
+      \frac{\theta+4\pi}{n}, \ldots, ~ \frac{\theta+2(n-1)\pi}{n}.
+    }
   \end{eqnarray*}
 \end{frame}
 
@@ -101,16 +108,29 @@
   \frametitle{Example}
 
   Find the fourth root of 16.
-  \begin{eqnarray*}
-    z^4 & = & 16 e^{i0}, ~ 16 e^{i2\pi}, ~ 16 e^{i4\pi}, ~ 16 e^{i6\pi} \\
-    R^4 e^{i4\alpha} & = & 16 e^{i0}, ~ 16 e^{i2\pi}, ~ 16 e^{i4\pi}, ~ 16 e^{i6\pi} 
-  \end{eqnarray*}
+  \only<2->{%
+    Express 16 four different ways:
+    \begin{eqnarray*}
+      z & = & R e^{i\alpha}, \\
+      z^4 & = & 16 e^{i0}, ~ 16 e^{i2\pi}, ~ 16 e^{i4\pi}, ~ 16 e^{i6\pi} \\
+      R^4 e^{i4\alpha} & = & 16 e^{i0}, ~ 16 e^{i2\pi}, ~ 16 e^{i4\pi}, ~ 16 e^{i6\pi} 
+    \end{eqnarray*}
+  }
 
-  Then
-  \begin{eqnarray*}
-    R & = & 2 \\
-    \alpha & = & 0, ~ \frac{\pi}{2}, ~ \pi, ~ \frac{3\pi}{2}
-  \end{eqnarray*}
+  \only<3->{%
+    Then
+    \begin{eqnarray*}
+      R & = & 2 \\
+      \alpha & = & 0, ~ \frac{\pi}{2}, ~ \pi, ~ \frac{3\pi}{2}
+    \end{eqnarray*}
+  }
+
+  \only<4->{%
+    \begin{eqnarray*}
+      z & = & 2 e^{i0},~2e^{i\pi/2},~2e^{i\pi},~2e^{i3\pi/2}, \\
+      & = & 1,~i,~-1,~-i.
+    \end{eqnarray*}
+  }
 
 \end{frame}
 
@@ -121,20 +141,23 @@
 
   Find the cubic roots of $2+2i$.
 
-  \begin{eqnarray*}
-    2 + 2i & = & 2\sqrt{2} e^{i\pi/4}
-  \end{eqnarray*}
+  \uncover<2->{%
+    \begin{eqnarray*}
+      2 + 2i & = & 2\sqrt{2} e^{i\pi/4}
+    \end{eqnarray*}
 
-  Let $z=re^{i\theta}$ so $z^3=r^3e^{i3\theta}$:
-  \begin{eqnarray*}
-    r^3e^{i3\theta} & = & 2\sqrt{2} e^{i\pi/4}, ~ 2\sqrt{2} e^{i9\pi/4}, ~ 2\sqrt{2} e^{i17\pi/4}
-  \end{eqnarray*}
+    Let $z=re^{i\theta}$ so $z^3=r^3e^{i3\theta}$:
+    \begin{eqnarray*}
+      r^3e^{i3\theta} & = & 2\sqrt{2} e^{i\pi/4}, ~ 2\sqrt{2} e^{i9\pi/4}, ~ 2\sqrt{2} e^{i17\pi/4}
+    \end{eqnarray*}
 
-  \begin{eqnarray*}
-    r &  = & (2\sqrt{2})^{1/3} \\
-    \theta & = & \frac{\pi}{12}, ~ \frac{9\pi}{12}, ~ \frac{17\pi}{12} \\
-    z & = &  (2\sqrt{2})^{1/3} e^{i\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i9\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i17\pi/12}
-  \end{eqnarray*}
+    \begin{eqnarray*}
+      r &  = & (2\sqrt{2})^{1/3} \\
+      \theta & = & \frac{\pi}{12}, ~ \frac{9\pi}{12}, ~ \frac{17\pi}{12} \\
+      z & = &  (2\sqrt{2})^{1/3} e^{i\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i9\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i17\pi/12}
+    \end{eqnarray*}
+
+  }
 
 \end{frame}
 
