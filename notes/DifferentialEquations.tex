@@ -25,17 +25,7 @@
 \setbeamercolor{block body}{fg=black,bg=black!10}
 \setbeamercolor{titlelike}{bg=clarksonGreen,fg=white} % parent=palette quaternary}
 
-\newcommand{\half}{\mbox{$\frac{1}{2}$}}
-\newcommand{\deltat}{\mbox{$\triangle t$}}
-\newcommand{\deltax}{\mbox{$\triangle x$}}
-\newcommand{\deltay}{\mbox{$\triangle y$}}
-
-\newcommand{\deriv}[2]{\frac{d}{d#2}#1}
-\newcommand{\derivTwo}[2]{\frac{d^2}{d#2^2}#1}
-
-\newcommand{\lp}{\left(}
-\newcommand{\rp}{\right)}
-
+\input{latexDefinitions}
 
 \includeonlylecture{Linear-Algebra}
 \includeonly{introLinearAlgebra}
@@ -45,7 +35,7 @@
 \toggletrue{clicker}
 %\togglefalse{clicker}
 \newcounter{clickerQuiz}      % Create a counter to determine which clicker quiz to give
-\setcounter{clickerQuiz}{1}   % Set the counter to 1, 2, or 3 for the section number
+\setcounter{clickerQuiz}{3}   % Set the counter to 1, 2, or 3 for the section number
 
 
 \begin{document}
@@ -53,25 +43,22 @@
 \institute{Clarkson University}
 
 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%% Introduction to the idea of ODEs
 
 \include{introduction2ODEs}
-
 \include{solutionsToDEs}
+
+
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Methods to solve and classify select differential equations
 
 \include{separableEqns}
-
 \include{linearEquations}
-
 \include{integratingFactors}
-
 \include{growthDecay}
-
 \include{conservation}
-
 \include{autonomous}
 
 
@@ -81,168 +68,23 @@
 
 \include{complexI}
 \include{complexII}
-
-
-\newcommand{\arrayTwo}[4]{
-  \left[
-  \begin{array}{rr}
-    #1 & #2 \\
-    #3 & #4
-  \end{array}
-  \right]
-}
-
-\newcommand{\vecTwo}[2]{
-  \left[
-  \begin{array}{r}
-    #1 \\  #2
-  \end{array}
-  \right]
-}
-
-
-\newcommand{\stateTwo}[2]{
-  \begin{array}{rr}
-    \mbox{\fontsize{6}{6}\selectfont $#1$} \\  \mbox{\fontsize{6}{6}\selectfont $#2$}
-  \end{array}
-}
-
-
-\newcommand{\arrayThree}[9]{
-  \left[
-    \begin{array}{rrr}
-      #1 & #2 & #3 \\
-      #4 & #5 & #6 \\
-      #7 & #8 & #9
-    \end{array}
-  \right]
-}
-
-\newcommand{\startRowOps}{
-  \left[
-    \begin{array}{rrr|r}
-}
-
-\newcommand{\oneRowOps}[4] {
-      #1 & #2 & #3 & #4 \\
-}
-
-\newcommand{\stopRowOps}{
-    \end{array}
-  \right]
-}
-
-
-\newcommand{\vecThree}[3]{
-  \left[
-  \begin{array}{r}
-    #1 \\  #2 \\ #3
-  \end{array}
-  \right]
-}
-
-
-\newcommand{\stateThree}[3]{
-  \begin{array}{r}
-    \mbox{\fontsize{6}{6}\selectfont $#1$} \\  
-    \mbox{\fontsize{6}{6}\selectfont $#2$} \\ 
-    \mbox{\fontsize{6}{6}\selectfont $#3$}
-  \end{array}
-}
-
-
-
-
-
-\newcommand{\detTwo}[4]{
-  \left|
-  \begin{array}{rr}
-    #1 & #2 \\
-    #3 & #4
-  \end{array}
-  \right|
-}
-
-
-
-\newcommand{\detThree}[9]{
-  \left|
-    \begin{array}{rrr}
-      #1 & #2 & #3 \\
-      #4 & #5 & #6 \\
-      #7 & #8 & #9
-    \end{array}
-  \right|
-}
-
-
-
-
-\newcommand{\startRowFour}{
-  \left[
-    \begin{array}{rrrr}
-}
-
-\newcommand{\oneRowFour}[4] {
-      #1 & #2 & #3 & #4 \\
-}
-
-
-
-
 \include{introLinearAlgebra}
-
 \include{solutionsToLinearEquations}
-
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\newcommand{\startRowOpsTwo}{
-  \left[
-    \begin{array}{rr|rr}
-}
-
-\newcommand{\oneRowOpsTwo}[4] {
-      #1 & #2 & #3 & #4 \\
-}
-
-
-\newcommand{\startRowOpsThree}{
-  \left[
-    \begin{array}{rrr|rrr}
-}
-
-\newcommand{\oneRowOpsThree}[6] {
-      #1 & #2 & #3 & #4 & #5 & #6 \\
-}
-
-
-
-
 \include{matrices}
-
 \include{determinants}
-
 \include{spanOfVectors}
+
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Second order differential equations
 
 \include{secondOrderDEs}
-
 \include{solutionsToSecondOrderDEs}
-
 \include{realRoots}
-
 \include{undeterminedCoefficients}
-
 \include{undeterminedCoefficientsII}
-
 \include{variationParameters}
-
 \include{forcedOscillations}
 
 
@@ -251,29 +93,20 @@
 % Back to eigen values and linear algebrea
 
 \include{eigenValues}
-
 \include{solvingSystems}
-
 \include{solvingSystemsII}
-
 \include{complexEigenValues}
-
 \include{traceDeterminant}
+
+
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Laplace Transforms
 
-\newcommand{\laplace}[1]{\makebox{$ {\cal L} \{ #1 \}$}}
-\newcommand{\invlaplace}[1]{\makebox{$ {\cal L}^{-1} \left\{ #1 \right\}$}}
-
 \include{partialFractions}
-
 \include{introLaplaceTransforms}
-
 \include{inverseLaplaceTransforms}
-
 \include{solveDEsLaplaceTransforms}
-
 \include{unitStepFunction}
 
 
