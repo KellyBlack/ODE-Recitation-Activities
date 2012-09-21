@@ -51,7 +51,7 @@
 \begin{frame}
   \frametitle{lol wut?}
 
-  Find the cube root of 3.
+  Find the cube roots of 3.
   \begin{eqnarray*}
     z^3 & = & 1 \\
     z^3 & = & \lp r e^{i\theta} \rp^3 \\
@@ -70,9 +70,9 @@
 
 \begin{frame}
   \frametitle{Root Finding}
-  To find the n\textsuperscript{th} root:
+  To find the n\textsuperscript{th} roots:
   \begin{itemize}
-  \item n\textsuperscript{th} root of $a+bi$
+  \item n\textsuperscript{th} roots of $a+bi$
   \item Convert $a+bi=re^{i\theta}$ 
   \item Find $z^n=re^{i\theta}$
     \begin{eqnarray*}
@@ -107,7 +107,7 @@
 \begin{frame}
   \frametitle{Example}
 
-  Find the fourth root of 16.
+  Find the fourth roots of 16.
   \only<2->{%
     Express 16 four different ways:
     \begin{eqnarray*}
@@ -128,7 +128,7 @@
   \only<4->{%
     \begin{eqnarray*}
       z & = & 2 e^{i0},~2e^{i\pi/2},~2e^{i\pi},~2e^{i3\pi/2}, \\
-      & = & 1,~i,~-1,~-i.
+      & = & 2,~2i,~-2,~-2i.
     \end{eqnarray*}
   }
 
@@ -236,6 +236,31 @@
      }\fi
 
       \ifnum\value{clickerQuiz}=3{%
+       Determine the square roots of $\sqrt{3} + i$
+
+        \vfill
+
+        %\begin{eqnarray*}
+        %  \sqrt{3} +  i & = & 2 e^{\pi/6} 
+        %\end{eqnarray*}
+
+        %Let $z=re^{i\theta}$ so $z^2=r^2e^{i2\theta}$:
+        %\begin{eqnarray*}
+        %  r^2e^{i2\theta} & = & 2 e^{\pi/6} , ~ 2 e^{13\pi/6} 
+        %\end{eqnarray*}
+
+        %\begin{eqnarray*}
+        %  r & = & \sqrt{2} \\
+        %  \theta & = & \frac{\pi}{6}, ~ \frac{13\pi}{6}
+        %\end{eqnarray*}
+
+
+        \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
+          A: &  $\sqrt{2}e^{i\frac{\pi}{3}}$, & $\sqrt{2}e^{i\frac{7\pi}{3}}$ \\
+          B: &  $\sqrt{2}e^{i\frac{\pi}{6}}$, & $\sqrt{2} e^{i\frac{13\pi}{6}}$ \\
+          C: &  $2e^{i\frac{\pi}{3}}$, & $2e^{i\frac{7\pi}{3}}$ \\
+          D: &  $2e^{i\frac{\pi}{6}}$, & $2e^{i\frac{13\pi}{6}}$ \\
+        \end{tabular}
 
      }\fi
 
