@@ -15,6 +15,102 @@
   \tableofcontents[pausesection,hideothersubsections]
 \end{frame}
 
+\subsection{Euler's Formula}
+\begin{frame}
+  \frametitle{Euler's Formula}
+
+  \begin{eqnarray*}
+    e^{it} & = & \cos(t) + i\sin(t)\\
+    e^{i\theta} & = & \cos(\theta) + i\sin(\theta)
+  \end{eqnarray*}
+
+  Different format of a complex number:
+    \begin{eqnarray*}
+    z & = & a + bi, \\
+    & = & r\cos(\theta) + ir\sin(\theta), ~ r = \sqrt{a^2+b^2}, \tan(\theta)=\frac{b}{a} \\
+    & = & r \lp \cos(\theta) + i\sin(\theta) \rp \\
+    & = & r e^{i\theta}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    z & = & 2 + 2i \\
+    \uncover<2->
+    {%
+       & = & 2\sqrt{2} \cos(\pi/4) + i 2\sqrt{2} \sin(\pi/4) \\
+       & = & 2\sqrt{2} \lp \cos(\pi/4) + i\sin(pi/4) \rp \\
+       & = & 2\sqrt{2} e^{i\pi/4}
+    }
+  \end{eqnarray*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+  \begin{eqnarray*}
+    z & = & \sqrt{3} + i \\
+    \uncover<2->
+    {%
+         & = & 2 \cos\lp\frac{\pi}{6}\rp + i 2 \sin\lp\frac{\pi}{6}\rp, \\
+         & = & 2 e^{i\frac{\pi}{6}}.
+    }
+  \end{eqnarray*}
+\end{frame}
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        Express -1 in Euler form.
+
+          \begin{tabular}{l@{\hspace{3em}}l}
+            A: & $e^{-i\pi}$, \\
+            B: & $e^{-i\pi/2}$, \\
+            C: & $e^{-i}$, \\
+            D: & $-1$, \\
+          \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        Express -1 in Euler form.
+
+          \begin{tabular}{l@{\hspace{3em}}l}
+            A: & $e^{-i\pi}$, \\
+            B: & $e^{-i\pi/2}$, \\
+            C: & $e^{-i}$, \\
+            D: & $-1$, \\
+          \end{tabular}
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+         Express -1 in Euler form.
+
+          \begin{tabular}{l@{\hspace{3em}}l}
+            A: & $e^{-i\pi}$, \\
+            B: & $e^{-i\pi/2}$, \\
+            C: & $e^{-i}$, \\
+            D: & $-1$, \\
+          \end{tabular}
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
 
 \subsection{Root Finding}
 
