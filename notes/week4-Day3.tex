@@ -1,10 +1,10 @@
-\part{Complex-Numbers-I}
-\lecture{Complex Numbers I}{Complex-Numbers-I}
-\section{Complex Numbers}
+\part{Complex-Numbers-II}
+\lecture{Complex Numbers II}{Complex-Numbers-II}
+\section{Complex Numbers II}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 4, Day 2}
-\date{19 Sep 2012}
+\subtitle{Math 232 - Week 5, Day 1}
+\date{21 Sep 2012}
 
 \begin{frame}
   \titlepage
@@ -16,49 +16,36 @@
 \end{frame}
 
 
-\subsection{The Letter i}
-
-
-\begin{frame}
-  \frametitle{The Letter i}
-
-  Definition: 
-  \begin{eqnarray*}
-    i & = & \sqrt{-1} 
-  \end{eqnarray*}
-
-  Which means....
-  \begin{eqnarray*}
-    i^2 & = & -1
-  \end{eqnarray*}
-
-\end{frame}
-
+\subsection{Root Finding}
 
 \begin{frame}
-  \frametitle{Complex Numbers}
+  \frametitle{So What?}
 
-  Definition: A complex number is a  number that can be expressed as
+  What is the cube root of 1?
   \begin{eqnarray*}
-    a + bi,
+    \uncover<2->{1,~e^{i2\pi/3},~e^{i4\pi/3}}.
   \end{eqnarray*}
-  where $a$ and $b$ are real numbers.
 
+  \uncover<3->
+  {
+    Cuz....
+    \begin{eqnarray*}
+      1^3 & = & 1. \\
+      \lp e^{i2\pi/3} \rp^3 & = & e^{i2\pi} \\
+      \lp e^{i4\pi/3} \rp^3 & = & e^{i4\pi}
+    \end{eqnarray*}
+
+
+  }
+
+  
 \end{frame}
-
-
 
 \begin{frame}
-  \frametitle{Example}
-
-  \begin{eqnarray*}
-    z_1 & = & 3 + 2i \\
-    z_2 & = & 5 - 7i
-  \end{eqnarray*}
-
+  \frametitle{Cube Root of One}
+  \centerline{\includegraphics[width=6cm]{img/cubeRoot}}
 \end{frame}
 
-\subsection{Operations With Complex Numbers}
 
 \begin{frame}
   \frametitle{Addition}
@@ -80,9 +67,13 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Multiplication}
+  \frametitle{lol wut?}
 
+  Find the cube root of 3.
   \begin{eqnarray*}
+    z^3 & = & 1 \\
+    z^3 & = & \lp r e^{i\theta} \rp^3 \\
+    z^3 & = & r^3 e^{i3\theta}
     (3+2i)(5-7i) & = & 
     \uncover<2->{%
       15 + 10i - 21i - 14 i^2 \\
@@ -91,7 +82,11 @@
     }
   \end{eqnarray*}
 
+  There are three ways to express the number ``1''
   \begin{eqnarray*}
+    z^3 & = & e^{i0} \\
+    z^3 & = & e^{i2\pi} \\
+    z^3 & = & e^{i4\pi}
     (4-2i)(6+3i) & = & 
     \uncover<3->{%
       24 - 12i + 12 i - 6i^2 \\
@@ -99,50 +94,36 @@
       & = & 30
     }
   \end{eqnarray*}
-
-\end{frame}
-
-
-\subsection{Complex Conjugate}
-
-\begin{frame}
-  \frametitle{The Complex Conjugate}
-
-  Definition: The complex conjugate of $z$, denoted $\bar{z}$, is
-  found by reversing the sign of the imaginary part.
   
-  Example:
-  For each of the numbers given below:
-  \begin{eqnarray*}
-    z_1 & = & 3 + 2i, \\
-    z_2 & = & 5 - 6i, 
-  \end{eqnarray*}
-  the complex conjugates are the following:
-  \begin{eqnarray*}
-    \bar{z_1} & = & 3 - 2i, \\
-    \bar{z_2} & = & 5 + 6i.
-  \end{eqnarray*}
-
-
+  % TODO - add a picture of the point in the complex plane
 \end{frame}
 
 \begin{frame}
-  \frametitle{Special Property of the Complex Conjugate}
-
-  \begin{eqnarray*}
-    z\cdot\bar{z} & = & (a+bi)(a-bi) \\
-    & = & a^2 +abi - abi - b^2 i^2 \\
-    & = & a^2 + b^2
-  \end{eqnarray*}
-
+  \frametitle{Root Finding}
+  To find the n\textsuperscript{th} root:
+  \begin{itemize}
+  \item n\textsuperscript{th} root of $a+bi$
+  \item Convert $a+bi=re^{i\theta}$
+  \item Find $z^n=re^{i\theta}$
+    \begin{eqnarray*}
+      z^n & = & re^{i\theta} \\
+      z^n & = & re^{i(\theta+2\pi)} \\
+      z^n & = & re^{i(\theta+4\pi)} \\
+      z^n & = & re^{i(\theta+6\pi)} \\
+      \vdots & & \vdots \\
+      z^n & = & re^{i(\theta+2(n-1)\pi)} \\
+    \end{eqnarray*}
+  \end{itemize}
 \end{frame}
 
-
-
 \begin{frame}
-  \frametitle{So What?}
-
+  If
   \begin{eqnarray*}
+    z & = & R e^{i\alpha} \\
+    z^n & = & R^n e^{i n\alpha} \\
+    R & = & r^{1/n} \\
+    \alpha & = & \frac{\theta}{n}, ~ \frac{\theta+2\pi}{n}, ~
+    \frac{\theta+4\pi}{n}, \ldots, ~ \frac{\theta+2(n-1)\pi}{n}
     \frac{5-3i}{2+3i} & = & 
     \uncover<2->{%
       \frac{(5-3i)(2-3i)}{(2+3i)(2-3i)} \\
@@ -151,13 +132,15 @@
       & = & \frac{1}{13} - \frac{21}{13} i
     }
   \end{eqnarray*}
-
 \end{frame}
 
 \begin{frame}
   \frametitle{Example}
 
+  Find the fourth root of 16.
   \begin{eqnarray*}
+    z^4 & = & 16 e^{i0}, ~ 16 e^{i2\pi}, ~ 16 e^{i4\pi}, ~ 16 e^{i6\pi} \\
+    R^4 e^{i4\alpha} & = & 16 e^{i0}, ~ 16 e^{i2\pi}, ~ 16 e^{i4\pi}, ~ 16 e^{i6\pi}
     \frac{2+3i}{5-3i} & = & 
     \uncover<2->{%
       \frac{(2+3i)(5+3i)}{(5-3i)(5+3i)} \\
@@ -167,47 +150,39 @@
     }
   \end{eqnarray*}
 
-\end{frame}
-
-\subsection{Graphical View of Complex Numbers}
-
-\begin{frame}
-  \frametitle{Graphical View of Complex Numbers}
-
-  \only<1>{\centerline{\includegraphics[width=4cm]{img/complexPlane}}}
-  \only<2>{\centerline{\includegraphics[width=4cm]{img/complexPlanePolar}}}
-  
+  Then
   \begin{eqnarray*}
-    a & = & r\cos(\theta) \\
-    b & = & r\sin(\theta) \\
-    r & = & \sqrt{a^2+b^2} \\
-    \tan(\theta) & = & \frac{b}{a}
+    R & = & 2 \\
+    \alpha & = & 0, ~ \frac{\pi}{2}, ~ \pi, ~ \frac{3\pi}{2},
+    z = 2 e^{i0}, 2e^{\frac{pi}{2}}, 2e^{\pi}, 2e^{\frac{3\pi}{2}}.
   \end{eqnarray*}
-  (Be careful about the arctangent. Your calculator lies!)
 
 \end{frame}
+
 
 
 \begin{frame}
   \frametitle{Example}
 
+  Find the cubic roots of $2+2i$.
+
   \begin{eqnarray*}
-    x & = &  2 + 2i
+    2 + 2i & = & 2\sqrt{2} e^{i\pi/4}
   \end{eqnarray*}
 
-  \uncover<2->
-  {%
+  Let $z=re^{i\theta}$ so $z^3=r^3e^{i3\theta}$:
+  \begin{eqnarray*}
+    r^3e^{i3\theta} & = & 2\sqrt{2} e^{i\pi/4}, ~ 2\sqrt{2} e^{i9\pi/4}, ~ 2\sqrt{2} e^{i17\pi/4}
+  \end{eqnarray*}
 
-    \begin{eqnarray*}
-      r & = & \sqrt{2^2+2^2}, \\
-        & = & 2\sqrt{2}, \\
-      \tan(\theta) & = & \frac{2}{2}, \\
-      \theta       & = & \frac{\pi}{4}.
-    \end{eqnarray*}
-
-  }
+  \begin{eqnarray*}
+    r & = & (2\sqrt{2})^{1/3} \\
+    \theta & = & \frac{\pi}{12}, ~ \frac{9\pi}{12}, ~ \frac{17\pi}{12} \\
+    z & = & (2\sqrt{2})^{1/3} e^{i\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i9\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i17\pi/12}
+  \end{eqnarray*}
 
 \end{frame}
+
 
 
 \iftoggle{clicker}{%
@@ -216,35 +191,73 @@
     
       \ifnum\value{clickerQuiz}=1{%
 
-        Determine the radius and angle for the following complex number:
-          \begin{eqnarray*}
-            z & = & -2 + 2i
-          \end{eqnarray*}
+        \vfill
 
+        Determine the square roots of $\sqrt{3}+i$
+
+        \vfill
+
+        %\begin{eqnarray*}
+        % \sqrt{3} + i & = & 2 e^{\pi/6}
+        %\end{eqnarray*}
+
+        %Let $z=re^{i\theta}$ so $z^2=r^2e^{i2\theta}$:
+        %\begin{eqnarray*}
+        % r^2e^{i2\theta} & = & 2 e^{\pi/6} , ~ 2 e^{13\pi/6}
+        %\end{eqnarray*}
+
+        %\begin{eqnarray*}
+        % r & = & \sqrt{2} \\
+        % \theta & = & \frac{\pi}{12}, ~ \frac{13\pi}{12}
+        %\end{eqnarray*}
 
           \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
-            A: &  $r=2$, & $\theta= -\pi/4$ \\
-            B: &  $r=2$, & $\theta= 3\pi/4$ \\
-            C: &  $r=2\sqrt{2}$, & $\theta= -\pi/4$ \\
-            D: &  $r=2\sqrt{2}$, & $\theta= 3\pi/4$ \\ 
+            A: & $\sqrt{2}e^{i\frac{\pi}{12}}$, & $\sqrt{2} e^{i\frac{13\pi}{12}}$ \\
+            B: & $\sqrt{2}e^{i\frac{\pi}{6}}$, & $\sqrt{2}e^{i\frac{13\pi}{6}}$ \\
+            C: & $2e^{i\frac{\pi}{12}}$, & $2e^{i\frac{13\pi}{12}}$ \\
+            D: & $2e^{i\frac{\pi}{6}}$, & $2e^{i\frac{13\pi}{6}}$ \\
           \end{tabular}
+
+          \vfill
 
      }\fi
 
      \ifnum\value{clickerQuiz}=2{%
 
+       \vfill
         Determine the radius and angle for the following complex number:
           \begin{eqnarray*}
             z & = & -2 -2i
           \end{eqnarray*}
 
+        Determine the square roots of $1 + \sqrt{3}i$
 
-          \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
-            A: &  $r=2$, & $\theta= -\pi/4$ \\
-            B: &  $r=2$, & $\theta= 5\pi/4$ \\
-            C: &  $r=2\sqrt{2}$, & $\theta= -\pi/4$ \\
-            D: &  $r=2\sqrt{2}$, & $\theta= 5\pi/4$ \\ 
-          \end{tabular}
+        \vfill
+
+        %\begin{eqnarray*}
+        % 1 + \sqrt{3} i & = & 2 e^{\pi/3}
+        %\end{eqnarray*}
+
+        %Let $z=re^{i\theta}$ so $z^2=r^2e^{i2\theta}$:
+        %\begin{eqnarray*}
+        % r^2e^{i2\theta} & = & 2 e^{\pi/3} , ~ 2 e^{7\pi/3}
+        %\end{eqnarray*}
+
+        %\begin{eqnarray*}
+        % r & = & \sqrt{2} \\
+        % \theta & = & \frac{\pi}{6}, ~ \frac{7\pi}{6}
+        %\end{eqnarray*}
+
+
+        \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
+          A: & $\sqrt{2}e^{i\frac{\pi}{3}}$, & $\sqrt{2}e^{i\frac{7\pi}{3}}$ \\
+          B: & $\sqrt{2}e^{i\frac{\pi}{6}}$, & $\sqrt{2} e^{i\frac{7\pi}{6}}$ \\
+          C: & $2e^{i\frac{\pi}{3}}$, & $2e^{i\frac{7\pi}{3}}$ \\
+          D: & $2e^{i\frac{\pi}{6}}$, & $2e^{i\frac{7\pi}{6}}$ \\
+        \end{tabular}
+
+        \vfill
+
 
      }\fi
 
@@ -260,89 +273,62 @@
 
 }
 
-    
-
-\subsection{Euler's Formula}
 
 \begin{frame}
-  \frametitle{A Differential Equation}
+  \frametitle{Important Properties}
 
-  Note: $i$ is a constant.
+  Euler's Formula
   \begin{eqnarray*}
-    \Rightarrow \frac{d}{dt} e^{it} & = & i e^{it}.
+    e^{it} & = & \cos(t) + i\sin(t).
   \end{eqnarray*}
 
-  The function
+  Note:
   \begin{eqnarray*}
-    y(t) & = & e^{it}
-  \end{eqnarray*}
-  is a solution to the differential equation
-  \begin{eqnarray*}
-    y' & = & iy, \\
-    y(0) & = & 1.
+    e^{-it} & = & \cos(-t) + i\sin(-t) \\
+    & = & \cos(t) - i\sin(t)
   \end{eqnarray*}
 
-\end{frame}
-
-\begin{frame}
-  \frametitle{Another Solution}
-
-  There is another solution,
+  So...
   \begin{eqnarray*}
-    y(t) & = & \cos(t) + i \sin(t).
+    e^{it} + e^{-it} & = & 2 \cos(t), \\
+    \frac{e^{it} + e^{-it}}{2} & = & \cos(t).
   \end{eqnarray*}
 
+  Also,
   \begin{eqnarray*}
-    \frac{d}{dt} y(t) & = & -\sin(t) + i \cos(t), \\
-    y(0) & = & \cos(0) + i\sin(0) \\
-    & = & 1.
+    e^{it} - e^{-it} & = & 2 i \sin(t), \\
+    \frac{e^{it} - e^{-it}}{2i} & = & \sin(t).
   \end{eqnarray*}
+
+
 
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{Euler's Formula}
+  \frametitle{Quick Example}
 
   \begin{eqnarray*}
-    e^{it} & = & \cos(t) + i\sin(t)
+    \cos(3t) & = & \frac{e^{i3t}+e^{-i3t}}{2} \\
+    \sin(4t) & = & \frac{e^{i4t}-e^{-i4t}}{2i}
   \end{eqnarray*}
-
-  or
-
-  \begin{eqnarray*}
-    e^{i\theta} & = & \cos(\theta) + i\sin(\theta)
-  \end{eqnarray*}
-  
-\end{frame}
-
-\begin{frame}
-  \frametitle{Another way to express complex numbers}
-
-  Suppose we have
-  \begin{eqnarray*}
-    z & = & a + bi, \\
-    & = & r\cos(\theta) + ir\sin(\theta) \\
-    & = & r \lp \cos(\theta) + i\sin(\theta) \rp \\
-    & = & r e^{i\theta}
-  \end{eqnarray*}
-
-  This is the ``Euler form'' for the complex number.
 
 \end{frame}
 
+
 \begin{frame}
-  \frametitle{Example}
-  
+  \frametitle{Another thing...}
+
   \begin{eqnarray*}
-    z & = & 2 + 2i \\
-    \uncover<2->
-    {%
-       & = & 2\sqrt{2} \cos(\pi/4) + i 2\sqrt{2} \sin(\pi/4) \\
-       & = & 2\sqrt{2} \lp \cos(\pi/4) + i\sin(pi/4) \rp \\
-       & = & 2\sqrt{2} e^{i\pi/4}
-    }
+    e^{a+ib} & = & e^a e^{ib} \\
+    & = & e^a \lp \cos(b) + i \sin(b) \rp.
   \end{eqnarray*}
+
+  Thusly...
+  \begin{eqnarray*}
+    e^{a-ib} & = & e^a \lp \cos(b) - i \sin(b) \rp.
+  \end{eqnarray*}
+
 
   % TODO - add a picture of the point in the complex plane
 \end{frame}
@@ -360,49 +346,71 @@
   % TODO - add a picture of the point in the complex plane
 \end{frame}
 
-\iftoggle{clicker}{%
+
 \begin{frame}
-  \frametitle{Clicker Quiz}
-    
-      \ifnum\value{clickerQuiz}=1{%
+  \frametitle{What do we have here?}
 
-        Express -1 in Euler form.
-
-          \begin{tabular}{l@{\hspace{3em}}l}
-            A: &  $e^{-i\pi}$, \\
-            B: &  $e^{-i\pi/2}$, \\
-            C: &  $e^{-i}$, \\
-            D: &  $-1$, \\ 
-          \end{tabular}
-
-     }\fi
-
-     \ifnum\value{clickerQuiz}=2{%
-
-        Express -1 in Euler form.
-
-          \begin{tabular}{l@{\hspace{3em}}l}
-            A: &  $e^{-i\pi}$, \\
-            B: &  $e^{-i\pi/2}$, \\
-            C: &  $e^{-i}$, \\
-            D: &  $-1$, \\ 
-          \end{tabular}
-
-
-     }\fi
-
-      \ifnum\value{clickerQuiz}=3{%
-
-     }\fi
-
-    \vfill
-    \vfill
-    \vfill
+  \begin{eqnarray*}
+    e^a \cos(b) & = & e^a \lp \frac{e^{ib}+e^{-ib}}{2} \rp \\
+    & = & \half e^a e^{ib} +\half e^a e^{-ib} \\
+    e^a \sin(b) & = & e^a \lp \frac{e^{ib}-e^{-ib}}{2i} \rp \\
+    & = & \frac{1}{2i} e^a e^{ib} - \frac{1}{2i} e^a e^{-ib}
+  \end{eqnarray*}
 
 \end{frame}
 
-}
+\subsection{Derivatives and Integrals}
+
+\begin{frame}
+  \frametitle{Derivatives and Integrals}
+
+  \begin{eqnarray*}
+    f(t) & = & u(t) + i v(t) \\
+    f'(t) & = & u'(t) + i v'(t),
+  \end{eqnarray*}
+
+  and
+  \begin{eqnarray*}
+    \int f(t) ~ dt & = & \int u(t) + i v(t) ~ dt, \\
+    & = & \int u(t) ~ dt + i \int v(t) ~ dt.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Examples}
+
+  \begin{eqnarray*}
+    \frac{d}{dt} \lp \sin(t) + i e^{2t} \cos(t) \rp & = &
+    \cos(t) + i \lp 2 e^{2t} \cos(t) - e^{2t} \sin(t) \rp.
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    \int \sin(t) + i t \cos(t) ~ dt & = &
+    \int \sin(t) ~ dt + i \int t \cos(t) ~ dt \\
+    & = & \cos(t) + i \lp t\sin(t) + \cos(t) \rp + C
+  \end{eqnarray*}
+
+  Note that ``$C$'' is a complex number!
+  \begin{eqnarray*}
+    C & = & C_1 + i C_2.
+  \end{eqnarray*}
+
+\end{frame}
+
+\subsection{What does this have to do with DEs?}
+
+\begin{frame}
+  \frametitle{Why do we care?}
+
+  Show that $y=C_1 e^{(-3+i)t} + C_2 e^{(-3-i)t}$ is a solution to the DE
+  \begin{eqnarray*}
+    y'' + 6y' + 10y & = & 0.
+  \end{eqnarray*}
+
+\end{frame}
 
 
 
-% LocalWords:  Clarkson pausesection hideothersubsections
+
