@@ -178,7 +178,7 @@
   \frametitle{Example}
 
   \begin{eqnarray*}
-    2x + 4y + 6x & = & 8 \\
+    2x + 4y + 6z & = & 8 \\
     x - y + z & = & 4 \\
     4x + 2y + 8z & = & 4 \\
     ~ \\
@@ -369,7 +369,7 @@
     \vec{x} & = & 
     \left[ \begin{array}{r}x_1\\x_2\\x_3\\x_4\\x_5\end{array}\right]
   \end{eqnarray*}
-  and the RREF of the system is the following:
+  and the REF of the system is the following:
   \begin{eqnarray*}
     \left[
       \begin{array}{rrrrr|r}
@@ -409,7 +409,9 @@
   In vector form:
   \begin{eqnarray*}
     \left[ \begin{array}{r}x_1\\x_2\\x_3\\x_4\\x_5\end{array}\right] & = & 
-    \left[ \begin{array}{r}2-2x_3\\1+x_3-x_5\\x_3\\3-2x_5\\x_5\end{array}\right] \\
+    \left[ \begin{array}{r}2-2x_3\\1+x_3-x_5\\x_3\\3-2x_5\\x_5\end{array}\right]=
+    \left[ \begin{array}{r}2-2x_3+0x_5\\1+1x_3-1x_5\\0+1x_3+0x_5\\3+0x_3-2x_5\\0+0x_3+1x_5\end{array}\right]    
+    \\
     & = & 
     \left[ \begin{array}{r}2\\1\\0\\3\\0\end{array}\right] 
     + x_3 \left[ \begin{array}{r}-2\\1\\1\\0\\0\end{array}\right]
