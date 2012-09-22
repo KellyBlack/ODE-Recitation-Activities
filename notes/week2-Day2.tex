@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 2, Day 2}
-\date{7 Sep 2011}
+\date{4 Sep 2012}
 
 \begin{frame}
   \titlepage
@@ -17,6 +17,59 @@
 
 
 \subsection{First Order Linear Equations}
+
+\iftoggle{clicker}{%
+
+  \begin{frame}
+    \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        Which differential equation is a linear equation?
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y'=y^2$. \\
+         B: & $y'' + 3y'-2y=0$. \\
+         C: & $y'+\sqrt{y}=\sin(t)$. \\
+         D: & $y' + \cos(t)y  =  \ln(t)$. \\
+         E: & A and B. \\
+         F: & B and D.
+       \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        Which differential equation is a linear equation?
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y'=3y$. \\
+         B: & $y'' + 3\sin(t)y'-2y=0$. \\
+         C: & $y''+ y^2 =\sin(t)$. \\
+         D: & $y' + y y'  =  \ln(t)$. \\
+         E: & A and B. \\
+         F: & A and D.
+       \end{tabular}
+
+
+     }\fi
+    
+
+      \ifnum\value{clickerQuiz}=3{%
+
+      }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+  \end{frame}
+
+}
 
 
 \begin{frame}
@@ -138,6 +191,59 @@
 \end{frame}
 
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        What is the integrating factor for the equation
+        \begin{eqnarray*}
+          y' & = & ty + 1 ?
+        \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $e^{t}$. \\
+         B: & $e^{-t}$. \\
+         C: & $e^{t^2/2}$. \\
+         D: & $e^{-t^2/2}$. \\
+       \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        What is the integrating factor for the equation
+        \begin{eqnarray*}
+          y' & = & ty + t^4 ?
+        \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $e^{t}$. \\
+         B: & $e^{-t}$. \\
+         C: & $e^{t^2/2}$. \\
+         D: & $e^{-t^2/2}$. \\
+       \end{tabular}
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
+
 
 \begin{frame}
   \frametitle{Example}
@@ -160,6 +266,59 @@
 
 \end{frame}
 
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        What is the integrating factor for the equation
+        \begin{eqnarray*}
+          y' & = & -\frac{4}{t} y + 4 ?
+        \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $4t$. \\
+         B: & $4\ln(t)$. \\
+         C: & $t^4$. \\
+         D: & $t^{-4}$. \\
+       \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        What is the integrating factor for the equation
+        \begin{eqnarray*}
+          y' & = & -\frac{4}{t} y + t^3?
+        \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $t^{-4}$. \\
+         B: & $t^4$. \\
+         C: & $4\ln(t)$. \\
+         D: & $4t$. \\
+       \end{tabular}
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
 
 
 \begin{frame}
@@ -211,6 +370,19 @@
 \end{frame}
 
 
+\begin{frame}
+  \frametitle{Solving the Integral}
+
+  Let $u=t^2-1$, and $du=2t$:
+  \begin{eqnarray*}
+    ty & = & \int \half \frac{1}{u} ~ du, \\
+    t y & = & \half \ln(u) + C, \\
+    t y & = & \half \ln \lp t^2 - 1 \rp + C, \\
+    y & = & \frac{\ln\lp t^2-1 \rp}{t} + \frac{C}{t}.
+  \end{eqnarray*}
+
+\end{frame}
+
 
 \begin{frame}
   \frametitle{Partial Fractions}
@@ -253,6 +425,20 @@
       \ln(y-1) & = & \sin(t) + C \\
       y - 1 & = & k e^{\sin(t)} \\
       y & = & 1 + ke^{\sin(t)} }
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    y' & = & y^2 + 1, \\
+    \uncover<2->{ \frac{y'}{y^2+1} & = & 1,} \\
+    \uncover<3->{\int \frac{y'}{y^2+1} ~ dt  & = & \int 1 ~ dt, \\
+      \arctan(y) & = & t + C \\
+      y  & = & \tan(t+C) }
   \end{eqnarray*}
 
 \end{frame}

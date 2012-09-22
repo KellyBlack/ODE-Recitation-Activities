@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 3, Day 1}
-\date{12 Sep 2011}
+\date{10 Sep 2012}
 
 \begin{frame}
   \titlepage
@@ -13,6 +13,8 @@
 \begin{frame}
   \frametitle{Outline}
   \tableofcontents[pausesection,hideothersubsections]
+
+  Section 2.4 of the book.
 \end{frame}
 
 
@@ -120,6 +122,102 @@
 \end{frame}
 
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        What is the rate that salt flows into the tank?
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & 10000 kg/hr. \\
+         B: & 333.33 kg/hr. \\
+         C: & 30 kg/hr. \\
+         D: & 0.3 kg/hr. \\ 
+       \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        What is the rate that salt flows into the tank?
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & 10000 kg/hr. \\
+         B: & 333.33 kg/hr. \\
+         C: & 30 kg/hr. \\
+         D: & 0.3 kg/hr. \\ 
+       \end{tabular}
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        What is the rate that salt flows out of the tank?
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & A/20  kg/hr. \\
+         B: & A/100 kg/hr. \\
+         C: & 1/20  kg/hr. \\
+         D: & 100   kg/hr. \\ 
+       \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        What is the rate that salt flows out of the tank?
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & A/20  kg/hr. \\
+         B: & A/100 kg/hr. \\
+         C: & 1/20  kg/hr. \\
+         D: & 100   kg/hr. \\ 
+       \end{tabular}
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
+
+
+
 \begin{frame}
 
   Let $A(t)$ be the amount of salt in the tank at time $t$.
@@ -173,11 +271,11 @@
 \begin{frame}
   \frametitle{Example}
 
-  A 500 liter tank initially contains fresh water. Brine with a
-  concentration of 0.1 kg per liter is pumped into the tank at a rate
-  of 20 liters per hour. The well mixed solution is pumped out at a
-  rate of 30 liters per hour. What will the concentration be at the
-  moment the tank is half full?
+  A 500 liter tank is initially full and contains fresh water. Brine
+  with a concentration of 0.1 kg per liter is pumped into the tank at
+  a rate of 20 liters per hour. The well mixed solution is pumped out
+  at a rate of 30 liters per hour. What will the concentration be at
+  the moment the tank is half full?
 
 \end{frame}
 
@@ -219,11 +317,11 @@
     (500-10t)^{-3} A  & = & \frac{1}{10} (500-10t)^{-2} + C  \\
     A(0) & = & 0 \\
     & = & \frac{1}{10} 500^{-2} + C \\
-    C & = & -\frac{1}{10\cdot500^{-2}}
+    C & = & -\frac{1}{10\cdot500^{2}}
   \end{eqnarray*}
 
   \begin{eqnarray*}
-    A(t) & = & \frac{1}{10} (500-10t) - \frac{1}{10\cdot500^{-2}} (500-10t)^3
+    A(t) & = & \frac{1}{10} (500-10t) - \frac{1}{10\cdot500^{2}} (500-10t)^3
   \end{eqnarray*}
 
 \end{frame}
@@ -231,11 +329,11 @@
 
 \begin{frame}
 
-  The tank is empty at 50 hours:
+  The tank is half full when the volume is 250l:
   \begin{eqnarray*}
-    v(t) & = & 0 \\
-    & = & 500-10t \\
-    \Rightarrow t & = & 50.
+    v(t) & = & 250 \\
+    250 & = & 500-10t \\
+    \Rightarrow t & = & 25.
   \end{eqnarray*}
 
   \begin{eqnarray*}
@@ -245,7 +343,7 @@
 
   \begin{eqnarray*}
     \mathrm{Concentration} & = & A(25)/250 \\
-    & \approx & 0.75 kg/l
+    & \approx & 0.075 kg/l
   \end{eqnarray*}
 
 \end{frame}

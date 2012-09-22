@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 3, Day 2}
-\date{14 Sep 2011}
+\date{12 Sep 2012}
 
 \begin{frame}
   \titlepage
@@ -13,6 +13,8 @@
 \begin{frame}
   \frametitle{Outline}
   \tableofcontents[pausesection,hideothersubsections]
+
+  Section 2.5 in book.
 \end{frame}
 
 
@@ -43,11 +45,82 @@
   \end{eqnarray*}
 
 
-  \includegraphics[height=6cm]{img/week3-D3SlopeExample}
+  \only<1>{\includegraphics[height=5cm]{img/week3-D3SlopeExample}}
+  \only<2->{\includegraphics[height=5cm]{img/week3-D3SlopeExampleSolutions}}
 
   Look at equilibria, stability, and look for straight line solutions.
 
 \end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        Look at the slope field:
+        \begin{eqnarray*}
+          y' & = & -t - y^2?
+        \end{eqnarray*}
+
+        \begin{columns}
+          \column{.6\textwidth} 
+
+          \includegraphics[height=5cm]{img/stabilityClicker1}
+
+          \column{.4\textwidth}
+          True or False: The solution to this differential equation is stable.
+
+          \begin{tabular}{l@{\hspace{3em}}l}
+            A: & True. \\
+            B: & False. \\
+            C: & Who knows? \\
+            D: & Truth is subjective. \\ 
+          \end{tabular}
+
+        \end{columns}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        Look at the slope field:
+        \begin{eqnarray*}
+          y' & = & \frac{3}{2}-y?
+        \end{eqnarray*}
+
+
+        \begin{columns}
+          \column{.6\textwidth} 
+
+          \includegraphics[height=5cm]{img/stabilityClicker2}
+
+          \column{.4\textwidth}
+          True or False: The solution to this differential equation is stable.
+
+          \begin{tabular}{l@{\hspace{3em}}l}
+            A: & True. \\
+            B: & False. \\
+            C: & Who knows? \\
+            D: & Truth is subjective. \\ 
+          \end{tabular}
+
+        \end{columns}
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
 
 
 \subsection{Autonomous DEs}
@@ -67,6 +140,26 @@
 
 \end{frame}
 
+
+\begin{frame}
+  \frametitle{The slope only depends on y!}
+
+  \vspace*{-3em}
+  \begin{eqnarray*}
+    y' & = & f(y).
+  \end{eqnarray*}
+
+  If the slope at $y=1$ and $t=1$ is $\half$, then it will be the same
+  slope for all points where $y=1$. 
+
+  \vfill
+  \includegraphics[width=5cm]{img/autonomousEqnSlopeField}
+  \vfill
+
+  We just need to find the slope for each value of $y$ and not worry
+  about $t$.
+
+\end{frame}
 
 \begin{frame}
   \frametitle{The Phase Line}
@@ -114,6 +207,49 @@
 
 \end{frame}
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        Which phase line is the correct phase line for the
+        differential equation
+        \begin{eqnarray*}
+          y ' & = & y^3-y^2
+        \end{eqnarray*}
+
+          \includegraphics[height=5cm]{img/phaseLinesClickerSect1}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+
+        Which phase line is the correct phase line for the
+        differential equation
+        \begin{eqnarray*}
+          y ' & = & y^2 + 3y - 4
+        \end{eqnarray*}
+
+        \includegraphics[height=5cm]{img/phaseLinesClickerSect2}
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
+
+
 
 \subsection{Logistic Growth}
 
@@ -144,7 +280,7 @@
   \frametitle{Logistic Equation}
 
   \begin{eqnarray*}
-    y' & = & r y \lp 1 - \frac{y}{L} \rp
+    y' & = & r \lp 1 - \frac{y}{L} \rp y
   \end{eqnarray*}
 
   Stationary points: $y=0$ and $y=L$. 
@@ -160,10 +296,10 @@
   \frametitle{Analytic Solution}
 
   \begin{eqnarray*}
-    y' & = & r y \lp 1 - \frac{y}{L} \rp, \\
+    y' & = & r \lp 1 - \frac{y}{L} \rp y, \\
     \uncover<2->{
-      \frac{y'}{y \lp 1 - \frac{y}{L} \rp} & = & r \\
-      \int \frac{y'}{y \lp 1 - \frac{y}{L} \rp} ~ dt & = & \int r ~ dt       
+      \frac{y'}{\lp 1 - \frac{y}{L} \rp y} & = & r \\
+      \int \frac{y'}{\lp 1 - \frac{y}{L} \rp y} ~ dt & = & \int r ~ dt       
     }
   \end{eqnarray*}
 
@@ -174,7 +310,7 @@
 
 
   \begin{eqnarray*}
-    \frac{1}{y \lp 1 - \frac{y}{L} \rp} & = & \frac{a}{1 - \frac{y}{L}} + \frac{b}{y} \\
+    \frac{1}{\lp 1 - \frac{y}{L} \rp y} & = & \frac{a}{1 - \frac{y}{L}} + \frac{b}{y} \\
     \Rightarrow 1 & = & a y + b \lp 1 - \frac{y}{L} \rp \\
     b & = & 1, \\
     a & = & \frac{1}{L}
@@ -186,7 +322,7 @@
   \begin{frame}
 
   \begin{eqnarray*}
-      \int \frac{1}{y \lp 1 - \frac{y}{L} \rp} ~ dy & = & \int r ~ dt \\
+      \int \frac{1}{\lp 1 - \frac{y}{L} \rp y} ~ dy & = & \int r ~ dt \\
       \int \frac{1}{L} \cdot \frac{1}{1 - \frac{y}{L}} + \frac{1}{y} ~ dy & = & \int r ~ dt \\
       -\ln\lp 1 - \frac{y}{L}\rp + \ln(y) & = & rt + C \\
       \ln\lp\frac{y}{1 - \frac{y}{L}}\rp & = & rt + C \\
