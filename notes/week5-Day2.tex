@@ -202,6 +202,24 @@
      }\fi
 
       \ifnum\value{clickerQuiz}=3{%
+        \vfill
+
+        Determine the value of
+        \begin{eqnarray*}
+          \arrayTwo{1}{2}{4}{-3} \cdot \vecTwo{-1}{1}
+        \end{eqnarray*}
+
+        \begin{eqnarray*}
+          \begin{array}{lcl@{\hspace{3em}}lcl}     
+            A: &  = &  [\begin{array}{rr}  1 & -7\end{array}]  &
+            B: &  = & [\begin{array}{rr}  3 & -5\end{array}] \\ [12pt]
+            C: &  = & \vecTwo{1}{-7} &
+            D: &  = & \vecTwo{3}{-5}\\[12pt]
+            E: &  = & \arrayTwo{-1}{2}{-4}{3}
+          \end{array}
+        \end{eqnarray*}
+
+       \vfill
 
      }\fi
 
@@ -454,6 +472,23 @@
      }\fi
 
       \ifnum\value{clickerQuiz}=3{%
+        \vfill
+
+        Express the system
+        \begin{eqnarray*}
+          \frac{d}{dt} x & = & 5x + 2y \\
+          \frac{d}{dt} y & = & -4y + 3 x
+        \end{eqnarray*}
+        in matrix/vector form.
+
+
+        \begin{eqnarray*}
+          A: \frac{d}{dt} \vecTwo{x}{y} & = & \arrayTwo{5}{2}{-4}{3} \vecTwo{x}{y} \\ [12pt]
+          B: \frac{d}{dt} \vecTwo{x}{y} & = & \arrayTwo{5}{2}{3}{-4} \vecTwo{x}{y} \\ [12pt]
+          C: \frac{d}{dt} \vecTwo{x}{y} & = & \arrayTwo{5}{3}{2}{-4} \vecTwo{x}{y} 
+        \end{eqnarray*}
+
+          \vfill
 
      }\fi
 
@@ -471,24 +506,23 @@
 
   \begin{columns}
     \column{.4\textwidth}
-    {\includegraphics[width=1.5\textwidth]{img/introLinearAlgebraTankProblem}}    
+    {\includegraphics[width=1.5\textwidth]{img/introLinearAlgebraTankProblem}}   
+    \column{.4\textwidth}
+    $x$ is the amount of salt in tank 1 (in g).
 
-    \column{.6\textwidth}
-    $x$ is the amount of salt in tank 1 (in kg).
-
-    $y$ is the amount of salt in tank 2 (in kg).
-
+    $y$ is the amount of salt in tank 2 (in g).
+    \vspace{3cm}
   \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Double Tank Problem}
 
-    $x$ is the amount of salt in tank 1 (in kg), and $y$ is the amount of salt in tank 2 (in kg).
+    $x$ is the amount of salt in tank 1 (in g), and $y$ is the amount of salt in tank 2 (in g).
 
     \vfill
 
-    The rates of change for the amounts (in kg) can now be expressed as 
+    The rates of change for the amounts (in g) can now be expressed as 
     \begin{tabular}{l@{\hspace{2em}}l}
       rate in, tank 1:  & 4 l/min $\times$ 4 g/l + $\frac{y~g}{100~l} \times$ 2 l/min,\\
       rate out, tank 1: & 6 l/min $\times \frac{x~g}{200~l}$,\\
@@ -511,7 +545,7 @@
 \begin{frame}
   \frametitle{Double Tank Problem}
 
-    $x$ is the amount of salt in tank 1 (in kg), and $y$ is the amount of salt in tank 2 (in kg).
+    $x$ is the amount of salt in tank 1 (in g), and $y$ is the amount of salt in tank 2 (in g).
 
     From the system of differential equations,
     \begin{eqnarray*}
