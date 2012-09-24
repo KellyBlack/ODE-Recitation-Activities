@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="phaseLinesClicker.svg"
+   inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClicker.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="-593.59524"
+     inkscape:cy="2290.8774"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-global="false"
+     inkscape:window-width="850"
+     inkscape:window-height="943"
+     inkscape:window-x="234"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2989" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -750.29153,-1066.8163 -0.0155,328.02007"
+       id="path2991"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z" />
+    <path
+       transform="translate(-0.26607378,167.88783)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-2"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-735.40729"
+       y="-989.43073"
+       id="text3783"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3785"
+         x="-735.40729"
+         y="-989.43073">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-735.93939"
+       y="-814.89117"
+       id="text3787"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-735.93939"
+         y="-814.89117"
+         id="tspan3791">-4</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -664.73081,-1066.7031 -0.0155,328.02006"
+       id="path2991-3"
+       inkscape:connector-curvature="0" />
+    <path
+       transform="translate(85.560727,0.11318645)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-3"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z" />
+    <path
+       transform="translate(85.294657,168.00099)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-2-2"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-649.84656"
+       y="-989.31757"
+       id="text3783-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3785-8"
+         x="-649.84656"
+         y="-989.31757">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-650.37866"
+       y="-814.77802"
+       id="text3787-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-650.37866"
+         y="-814.77802"
+         id="tspan3791-3">-4</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -583.34808,-1067.2533 -0.0155,328.02011"
+       id="path2991-1"
+       inkscape:connector-curvature="0" />
+    <path
+       transform="translate(166.94345,-0.4369566)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-9"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z" />
+    <path
+       transform="translate(166.67738,167.45084)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-2-21"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-568.46387"
+       y="-989.86768"
+       id="text3783-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3785-1"
+         x="-568.46387"
+         y="-989.86768">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-568.99597"
+       y="-815.32812"
+       id="text3787-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-568.99597"
+         y="-815.32812"
+         id="tspan3791-0">1</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -497.8522,-1065.5847 -0.0155,328.02011"
+       id="path2991-5"
+       inkscape:connector-curvature="0" />
+    <path
+       transform="translate(252.43933,1.2316437)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-5"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z" />
+    <path
+       transform="translate(252.17326,169.11944)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-2-5"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-480.17078"
+       y="-988.89838"
+       id="text3783-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3785-83"
+         x="-480.17078"
+         y="-988.89838">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-480.70288"
+       y="-814.35883"
+       id="text3787-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-480.70288"
+         y="-814.35883"
+         id="tspan3791-4">1</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79335576px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -759.98871,-1042.2129 9.46649,24.6825 10.96119,-24.9508"
+       id="path3875"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75772572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -759.74046,-914.59192 9.48301,-22.47607 10.98031,22.72039"
+       id="path3875-2"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79335576px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -759.72264,-781.60096 9.46649,24.6825 10.96119,-24.9508"
+       id="path3875-6"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75772572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -674.16817,-1019.9543 9.48301,-22.4761 10.98031,22.7204"
+       id="path3875-2-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79335576px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -674.52662,-936.97973 9.46649,24.6825 10.96119,-24.9508"
+       id="path3875-0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75772572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -674.16817,-755.80954 9.48301,-22.4761 10.98031,22.7204"
+       id="path3875-2-9-5"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79335576px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -592.64352,-1045.7137 9.46649,24.6825 10.96119,-24.9508"
+       id="path3875-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75772572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -592.39527,-918.09272 9.48301,-22.47602 10.98031,22.72034"
+       id="path3875-2-91"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79335576px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -592.37745,-785.10176 9.46649,24.6825 10.96119,-24.9508"
+       id="path3875-6-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75772572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -506.82298,-1023.4551 9.48301,-22.4761 10.98032,22.7204"
+       id="path3875-2-9-0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79335576px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -507.18143,-940.48054 9.46649,24.68251 10.9612,-24.95081"
+       id="path3875-0-1"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75772572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -506.82298,-759.31034 9.48301,-22.4761 10.98032,22.7204"
+       id="path3875-2-9-5-2"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-762"
+       y="-1085.6544"
+       id="text3996"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3998"
+         x="-762"
+         y="-1085.6544">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-671"
+       y="-1085.6544"
+       id="text4000"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4002"
+         x="-671"
+         y="-1085.6544">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-586"
+       y="-1085.923"
+       id="text4004"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4006"
+         x="-586"
+         y="-1085.923">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-511"
+       y="-1085.6544"
+       id="text4008"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4010"
+         x="-511"
+         y="-1085.6544">D</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -753.77597,-1493.202 -0.0155,328.02"
+       id="path2991-37"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(-3.48443,-426.38571)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-8"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(-3.75051,-258.49791)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-2-0"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-738.89172"
+       y="-1415.8164"
+       id="text3783-58"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3785-3"
+         x="-738.89172"
+         y="-1415.8164">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-739.42383"
+       y="-1241.2769"
+       id="text3787-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         x="-739.42383"
+         y="-1241.2769"
+         id="tspan3791-48">0</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -668.21525,-1493.0888 -0.0155,328.02"
+       id="path2991-3-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(82.07629,-426.27251)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-3-0"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(81.81022,-258.38471)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-2-2-6"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-653.33099"
+       y="-1415.7032"
+       id="text3783-5-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3785-8-1"
+         x="-653.33099"
+         y="-1415.7032">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-653.8631"
+       y="-1241.1637"
+       id="text3787-2-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         x="-653.8631"
+         y="-1241.1637"
+         id="tspan3791-3-2">0</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -586.83251,-1493.639 -0.0155,328.0201"
+       id="path2991-1-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(163.45902,-426.82271)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-9-8"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(163.19295,-258.93491)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-2-21-2"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-571.9483"
+       y="-1416.2534"
+       id="text3783-0-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3785-1-0"
+         x="-571.9483"
+         y="-1416.2534">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-572.48041"
+       y="-1241.7139"
+       id="text3787-9-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         x="-572.48041"
+         y="-1241.7139"
+         id="tspan3791-0-8">0</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -501.33663,-1491.9704 -0.0155,328.0201"
+       id="path2991-5-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(248.95494,-425.15411)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-5-0"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(248.68884,-257.26631)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3761-2-5-1"
+       sodipodi:cx="-750.57306"
+       sodipodi:cy="-990.22888"
+       sodipodi:rx="4.5231271"
+       sodipodi:ry="3.4588621"
+       d="m -746.04993,-990.22888 a 4.5231271,3.4588621 0 1 1 -9.04626,0 4.5231271,3.4588621 0 1 1 9.04626,0 z"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-483.65521"
+       y="-1415.2841"
+       id="text3783-6-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3785-83-2"
+         x="-483.65521"
+         y="-1415.2841">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-484.18732"
+       y="-1240.7445"
+       id="text3787-7-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         x="-484.18732"
+         y="-1240.7445"
+         id="tspan3791-4-7">0</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79335576px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -763.47315,-1468.5986 9.46649,24.6825 10.96119,-24.9508"
+       id="path3875-72"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75772572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -763.2249,-1340.9777 9.48301,-22.476 10.98031,22.7204"
+       id="path3875-2-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79335576px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -763.20708,-1207.9867 9.46649,24.6825 10.96119,-24.9508"
+       id="path3875-6-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75772572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -677.65261,-1446.34 9.48301,-22.4761 10.98032,22.7204"
+       id="path3875-2-9-07"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79335576px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -678.01106,-1363.3655 9.46649,24.6825 10.9612,-24.9508"
+       id="path3875-0-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75772572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -677.65261,-1182.1953 9.48301,-22.4761 10.98032,22.7204"
+       id="path3875-2-9-5-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79335576px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -596.12795,-1472.0994 9.46649,24.6825 10.96119,-24.9508"
+       id="path3875-7-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75772572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -595.8797,-1344.4785 9.48301,-22.476 10.98031,22.7204"
+       id="path3875-2-91-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79335576px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -510.86188,-1211.4875 9.46649,24.6825 10.96119,-24.9508"
+       id="path3875-6-9-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75772572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -510.30741,-1449.8408 9.48301,-22.4761 10.98032,22.7204"
+       id="path3875-2-9-0-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79335576px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -510.66586,-1366.8663 9.46649,24.6825 10.9612,-24.9508"
+       id="path3875-0-1-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75772572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -596.30741,-1187.6961 9.48301,-22.4761 10.98032,22.7204"
+       id="path3875-2-9-5-2-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-765.48444"
+       y="-1512.0402"
+       id="text3996-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3998-0"
+         x="-765.48444"
+         y="-1512.0402">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-674.48444"
+       y="-1512.0402"
+       id="text4000-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4002-9"
+         x="-674.48444"
+         y="-1512.0402">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-589.48444"
+       y="-1512.3087"
+       id="text4004-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4006-2"
+         x="-589.48444"
+         y="-1512.3087">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-514.48444"
+       y="-1512.0402"
+       id="text4008-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/phaseLinesClickerSect1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4010-8"
+         x="-514.48444"
+         y="-1512.0402">D</tspan></text>
+  </g>
+</svg>
