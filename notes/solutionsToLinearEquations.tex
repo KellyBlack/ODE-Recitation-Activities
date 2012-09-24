@@ -127,24 +127,89 @@
 \end{frame}
 
 
-\begin{frame}
-  \frametitle{Example}
 
-  \begin{eqnarray*}
-    2x + 4y - z & = & 6 \\
-    x + y + z & = & 2 \\
-    -3x + y + 2z & = & 7 \\
-    \\
-    \uncover<1->
-    {
-      \arrayThree{2}{4}{-1}{1}{1}{1}{-3}{1}{2}
-      \vecThree{x}{y}{z}
-      & = & 
-      \vecThree{6}{2}{7}
-    } 
-  \end{eqnarray*}
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        Express the following system of equations in matrix/vector notation:
+        \begin{eqnarray*}
+          2x + 4y - z & = & 6 \\
+          x + y + z & = & 2 \\
+          -3x + y + 2z & = & 7
+        \end{eqnarray*}
+        
+        \begin{eqnarray*}
+          \begin{array}{l@{\hspace{2em}}rcl}
+            A: & \arrayThree{2}{4}{-1}{1}{1}{1}{-3}{1}{2} \vecThree{x}{y}{z} & = & \vecThree{6}{2}{7}\\ [18pt]
+            B: & \arrayThree{2}{1}{-3}{4}{1}{1}{-1}{1}{2} \vecThree{x}{y}{z} & = & \vecThree{6}{2}{7}\\ 
+          \end{array}
+        \end{eqnarray*}
+
+          \vfill
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+
+        Express the following system of equations in matrix/vector notation:
+        \begin{eqnarray*}
+          2x + 4y - z & = & 6 \\
+          x + y + z & = & 2 \\
+          -3x + y + 2z & = & 7
+        \end{eqnarray*}
+        
+        \begin{eqnarray*}
+          \begin{array}{l@{\hspace{2em}}rcl}
+            A: & \arrayThree{2}{4}{-1}{1}{1}{1}{-3}{1}{2} \vecThree{x}{y}{z} & = & \vecThree{6}{2}{7}\\ [18pt]
+            B: & \arrayThree{2}{1}{-3}{4}{1}{1}{-1}{1}{2} \vecThree{x}{y}{z} & = & \vecThree{6}{2}{7}\\ 
+          \end{array}
+        \end{eqnarray*}
+
+          \vfill
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+        \vfill
+
+        Express the following system of equations in matrix/vector notation:
+        \begin{eqnarray*}
+          2x + 4y - z & = & 6 \\
+          x + y + z & = & 2 \\
+          -3x + y + 2z & = & 7
+        \end{eqnarray*}
+        
+        \begin{eqnarray*}
+          \begin{array}{l@{\hspace{2em}}rcl}
+            A: & \arrayThree{2}{4}{-1}{1}{1}{1}{-3}{1}{2} \vecThree{x}{y}{z} & = & \vecThree{6}{2}{7}\\ [18pt]
+            B: & \arrayThree{2}{1}{-3}{4}{1}{1}{-1}{1}{2} \vecThree{x}{y}{z} & = & \vecThree{6}{2}{7}\\ 
+          \end{array}
+        \end{eqnarray*}
+
+          \vfill
+
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
 
 \end{frame}
+
+}
+
+
+
 
 
 \begin{frame}
@@ -341,6 +406,89 @@
   For any $z$!
   
 \end{frame}
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        \begin{eqnarray*}
+          \vecThree{x}{y}{z} & = & \vecThree{4 - \frac{5}{3}z}{-\frac{2}{3}z}{z} \\
+          & = & \vecThree{4}{0}{0} + z \vecThree{\frac{-5}{3}}{\frac{-2}{3}}{1}
+        \end{eqnarray*}
+
+        How many solutions are there to the system?
+
+        \begin{tabular}{{l@{\hspace{3em}}l}}
+          A: & Infinite \\
+          B: & One \\
+          C: & None 
+        \end{tabular}
+
+
+        \vfill
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+
+        \begin{eqnarray*}
+          \vecThree{x}{y}{z} & = & \vecThree{4 - \frac{5}{3}z}{-\frac{2}{3}z}{z} \\
+          & = & \vecThree{4}{0}{0} + z \vecThree{\frac{-5}{3}}{\frac{-2}{3}}{1}
+        \end{eqnarray*}
+
+        How many solutions are there to the system?
+
+        \begin{tabular}{{l@{\hspace{3em}}l}}
+          A: & None \\
+          B: & One \\
+          C: & Infinite 
+        \end{tabular}
+
+
+        \vfill
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+        \vfill
+
+        \begin{eqnarray*}
+          \vecThree{x}{y}{z} & = & \vecThree{4 - \frac{5}{3}z}{-\frac{2}{3}z}{z} \\
+          & = & \vecThree{4}{0}{0} + z \vecThree{\frac{-5}{3}}{\frac{-2}{3}}{1}
+        \end{eqnarray*}
+
+        How many solutions are there to the system?
+
+        \begin{tabular}{{l@{\hspace{3em}}l}}
+          A: & Infinite \\
+          B: & One \\
+          C: & None 
+        \end{tabular}
+
+
+
+        \vfill
+
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
+
+
 
 \begin{frame}
   \frametitle{Another Way to Express The Solution}
