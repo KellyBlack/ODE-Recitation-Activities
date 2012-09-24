@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="complexPlane.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="451.97884"
+     inkscape:cy="718.71429"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1087"
+     inkscape:window-height="924"
+     inkscape:window-x="208"
+     inkscape:window-y="29"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 160,212.36218 0,280"
+       id="path2987"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 20.000001,352.36218 279.999999,0"
+       id="path2987-8"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="149.35828"
+       y="205.99866"
+       id="text3007"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3009"
+         x="149.35828"
+         y="205.99866">Im</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="303.7673"
+       y="362.5723"
+       id="text3011"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3013"
+         x="303.7673"
+         y="362.5723">Re</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="252.53813"
+       y="238.46783"
+       id="text3015"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3017"
+         x="252.53813"
+         y="238.46783">z=a+bi</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#008000;fill-opacity:1;stroke:#008000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2, 4;stroke-dashoffset:0"
+       id="path3033"
+       sodipodi:cx="245"
+       sodipodi:cy="247.36218"
+       sodipodi:rx="5"
+       sodipodi:ry="5"
+       d="m 250,247.36218 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       transform="translate(-5,-5.7723003)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 160,352.36218 80,-110"
+       id="path3019"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 240,362.36218 0,-20"
+       id="path3021"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 170,242.36218 -20,0"
+       id="path3023"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="131.31982"
+       y="242.79707"
+       id="text3025"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3027"
+         x="131.31982"
+         y="242.79707">b</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="235.22124"
+       y="379.88919"
+       id="text3029"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3031"
+         x="235.22124"
+         y="379.88919">a</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 2;stroke-dashoffset:0"
+       d="m 610,352.36218 0,-110"
+       id="path3137"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="559.42859"
+       y="299.21933"
+       id="text3017"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3019"
+         x="559.42859"
+         y="299.21933">r</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3034"
+       sodipodi:cx="530"
+       sodipodi:cy="352.36218"
+       sodipodi:rx="25"
+       sodipodi:ry="20"
+       d="m 541.79561,334.72833 a 25,20 0 0 1 13.19981,17.25085"
+       sodipodi:start="5.203748"
+       sodipodi:end="6.2640339"
+       sodipodi:open="true"
+       transform="matrix(1.4168126,0,0,1.7390451,-216.3245,-259.74548)"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.99140358px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Mathematica1Mono;-inkscape-font-specification:Mathematica1Mono Bold"
+       x="521.83203"
+       y="362.94308"
+       id="text3813"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0445954,0.95730847)"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3815"
+         x="521.83203"
+         y="362.94308">q</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 530,212.36218 0,280"
+       id="path2987-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 390,352.36218 280,0"
+       id="path2987-8-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="519.35828"
+       y="205.99866"
+       id="text3007-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3009-5"
+         x="519.35828"
+         y="205.99866">Im</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="673.76733"
+       y="362.5723"
+       id="text3011-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3013-5"
+         x="673.76733"
+         y="362.5723">Re</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="622.53815"
+       y="238.46783"
+       id="text3015-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3017-3"
+         x="622.53815"
+         y="238.46783">z=a+bi</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#008000;fill-opacity:1;stroke:#008000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2, 4;stroke-dashoffset:0"
+       id="path3033-6"
+       sodipodi:cx="245"
+       sodipodi:cy="247.36218"
+       sodipodi:rx="5"
+       sodipodi:ry="5"
+       d="m 250,247.36218 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       transform="translate(365,-5.7722974)"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 530,352.36218 80,-110"
+       id="path3019-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 610,362.36218 0,-20"
+       id="path3021-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 540,242.36218 -20,0"
+       id="path3023-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="501.31982"
+       y="242.79707"
+       id="text3025-6"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3027-9"
+         x="501.31982"
+         y="242.79707">b</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="605.22125"
+       y="379.88919"
+       id="text3029-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3031-6"
+         x="605.22125"
+         y="379.88919">a</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.78044277;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:0.78044276, 1.56088553;stroke-dashoffset:0"
+       d="m 533,241.36218 67,0"
+       id="path3137-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/complexPlanePolar.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>
