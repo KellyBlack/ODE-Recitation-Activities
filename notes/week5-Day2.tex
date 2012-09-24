@@ -231,6 +231,81 @@
 
 }
 
+\subsection{Matrices to Know}
+
+\begin{frame}
+  \frametitle{Matrices to Know}
+
+  A diagonal matrix is in the form
+  \begin{eqnarray*}
+    \left[
+      \begin{array}{rrrr}
+        a_{11} & 0 & \\
+        0 & a_{22} & 0 \\
+        & & \ddots & 0\\
+        & & 0 & a_{nn}
+      \end{array}
+    \right]
+  \end{eqnarray*}
+
+  Special case, the identity matrix:
+  \begin{eqnarray*}
+    I_n & = & 
+    \left[
+      \begin{array}{rrrr}
+        1 & 0 & \\
+        0 & 1 & 0 \\
+        & & \ddots & 0 \\
+        & & 0 & 1
+      \end{array}
+    \right]
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+
+  Special case, the identity matrix:
+  \begin{eqnarray*}
+    I_3 & = & 
+    \left[
+      \begin{array}{rrr}
+        1 & 0 & 0\\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+      \end{array}
+    \right]
+  \end{eqnarray*}
+
+  Note:
+  \begin{eqnarray*}
+    \left[
+      \begin{array}{rrr}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+      \end{array}
+    \right] \cdot
+       \left[
+      \begin{array}{rrr}
+        3 & 4 & 2 \\
+        -5 & 6 & 7 \\
+        8 & 7 & 3
+      \end{array}
+    \right] & = & 
+       \left[
+      \begin{array}{rrr}
+        3 & 4 & 2 \\
+        -5 & 6 & 7 \\
+        8 & 7 & 3
+      \end{array}
+    \right] 
+  \end{eqnarray*}
+
+  In general $I_n\cdot A = A$.
+
+\end{frame}
 
 
 \subsection{Vector Operations}
@@ -280,99 +355,6 @@
 
 \end{frame}
 
-
-\begin{frame}
-  \frametitle{Example}
-
-  \begin{eqnarray*}
-    \vec{x} & = & 
-    \left[
-      \begin{array}{r}
-        2 \\ 4 \\ -1
-      \end{array} \right] \\
-      \| \vec{x} \| & = & \sqrt{2^2 + 4^2 + (-1)^2} \\
-      & = & \sqrt{21}
-  \end{eqnarray*}
-
-\end{frame}
-
-\subsection{Matrices to Know}
-
-\begin{frame}
-  \frametitle{Matrices to Know}
-  
-  A diagonal matrix is in the form
-  \begin{eqnarray*}
-    \left[
-      \begin{array}{rrrr}
-        a_{11} & 0 & \\
-        0 & a_{22} & 0 \\
-        & & \ddots & 0\\
-        & & 0 & a_{nn}
-      \end{array}
-    \right]
-  \end{eqnarray*}
-
-  Special case, the identity matrix:
-  \begin{eqnarray*}
-    I_n & = & 
-    \left[
-      \begin{array}{rrrr}
-        1 & 0 & \\
-        0 & 1 & 0 \\
-        & & \ddots & 0 \\
-        & & 0 & 1
-      \end{array}
-    \right]
-  \end{eqnarray*}
-
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Example}
-  
-  Special case, the identity matrix:
-  \begin{eqnarray*}
-    I_3 & = & 
-    \left[
-      \begin{array}{rrr}
-        1 & 0 & 0\\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-      \end{array}
-    \right]
-  \end{eqnarray*}
-
-  Note:
-  \begin{eqnarray*}
-    \left[
-      \begin{array}{rrr}
-        1 & 0 & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-      \end{array}
-    \right] \cdot
-       \left[
-      \begin{array}{rrr}
-        3 & 4 & 2 \\
-        -5 & 6 & 7 \\
-        8 & 7 & 3
-      \end{array}
-    \right] & = & 
-       \left[
-      \begin{array}{rrr}
-        3 & 4 & 2 \\
-        -5 & 6 & 7 \\
-        8 & 7 & 3
-      \end{array}
-    \right] 
-  \end{eqnarray*}
-
-  In general $I_n\cdot A = A$.
-
-\end{frame}
-
 \subsection{Orthogonality}
 
 \begin{frame}
@@ -390,8 +372,27 @@
   \end{eqnarray*}
 
   Definition, if $\vec{u}\cdot\vec{v}=0$ then the vectors are \textbf{orthogonal}.
-  
+
 \end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    \vec{x} & = & 
+    \left[
+      \begin{array}{r}
+        2 \\ 4 \\ -1
+      \end{array} \right] \\
+      \| \vec{x} \| & = & \sqrt{2^2 + 4^2 + (-1)^2} \\
+      & = & \sqrt{21}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+
 
 \subsection{Differentiation}
 
