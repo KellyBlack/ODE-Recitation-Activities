@@ -1,12 +1,8 @@
-\documentclass{beamer}   % {article}
+\documentclass{beamer}
 \usepackage{etoolbox}
-%\setbeameroption{show notes}
-%\usepackage{beamerarticle}
-\usepackage{graphicx}
-%\mode<handout>{Differential Equations Notes}
+\mode<presentation>
 
 
- 
 
 
 
@@ -27,18 +23,18 @@
 
 \input{latexDefinitions}
 
-\includeonlylecture{Linear-Algebra}
-\includeonly{introLinearAlgebra}
+\includeonlylecture{Linear-Systems}
+\includeonly{solutionsToLinearEquations}
 %test
 
 \newtoggle{clicker}
 \toggletrue{clicker}
 %\togglefalse{clicker}
-\newcounter{clickerQuiz}      % Create a counter to determine which clicker quiz to give
-\setcounter{clickerQuiz}{3}   % Set the counter to 1, 2, or 3 for the section number
-
+\newcounter{clickerQuiz} % Create a counter to determine which clicker quiz to give
+\setcounter{clickerQuiz}{3} % Set the counter to 1, 2, or 3 for the section number
 
 \begin{document}
+
 \author{Kelly Black and Guangming Yao}
 \institute{Clarkson University}
 
@@ -73,7 +69,6 @@
 \include{matrices}
 \include{determinants}
 \include{spanOfVectors}
-
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -202,6 +202,24 @@
      }\fi
 
       \ifnum\value{clickerQuiz}=3{%
+        \vfill
+
+        Determine the value of
+        \begin{eqnarray*}
+          \arrayTwo{1}{2}{4}{-3} \cdot \vecTwo{-1}{1}
+        \end{eqnarray*}
+
+        \begin{eqnarray*}
+          \begin{array}{lcl@{\hspace{3em}}lcl}     
+            A: &  = &  [\begin{array}{rr}  1 & -7\end{array}]  &
+            B: &  = & [\begin{array}{rr}  3 & -5\end{array}] \\ [12pt]
+            C: &  = & \vecTwo{1}{-7} &
+            D: &  = & \vecTwo{3}{-5}\\[12pt]
+            E: &  = & \arrayTwo{-1}{2}{-4}{3}
+          \end{array}
+        \end{eqnarray*}
+
+       \vfill
 
      }\fi
 
@@ -213,6 +231,81 @@
 
 }
 
+\subsection{Matrices to Know}
+
+\begin{frame}
+  \frametitle{Matrices to Know}
+
+  A diagonal matrix is in the form
+  \begin{eqnarray*}
+    \left[
+      \begin{array}{rrrr}
+        a_{11} & 0 & \\
+        0 & a_{22} & 0 \\
+        & & \ddots & 0\\
+        & & 0 & a_{nn}
+      \end{array}
+    \right]
+  \end{eqnarray*}
+
+  Special case, the identity matrix:
+  \begin{eqnarray*}
+    I_n & = & 
+    \left[
+      \begin{array}{rrrr}
+        1 & 0 & \\
+        0 & 1 & 0 \\
+        & & \ddots & 0 \\
+        & & 0 & 1
+      \end{array}
+    \right]
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+
+  Special case, the identity matrix:
+  \begin{eqnarray*}
+    I_3 & = & 
+    \left[
+      \begin{array}{rrr}
+        1 & 0 & 0\\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+      \end{array}
+    \right]
+  \end{eqnarray*}
+
+  Note:
+  \begin{eqnarray*}
+    \left[
+      \begin{array}{rrr}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+      \end{array}
+    \right] \cdot
+       \left[
+      \begin{array}{rrr}
+        3 & 4 & 2 \\
+        -5 & 6 & 7 \\
+        8 & 7 & 3
+      \end{array}
+    \right] & = & 
+       \left[
+      \begin{array}{rrr}
+        3 & 4 & 2 \\
+        -5 & 6 & 7 \\
+        8 & 7 & 3
+      \end{array}
+    \right] 
+  \end{eqnarray*}
+
+  In general $I_n\cdot A = A$.
+
+\end{frame}
 
 
 \subsection{Vector Operations}
@@ -262,99 +355,6 @@
 
 \end{frame}
 
-
-\begin{frame}
-  \frametitle{Example}
-
-  \begin{eqnarray*}
-    \vec{x} & = & 
-    \left[
-      \begin{array}{r}
-        2 \\ 4 \\ -1
-      \end{array} \right] \\
-      \| \vec{x} \| & = & \sqrt{2^2 + 4^2 + (-1)^2} \\
-      & = & \sqrt{21}
-  \end{eqnarray*}
-
-\end{frame}
-
-\subsection{Matrices to Know}
-
-\begin{frame}
-  \frametitle{Matrices to Know}
-  
-  A diagonal matrix is in the form
-  \begin{eqnarray*}
-    \left[
-      \begin{array}{rrrr}
-        a_{11} & 0 & \\
-        0 & a_{22} & 0 \\
-        & & \ddots & 0\\
-        & & 0 & a_{nn}
-      \end{array}
-    \right]
-  \end{eqnarray*}
-
-  Special case, the identity matrix:
-  \begin{eqnarray*}
-    I_n & = & 
-    \left[
-      \begin{array}{rrrr}
-        1 & 0 & \\
-        0 & 1 & 0 \\
-        & & \ddots & 0 \\
-        & & 0 & 1
-      \end{array}
-    \right]
-  \end{eqnarray*}
-
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Example}
-  
-  Special case, the identity matrix:
-  \begin{eqnarray*}
-    I_3 & = & 
-    \left[
-      \begin{array}{rrr}
-        1 & 0 & 0\\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-      \end{array}
-    \right]
-  \end{eqnarray*}
-
-  Note:
-  \begin{eqnarray*}
-    \left[
-      \begin{array}{rrr}
-        1 & 0 & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-      \end{array}
-    \right] \cdot
-       \left[
-      \begin{array}{rrr}
-        3 & 4 & 2 \\
-        -5 & 6 & 7 \\
-        8 & 7 & 3
-      \end{array}
-    \right] & = & 
-       \left[
-      \begin{array}{rrr}
-        3 & 4 & 2 \\
-        -5 & 6 & 7 \\
-        8 & 7 & 3
-      \end{array}
-    \right] 
-  \end{eqnarray*}
-
-  In general $I_n\cdot A = A$.
-
-\end{frame}
-
 \subsection{Orthogonality}
 
 \begin{frame}
@@ -372,8 +372,27 @@
   \end{eqnarray*}
 
   Definition, if $\vec{u}\cdot\vec{v}=0$ then the vectors are \textbf{orthogonal}.
-  
+
 \end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    \vec{x} & = & 
+    \left[
+      \begin{array}{r}
+        2 \\ 4 \\ -1
+      \end{array} \right] \\
+      \| \vec{x} \| & = & \sqrt{2^2 + 4^2 + (-1)^2} \\
+      & = & \sqrt{21}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+
 
 \subsection{Differentiation}
 
@@ -454,6 +473,23 @@
      }\fi
 
       \ifnum\value{clickerQuiz}=3{%
+        \vfill
+
+        Express the system
+        \begin{eqnarray*}
+          \frac{d}{dt} x & = & 5x + 2y \\
+          \frac{d}{dt} y & = & -4y + 3 x
+        \end{eqnarray*}
+        in matrix/vector form.
+
+
+        \begin{eqnarray*}
+          A: \frac{d}{dt} \vecTwo{x}{y} & = & \arrayTwo{5}{2}{-4}{3} \vecTwo{x}{y} \\ [12pt]
+          B: \frac{d}{dt} \vecTwo{x}{y} & = & \arrayTwo{5}{2}{3}{-4} \vecTwo{x}{y} \\ [12pt]
+          C: \frac{d}{dt} \vecTwo{x}{y} & = & \arrayTwo{5}{3}{2}{-4} \vecTwo{x}{y} 
+        \end{eqnarray*}
+
+          \vfill
 
      }\fi
 
@@ -474,10 +510,13 @@
     {\includegraphics[width=1.5\textwidth]{img/introLinearAlgebraTankProblem}}    
 
     \column{.6\textwidth}
+    {\includegraphics[width=1.5\textwidth]{img/introLinearAlgebraTankProblem}}   
+    \column{.4\textwidth}
+
     $x$ is the amount of salt in tank 1 (in g).
 
     $y$ is the amount of salt in tank 2 (in g).
-
+    \vspace{3cm}
   \end{columns}
 \end{frame}
 
