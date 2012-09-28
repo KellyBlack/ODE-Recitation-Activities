@@ -3,8 +3,8 @@
 \section{Determinants}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 1, Day 1}
-\date{7 Oct 2012}
+\subtitle{Math 232 - Determinants}
+\date{4 Oct 2012}
 
 \begin{frame}
   \titlepage
@@ -37,30 +37,108 @@
   Suppose I want to solve the following system of equations:
   \begin{eqnarray*}
     \arrayTwo{a}{b}{c}{d} \vecTwo{x}{y} & = & \vecTwo{\#}{\#} \\
-    \startRowOpsTwo
-    \oneRowOpsTwo{a}{b}{1}{0}
-    \oneRowOpsTwo{c}{d}{0}{1}
-    \stopRowOps \\
-    \stateTwo{}{-cR_1+aR_2}
-    \startRowOpsTwo
-    \oneRowOpsTwo{a}{b}{1}{0}
-    \oneRowOpsTwo{0}{ad-bc}{-c}{a}
-    \stopRowOps
+    \uncover<2->{%
+      \startRowOpsTwo
+      \oneRowOpsTwo{a}{b}{1}{0}
+      \oneRowOpsTwo{c}{d}{0}{1}
+      \stopRowOps} \\
+    \uncover<3->{%
+      \stateTwo{}{-cR_1+aR_2}
+      \startRowOpsTwo
+      \oneRowOpsTwo{a}{b}{1}{0}
+      \oneRowOpsTwo{0}{ad-bc}{-c}{a}
+      \stopRowOps
+    }
   \end{eqnarray*}
 
-  \uncover<2->
+  \uncover<4->
   {
     If $ad-bc$ is zero then there is no inverse. The linear system
     does not have a unique solution.
   }
 
-  \uncover<3->
+  \uncover<5->
   {
     In general if the determinant of a matrix is zero its inverse does
     not exist. 
   }
 
 \end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    A & = & \arrayTwo{2}{-1}{3}{1}, \\
+    |A| & = & 2(1)-3(-1), \\
+    & = & 5.
+  \end{eqnarray*}
+
+\end{frame}
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        What is determinant of the following matrix
+        \begin{eqnarray*}
+          M & = & \arrayTwo{3}{-1}{4}{1}?
+        \end{eqnarray*}
+        
+        \begin{eqnarray*}
+          \begin{array}{llcr}
+            A: & |M| &  = & 11 \\ 
+            B: & |M| &  = &  1 \\ 
+            C: & |M| &  = & -1 \\
+            D: & |M| &  = &  7
+          \end{array}
+        \end{eqnarray*}
+
+          \vfill
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+
+        What is determinant of the following matrix
+        \begin{eqnarray*}
+          M & = & \arrayTwo{2}{-1}{5}{1}?
+        \end{eqnarray*}
+        
+        \begin{eqnarray*}
+          \begin{array}{llcr}
+            A: & |M| &  = &  7 \\ 
+            B: & |M| &  = & -3 \\ 
+            C: & |M| &  = &  3 \\
+            D: & |M| &  = & 10
+          \end{array}
+        \end{eqnarray*}
+
+          \vfill
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+        \vfill
+
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
+
 
 
 \subsection{Higher Dimensions}
@@ -73,11 +151,11 @@
     A & = & 
     \left[
       \begin{array}{rrr|r|rr}
-        a_{11} & a_{12} & \cdots & a_{1j} & \cdots & a_{1n} \\
-        \vdots &       &        & \vdots &        & \vdots \\ \hline
-        a_{i1} & a_{i2} & \cdots & a_{ij} & \cdots & a_{in} \\ \hline
-        \vdots &       &        & \vdots &        & \vdots \\
-        a_{n1} & a_{n2} & \cdots & a_{nj} & \cdots & a_{nn} \\
+        a_{11} & a_{12} & \cdots & {\color{red}a_{1j}}  & \cdots & a_{1n} \\
+        \vdots &       &       & {\color{red}\vdots} &        & \vdots \\ \hline
+        {\color{green}a_{i1}} & {\color{green}a_{i2}}  & {\color{green}\cdots} & {\color{blue}a_{ij}} & {\color{green}\cdots} & {\color{green}a_{in}} \\ \hline
+        \vdots &       &       & {\color{red}\vdots} &        & \vdots \\
+        a_{n1} & a_{n2} & \cdots & {\color{red}a_{nj}}  & \cdots & a_{nn} \\
       \end{array}
     \right]
   \end{eqnarray*}
@@ -133,12 +211,43 @@
 \begin{frame}
   \frametitle{Example}
 
+  Find the determinant of the following matrix:
+
+  \only<1>{%
+    \begin{eqnarray*}
+      \mathrm{det}
+      \arrayThree{3}{2}{-1}{4}{6}{2}{1}{3}{1}
+    \end{eqnarray*}
+  }
+
+  \only<2>{%
+    \begin{eqnarray*}
+      \mathrm{det}
+      \arrayThree{{\color{red}3}}{\color{red}{2}}{\color{red}{-1}}{4}{6}{2}{1}{3}{1}
+    \end{eqnarray*}
+  }  
+
+  \only<3>{%
+    \begin{eqnarray*}
+      \mathrm{det}
+      \arrayThree{{\color{blue}(+)}{\color{red}3}}{{\color{blue}(-)}{\color{red}2}}{{\color{blue}(+)}{\color{red}-1}}{4}{6}{2}{1}{3}{1}
+    \end{eqnarray*}
+  }  
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+
+  Find the determinant of the following matrix:
+
   \begin{eqnarray*}
     \mathrm{det}
-    \arrayThree{3}{2}{-1}{4}{6}{2}{1}{3}{1}
+    \arrayThree{{\color{red}3}}{{\color{red}2}}{{\color{red}-1}}{4}{6}{2}{1}{3}{1}
     & = & 
-    3\detTwo{6}{2}{3}{1} - 2 \detTwo{4}{2}{1}{1} 
-    + (-1) \detTwo{4}{6}{1}{3} \\
+    {\color{red}3} \detTwo{6}{2}{3}{1} - {\color{red}2} \detTwo{4}{2}{1}{1}
+    + {\color{red}(-1)} \detTwo{4}{6}{1}{3} \\
     & = & 3 (6-6) - 2(4-2) + (-1) (12-6) \\
     & = & -10
   \end{eqnarray*}
@@ -146,28 +255,151 @@
 \end{frame}
 
 
+
+
 \begin{frame}
-  \frametitle{}
+  \frametitle{Example}
+  Find the determinant of the following matrix:
+
+  \only<1>{%
+    \begin{eqnarray*}
+      \mathrm{det}
+      \startRowFour
+      \oneRowFour{4}{3}{-1}{0}
+      \oneRowFour{1}{0}{1}{7}
+      \oneRowFour{0}{1}{2}{6}
+      \oneRowFour{2}{0}{3}{2}
+      \stopRowOps
+    \end{eqnarray*}
+  }
+
+
+  \only<2>{%
+    \begin{eqnarray*}
+      \mathrm{det}
+      \startRowFour
+      \oneRowFour{4}{{\color{red}3}}{-1}{0}
+      \oneRowFour{1}{{\color{red}0}}{1}{7}
+      \oneRowFour{0}{{\color{red}1}}{2}{6}
+      \oneRowFour{2}{{\color{red}0}}{3}{2}
+      \stopRowOps
+    \end{eqnarray*}
+  }
+
+  \only<3>{%
+    \begin{eqnarray*}
+      \mathrm{det}
+      \startRowFour
+      \oneRowFour{4}{{\color{green}(-)}{\color{red}3}}{-1}{0}
+      \oneRowFour{1}{{\color{green}(+)}{\color{red}0}}{1}{7}
+      \oneRowFour{0}{{\color{green}(-)}{\color{red}1}}{2}{6}
+      \oneRowFour{2}{{\color{green}(+)}{\color{red}0}}{3}{2}
+      \stopRowOps
+    \end{eqnarray*}
+  }
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  Find the determinant of the following matrix:
 
   \begin{eqnarray*}
     \mathrm{det}
     \startRowFour
-    \oneRowFour{4}{3}{-1}{0}
-    \oneRowFour{1}{0}{1}{7}
-    \oneRowFour{0}{1}{2}{6}
-    \oneRowFour{2}{0}{3}{2}
+    \oneRowFour{4}{{\color{red}3}}{-1}{0}
+    \oneRowFour{1}{{\color{red}0}}{1}{7}
+    \oneRowFour{0}{{\color{red}1}}{2}{6}
+    \oneRowFour{2}{{\color{red}0}}{3}{2}
     \stopRowOps
     & = & 
-    -3 \detThree{1}{1}{7}{0}{2}{6}{2}{3}{2}
-    + 0 \detThree{4}{-1}{0}{0}{2}{6}{2}{3}{2} \\
+    {\color{red}-3} \color{green}{\detThree{1}{1}{7}{0}{2}{6}{2}{3}{2}}
+    + {\color{red}0} \color{blue}{\detThree{4}{-1}{0}{0}{2}{6}{2}{3}{2}} \\
     & & 
-    - 1 \detThree{4}{-1}{0}{1}{1}{7}{2}{3}{2}
-    + 0 \detThree{4}{-1}{0}{1}{1}{7}{0}{2}{6} \\
+    - {\color{red}1} \color{orange}{\detThree{4}{-1}{0}{1}{1}{7}{2}{3}{2}}
+    + {\color{red}0} \color{cyan}{\detThree{4}{-1}{0}{1}{1}{7}{0}{2}{6}} \\
     & = & 178
   \end{eqnarray*}
 
 
 \end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        Is the matrix
+        \begin{eqnarray*}
+          \mathrm{det}
+          \startRowFour
+          \oneRowFour{4}{3}{-1}{0}
+          \oneRowFour{1}{0}{1}{7}
+          \oneRowFour{0}{1}{2}{6}
+          \oneRowFour{2}{0}{3}{2}
+          \stopRowOps
+        \end{eqnarray*}
+        invertible?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Yes \\ 
+          B: & No
+        \end{tabular}
+
+        \vfill
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+
+        Is the matrix
+        \begin{eqnarray*}
+          \mathrm{det}
+          \startRowFour
+          \oneRowFour{4}{3}{-1}{0}
+          \oneRowFour{1}{0}{1}{7}
+          \oneRowFour{0}{1}{2}{6}
+          \oneRowFour{2}{0}{3}{2}
+          \stopRowOps
+        \end{eqnarray*}
+        invertible?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Yes \\ 
+          B: & No
+        \end{tabular}
+
+        \vfill
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+        \vfill
+
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
 
 
 \subsection{Properties of Determinants}
@@ -180,15 +412,19 @@
     \mathrm{det}(I_n) & = & 1
   \end{eqnarray*}
 
-  Note:
-  \begin{eqnarray*}
-    A A^{-1} & = & I_n \\
-    \mathrm{det}(A A^{-1}) & = & \mathrm{det}(I_n) \\
-    \mathrm{det}(A) \mathrm{det}(A^{-1}) & = & 1 \\
-    \mathrm{det}(A^{-1}) & = & \frac{1}{\mathrm{det}(A)}
-  \end{eqnarray*}
+  \uncover<2->{%
+    Note:
+    \begin{eqnarray*}
+      A A^{-1} & = & I_n \\
+      \mathrm{det}(A A^{-1}) & = & \mathrm{det}(I_n) \\
+      \mathrm{det}(A) \mathrm{det}(A^{-1}) & = & 1 \\
+      \mathrm{det}(A^{-1}) & = & \frac{1}{\mathrm{det}(A)}
+    \end{eqnarray*}
+  }
 
-  Read Cramer's rule pp. 160-162.
+  \uncover<3->{%
+    Read Cramer's rule pp. 160-162.
+  }
 
 \end{frame}
 
@@ -219,12 +455,13 @@
   \frametitle{Example}
 
   $\mathbb{R}^2$ is a vector space.
+  \only<2->{Suppose that $x$,  $y$, $u$, $v$, and $c$ are real numbers.}
   \begin{eqnarray*}
-    \vecTwo{x}{y} & \in & \mathbb{R}^2 \\
-    \vecTwo{x}{y} + \vecTwo{u}{v} & = & \vecTwo{x+u}{y+v} \\
-    c \vecTwo{x}{y} & = & \vecTwo{cx}{cy} \\
-    \vec{0} & = & \vecTwo{0}{0} \\
-    \vecTwo{x}{y} + \vecTwo{-x}{-y} & = & \vec{0}
+    \only<3->{\vecTwo{x}{y} & \in & \mathbb{R}^2} \\
+    \only<4->{\vecTwo{x}{y} + \vecTwo{u}{v} & = & \vecTwo{x+u}{y+v}} \\
+    \only<5->{c \vecTwo{x}{y} & = & \vecTwo{cx}{cy}} \\
+    \only<6->{\vec{0} & = & \vecTwo{0}{0}} \\
+    \only<7->{\vecTwo{x}{y} + \vecTwo{-x}{-y} & = & \vec{0}}
   \end{eqnarray*}
 
 \end{frame}
@@ -236,10 +473,10 @@
   The set of continuous functions ($C_0$) is a vector space.
   Suppose $f(t),~g(t)~\in~C_o$:
   \begin{itemize}
-  \item $f(t)+g(t)$ is continuous.
-  \item $c f(t)$ is continuous if $c$ is a real number.
-  \item $h(t)=0$ is the zero vector.
-  \item For any function
+  \item<2-> $f(t)+g(t)$ is continuous.
+  \item<3-> $c f(t)$ is continuous if $c$ is a real number.
+  \item<4-> $h(t)=0$ is the zero vector.
+  \item<5-> For any function
     \begin{eqnarray*}
       f(t) + (-1)f(t) & = & (1 + (-1))f(t), \\
       & = & 0 f(t), \\
@@ -254,23 +491,39 @@
   \frametitle{Example - Quadratic Functions}
 
   The set of quadratic functions is a vector space:
-  \begin{eqnarray*}
-    h(x) & = & a x^2 + bx + c, \\
-    g(x) & = & dx^2 + ex + f,
-  \end{eqnarray*}
-  where $a$, $b$, $c$, $d$, $e$, and $f$ are real numbers.
 
-  Addition:
-  \begin{eqnarray*}
-    h(x)+g(x) & = & (a+d) x^2 + (b+e) x + (c+f)
-  \end{eqnarray*}
-  is a quadratic function.
+  \uncover<2->{%
+    \begin{eqnarray*}
+      h(x) & = & a x^2 + bx + c, \\
+      g(x) & = & dx^2 + ex + f,
+    \end{eqnarray*}
+    where $a$, $b$, $c$, $d$, $e$, and $f$ are real numbers.
+  }
 
-  Scalar multiplication, if $r$ is a real number:
-  \begin{eqnarray*}
-    r h(x) & = & ra x^2 + rb x + rc
-  \end{eqnarray*}
-  is a quadratic.
+  \only<3>{%
+    \color{red}{Addition:}{~}
+    \begin{eqnarray*}
+      h(x)+g(x) & = & (a+d) x^2 + (b+e) x + (c+f)
+    \end{eqnarray*}
+    is a quadratic function.
+  }
+
+  \only<4>{%
+    \color{red}{Scalar multiplication}, if $r$ is a real number:
+    \begin{eqnarray*}
+      r h(x) & = & ra x^2 + rb x + rc
+    \end{eqnarray*}
+    is a quadratic.
+  }
+
+  \only<5>{%
+    The function
+    \begin{eqnarray*}
+      h(x) & = & 0,
+    \end{eqnarray*}
+    is a quadratic and is the \color{red}{``zero vector.''}
+  }
+
 
 \end{frame}
 
@@ -279,16 +532,20 @@
   \frametitle{Counter Example}
 
   The set of straight lines through $(0,1)$ is not a vector space:
-  \begin{eqnarray*}
-    h(x) & = & ax + 1 \\
-    g(x) & = & bx + 1
-  \end{eqnarray*}
+  \uncover<2->{%
+    \begin{eqnarray*}
+      h(x) & = & ax + 1 \\
+      g(x) & = & bx + 1
+    \end{eqnarray*}
+  }
 
-  It fails the addition test:
-  \begin{eqnarray*}
-    h(x) + g(x) & = & (a+b)x + 2
-  \end{eqnarray*}
-  is a straight line but does not go through $(0,1)$.
+  \uncover<3->{%
+    It fails the addition test:
+    \begin{eqnarray*}
+      h(x) + g(x) & = & (a+b)x + 2
+    \end{eqnarray*}
+    is a straight line but does not go through $(0,1)$.
+  }
 
 \end{frame}
 
