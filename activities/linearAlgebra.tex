@@ -7,6 +7,31 @@
     3x + 4y & = & 1, \\
     x + y   & = & 0.
   \end{eqnarray*}
+
+  \iftoggle{solutions}{%
+
+    \begin{eqnarray*}
+          \stateTwo{1/3 R_1}{~} 
+          \startRowOpsTwo
+          \oneRowOpsTwo{1}{4/3}{1/3}{~}
+          \oneRowOpsTwo{1}{1}{0}{~}
+          \stopRowOps \\
+          \stateTwo{~}{-R_1+R_2} 
+          \startRowOpsTwo
+          \oneRowOpsTwo{1}{4/3}{1/3}{~}
+          \oneRowOpsTwo{0}{-1/3}{-1/3}{~}
+          \stopRowOps \\
+          \stateTwo{~}{3R_2} 
+          \startRowOpsTwo
+          \oneRowOpsTwo{1}{4/3}{1/3}{~}
+          \oneRowOpsTwo{0}{1}{1}{~}
+          \stopRowOps \\
+          y & = & 1, \\
+          x & = & -1.
+    \end{eqnarray*}
+
+  }
+
   \vfill
 
 \item Find the solution to the following linear system of equations:
@@ -14,6 +39,26 @@
     2x + y & = &  2, \\
     x - y  & = &  1.
   \end{eqnarray*}
+
+  \iftoggle{solutions}{%
+
+    \begin{eqnarray*}
+      \stateTwo{1/2 R_1}{~} 
+      \startRowOpsTwo
+      \oneRowOpsTwo{1}{1/2}{1}{~}
+      \oneRowOpsTwo{1}{-1}{1}{~}
+      \stopRowOps \\
+      \stateTwo{~}{-R_1+R_2} 
+      \startRowOpsTwo
+      \oneRowOpsTwo{1}{1/2}{1}{~}
+      \oneRowOpsTwo{0}{-3/2}{0}{~}
+      \stopRowOps \\
+      y & = & 0, \\
+      x & = & 1.
+    \end{eqnarray*}
+
+  }
+
   \vfill
 
 \end{problem}
@@ -42,9 +87,60 @@
     \begin{subproblem}
     \item Determine the value of  $A*B$.
 
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          \left[
+            \begin{array}{rr}
+              1 &  7 \\ 
+              3 & -2
+            \end{array}
+          \right] *
+          \left[
+            \begin{array}{rr}
+              1 &  1 \\
+              -1 & -1
+            \end{array}
+          \right] & = & 
+          \left[
+            \begin{array}{rr}
+              -6 & -6 \\
+               5 &  5
+            \end{array}
+          \right]
+        \end{eqnarray*}
+
+      }
+
     \vfill
 
   \item Determine the value of $B*A$.
+
+    \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          \left[
+            \begin{array}{rr}
+              1 &  1 \\
+              -1 & -1
+            \end{array}
+          \right] *
+          \left[
+            \begin{array}{rr}
+              1 &  7 \\ 
+              3 & -2
+            \end{array}
+          \right] & = & 
+          \left[
+            \begin{array}{rr}
+               4 &  5 \\
+              -4 & -5
+            \end{array}
+          \right]
+        \end{eqnarray*}
+
+    }
+
     \vfill
 
   \end{subproblem}
@@ -53,11 +149,41 @@
   \item Find the length of the following vectors:
 
     \begin{subproblem}
-      \item $3\vec{\imath} - 2\vec{\jmath} + 2\vec{k}$
+      \item $\vec{u} = 3\vec{\imath} - 2\vec{\jmath} + 2\vec{k}$
+
+        \iftoggle{solutions}{%
+
+          \begin{eqnarray*}
+            \| \vec{u} \| & = & \sqrt{3^2 + (-2)^2 + 2^2}, \\
+            & = & \sqrt{17}.
+          \end{eqnarray*}
+
+        }
+
         \vfill
-      \item $\left[\begin{array}{r} 5 \\ 8 \\ 1 \end{array}\right]$
+      \item $\vec{v} = \left[\begin{array}{r} 5 \\ 8 \\ 1 \end{array}\right]$
+
+        \iftoggle{solutions}{%
+
+          \begin{eqnarray*}
+            \| \vec{v} \| & = & \sqrt{5^2 + 8^2 + 1^2}, \\
+            & = & 3 \sqrt{10}.
+          \end{eqnarray*}
+
+        }
+
         \vfill
-      \item $<5,-1,3>$
+      \item $\vec{w} = <5,-1,3>$
+
+        \iftoggle{solutions}{%
+
+          \begin{eqnarray*}
+            \| \vec{w} \| & = & \sqrt{5^2 + (-1)^2 + 3^2}, \\
+            & = & \sqrt{35}.
+          \end{eqnarray*}
+
+        }
+
         \vfill
     \end{subproblem}
 
@@ -70,12 +196,35 @@
   \item Find the angles between the following vectors:
 
     \begin{subproblem}
-      \item $3\vec{\imath} - 2\vec{\jmath} + 2\vec{k}$ 
-        and $2\vec{\imath} + \vec{\jmath}  + 4\vec{k}$
+      \item $\vec{u} = 3\vec{\imath} - 2\vec{\jmath} + 2\vec{k}$ 
+        and $\vec{v} = 2\vec{\imath} + \vec{\jmath}  + 4\vec{k}$
+
+        \iftoggle{solutions}{%
+
+          \begin{eqnarray*}
+            \vec{u} \cdot \vec{v} & = & \| \vec{u} \| \| \vec{v} \| \cos(\theta), \\
+            23 & = & \sqrt{17} \sqrt{21} \cos(\theta), \\
+            \theta & = & \arccos\lp\frac{23}{\sqrt{17}\sqrt{21}}\rp.
+          \end{eqnarray*}
+
+        }
+
         \vfill
 
-      \item $\left[\begin{array}{r} 5 \\  8 \\ 1 \end{array}\right]$
-        and $\left[\begin{array}{r} 1 \\ -2 \\ 6 \end{array}\right]$
+      \item $\vec{w} = \left[\begin{array}{r} 5 \\  8 \\ 1 \end{array}\right]$
+        and $\vec{x} = \left[\begin{array}{r} 1 \\ -2 \\ 6 \end{array}\right]$
+
+        \iftoggle{solutions}{%
+
+          \begin{eqnarray*}
+            \vec{w} \cdot \vec{x} & = & \| \vec{w} \| \| \vec{x} \| \cos(\theta), \\
+            -5 & = & \sqrt{90} \sqrt{41} \cos(\theta), \\
+            \theta & = & \arccos\lp\frac{-5}{3\sqrt{10}\sqrt{41}}\rp.
+          \end{eqnarray*}
+
+
+        }
+
         \vfill
 
     \end{subproblem}
@@ -111,13 +260,50 @@
   \end{eqnarray*}
 
 
+  \iftoggle{solutions}{%
+
+    The left hand side is 
+    \begin{eqnarray*}
+          \left[
+      \begin{array}{rr}
+        3 & 4 \\ 
+        1 & 1
+      \end{array}
+    \right] 
+    \left[
+      \begin{array}{r}
+        x \\
+        y
+      \end{array}
+    \right]
+    & = & 
+    \left[
+      \begin{array}{r}
+        3x + 4y \\
+        x + y
+      \end{array}
+    \right].
+    \end{eqnarray*}
+
+    This is the same as the left hand side of the equations in the
+    problem statement.
+
+  }
+
+
     \vfill
 
     \clearpage
 
-  \item After finding the requested matrices state what this implies
-    about finding the solutions to linear equations.
-
+  \item Given a matrix,
+    \begin{eqnarray*}
+      C & = &  \left[ \begin{array}{rr}
+                         3 & 4 \\ 
+                         1 & 1
+                       \end{array} \right],
+    \end{eqnarray*}
+    find the matrices, $A$ and $B$ that satisfy the following
+    requirements.
     \begin{subproblem}
     \item Find a matrix, $A$, so that
       \begin{eqnarray*}
@@ -135,7 +321,54 @@
           \end{array}
         \right] 
       \end{eqnarray*}
-      
+  
+      \iftoggle{solutions}{%
+
+        We need to find values of $a$ and $b$ so that
+        \begin{eqnarray*}
+          \left[
+          \begin{array}{rr}
+            a & b \\ 
+            0 & 1
+          \end{array}
+        \right] 
+          \left[
+          \begin{array}{rr}
+            3 & 4 \\ 
+            1 & 1
+          \end{array}
+        \right]  & = & 
+          \left[
+          \begin{array}{rr}
+            1 & 0 \\ 
+            1 & 1
+          \end{array}
+        \right].
+        \end{eqnarray*}
+
+        The left hand side reduces to
+        \begin{eqnarray*}
+          \left[
+          \begin{array}{rr}
+            3a+b & 4a+b \\ 
+            1 & 1
+          \end{array}
+          \right]
+        \end{eqnarray*}
+
+        Solving the system of equations
+        \begin{eqnarray*}
+          3a+b & = & 1, \\
+          4a+b & = & 0,
+        \end{eqnarray*}
+        yields the values
+        \begin{eqnarray*}
+          a & = & -1, \\
+          b & = & 4.
+        \end{eqnarray*}
+
+      }
+    
       \vfill
 
     \item Find a matrix, $B$, so that
@@ -155,7 +388,74 @@
         \right] 
       \end{eqnarray*}
 
+
+      \iftoggle{solutions}{%
+
+        We need to find values of $a$ and $b$ so that
+        \begin{eqnarray*}
+          \left[
+          \begin{array}{rr}
+            1 & 0 \\ 
+            a & b
+          \end{array}
+        \right] 
+          \left[
+          \begin{array}{rr}
+            1 & 0 \\ 
+            1 & 1
+          \end{array}
+        \right]  & = & 
+          \left[
+          \begin{array}{rr}
+            1 & 0 \\ 
+            0 & 1
+          \end{array}
+        \right].
+        \end{eqnarray*}
+
+        The left hand side reduces to
+        \begin{eqnarray*}
+          \left[
+          \begin{array}{rr}
+            1 & 0 \\
+            a+b & b 
+          \end{array}
+          \right]
+        \end{eqnarray*}
+
+        Solving the system of equations
+        \begin{eqnarray*}
+          a+b & = & 0, \\
+            b & = & 1,
+        \end{eqnarray*}
+        yields the values
+        \begin{eqnarray*}
+          a & = & -1, \\
+          b & = & 1.
+        \end{eqnarray*}
+
+
+      }
+
       \vfill
+
+      \item What does this imply about the matrix $C$?
+
+      \iftoggle{solutions}{%
+
+        The inverse of the matrix is
+        \begin{eqnarray*}
+          B*A & = & 
+          \left[
+          \begin{array}{rr}
+             -1 &  4 \\
+              1 & -3 
+          \end{array}
+          \right].         
+        \end{eqnarray*}
+
+        }{\vspace*{3em}}
+          
 
       \end{subproblem}
 \end{problem}
