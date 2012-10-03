@@ -3,7 +3,7 @@
 \section{Second Order DEs}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 7, Day 1}
+\subtitle{Math 232 - Linear, Constant Coefficient ODEs}
 \date{8 Oct 2012}
 
 \begin{frame}
@@ -19,15 +19,66 @@
 \subsection{Second Order DEs}
 
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        Are the vectors $\vecTwo{-1}{1}$ and $\vecTwo{2}{-2}$ linearly independent?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Yes \\
+          B: & No
+        \end{tabular}
+
+
+        \vfill
+
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+
+        Are the vectors $\vecTwo{1}{1}$ and $\vecTwo{3}{2}$ linearly independent?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Yes \\
+          B: & No
+        \end{tabular}
+
+        \vfill
+
+     }\fi
+   
+     \ifnum\value{clickerQuiz}=3{%
+
+        \vfill
+
+    }\fi
+  
+
+\end{frame}
+}
+
+
+
 \begin{frame}
   \frametitle{Second Order Equations}
 
   The General, Constant Coefficient, Linear, Second Order Homogeneous
   Differential Equation:
   \begin{eqnarray*}
-    m x'' + b x' + kx & = & 0.
+    {\color{red}m} x'' + {\color{red}b} x' + {\color{red}k}x & = & 0.
   \end{eqnarray*}
-  The parameters $m$, $b$, and $k$ are constants.
+  The parameters {\color{red}$m$}, {\color{red}$b$}, and {\color{red}$k$} are constants.
 
   This is also called the ``Damped Harmonic Oscillator.''
 
@@ -38,16 +89,24 @@
 \begin{frame}
   \frametitle{Horizontal Spring/Mass System}
 
-  \begin{eqnarray*}
-    \frac{d}{dt} \lp m \vec{v} \rp & = & \sum_i \vec{F}_i \\
-    & = & -kx - bv_x 
-  \end{eqnarray*}
-  or
-  \begin{eqnarray*}
-    mx'' + bx' + kx & = & 0.
-  \end{eqnarray*}
+  \only<1>{\includegraphics[width=6cm]{img/springMassStatic}}
+  \only<2>{\includegraphics[width=6cm]{img/springMassStaticCoordinates}}
+  \only<3>{\includegraphics[width=6cm]{img/springMassDynamic}}
+  \only<4->{\includegraphics[width=6cm]{img/springMassDynamicVectors}}
 
-  If $b=0$ it is an ``undamped'' system, otherwise it is ``damped.''
+  \uncover<4->{%
+    Newton's Second Law:
+    \begin{eqnarray*}
+      \frac{d}{dt} \lp m \vec{v} \rp & = & \sum_i \vec{F}_i \\
+      & = & -kx - bv_x 
+    \end{eqnarray*}
+    or
+    \begin{eqnarray*}
+      mx'' + bx' + kx & = & 0.
+    \end{eqnarray*}
+
+    If $b=0$ it is an ``\textbf{undamped''} system, otherwise it is ``\textbf{damped}.''
+  }
 
 \end{frame}
 
@@ -93,7 +152,7 @@
 \begin{frame}
   \frametitle{Special Case}
 
-  No friction, $b=0$:
+  No friction, $b=0$: \textit{(Use your intuition!)} 
   \begin{eqnarray*}
     m x'' + kx & = & 0.
   \end{eqnarray*}
@@ -115,6 +174,72 @@
   }
 
 \end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        Suppose that the spring/mass system has no friction,
+        $b=0$, 
+        \begin{eqnarray*}
+          m x'' + kx & = & 0.
+        \end{eqnarray*}        
+        What kind of behavior do you expect?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Infinite, perfect oscillations until the end of time. \\
+             & (or the end of today's class whichever comes first)  \\
+          B: & Oscillations slowly dieing out.  \\
+          C: & Oscillations with slow but steady decay \\
+          D  & Oscillations with exponential decay
+        \end{tabular}
+
+
+        \vfill
+
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+        Suppose that the spring/mass system has no friction,
+        $b=0$, 
+        \begin{eqnarray*}
+          m x'' + kx & = & 0.
+        \end{eqnarray*}        
+        What kind of behavior do you expect?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Infinite, perfect oscillations until the end of time. \\
+             & (or the end of today's class whichever comes first)  \\
+          B: & Oscillations slowly dieing out.  \\
+          C: & Oscillations with slow but steady decay \\
+          D  & Oscillations with exponential decay
+        \end{tabular}
+
+
+        \vfill
+
+     }\fi
+   
+     \ifnum\value{clickerQuiz}=3{%
+
+        \vfill
+
+    }\fi
+  
+
+\end{frame}
+}
 
 
 \begin{frame}
@@ -217,4 +342,5 @@
 
 
 
-% LocalWords:  Clarkson pausesection hideothersubsections
+% LocalWords:  Clarkson pausesection hideothersubsections DEs ODEs undamped kx
+% LocalWords:  mx RCL
