@@ -3,8 +3,8 @@
 \section{Span of Vectors}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 7, Day 1}
-\date{10 Oct 2012}
+\subtitle{Math 232 - Span of Vectors}
+\date{5 Oct 2012}
 
 \begin{frame}
   \titlepage
@@ -16,6 +16,83 @@
 \end{frame}
 
 
+\subsection{Vector Spaces}
+
+\begin{frame}
+  \frametitle{Vector Spaces}
+
+  Definition of a vector space, V:
+  \begin{itemize}
+  \item Elements in V are called ``vectors.''
+  \item If $\vec{x}$, $\vec{y}$ are members of V then
+    $\vec{x}+\vec{y}$ is in V.
+  \item If $c$ is a real number and $\vec{x}$ is in V then so is
+    $c\vec{x}$.
+  \item There is a ``zero vector'' where $\vec{x}+\vec{0}=\vec{x}$ for
+    every member of V.
+  \item For any $\vec{x}$ in V there is another $\vec{y}$ in V where
+    $\vec{x}+\vec{y}=\vec{0}$. ($\vec{y}$ is called ``$-\vec{x}$.'')
+  \end{itemize}
+
+  See p. 168 for definition and properties.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+
+  $\mathbb{R}^2$ is a vector space.
+  \only<1->{Suppose that $x$,  $y$, $u$, $v$, and $c$ are real numbers.}
+  \begin{eqnarray*}
+    \only<1->{\vecTwo{x}{y} & \in & \mathbb{R}^2} \\
+    \only<1->{\vecTwo{x}{y} + \vecTwo{u}{v} & = & \vecTwo{x+u}{y+v}} \\
+    \only<1->{c \vecTwo{x}{y} & = & \vecTwo{cx}{cy}} \\
+    \only<1->{\vec{0} & = & \vecTwo{0}{0}} \\
+    \only<1->{\vecTwo{x}{y} + \vecTwo{-x}{-y} & = & \vec{0}}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example - Quadratic Functions}
+
+  The set of quadratic functions is a vector space:
+
+  \uncover<1->{%
+    \begin{eqnarray*}
+      h(x) & = & a x^2 + bx + c, \\
+      g(x) & = & dx^2 + ex + f,
+    \end{eqnarray*}
+    where $a$, $b$, $c$, $d$, $e$, and $f$ are real numbers.
+  }
+
+  \only<1>{%
+    \color{red}{Addition:}{~}
+    \begin{eqnarray*}
+      h(x)+g(x) & = & (a+d) x^2 + (b+e) x + (c+f)
+    \end{eqnarray*}
+    is a quadratic function.
+  }
+
+  \only<1>{%
+    \color{red}{Scalar multiplication}, if $r$ is a real number:
+    \begin{eqnarray*}
+      r h(x) & = & ra x^2 + rb x + rc
+    \end{eqnarray*}
+    is a quadratic.
+  }
+
+  \only<1>{%
+    The function $h(x) =  0$ 
+    is a quadratic and is the \color{red}{``zero vector.''}
+  }
+
+
+\end{frame}
+
+
+
 \subsection{Span of a Set of Vectors}
 
 
@@ -24,22 +101,23 @@
 
   Any vector in $\mathbb{R}^2$ can be written as 
   \begin{eqnarray*}
-    \vec{x} & = & x \vec{i} + y \vec{j} \\
+    \vec{x} & = & \vecTwo{x}{y},  \\
     \uncover<2->
     {
-      & = & \vecTwo{x}{y} 
+      & = & \vecTwo{{\color{red}x}}{0} + \vecTwo{0}{{\color{blue}y}},
     } \\
-    \uncover<3->
+    \uncover<2->
     {
-      & = & \vecTwo{x}{0} + \vecTwo{0}{y} 
-    } \\
-    \uncover<4->
+      & = & {\color{red}x} \vecTwo{1}{0} + {\color{blue}y} \vecTwo{0}{1},
+    }\\
+    \uncover<2->
     {
-      & = & x \vecTwo{1}{0} + y \vecTwo{0}{1}.
-    }
+     & = & {\color{red}x} \vec{i} + {\color{blue}y} \vec{j} ,
+     }
   \end{eqnarray*}
 
-  $x$ and $y$ can be \textbf{any} constants.
+  where $x$ and $y$ can be \textbf{any} constants,  
+  $\vec{i} =  \vecTwo{1}{0}, \vec{j} =  \vecTwo{0}{1}$.
 
 \end{frame}
 
@@ -47,16 +125,18 @@
 \begin{frame}
   \frametitle{Span of a Set of Vectors}
 
-  The set of all possible vectors that can be written in the form
+  {\color{brown}The set} of all possible vectors 
+  that can be written in the form
   \begin{eqnarray*}
     \vec{v} & = & x \vecTwo{1}{0} + y \vecTwo{0}{1}
   \end{eqnarray*}
-  for any real numbers $x$ and $y$ is called the \textit{\underline{span}} of the
-  vectors $\vecTwo{1}{0}$ and $\vecTwo{0}{1}$. 
+  for any real numbers $x$ and $y$ is called  
+  {the \color{red}\textit{\underline{span}} of the
+  vectors $\vecTwo{1}{0}$ and $\vecTwo{0}{1}$}. 
 
   \vfill
 
-  \uncover<2->
+  \uncover<1->
   {
     Any vector that I can write in the form
     \begin{eqnarray*}
@@ -77,17 +157,70 @@
   \begin{eqnarray*}
     c_1 \vec{v_1} + c_2 \vec{v_2} + c_3 \vec{v_3} + \cdots + c_n \vec{v_n}
   \end{eqnarray*}
-  is called the \textit{\underline{span}} of the vectors.
+  is called {\color{red}the \textit{\underline{span}} of the vectors.}
 
-  \uncover<2->
+  \uncover<1->
   {
     Notation:
-    \begin{eqnarray*}
+    {\color{blue}
+     \begin{eqnarray*}
       \mathrm{span}\{\vec{v_1}, \vec{v_2}, \vec{v_3},\ldots, \vec{v_n} \}
+    = \{c_1 \vec{v_1} + c_2 \vec{v_2} + c_3 \vec{v_3} + \cdots + c_n \vec{v_n}\}
     \end{eqnarray*}
+    }
   }
 
 \end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        Is $\mathrm{span}\{\vecTwo{2}{1},\vecTwo{4}{2}\}$ equal to $\mathbb{R}^2$?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Yes \\
+          B: & No
+        \end{tabular}
+
+
+        \vfill
+
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+
+        Is $\mathrm{span}\left\{\vecTwo{1}{3},\vecTwo{2}{6}\right\}$ equal to $\mathbb{R}^2$?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Yes \\
+          B: & No
+        \end{tabular}
+
+        \vfill
+
+     }\fi
+   
+     \ifnum\value{clickerQuiz}=3{%
+
+        \vfill
+
+    }\fi
+  
+
+\end{frame}
+}
 
 
 \begin{frame}
@@ -121,14 +254,27 @@
   Why should I care?
 
   \begin{eqnarray*}
-    \arrayThree{1}{2}{4}{0}{1}{3}{2}{1}{4} \vecThree{x_1}{x_2}{x_3} &
-    = & 
-    \vecThree{x_1+2x_2+4x_3}{0x_1+1 x_2+3x_3}{2x_1+1 x_2+4 x_3} \\
-    & = & x_1 \vecThree{1}{0}{2} + x_2 \vecThree{2}{1}{1} + x_3 \vecThree{4}{3}{4}
+    \arrayThree{1}{2}{4}{0}{1}{3}{2}{1}{4} \vecThree{x_1}{x_2}{x_3} 
+    & = & 
+    \only<2>{%
+      \vecThree{x_1+2x_2+4x_3}{0x_1+1 x_2+3x_3}{2x_1+1 x_2+4 x_3} 
+    }
+    \uncover<3->{%
+      \vecThree{{\color{red}x_1}+{\color{blue}2x_2}+{\color{green}4x_3}}{%
+        {\color{red}0x_1}+{\color{blue}1 x_2}+{\color{green}3x_3}}{%
+        {\color{red}2x_1}+{\color{blue}1 x_2}+{\color{green}4 x_3}} \\
+    }
+    \uncover<4->{%
+      & = & x_1 {\color{red}\vecThree{1}{0}{2}} + 
+            x_2 {\color{blue}\vecThree{2}{1}{1}} + 
+            x_3 {\color{green}\vecThree{4}{3}{4}}
+    }
   \end{eqnarray*}
 
-  The matrix vector multiplication is a linear combination of the
-  columns of the matrix!
+  \uncover<4->{%
+    The matrix vector multiplication is a linear combination of the
+    columns of the matrix!
+  }
 
 \end{frame}
 
@@ -136,12 +282,13 @@
 \begin{frame}
   \frametitle{Column Space of a Matrix}
 
-  Definition: The \textit{Column space} of a matrix is the span of its
-  column vectors.
+  {\color{red}Definition:} 
+  {\color{brown}The \textit{Column space} of a matrix is the span of its
+  column vectors.}
 
-  \uncover<2->
+  \uncover<1->
   {
-    The column span of 
+    The column space of 
     \begin{eqnarray*}
       \arrayThree{1}{2}{4}{0}{1}{3}{2}{1}{4}
     \end{eqnarray*}
@@ -165,15 +312,41 @@
   \begin{eqnarray*}
     A \vec{x} & = & \vec{b}.
   \end{eqnarray*}
-  The matrix $A$ can be thought of as a bunch of column vectors
+
+  \uncover<2->{%
+    The matrix $A$ can be thought of as a bunch of column vectors
+    \begin{eqnarray*}
+      A & = & \left[ \vec{v}_1~\vec{v}_2~\vec{v}_3~\cdots~\vec{v}_n \right].
+    \end{eqnarray*}
+
+    We want to find constants $x_1, x_2, \cdots, x_n$ so that
+    \begin{eqnarray*}
+      x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}
+    \end{eqnarray*}
+
+  }
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Think Different}
+
+  We want to solve
   \begin{eqnarray*}
-    A & = & \left[ \vec{v}_1~\vec{v}_2~\vec{v}_3~\cdots~\vec{v}_n \right].
+    A \vec{x} & = & \vec{b}.
   \end{eqnarray*}
 
-  We want to find constants so that
-  \begin{eqnarray*}
-    x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}
-  \end{eqnarray*}
+    We want to find constants $x_1, x_2, \cdots, x_n$ so that
+    \begin{eqnarray*}
+      x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}
+    \end{eqnarray*}
+    Is the same thing as solving a system in the augmented matrix:
+    \begin{eqnarray*}
+      \left[ \vec{v}_1 ~ \vec{v}_2 ~ \vec{v}_3 ~ \cdots ~ \vec{v}_n \bigg| \vec{b} \right]
+    \end{eqnarray*}
+
+    Put this system into RREF and solve for the unknowns.
 
 
 \end{frame}
@@ -190,32 +363,35 @@
   \begin{eqnarray*}
     x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}?
   \end{eqnarray*}
-
-
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Relationship to Linear Systems}
-
-  Meh, I still do not care.
-
-  But this is a big question!
-
-  Solving this:
-  \begin{eqnarray*}
-    x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}?
-  \end{eqnarray*}
-
-  Is the same thing as solving a system in the augmented matrix:
-  \begin{eqnarray*}
-    \left[ \vec{v}_1 ~ \vec{v}_2 ~ \vec{v}_3 ~ \cdots ~ \vec{v}_n \bigg| \vec{b} \right]
-  \end{eqnarray*}
-
-  Put this system into RREF and solve for the unknowns.
-  
+  Is the same thing as finding constants $x_1, x_2, \cdots, x_n$, so that 
+   $$\vec{b} \in  span
+   \left\{\vec{v}_1 ~ \vec{v}_2 ~ \vec{v}_3 ~ \cdots ~ \vec{v}_n \right\}.
+   $$
 
 \end{frame}
+
+
+%\begin{frame}
+%  \frametitle{Relationship to Linear Systems}
+%
+%  Meh, I still do not care.
+%%
+%  But this is a big question!
+%
+%  Solving this:
+%  \begin{eqnarray*}
+%    x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}?
+%  \end{eqnarray*}
+%
+%  Is the same thing as solving a system in the augmented matrix:
+%  \begin{eqnarray*}
+%    \left[ \vec{v}_1 ~ \vec{v}_2 ~ \vec{v}_3 ~ \cdots ~ \vec{v}_n \bigg| \vec{b} \right]
+%  \end{eqnarray*}
+%
+%  Put this system into RREF and solve for the unknowns.
+%  
+%
+%\end{frame}
 
 
 \begin{frame}
@@ -226,7 +402,7 @@
     \arrayTwo{1}{3}{2}{4} \vec{x} & = & \vec{b}.
   \end{eqnarray*}
 
-  \uncover<2-> { Another way to state the problem: Given any vector,
+  \uncover<1-> { Another way to state the problem: Given any vector,
     $\vec{b}$, can I find constants, $x_1$ and $x_2$, so that 
     \begin{eqnarray*}
       x_1 \vecTwo{1}{2} + x_2 \vecTwo{3}{4}  & = & \vec{b}?
@@ -244,23 +420,23 @@
     \oneRowOpsTwo{1}{3}{b_1}{~}
     \oneRowOpsTwo{2}{4}{b_2}{~}
     \stopRowOps \\
-    \uncover<2->
+    \uncover<1->
     {
       \stateTwo{~}{R_2-2R_1}
       \startRowOpsTwo
       \oneRowOpsTwo{1}{3}{b_1}{~}
-      \oneRowOpsTwo{0}{2}{b_2-2b_1}{~}
+      \oneRowOpsTwo{0}{-2}{b_2-2b_1}{~}
       \stopRowOps \\
     }
-    \uncover<3->
+    \uncover<1->
     {
-      \stateTwo{~}{1/2 R_2}
+      \stateTwo{~}{-1/2 R_2}
       \startRowOpsTwo
       \oneRowOpsTwo{1}{3}{b_1}{~}
-      \oneRowOpsTwo{0}{1}{\half \lp b_2-2b_1 \rp}{~}
+      \oneRowOpsTwo{0}{1}{\half \lp 2b_1-b_2 \rp}{~}
       \stopRowOps \\
     }
-    \uncover<4->
+    \uncover<1->
     {
       \stateTwo{R_1-3R_2}{~}
       \startRowOpsTwo
@@ -270,51 +446,110 @@
     }
   \end{eqnarray*}
   
-  \uncover<5->{I can find the solution no matter what the value of $\vec{b}$ is!}
+  \uncover<1->{I can find the solution no matter what the value of $\vec{b}$ is!}
     
 \end{frame}
 
-
+\iftoggle{clicker}{%
 \begin{frame}
-  \frametitle{Example}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        Suppose that 
+        \begin{eqnarray*}
+          x_1 \vecTwo{1}{2} + x_2 \vecTwo{3}{4} & = & \vecTwo{0}{0}.
+        \end{eqnarray*}
+        What are the values of $x_1$ and $x_2$?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $x_1=0$, $x_2=0$ \\
+          B: & The solution is not unique.
+        \end{tabular}
+
+
+        \vfill
+
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+        Suppose that 
+        \begin{eqnarray*}
+          x_1 \vecTwo{1}{2} + x_2 \vecTwo{3}{4} & = & \vecTwo{0}{0}.
+        \end{eqnarray*}
+        What are the values of $x_1$ and $x_2$?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $x_1=0$, $x_2=0$ \\
+          B: & The solution is not unique.
+        \end{tabular}
+
+        \vfill
+
+     }\fi
+   
+     \ifnum\value{clickerQuiz}=3{%
+
+        \vfill
+
 
   Find the solution to the system of equations
   \begin{eqnarray*}
     \arrayTwo{1}{2}{2}{4} \vec{x} & = & \vec{b}.
   \end{eqnarray*}
 
-  \uncover<2-> { Another way to state the problem: Given any vector,
+  \uncover<1-> { Another way to state the problem: Given any vector,
     $\vec{b}$, can I find constants, $x_1$ and $x_2$, so that 
     \begin{eqnarray*}
       x_1 \vecTwo{1}{2} + x_2 \vecTwo{2}{4}  & = & \vec{b}?
     \end{eqnarray*}
   }
+  
+   The system is 
+
+    \begin{tabular}{ll}
+          A: & inconsistent \\
+          B: & underdeterminant\\
+          C: & I am not sure
+        \end{tabular}
+
+        \vfill
 
 
+    }\fi
   
 
 \end{frame}
+}
 
-\begin{frame}
-  
-  \begin{eqnarray*}
-    \startRowOpsTwo
-    \oneRowOpsTwo{1}{2}{b_1}{~}
-    \oneRowOpsTwo{2}{4}{b_2}{~}
-    \stopRowOps \\
-    \uncover<2->
-    {
-      \stateTwo{~}{R_2-2R_1}
-      \startRowOpsTwo
-      \oneRowOpsTwo{1}{3}{b_1}{~}
-      \oneRowOpsTwo{0}{0}{b_2-2b_1}{~}
-      \stopRowOps \\
-    }
-  \end{eqnarray*}
-
-  \uncover<3->{I cannot find the solution except in certain circumstances!}
-
-\end{frame}
+%\begin{frame}
+%  
+%  \begin{eqnarray*}
+%    \startRowOpsTwo
+%    \oneRowOpsTwo{1}{2}{b_1}{~}
+%    \oneRowOpsTwo{2}{4}{b_2}{~}
+%    \stopRowOps \\
+%    \uncover<1->
+%    {
+%      \stateTwo{~}{R_2-2R_1}
+%      \startRowOpsTwo
+%      \oneRowOpsTwo{1}{2}{b_1}{~}
+%      \oneRowOpsTwo{0}{0}{b_2-2b_1}{~}
+%      \stopRowOps \\
+%    }
+%  \end{eqnarray*}
+%
+%  \uncover<1->{I cannot find the solution except in certain circumstances!}
+%
+%\end{frame}
 
 \begin{frame}
   \frametitle{Example}
@@ -334,7 +569,7 @@
     \oneRowOpsThree{1}{1}{4}{b_1}{}{}
     \oneRowOpsThree{2}{1}{3}{b_2}{}{}
     \stopRowOps \\
-    \uncover<2->
+    \uncover<1->
     {
       \stateThree{~}{R_2-2R_1}{}
       \startRowOpsThree
@@ -342,7 +577,7 @@
       \oneRowOpsTwo{0}{-1}{-5}{\#}{}{}
       \stopRowOps \\
     }
-    \uncover<3->
+    \uncover<1->
     {
       \stateThree{}{-R_2}{}
       \startRowOpsThree
@@ -350,7 +585,7 @@
       \oneRowOpsTwo{0}{1}{5}{\#}{}{}
       \stopRowOps \\
     }
-    \uncover<4->
+    \uncover<1->
     {
       \stateThree{R_1-R_2}{}{}
       \startRowOpsThree
@@ -360,7 +595,7 @@
     }
   \end{eqnarray*}
 
-  \uncover<5->{We have extra information! }
+  \uncover<1->{We have extra information! }
    
   
 \end{frame}
@@ -382,8 +617,10 @@
   \end{eqnarray*}
 
   So $\vecTwo{4}{3}$ \textit{\underline{depends}} on $\vecTwo{1}{2}$
-  and $\vecTwo{1}{1}$. We say that the vectors are ``linearly
-  dependent.''
+  and $\vecTwo{1}{1}$. 
+
+  {\color{red}We say that the vectors are ``linearly
+  dependent.''}
 
 \end{frame}
 
@@ -410,19 +647,19 @@
     W & = & 
     \mathrm{det}
     \arrayThree{t^2-1}{t^2+1}{t^2-2}{\frac{d}{dt}\lp t^2-1\rp}{\frac{d}{dt}\lp t^2+1\rp}{\frac{d}{dt}\lp t^2-2\rp}{\frac{d^2}{dt^2}\lp t^2-1\rp}{\frac{d^2}{dt^2}\lp t^2+1\rp}{\frac{d^2}{dt^2}\lp t^2-2\rp}  \\
-    \uncover<2->
+    \uncover<1->
     {
     & = & 
     \mathrm{det}
     \arrayThree{t^2-1}{t^2+1}{t^2-2}{2t}{2t}{2t}{2}{2}{2}  \\
     }
-    \uncover<3->
+    \uncover<1->
     {
       & = & 0
     }
   \end{eqnarray*}
 
-  \uncover<4->
+  \uncover<1->
   {
     If the Wronskian is zero then the functions are linearly dependent.
   }
@@ -449,21 +686,50 @@
 
 \end{frame}
 
+\iftoggle{clicker}{%
 \begin{frame}
-  \frametitle{Example}
+  \frametitle{Clicker Quiz}
 
+       \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+       
+        
+       }\fi
+
+       \ifnum\value{clickerQuiz}=2{%
+
+       \vfill
+        
+         
+       }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+        \vfill
   Are the functions $\{t^2,t,1\}$ linearly independent?
 
-  \begin{eqnarray*}
-    W & = & \mathrm{det}
-    \arrayThree{t^2}{t}{1}{2t}{1}{0}{2}{0}{0} \\
-    & = & -2 \\
-    & \neq & 0
-  \end{eqnarray*}
+%  \begin{eqnarray*}
+%    W & = & \mathrm{det}
+%    \arrayThree{t^2}{t}{1}{2t}{1}{0}{2}{0}{0} \\
+%    & = & -2 \\
+%    & \neq & 0
+%  \end{eqnarray*}
+%  Yes. The functions $\{t^2,t,1\}$ are linearly independent.
+       \vfill
+
+        \begin{tabular}{ll}
+          A: & Yes \\
+          B: & No
+        \end{tabular}
+
+        \vfill
+
+     }\fi
 
 \end{frame}
 
-
+}
 
 % LocalWords:  Clarkson pausesection hideothersubsections Meh RREF Wronksian det
 % LocalWords:  Wronskian

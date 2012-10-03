@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Determinants}
-\date{4 Oct 2012}
+\date{3 Oct 2012}
 
 \begin{frame}
   \titlepage
@@ -17,6 +17,83 @@
 
 
 \subsection{Determinants}
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+       \ifnum\value{clickerQuiz}=1{%
+         Which matrix is the inverse of 
+         \begin{eqnarray*}
+           \arrayTwo{0}{1}{2}{1}?
+         \end{eqnarray*}
+
+         \vfill
+ 
+         \begin{eqnarray*}
+           \begin{array}{llcr}
+             A: &  \arrayTwo{1/2}{1/2}{1}{0}  \\ [12pt]
+             B: &  \arrayTwo{-1/2}{1/2}{1}{0}   \\ [12pt] 
+             C: &  \arrayTwo{0}{1/2}{1}{1/2} \\  [12pt]
+             D: &  \arrayTwo{0}{1}{1/2}{1}
+           \end{array}
+         \end{eqnarray*}
+
+ 
+         \vfill
+ 
+       }\fi
+
+         \ifnum\value{clickerQuiz}=2{%
+         Which matrix is the inverse of 
+         \begin{eqnarray*}
+           \arrayTwo{1}{1}{2}{0}?
+         \end{eqnarray*}
+
+         \vfill
+ 
+         \begin{eqnarray*}
+           \begin{array}{llcr}
+             A: &  \arrayTwo{1/2}{1/2}{1}{0}  \\ [12pt]
+             B: &  \arrayTwo{-1}{1}{1/2}{0}   \\ [12pt] 
+             C: &  \arrayTwo{0}{1/2}{1}{-1/2} \\  [12pt]
+             D: &  \arrayTwo{1/2}{0}{1}{1}
+           \end{array}
+         \end{eqnarray*}
+
+
+         
+         \vfill
+        
+       }\fi
+ 
+
+      \ifnum\value{clickerQuiz}=3{%
+       Calculate the inverse of 
+        \begin{eqnarray*}
+         \arrayTwo{2}{0}{1}{1}.
+        \end{eqnarray*}
+
+        \vfill
+ 
+         \begin{eqnarray*}
+          \begin{array}{llcr}
+            A: &  \arrayTwo{1/2}{0}{-1/2}{1}\\ 
+            B: &  \arrayTwo{1/2}{0}{1}{1}\\ 
+            C: &  \arrayTwo{1/2}{0}{1/2}{1}\\ 
+            D: &  \arrayTwo{-1/2}{0}{-1}{1}\\ 
+          \end{array}
+        \end{eqnarray*}
+
+        \vfill
+
+     }\fi
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
 
 
 \begin{frame}
@@ -37,12 +114,12 @@
   Suppose I want to solve the following system of equations:
   \begin{eqnarray*}
     \arrayTwo{a}{b}{c}{d} \vecTwo{x}{y} & = & \vecTwo{\#}{\#} \\
-    \uncover<2->{%
+    \uncover<1->{%
       \startRowOpsTwo
       \oneRowOpsTwo{a}{b}{1}{0}
       \oneRowOpsTwo{c}{d}{0}{1}
       \stopRowOps} \\
-    \uncover<3->{%
+    \uncover<1->{%
       \stateTwo{}{-cR_1+aR_2}
       \startRowOpsTwo
       \oneRowOpsTwo{a}{b}{1}{0}
@@ -51,13 +128,13 @@
     }
   \end{eqnarray*}
 
-  \uncover<4->
+  \uncover<1->
   {
     If $ad-bc$ is zero then there is no inverse. The linear system
     does not have a unique solution.
   }
 
-  \uncover<5->
+  \uncover<1->
   {
     In general if the determinant of a matrix is zero its inverse does
     not exist. 
@@ -127,6 +204,21 @@
 
       \ifnum\value{clickerQuiz}=3{%
         \vfill
+      What is determinant of the following matrix
+        \begin{eqnarray*}
+          M & = & \arrayTwo{-2}{1}{5}{2}?
+        \end{eqnarray*}
+
+        \begin{eqnarray*}
+          \begin{array}{llcr}
+            A: & |M| &  = &  1 \\ 
+            B: & |M| &  = & -9 \\ 
+            C: & |M| &  = &  -1 \\
+            D: & |M| &  = & 9
+          \end{array}
+        \end{eqnarray*}
+
+          \vfill
 
 
      }\fi
@@ -220,14 +312,14 @@
     \end{eqnarray*}
   }
 
-  \only<2>{%
+  \only<1>{%
     \begin{eqnarray*}
       \mathrm{det}
       \arrayThree{{\color{red}3}}{\color{red}{2}}{\color{red}{-1}}{4}{6}{2}{1}{3}{1}
     \end{eqnarray*}
   }  
 
-  \only<3>{%
+  \only<1>{%
     \begin{eqnarray*}
       \mathrm{det}
       \arrayThree{{\color{blue}(+)}{\color{red}3}}{{\color{blue}(-)}{\color{red}2}}{{\color{blue}(+)}{\color{red}-1}}{4}{6}{2}{1}{3}{1}
@@ -274,7 +366,7 @@
   }
 
 
-  \only<2>{%
+  \only<1>{%
     \begin{eqnarray*}
       \mathrm{det}
       \startRowFour
@@ -286,7 +378,7 @@
     \end{eqnarray*}
   }
 
-  \only<3>{%
+  \only<1>{%
     \begin{eqnarray*}
       \mathrm{det}
       \startRowFour
@@ -327,81 +419,6 @@
 
 \end{frame}
 
-
-\iftoggle{clicker}{%
-\begin{frame}
-  \frametitle{Clicker Quiz}
-    
-      \ifnum\value{clickerQuiz}=1{%
-
-        \vfill
-
-        Is the matrix
-        \begin{eqnarray*}
-          \mathrm{det}
-          \startRowFour
-          \oneRowFour{4}{3}{-1}{0}
-          \oneRowFour{1}{0}{1}{7}
-          \oneRowFour{0}{1}{2}{6}
-          \oneRowFour{2}{0}{3}{2}
-          \stopRowOps
-        \end{eqnarray*}
-        invertible?
-
-        \vfill
-
-        \begin{tabular}{ll}
-          A: & Yes \\ 
-          B: & No
-        \end{tabular}
-
-        \vfill
-
-     }\fi
-
-     \ifnum\value{clickerQuiz}=2{%
-
-        \vfill
-
-        Is the matrix
-        \begin{eqnarray*}
-          \mathrm{det}
-          \startRowFour
-          \oneRowFour{4}{3}{-1}{0}
-          \oneRowFour{1}{0}{1}{7}
-          \oneRowFour{0}{1}{2}{6}
-          \oneRowFour{2}{0}{3}{2}
-          \stopRowOps
-        \end{eqnarray*}
-        invertible?
-
-        \vfill
-
-        \begin{tabular}{ll}
-          A: & Yes \\ 
-          B: & No
-        \end{tabular}
-
-        \vfill
-
-
-     }\fi
-
-      \ifnum\value{clickerQuiz}=3{%
-        \vfill
-
-
-     }\fi
-
-    \vfill
-    \vfill
-    \vfill
-
-\end{frame}
-
-}
-
-
 \subsection{Properties of Determinants}
 
 \begin{frame}
@@ -412,7 +429,7 @@
     \mathrm{det}(I_n) & = & 1
   \end{eqnarray*}
 
-  \uncover<2->{%
+  \uncover<1->{%
     Note:
     \begin{eqnarray*}
       A A^{-1} & = & I_n \\
@@ -422,7 +439,7 @@
     \end{eqnarray*}
   }
 
-  \uncover<3->{%
+  \uncover<1->{%
     Read Cramer's rule pp. 160-162.
   }
 
@@ -455,13 +472,13 @@
   \frametitle{Example}
 
   $\mathbb{R}^2$ is a vector space.
-  \only<2->{Suppose that $x$,  $y$, $u$, $v$, and $c$ are real numbers.}
+  \only<1->{Suppose that $x$,  $y$, $u$, $v$, and $c$ are real numbers.}
   \begin{eqnarray*}
-    \only<3->{\vecTwo{x}{y} & \in & \mathbb{R}^2} \\
-    \only<4->{\vecTwo{x}{y} + \vecTwo{u}{v} & = & \vecTwo{x+u}{y+v}} \\
-    \only<5->{c \vecTwo{x}{y} & = & \vecTwo{cx}{cy}} \\
-    \only<6->{\vec{0} & = & \vecTwo{0}{0}} \\
-    \only<7->{\vecTwo{x}{y} + \vecTwo{-x}{-y} & = & \vec{0}}
+    \only<1->{\vecTwo{x}{y} & \in & \mathbb{R}^2} \\
+    \only<1->{\vecTwo{x}{y} + \vecTwo{u}{v} & = & \vecTwo{x+u}{y+v}} \\
+    \only<1->{c \vecTwo{x}{y} & = & \vecTwo{cx}{cy}} \\
+    \only<1->{\vec{0} & = & \vecTwo{0}{0}} \\
+    \only<1->{\vecTwo{x}{y} + \vecTwo{-x}{-y} & = & \vec{0}}
   \end{eqnarray*}
 
 \end{frame}
@@ -473,10 +490,10 @@
   The set of continuous functions ($C_0$) is a vector space.
   Suppose $f(t),~g(t)~\in~C_o$:
   \begin{itemize}
-  \item<2-> $f(t)+g(t)$ is continuous.
-  \item<3-> $c f(t)$ is continuous if $c$ is a real number.
-  \item<4-> $h(t)=0$ is the zero vector.
-  \item<5-> For any function
+  \item<1-> $f(t)+g(t)$ is continuous.
+  \item<1-> $c f(t)$ is continuous if $c$ is a real number.
+  \item<1-> $h(t)=0$ is the zero vector.
+  \item<1-> For any function
     \begin{eqnarray*}
       f(t) + (-1)f(t) & = & (1 + (-1))f(t), \\
       & = & 0 f(t), \\
@@ -492,7 +509,7 @@
 
   The set of quadratic functions is a vector space:
 
-  \uncover<2->{%
+  \uncover<1->{%
     \begin{eqnarray*}
       h(x) & = & a x^2 + bx + c, \\
       g(x) & = & dx^2 + ex + f,
@@ -500,7 +517,7 @@
     where $a$, $b$, $c$, $d$, $e$, and $f$ are real numbers.
   }
 
-  \only<3>{%
+  \only<1>{%
     \color{red}{Addition:}{~}
     \begin{eqnarray*}
       h(x)+g(x) & = & (a+d) x^2 + (b+e) x + (c+f)
@@ -508,7 +525,7 @@
     is a quadratic function.
   }
 
-  \only<4>{%
+  \only<1>{%
     \color{red}{Scalar multiplication}, if $r$ is a real number:
     \begin{eqnarray*}
       r h(x) & = & ra x^2 + rb x + rc
@@ -516,11 +533,8 @@
     is a quadratic.
   }
 
-  \only<5>{%
-    The function
-    \begin{eqnarray*}
-      h(x) & = & 0,
-    \end{eqnarray*}
+  \only<1>{%
+    The function $h(x) =  0$ 
     is a quadratic and is the \color{red}{``zero vector.''}
   }
 
@@ -532,14 +546,14 @@
   \frametitle{Counter Example}
 
   The set of straight lines through $(0,1)$ is not a vector space:
-  \uncover<2->{%
+  \uncover<1->{%
     \begin{eqnarray*}
       h(x) & = & ax + 1 \\
       g(x) & = & bx + 1
     \end{eqnarray*}
   }
 
-  \uncover<3->{%
+  \uncover<1->{%
     It fails the addition test:
     \begin{eqnarray*}
       h(x) + g(x) & = & (a+b)x + 2
