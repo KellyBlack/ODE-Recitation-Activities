@@ -3,7 +3,7 @@
 \section{Span of Vectors}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 6, Day 3}
+\subtitle{Math 232 - Span of Vectors}
 \date{5 Oct 2012}
 
 \begin{frame}
@@ -16,6 +16,83 @@
 \end{frame}
 
 
+\subsection{Vector Spaces}
+
+\begin{frame}
+  \frametitle{Vector Spaces}
+
+  Definition of a vector space, V:
+  \begin{itemize}
+  \item Elements in V are called ``vectors.''
+  \item If $\vec{x}$, $\vec{y}$ are members of V then
+    $\vec{x}+\vec{y}$ is in V.
+  \item If $c$ is a real number and $\vec{x}$ is in V then so is
+    $c\vec{x}$.
+  \item There is a ``zero vector'' where $\vec{x}+\vec{0}=\vec{x}$ for
+    every member of V.
+  \item For any $\vec{x}$ in V there is another $\vec{y}$ in V where
+    $\vec{x}+\vec{y}=\vec{0}$. ($\vec{y}$ is called ``$-\vec{x}$.'')
+  \end{itemize}
+
+  See p. 168 for definition and properties.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+
+  $\mathbb{R}^2$ is a vector space.
+  \only<1->{Suppose that $x$,  $y$, $u$, $v$, and $c$ are real numbers.}
+  \begin{eqnarray*}
+    \only<1->{\vecTwo{x}{y} & \in & \mathbb{R}^2} \\
+    \only<1->{\vecTwo{x}{y} + \vecTwo{u}{v} & = & \vecTwo{x+u}{y+v}} \\
+    \only<1->{c \vecTwo{x}{y} & = & \vecTwo{cx}{cy}} \\
+    \only<1->{\vec{0} & = & \vecTwo{0}{0}} \\
+    \only<1->{\vecTwo{x}{y} + \vecTwo{-x}{-y} & = & \vec{0}}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example - Quadratic Functions}
+
+  The set of quadratic functions is a vector space:
+
+  \uncover<1->{%
+    \begin{eqnarray*}
+      h(x) & = & a x^2 + bx + c, \\
+      g(x) & = & dx^2 + ex + f,
+    \end{eqnarray*}
+    where $a$, $b$, $c$, $d$, $e$, and $f$ are real numbers.
+  }
+
+  \only<1>{%
+    \color{red}{Addition:}{~}
+    \begin{eqnarray*}
+      h(x)+g(x) & = & (a+d) x^2 + (b+e) x + (c+f)
+    \end{eqnarray*}
+    is a quadratic function.
+  }
+
+  \only<1>{%
+    \color{red}{Scalar multiplication}, if $r$ is a real number:
+    \begin{eqnarray*}
+      r h(x) & = & ra x^2 + rb x + rc
+    \end{eqnarray*}
+    is a quadratic.
+  }
+
+  \only<1>{%
+    The function $h(x) =  0$ 
+    is a quadratic and is the \color{red}{``zero vector.''}
+  }
+
+
+\end{frame}
+
+
+
 \subsection{Span of a Set of Vectors}
 
 
@@ -24,18 +101,18 @@
 
   Any vector in $\mathbb{R}^2$ can be written as 
   \begin{eqnarray*}
-    \vec{x} & = & \vecTwo{x}{y}  \\
-    \uncover<1->
+    \vec{x} & = & \vecTwo{x}{y},  \\
+    \uncover<2->
     {
-      & = & \vecTwo{x}{0} + \vecTwo{0}{y} 
+      & = & \vecTwo{{\color{red}x}}{0} + \vecTwo{0}{{\color{blue}y}},
     } \\
-    \uncover<1->
+    \uncover<2->
     {
-      & = & x \vecTwo{1}{0} + y \vecTwo{0}{1}.
+      & = & {\color{red}x} \vecTwo{1}{0} + {\color{blue}y} \vecTwo{0}{1},
     }\\
-    \uncover<1->
+    \uncover<2->
     {
-     & = & x \vec{i} + y \vec{j} 
+     & = & {\color{red}x} \vec{i} + {\color{blue}y} \vec{j} ,
      }
   \end{eqnarray*}
 
@@ -96,6 +173,56 @@
 \end{frame}
 
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        Is $\mathrm{span}\{\vecTwo{2}{1},\vecTwo{4}{2}\}$ equal to $\mathbb{R}^2$?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Yes \\
+          B: & No
+        \end{tabular}
+
+
+        \vfill
+
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+
+        Is $\mathrm{span}\left\{\vecTwo{1}{3},\vecTwo{2}{6}\right\}$ equal to $\mathbb{R}^2$?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Yes \\
+          B: & No
+        \end{tabular}
+
+        \vfill
+
+     }\fi
+   
+     \ifnum\value{clickerQuiz}=3{%
+
+        \vfill
+
+    }\fi
+  
+
+\end{frame}
+}
+
+
 \begin{frame}
   \frametitle{$\mathbb{R}^2$}
 
@@ -127,14 +254,27 @@
   Why should I care?
 
   \begin{eqnarray*}
-    \arrayThree{1}{2}{4}{0}{1}{3}{2}{1}{4} \vecThree{x_1}{x_2}{x_3} &
-    = & 
-    \vecThree{x_1+2x_2+4x_3}{0x_1+1 x_2+3x_3}{2x_1+1 x_2+4 x_3} \\
-    & = & x_1 \vecThree{1}{0}{2} + x_2 \vecThree{2}{1}{1} + x_3 \vecThree{4}{3}{4}
+    \arrayThree{1}{2}{4}{0}{1}{3}{2}{1}{4} \vecThree{x_1}{x_2}{x_3} 
+    & = & 
+    \only<2>{%
+      \vecThree{x_1+2x_2+4x_3}{0x_1+1 x_2+3x_3}{2x_1+1 x_2+4 x_3} 
+    }
+    \uncover<3->{%
+      \vecThree{{\color{red}x_1}+{\color{blue}2x_2}+{\color{green}4x_3}}{%
+        {\color{red}0x_1}+{\color{blue}1 x_2}+{\color{green}3x_3}}{%
+        {\color{red}2x_1}+{\color{blue}1 x_2}+{\color{green}4 x_3}} \\
+    }
+    \uncover<4->{%
+      & = & x_1 {\color{red}\vecThree{1}{0}{2}} + 
+            x_2 {\color{blue}\vecThree{2}{1}{1}} + 
+            x_3 {\color{green}\vecThree{4}{3}{4}}
+    }
   \end{eqnarray*}
 
-  The matrix vector multiplication is a linear combination of the
-  columns of the matrix!
+  \uncover<4->{%
+    The matrix vector multiplication is a linear combination of the
+    columns of the matrix!
+  }
 
 \end{frame}
 
@@ -172,21 +312,41 @@
   \begin{eqnarray*}
     A \vec{x} & = & \vec{b}.
   \end{eqnarray*}
-  The matrix $A$ can be thought of as a bunch of column vectors
+
+  \uncover<2->{%
+    The matrix $A$ can be thought of as a bunch of column vectors
+    \begin{eqnarray*}
+      A & = & \left[ \vec{v}_1~\vec{v}_2~\vec{v}_3~\cdots~\vec{v}_n \right].
+    \end{eqnarray*}
+
+    We want to find constants $x_1, x_2, \cdots, x_n$ so that
+    \begin{eqnarray*}
+      x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}
+    \end{eqnarray*}
+
+  }
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Think Different}
+
+  We want to solve
   \begin{eqnarray*}
-    A & = & \left[ \vec{v}_1~\vec{v}_2~\vec{v}_3~\cdots~\vec{v}_n \right].
+    A \vec{x} & = & \vec{b}.
   \end{eqnarray*}
 
-  We want to find constants $x_1, x_2, \cdots, x_n$ so that
-  \begin{eqnarray*}
-    x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}
-  \end{eqnarray*}
-   Is the same thing as solving a system in the augmented matrix:
-  \begin{eqnarray*}
-    \left[ \vec{v}_1 ~ \vec{v}_2 ~ \vec{v}_3 ~ \cdots ~ \vec{v}_n \bigg| \vec{b} \right]
-  \end{eqnarray*}
+    We want to find constants $x_1, x_2, \cdots, x_n$ so that
+    \begin{eqnarray*}
+      x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}
+    \end{eqnarray*}
+    Is the same thing as solving a system in the augmented matrix:
+    \begin{eqnarray*}
+      \left[ \vec{v}_1 ~ \vec{v}_2 ~ \vec{v}_3 ~ \cdots ~ \vec{v}_n \bigg| \vec{b} \right]
+    \end{eqnarray*}
 
-  Put this system into RREF and solve for the unknowns.
+    Put this system into RREF and solve for the unknowns.
 
 
 \end{frame}
@@ -297,6 +457,21 @@
       \ifnum\value{clickerQuiz}=1{%
 
         \vfill
+
+        Suppose that 
+        \begin{eqnarray*}
+          x_1 \vecTwo{1}{2} + x_2 \vecTwo{3}{4} & = & \vecTwo{0}{0}.
+        \end{eqnarray*}
+        What are the values of $x_1$ and $x_2$?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $x_1=0$, $x_2=0$ \\
+          B: & The solution is not unique.
+        \end{tabular}
+
+
         \vfill
 
       }\fi
@@ -304,6 +479,19 @@
       \ifnum\value{clickerQuiz}=2{%
 
         \vfill
+        Suppose that 
+        \begin{eqnarray*}
+          x_1 \vecTwo{1}{2} + x_2 \vecTwo{3}{4} & = & \vecTwo{0}{0}.
+        \end{eqnarray*}
+        What are the values of $x_1$ and $x_2$?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $x_1=0$, $x_2=0$ \\
+          B: & The solution is not unique.
+        \end{tabular}
+
         \vfill
 
      }\fi
