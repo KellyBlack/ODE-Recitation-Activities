@@ -6,6 +6,9 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Basic definitions used throughout the notes
 
+\newcommand{\change}[1]{\triangle #1}
+\newcommand{\fortyFive}{\frac{\sqrt{2}}{2}}
+\newcommand{\imag}{j}
 \newcommand{\half}{\mbox{$\frac{1}{2}$}}
 \newcommand{\deltat}{\mbox{$\triangle t$}}
 \newcommand{\deltax}{\mbox{$\triangle x$}}
@@ -16,11 +19,6 @@
 
 \newcommand{\lp}{\left(}
 \newcommand{\rp}{\right)}
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Basic color additions
-\definecolor{fuchsia}{RGB}{255,0.0,255}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,6 +37,14 @@
   \left[
   \begin{array}{r}
     #1 \\  #2
+  \end{array}
+  \right]
+}
+
+\newcommand{\vecFour}[4]{
+  \left[
+  \begin{array}{r}
+    #1 \\  #2 \\ #3 \\ #4
   \end{array}
   \right]
 }
