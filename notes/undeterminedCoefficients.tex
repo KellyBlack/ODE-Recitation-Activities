@@ -3,8 +3,8 @@
 \section{Undetermined Coefficients}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 8, Day 2}
-\date{19 Oct 2012}
+\subtitle{Math 232 - Method of Undetermined Coefficients}
+\date{15 Oct 2012}
 
 \begin{frame}
   \titlepage
@@ -39,13 +39,13 @@
 
 
 \begin{frame}
-  \frametitle{Note About Linear Equations}
+  \frametitle{Solutions to Linear Equations}
 
-  These are linear equations. If $y_h(t)$ is a solution to the
-  homogeneous problem and $y_p(t)$ is a solution to the particular
-  problem then
+  These are linear differential equations. If $y_h(t)$ is a solution
+  to the homogeneous problem and $y_p(t)$ is a solution to the
+  particular problem then
   \begin{eqnarray*}
-    y_h(t) + y_p(t)
+    y & = & y_h(t) + y_p(t)
   \end{eqnarray*}
   is also a solution.
 
@@ -72,12 +72,77 @@
     \begin{eqnarray*}
       y(t) & = & y_h(t) + y_p(t).
     \end{eqnarray*}
+  \item Determine the constants if initial values are given. \\
+    (Do this last!)
   \end{enumerate}
 
 
 \end{frame}
 
 \subsection{Examples}
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        Determine the solution to the differential equation
+        \begin{eqnarray*}
+          y'' + 4y' + 4y & = & 0.
+        \end{eqnarray*}
+
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $y=C_1e^{2t}$ \\
+          B: & $y=C_1e^{2t} + C_2te^{2t}$ \\
+          C: & $y=C_1e^{-2t}$ \\
+          D: & $y=C_1e^{-2t} + C_2te^{-2t}$ \\
+        \end{tabular}
+
+
+        \vfill
+
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+
+        Determine the solution to the differential equation
+        \begin{eqnarray*}
+          y'' + 4y' + 4y & = & 0.
+        \end{eqnarray*}
+
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $y=C_1e^{-2t} + C_2te^{-2t}$ \\
+          B: & $y=C_1e^{-2t}$ \\
+          C: & $y=C_1e^{2t} + C_2te^{2t}$ \\
+          D: & $y=C_1e^{2t}$ \\
+        \end{tabular}
+
+        \vfill
+
+     }\fi
+   
+     \ifnum\value{clickerQuiz}=3{%
+
+        \vfill
+
+    }\fi
+  
+
+\end{frame}
+}
+
+
 
 \begin{frame}
   \frametitle{Example}
@@ -90,9 +155,9 @@
   {
     Find the homogeneous solution:
       \begin{eqnarray*}
-        r^2 + 4r + 4 & = &, \\
+        r^2 + 4r + 4 & = & 0, \\
         (r+2)^2 & = & 0, \\
-        y_h & = & C_1 e^{-2t} + C_2 t e^{-2t}.
+        {\color{blue}y_h} & {\color{blue}=} & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}}.
       \end{eqnarray*}
     }
 
@@ -101,21 +166,31 @@
 
 \begin{frame}
   \frametitle{The Particular Solution}
-  
-  We make a guess:
+
+  The particular solution satisfies
   \begin{eqnarray*}
-    y_p & = & A, \\
-    y_p' & = 0, \\
-    y_p'' & = & 0, \\
-    0 + 4(0) + 4A & = & 1, \\
-    A & = & \frac{1}{4}, \\
-    y_p & = & \frac{1}{4}
+    y_p'' + 4y_p' + 4y_p & = & 1.
   \end{eqnarray*}
 
-  The solution to the problem is
-  \begin{eqnarray*}
-    y(t) & = & C_1 e^{-2t} + C_2 t e^{-2t} + \frac{1}{4}.
-  \end{eqnarray*}
+  
+  \uncover<2->{%
+    We make a guess:
+    \begin{eqnarray*}
+      y_p & = & A, \\
+      y_p' & = 0, \\
+      y_p'' & = & 0, \\
+      0 + 4(0) + 4A & = & 1, \\
+      A & = & \frac{1}{4}, \\
+      {\color{red}y_p} & {\color{red}=} & {\color{red}\frac{1}{4}}
+    \end{eqnarray*}
+  }
+
+  \uncover<3->{%
+    The solution to the problem is
+    \begin{eqnarray*}
+      y(t) & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\frac{1}{4}}.
+    \end{eqnarray*}
+  }
 
 \end{frame}
 
@@ -155,7 +230,7 @@
   \uncover<2->
   {
     \begin{eqnarray*}
-      y_h & = & C_1 e^{-2t} + C_2 t e^{-2t}
+      y_h & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}}.
     \end{eqnarray*}
   }
 
@@ -165,27 +240,145 @@
 \begin{frame}
   \frametitle{The particular solution}
 
+  Find the particular solution to
   \begin{eqnarray*}
-    y_p & = & at^2 + bt + c, \\
-    y_p' & = & 2at + b \\
-    y_p'' & = & 2a
+    y_p'' + 4y_p' + 4y_p & = & 2t^2.
   \end{eqnarray*}
 
-  Substitute this back into the equation:
   \begin{eqnarray*}
-    2a + 4 (2at+b) + 4 (at^2 + bt + c) & = & 2t^2, \\
-    \Rightarrow 
-    a & = & \half \\
-    b & = & -1 \\
-    c & = & \frac{3}{4}
+    \uncover<2->{y_p & = & at^2 + bt + c,} \\
+    \uncover<3->{%
+      y_p' & = & 2at + b \\
+      y_p'' & = & 2a
+    }
+  \end{eqnarray*}
+
+  \uncover<4->{%
+    Substitute this back into the equation:
+    \begin{eqnarray*}
+      2a + 4 (2at+b) + 4 (at^2 + bt + c) & = & 2t^2.
+    \end{eqnarray*}
+  }
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{The particular solution}
+
+  Find the particular solution to
+  \begin{eqnarray*}
+    y_p'' + 4y_p' + 4y_p & = & 2t^2.
+  \end{eqnarray*}
+
+  Assume a general form
+  \begin{eqnarray*}
+    y_p & = & at^2 + bt + c,
+  \end{eqnarray*}
+  
+  which gives
+    \begin{eqnarray*}
+      2a + 4 (2at+b) + 4 (at^2 + bt + c) & = & 2t^2, \\
+      4at^2 + \lp 8a+4b \rp t + \lp 2a + 4b + 4c \rp & = & 2t^2 + 0t + 0, \\
+      \uncover<2->{%
+        \Rightarrow
+        a & = & \half \\
+        b & = & -1 \\
+        c & = & \frac{3}{4}
+      }
+    \end{eqnarray*}
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{The  solution}
+
+
+  The differential equation
+  \begin{eqnarray*}
+    y'' + 4y' + 4y & = & 2t^2,
+  \end{eqnarray*}
+  has a homeogeneous solution given by
+  \begin{eqnarray*}
+    y_h & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}}
+  \end{eqnarray*}
+  and a particular solution given by
+  \begin{eqnarray*}
+    y_p & = & {\color{red}\half t^2 - t + \frac{3}{4}}.
   \end{eqnarray*}
 
   The solution is 
   \begin{eqnarray*}
-    y(t) & = & C_1 e^{-2t} + C_2 t e^{-2t} + \half t^2 - t + \frac{3}{4}.
+    y(t) & = & {\color{blue}y_h(t)} + {\color{red}y_p(t)}, \\
+         & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\half t^2 - t + \frac{3}{4}}.
   \end{eqnarray*}
 
 \end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        What would be the best guess for the particular solution to the following differential equation:
+        \begin{eqnarray*}
+          y'' + 4y' + 4y & = & 2e^{3t}?
+        \end{eqnarray*}
+
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $y=A\cos(3t)+B\sin(3t)$ \\
+          B: & $y=Ae^{3t}$ \\
+          C: & $y=Ae^{2t}$ \\
+          D: & $y=at^2+bt+c$ \\
+        \end{tabular}
+
+
+        \vfill
+
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+
+        What would be the best guess for the particular solution to the following differential equation:
+        \begin{eqnarray*}
+          y'' + 4y' + 4y & = & 2e^{3t}?
+        \end{eqnarray*}
+
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $y=at^2+bt+c$ \\
+          B: & $y=Ae^{2t}$ \\
+          C: & $y=Ae^{3t}$ \\
+          D: & $y=A\cos(3t)+B\sin(3t)$ \\
+        \end{tabular}
+
+        \vfill
+
+     }\fi
+   
+     \ifnum\value{clickerQuiz}=3{%
+
+        \vfill
+
+    }\fi
+  
+
+\end{frame}
+}
+
 
 
 \begin{frame}
@@ -198,7 +391,7 @@
   \uncover<2->
   {
     \begin{eqnarray*}
-      y_h & = & C_1 e^{-2t} + C_2 t e^{-2t}
+      y_h & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}}
     \end{eqnarray*}
   }
 
@@ -208,23 +401,30 @@
 \begin{frame}
   \frametitle{The particular solution}
 
+  Assume a particular solution of the form
   \begin{eqnarray*}
     y_p & = & A e^{3t}, \\
-    y_p' & = & 3 A e^{3t} \\
-    y_p'' & = & 9 A e^{3t}
+    \uncover<2->{%
+      y_p' & = & 3 A e^{3t} \\
+      y_p'' & = & 9 A e^{3t}
+    }
   \end{eqnarray*}
 
-  Substitute this back into the equation:
-  \begin{eqnarray*}
-    9 A e^{3t} + 4 (3 A e^{3t}) + 4 (A e^{3t}) & = & 2 e^{3t}, \\
-    \Rightarrow 
-    A & = & \frac{2}{25}
-  \end{eqnarray*}
+  \uncover<3->{%
+    Substitute this back into the equation:
+    \begin{eqnarray*}
+      9 A e^{3t} + 4 (3 A e^{3t}) + 4 (A e^{3t}) & = & 2 e^{3t}, \\
+      \Rightarrow 
+      A & = & \frac{2}{25}
+    \end{eqnarray*}
+  }
 
-  The solution is 
-  \begin{eqnarray*}
-    y(t) & = & C_1 e^{-2t} + C_2 t e^{-2t} + \frac{2}{25} e^{3t}.
-  \end{eqnarray*}
+  \uncover<4->{%
+    The solution is 
+    \begin{eqnarray*}
+      y(t) & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\frac{2}{25} e^{3t}}.
+    \end{eqnarray*}
+  }
 
 \end{frame}
 
@@ -240,7 +440,7 @@
   \uncover<2->
   {
     \begin{eqnarray*}
-      y_h & = & C_1 e^{-2t} + C_2 t e^{-2t}
+      y_h & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}}
     \end{eqnarray*}
   }
 
@@ -250,28 +450,59 @@
 \begin{frame}
   \frametitle{The particular solution}
 
+  Assume a particular solution of the form
   \begin{eqnarray*}
     y_p & = & a \cos(3t) + b \sin(3t), \\
-    y_p' & = & -3 a \sin(3t) + 3b \cos(3t) \\
-    y_p'' & = & -9 a \cos(3t) - 9b \sin(3t)
+    \uncover<2->{%
+      y_p' & = & -3 a \sin(3t) + 3b \cos(3t) \\
+      y_p'' & = & -9 a \cos(3t) - 9b \sin(3t)
+    }
   \end{eqnarray*}
 
-  Substitute this back into the equation:
-  \begin{eqnarray*}
-    -9 a \cos(3t) - 9b \sin(3t) 
-    + 4 \lp -3 a \sin(3t) + 3b \cos(3t) \rp & & \\
-    + 4 \lp a \cos(3t) + b \sin(3t) \rp
-     & = & 2 \cos(3t), \\
-    \Rightarrow 
-    a & = & \frac{-10}{169} \\
-    b & = & \frac{24}{169}
-  \end{eqnarray*}
+  \uncover<3->{%
+    Substitute this back into the equation:
+    \begin{eqnarray*}
+      -9 a \cos(3t) - 9b \sin(3t) 
+      + 4 \lp -3 a \sin(3t) + 3b \cos(3t) \rp & & \\
+      + 4 \lp a \cos(3t) + b \sin(3t) \rp
+      & = & 2 \cos(3t)
+    \end{eqnarray*}
+  }
 
-  The solution is 
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{The particular solution}
+
+  Assume a particular solution of the form
   \begin{eqnarray*}
-    y(t) & = & C_1 e^{-2t} + C_2 t e^{-2t} + \frac{-10}{169}\cos(3t) +
-    \frac{24}{169} \sin(3t).
+    y_p & = & a \cos(3t) + b \sin(3t).
   \end{eqnarray*}
+    Substitute this back into the equation:
+    \begin{eqnarray*}
+      \uncover<2->{%
+        -9 a \cos(3t) - 9b \sin(3t) & & \\
+        + 4 \lp -3 a \sin(3t) + 3b \cos(3t) \rp & & \\
+        + 4 \lp a \cos(3t) + b \sin(3t) \rp
+        & = & 2 \cos(3t),} \\
+      \uncover<3->{%
+        (-5a+12b) \cos(3t) + (-12a-5b) \sin(3t) & = & 2 \cos(3t) + 0 \sin(3t),} \\
+      \uncover<4->{%
+        \Rightarrow 
+        a & = & \frac{-10}{169} \\
+        b & = & \frac{24}{169}
+      }
+    \end{eqnarray*}
+
+  \uncover<5->{%
+    The solution is 
+    \begin{eqnarray*}
+      y(t) & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + 
+                  {\color{red}\frac{-10}{169}\cos(3t) + \frac{24}{169} \sin(3t)}.
+    \end{eqnarray*}
+  }
 
 \end{frame}
 
@@ -286,7 +517,7 @@
   \uncover<2->
   {
     \begin{eqnarray*}
-      y_h & = & C_1 e^{-2t} + C_2 t e^{-2t}
+      y_h & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}}.
     \end{eqnarray*}
   }
 
@@ -312,10 +543,29 @@
     d & = & \frac{2}{25} e^{3t}
   \end{eqnarray*}
 
-  The solution is 
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{The  solution}
+
+  To find the solution to the differential equation
   \begin{eqnarray*}
-    y(t) & = & C_1 e^{-2t} + C_2 t e^{-2t} + \half t^2 - t +
-    \frac{3}{4} + \frac{2}{25} e^{3t}R.
+    y'' + 4y' + 4y & = & 2t^2 + 2 e^{3t},
+  \end{eqnarray*}
+  we first find the homogeneous solution,
+  \begin{eqnarray*}
+    y_h & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}}.
+  \end{eqnarray*}
+  We then find the particular solution,
+  \begin{eqnarray*}
+    y_p & = & {\color{red}\half t^2 - t +  \frac{3}{4} + \frac{2}{25} e^{3t}}.
+  \end{eqnarray*}
+
+  The solution is then formed using the homogeneous and particular solutions,
+  \begin{eqnarray*}
+    y(t) & = & {\color{blue}y_h(t)} + {\color{red}y_p(t)}, \\
+         & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\half t^2 - t + \frac{3}{4} + \frac{2}{25} e^{3t}}.
   \end{eqnarray*}
 
 \end{frame}
@@ -332,7 +582,7 @@
   \uncover<2->
   {
     \begin{eqnarray*}
-      y_h & = & C_1 e^{-2t} + C_2 t e^{-2t}
+      y_h & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}}.
     \end{eqnarray*}
   }
 
@@ -366,10 +616,24 @@
 
 \begin{frame}
 
-  The solution is 
+  to find the solution to the differential equation
   \begin{eqnarray*}
-    y(t) & = & C_1 e^{-2t} + C_2 t e^{-2t} + \frac{-10}{169}\cos(3t) +
-    \frac{24}{169} \sin(3t) + \frac{2}{25}  e^{3t}.
+    y'' + 4y' + 4y & = & 2 \cos(3t) + 2e^{3t},
+  \end{eqnarray*}
+  we first find the solution to the homogeneous equation
+  \begin{eqnarray*}
+    y_h & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}}.
+  \end{eqnarray*}
+  We then find the particular solution
+  \begin{eqnarray*}
+    y_p & = & {\color{red}\frac{-10}{169}\cos(3t) + \frac{24}{169} \sin(3t) + \frac{2}{25}  e^{3t}}.
+  \end{eqnarray*}
+
+  The solution is the found
+  \begin{eqnarray*}
+    y(t) & = & {\color{blue}y_h(t)} + y_p(t), \\
+         & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\frac{-10}{169}\cos(3t) +
+               \frac{24}{169} \sin(3t) + \frac{2}{25}  e^{3t}}.
   \end{eqnarray*}
   
 \end{frame}
