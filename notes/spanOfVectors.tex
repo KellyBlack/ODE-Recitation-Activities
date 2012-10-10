@@ -3,8 +3,8 @@
 \section{Span of Vectors}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 7, Day 1}
-\date{10 Oct 2012}
+\subtitle{Math 232 - Week 6, Day 3}
+\date{5 Oct 2012}
 
 \begin{frame}
   \titlepage
@@ -24,22 +24,23 @@
 
   Any vector in $\mathbb{R}^2$ can be written as 
   \begin{eqnarray*}
-    \vec{x} & = & x \vec{i} + y \vec{j} \\
-    \uncover<2->
-    {
-      & = & \vecTwo{x}{y} 
-    } \\
-    \uncover<3->
+    \vec{x} & = & \vecTwo{x}{y}  \\
+    \uncover<1->
     {
       & = & \vecTwo{x}{0} + \vecTwo{0}{y} 
     } \\
-    \uncover<4->
+    \uncover<1->
     {
       & = & x \vecTwo{1}{0} + y \vecTwo{0}{1}.
-    }
+    }\\
+    \uncover<1->
+    {
+     & = & x \vec{i} + y \vec{j} 
+     }
   \end{eqnarray*}
 
-  $x$ and $y$ can be \textbf{any} constants.
+  where $x$ and $y$ can be \textbf{any} constants,  
+  $\vec{i} =  \vecTwo{1}{0}, \vec{j} =  \vecTwo{0}{1}$.
 
 \end{frame}
 
@@ -47,16 +48,18 @@
 \begin{frame}
   \frametitle{Span of a Set of Vectors}
 
-  The set of all possible vectors that can be written in the form
+  {\color{brown}The set} of all possible vectors 
+  that can be written in the form
   \begin{eqnarray*}
     \vec{v} & = & x \vecTwo{1}{0} + y \vecTwo{0}{1}
   \end{eqnarray*}
-  for any real numbers $x$ and $y$ is called the \textit{\underline{span}} of the
-  vectors $\vecTwo{1}{0}$ and $\vecTwo{0}{1}$. 
+  for any real numbers $x$ and $y$ is called  
+  {the \color{red}\textit{\underline{span}} of the
+  vectors $\vecTwo{1}{0}$ and $\vecTwo{0}{1}$}. 
 
   \vfill
 
-  \uncover<2->
+  \uncover<1->
   {
     Any vector that I can write in the form
     \begin{eqnarray*}
@@ -77,14 +80,17 @@
   \begin{eqnarray*}
     c_1 \vec{v_1} + c_2 \vec{v_2} + c_3 \vec{v_3} + \cdots + c_n \vec{v_n}
   \end{eqnarray*}
-  is called the \textit{\underline{span}} of the vectors.
+  is called {\color{red}the \textit{\underline{span}} of the vectors.}
 
-  \uncover<2->
+  \uncover<1->
   {
     Notation:
-    \begin{eqnarray*}
+    {\color{blue}
+     \begin{eqnarray*}
       \mathrm{span}\{\vec{v_1}, \vec{v_2}, \vec{v_3},\ldots, \vec{v_n} \}
+    = \{c_1 \vec{v_1} + c_2 \vec{v_2} + c_3 \vec{v_3} + \cdots + c_n \vec{v_n}\}
     \end{eqnarray*}
+    }
   }
 
 \end{frame}
@@ -136,12 +142,13 @@
 \begin{frame}
   \frametitle{Column Space of a Matrix}
 
-  Definition: The \textit{Column space} of a matrix is the span of its
-  column vectors.
+  {\color{red}Definition:} 
+  {\color{brown}The \textit{Column space} of a matrix is the span of its
+  column vectors.}
 
-  \uncover<2->
+  \uncover<1->
   {
-    The column span of 
+    The column space of 
     \begin{eqnarray*}
       \arrayThree{1}{2}{4}{0}{1}{3}{2}{1}{4}
     \end{eqnarray*}
@@ -170,10 +177,16 @@
     A & = & \left[ \vec{v}_1~\vec{v}_2~\vec{v}_3~\cdots~\vec{v}_n \right].
   \end{eqnarray*}
 
-  We want to find constants so that
+  We want to find constants $x_1, x_2, \cdots, x_n$ so that
   \begin{eqnarray*}
     x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}
   \end{eqnarray*}
+   Is the same thing as solving a system in the augmented matrix:
+  \begin{eqnarray*}
+    \left[ \vec{v}_1 ~ \vec{v}_2 ~ \vec{v}_3 ~ \cdots ~ \vec{v}_n \bigg| \vec{b} \right]
+  \end{eqnarray*}
+
+  Put this system into RREF and solve for the unknowns.
 
 
 \end{frame}
@@ -190,32 +203,35 @@
   \begin{eqnarray*}
     x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}?
   \end{eqnarray*}
-
-
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Relationship to Linear Systems}
-
-  Meh, I still do not care.
-
-  But this is a big question!
-
-  Solving this:
-  \begin{eqnarray*}
-    x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}?
-  \end{eqnarray*}
-
-  Is the same thing as solving a system in the augmented matrix:
-  \begin{eqnarray*}
-    \left[ \vec{v}_1 ~ \vec{v}_2 ~ \vec{v}_3 ~ \cdots ~ \vec{v}_n \bigg| \vec{b} \right]
-  \end{eqnarray*}
-
-  Put this system into RREF and solve for the unknowns.
-  
+  Is the same thing as finding constants $x_1, x_2, \cdots, x_n$, so that 
+   $$\vec{b} \in  span
+   \left\{\vec{v}_1 ~ \vec{v}_2 ~ \vec{v}_3 ~ \cdots ~ \vec{v}_n \right\}.
+   $$
 
 \end{frame}
+
+
+%\begin{frame}
+%  \frametitle{Relationship to Linear Systems}
+%
+%  Meh, I still do not care.
+%%
+%  But this is a big question!
+%
+%  Solving this:
+%  \begin{eqnarray*}
+%    x_1 \vec{v}_1 + x_2 \vec{v}_2 + x_3 \vec{v}_3 + \cdots + x_n \vec{v}_n & = & \vec{b}?
+%  \end{eqnarray*}
+%
+%  Is the same thing as solving a system in the augmented matrix:
+%  \begin{eqnarray*}
+%    \left[ \vec{v}_1 ~ \vec{v}_2 ~ \vec{v}_3 ~ \cdots ~ \vec{v}_n \bigg| \vec{b} \right]
+%  \end{eqnarray*}
+%
+%  Put this system into RREF and solve for the unknowns.
+%  
+%
+%\end{frame}
 
 
 \begin{frame}
@@ -226,7 +242,7 @@
     \arrayTwo{1}{3}{2}{4} \vec{x} & = & \vec{b}.
   \end{eqnarray*}
 
-  \uncover<2-> { Another way to state the problem: Given any vector,
+  \uncover<1-> { Another way to state the problem: Given any vector,
     $\vec{b}$, can I find constants, $x_1$ and $x_2$, so that 
     \begin{eqnarray*}
       x_1 \vecTwo{1}{2} + x_2 \vecTwo{3}{4}  & = & \vec{b}?
@@ -244,23 +260,23 @@
     \oneRowOpsTwo{1}{3}{b_1}{~}
     \oneRowOpsTwo{2}{4}{b_2}{~}
     \stopRowOps \\
-    \uncover<2->
+    \uncover<1->
     {
       \stateTwo{~}{R_2-2R_1}
       \startRowOpsTwo
       \oneRowOpsTwo{1}{3}{b_1}{~}
-      \oneRowOpsTwo{0}{2}{b_2-2b_1}{~}
+      \oneRowOpsTwo{0}{-2}{b_2-2b_1}{~}
       \stopRowOps \\
     }
-    \uncover<3->
+    \uncover<1->
     {
-      \stateTwo{~}{1/2 R_2}
+      \stateTwo{~}{-1/2 R_2}
       \startRowOpsTwo
       \oneRowOpsTwo{1}{3}{b_1}{~}
-      \oneRowOpsTwo{0}{1}{\half \lp b_2-2b_1 \rp}{~}
+      \oneRowOpsTwo{0}{1}{\half \lp 2b_1-b_2 \rp}{~}
       \stopRowOps \\
     }
-    \uncover<4->
+    \uncover<1->
     {
       \stateTwo{R_1-3R_2}{~}
       \startRowOpsTwo
@@ -270,51 +286,82 @@
     }
   \end{eqnarray*}
   
-  \uncover<5->{I can find the solution no matter what the value of $\vec{b}$ is!}
+  \uncover<1->{I can find the solution no matter what the value of $\vec{b}$ is!}
     
 \end{frame}
 
-
+\iftoggle{clicker}{%
 \begin{frame}
-  \frametitle{Example}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+        \vfill
+
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+        \vfill
+
+     }\fi
+   
+     \ifnum\value{clickerQuiz}=3{%
+
+        \vfill
+
 
   Find the solution to the system of equations
   \begin{eqnarray*}
     \arrayTwo{1}{2}{2}{4} \vec{x} & = & \vec{b}.
   \end{eqnarray*}
 
-  \uncover<2-> { Another way to state the problem: Given any vector,
+  \uncover<1-> { Another way to state the problem: Given any vector,
     $\vec{b}$, can I find constants, $x_1$ and $x_2$, so that 
     \begin{eqnarray*}
       x_1 \vecTwo{1}{2} + x_2 \vecTwo{2}{4}  & = & \vec{b}?
     \end{eqnarray*}
   }
+  
+   The system is 
+
+    \begin{tabular}{ll}
+          A: & inconsistent \\
+          B: & underdeterminant\\
+          C: & I am not sure
+        \end{tabular}
+
+        \vfill
 
 
+    }\fi
   
 
 \end{frame}
+}
 
-\begin{frame}
-  
-  \begin{eqnarray*}
-    \startRowOpsTwo
-    \oneRowOpsTwo{1}{2}{b_1}{~}
-    \oneRowOpsTwo{2}{4}{b_2}{~}
-    \stopRowOps \\
-    \uncover<2->
-    {
-      \stateTwo{~}{R_2-2R_1}
-      \startRowOpsTwo
-      \oneRowOpsTwo{1}{3}{b_1}{~}
-      \oneRowOpsTwo{0}{0}{b_2-2b_1}{~}
-      \stopRowOps \\
-    }
-  \end{eqnarray*}
-
-  \uncover<3->{I cannot find the solution except in certain circumstances!}
-
-\end{frame}
+%\begin{frame}
+%  
+%  \begin{eqnarray*}
+%    \startRowOpsTwo
+%    \oneRowOpsTwo{1}{2}{b_1}{~}
+%    \oneRowOpsTwo{2}{4}{b_2}{~}
+%    \stopRowOps \\
+%    \uncover<1->
+%    {
+%      \stateTwo{~}{R_2-2R_1}
+%      \startRowOpsTwo
+%      \oneRowOpsTwo{1}{2}{b_1}{~}
+%      \oneRowOpsTwo{0}{0}{b_2-2b_1}{~}
+%      \stopRowOps \\
+%    }
+%  \end{eqnarray*}
+%
+%  \uncover<1->{I cannot find the solution except in certain circumstances!}
+%
+%\end{frame}
 
 \begin{frame}
   \frametitle{Example}
@@ -334,7 +381,7 @@
     \oneRowOpsThree{1}{1}{4}{b_1}{}{}
     \oneRowOpsThree{2}{1}{3}{b_2}{}{}
     \stopRowOps \\
-    \uncover<2->
+    \uncover<1->
     {
       \stateThree{~}{R_2-2R_1}{}
       \startRowOpsThree
@@ -342,7 +389,7 @@
       \oneRowOpsTwo{0}{-1}{-5}{\#}{}{}
       \stopRowOps \\
     }
-    \uncover<3->
+    \uncover<1->
     {
       \stateThree{}{-R_2}{}
       \startRowOpsThree
@@ -350,7 +397,7 @@
       \oneRowOpsTwo{0}{1}{5}{\#}{}{}
       \stopRowOps \\
     }
-    \uncover<4->
+    \uncover<1->
     {
       \stateThree{R_1-R_2}{}{}
       \startRowOpsThree
@@ -360,7 +407,7 @@
     }
   \end{eqnarray*}
 
-  \uncover<5->{We have extra information! }
+  \uncover<1->{We have extra information! }
    
   
 \end{frame}
@@ -382,8 +429,10 @@
   \end{eqnarray*}
 
   So $\vecTwo{4}{3}$ \textit{\underline{depends}} on $\vecTwo{1}{2}$
-  and $\vecTwo{1}{1}$. We say that the vectors are ``linearly
-  dependent.''
+  and $\vecTwo{1}{1}$. 
+
+  {\color{red}We say that the vectors are ``linearly
+  dependent.''}
 
 \end{frame}
 
@@ -410,19 +459,19 @@
     W & = & 
     \mathrm{det}
     \arrayThree{t^2-1}{t^2+1}{t^2-2}{\frac{d}{dt}\lp t^2-1\rp}{\frac{d}{dt}\lp t^2+1\rp}{\frac{d}{dt}\lp t^2-2\rp}{\frac{d^2}{dt^2}\lp t^2-1\rp}{\frac{d^2}{dt^2}\lp t^2+1\rp}{\frac{d^2}{dt^2}\lp t^2-2\rp}  \\
-    \uncover<2->
+    \uncover<1->
     {
     & = & 
     \mathrm{det}
     \arrayThree{t^2-1}{t^2+1}{t^2-2}{2t}{2t}{2t}{2}{2}{2}  \\
     }
-    \uncover<3->
+    \uncover<1->
     {
       & = & 0
     }
   \end{eqnarray*}
 
-  \uncover<4->
+  \uncover<1->
   {
     If the Wronskian is zero then the functions are linearly dependent.
   }
@@ -449,21 +498,50 @@
 
 \end{frame}
 
+\iftoggle{clicker}{%
 \begin{frame}
-  \frametitle{Example}
+  \frametitle{Clicker Quiz}
 
+       \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+       
+        
+       }\fi
+
+       \ifnum\value{clickerQuiz}=2{%
+
+       \vfill
+        
+         
+       }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+
+        \vfill
   Are the functions $\{t^2,t,1\}$ linearly independent?
 
-  \begin{eqnarray*}
-    W & = & \mathrm{det}
-    \arrayThree{t^2}{t}{1}{2t}{1}{0}{2}{0}{0} \\
-    & = & -2 \\
-    & \neq & 0
-  \end{eqnarray*}
+%  \begin{eqnarray*}
+%    W & = & \mathrm{det}
+%    \arrayThree{t^2}{t}{1}{2t}{1}{0}{2}{0}{0} \\
+%    & = & -2 \\
+%    & \neq & 0
+%  \end{eqnarray*}
+%  Yes. The functions $\{t^2,t,1\}$ are linearly independent.
+       \vfill
+
+        \begin{tabular}{ll}
+          A: & Yes \\
+          B: & No
+        \end{tabular}
+
+        \vfill
+
+     }\fi
 
 \end{frame}
 
-
+}
 
 % LocalWords:  Clarkson pausesection hideothersubsections Meh RREF Wronksian det
 % LocalWords:  Wronskian
