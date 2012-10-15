@@ -6,6 +6,9 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Basic definitions used throughout the notes
 
+\newcommand{\change}[1]{\triangle #1}
+\newcommand{\fortyFive}{\frac{\sqrt{2}}{2}}
+\newcommand{\imag}{j}
 \newcommand{\half}{\mbox{$\frac{1}{2}$}}
 \newcommand{\deltat}{\mbox{$\triangle t$}}
 \newcommand{\deltax}{\mbox{$\triangle x$}}
@@ -17,14 +20,6 @@
 \newcommand{\lp}{\left(}
 \newcommand{\rp}{\right)}
 
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Basic color additions
-\definecolor{fuchsia}{RGB}{255,0.0,255}
-
-\newcommand{\redText}[1]{{\color{red}#1}}
-\newcommand{\blueText}[1]{{\color{blue}#1}}
-\newcommand{\fuchsiaText}[1]{{\color{fuchsia}#1}}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Basic linear algebra commands
@@ -41,7 +36,15 @@
 \newcommand{\vecTwo}[2]{
   \left[
   \begin{array}{r}
-    #1 \\ #2
+    #1 \\  #2
+  \end{array}
+  \right]
+}
+
+\newcommand{\vecFour}[4]{
+  \left[
+  \begin{array}{r}
+    #1 \\  #2 \\ #3 \\ #4
   \end{array}
   \right]
 }
@@ -49,7 +52,7 @@
 
 \newcommand{\stateTwo}[2]{
   \begin{array}{rr}
-    \mbox{\fontsize{6}{6}\selectfont $#1$} \\ \mbox{\fontsize{6}{6}\selectfont $#2$}
+    \mbox{\fontsize{6}{6}\selectfont $#1$} \\  \mbox{\fontsize{6}{6}\selectfont $#2$}
   \end{array}
 }
 
@@ -82,7 +85,7 @@
 \newcommand{\vecThree}[3]{
   \left[
   \begin{array}{r}
-    #1 \\ #2 \\ #3
+    #1 \\  #2 \\ #3
   \end{array}
   \right]
 }
@@ -90,8 +93,8 @@
 
 \newcommand{\stateThree}[3]{
   \begin{array}{r}
-    \mbox{\fontsize{6}{6}\selectfont $#1$} \\
-    \mbox{\fontsize{6}{6}\selectfont $#2$} \\
+    \mbox{\fontsize{6}{6}\selectfont $#1$} \\  
+    \mbox{\fontsize{6}{6}\selectfont $#2$} \\ 
     \mbox{\fontsize{6}{6}\selectfont $#3$}
   \end{array}
 }
@@ -166,7 +169,7 @@
 
 
 
-%%% Local Variables:
+%%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: t
 %%% End: 
