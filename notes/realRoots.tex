@@ -1,0 +1,271 @@
+\part{Real-Valued-Roots}
+\lecture{Real Valued Roots}{Real-Valued-Roots}
+\section{Ordinary Differential Equations}
+
+\title{Ordinary Differential Equations}
+\subtitle{Math 232 - Week 7, Day 3}
+\date{12 Oct 2012}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[pausesection,hideothersubsections]
+\end{frame}
+
+
+\subsection{Second Order, Homogeneous Differential Equations}
+
+
+\begin{frame}
+  \frametitle{Second Order, Homogeneous Differential Equations}
+
+  \begin{eqnarray*}
+    a y'' + by' + cy & = & 0, a, b, c \text{are constants}, 
+  \end{eqnarray*}
+  Assume that $y =  A e^{rt}$, 
+  which implies that
+  \begin{eqnarray*}
+    a r^2 + b r + c & = & 0, \\
+    r & = & \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
+  \end{eqnarray*}
+
+  Three cases: two distinct real roots, one repeated real root, and
+  two complex roots.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Second Order, Homogeneous Differential Equations}
+Since 
+  \begin{eqnarray*}
+  e^{d+ih} & = & e^d\left(\cos(h)+i\sin(h)\right) \\ 
+  e^{d-ih} & = & e^d\left(\cos(-h)+i\sin(-h)\right)  \\
+           & = & e^d\left(\cos(h)-i\sin(h)\right).  
+  \end{eqnarray*}
+Then  
+  \begin{eqnarray*}
+   &   &  C_1e^{d+ih} + C_2e^{d-ih}\\
+   & = & C_1e^d\left(\cos(h)+i\sin(h)\right) 
+       + C_2 e^d\left(\cos(h)-i\sin(h)\right)\\
+   & = & e^d\left((C_1+C_2)\cos(h)+i(C_1-C_2)\sin(h)\right)\\
+   & = & e^d\left(A_1\cos(h)+A_2\sin(h)\right)  
+  \end{eqnarray*}
+
+\end{frame}
+
+\subsection{Complex Roots}
+
+\begin{frame}
+  \frametitle{Complex Roots}
+
+  \begin{eqnarray*}
+    y'' + y' + y & = & 0, \\
+    \uncover<2->
+    {
+      r^2 + r + 1 & = & 0 \\
+      r & = & \frac{-1\pm\sqrt{1-4}}{2} \\
+      & = & -\half \pm \frac{\sqrt{-3}}{2} \\
+      & = & -\half \pm i \frac{\sqrt{3}}{2} 
+    }
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  \begin{eqnarray*}
+    y & = & C_1 e^{\lp-\half + i \frac{\sqrt{3}}{2}\rp t} + C_2 e^{\lp -\half - i \frac{\sqrt{3}}{2}\rp t} \\
+    & = & C_1 e^{-\half t}e^{i \frac{\sqrt{3}}{2}t} + C_2 e^{-\half t}e^{ - i \frac{\sqrt{3}}{2}t} \\
+    & = & e^{-\half t} \left[ C_1 e^{i \frac{\sqrt{3}}{2}t} + C_2 e^{ - i \frac{\sqrt{3}}{2}t} \right] \\
+    & = & e^{-\half t} \left[ \right. \\
+    &   & C_1 \lp \cos\lp\frac{\sqrt{3}}{2}t\rp + i \sin\lp \frac{\sqrt{3}}{2} t \rp \rp \\ 
+    &   & \left. + C_2 \lp \cos\lp\frac{\sqrt{3}}{2}t\rp - i \sin\lp\frac{\sqrt{3}}{2}t\rp\rp  \right] \\
+    & = & e^{-\half t} \left[ 
+          (C_1+C_2) \cos\lp\frac{\sqrt{3}}{2}t\rp + i(C_1-C_2) \sin\lp \frac{\sqrt{3}}{2}t\rp \right] \\ 
+    & = & e^{-\half t} \left[ 
+          A_1 \cos\lp\frac{\sqrt{3}}{2} t \rp + A_2 \sin\lp \frac{\sqrt{3}}{2} t \rp \right] \\ 
+  \end{eqnarray*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{In General}
+
+  \begin{eqnarray*}
+    a y'' + by' + cy & = & 0,
+  \end{eqnarray*}
+  where $a$, $b$, and $c$ are constants, then assume
+  $ y  =  A e^{rt}$,which implies that
+  \begin{eqnarray*}
+    a r^2 + b r + c & = & 0, \\
+    r & = & \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
+  \end{eqnarray*}
+
+  If $b^2-4ac  < 0$, 
+  then the system has oscillations and
+  \begin{eqnarray*}
+    r & = & \frac{-b}{2a} \pm i \frac{\sqrt{4ac-b^2}}{2a}.
+  \end{eqnarray*}
+   The general solution is 
+  \begin{eqnarray*}
+    y(t) & = & e^{\frac{-b}{2a}} \left(
+           A_1 \cos\left(\frac{\sqrt{4ac-b^2}}{2a}\right)
+           +A_2 \sin\left(\frac{\sqrt{4ac-b^2}}{2a}\right)
+           \right) 
+  \end{eqnarray*}
+ 
+\end{frame}
+
+\subsection{Examples}
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    2y'' + y' + 3y & = & 0.
+  \end{eqnarray*}
+  
+  \uncover<2->
+  {
+    \begin{eqnarray*}
+      2r^2+r+3 & = & 0, \\
+      r & = & \frac{-1\pm\sqrt{1-24}}{4}, \\
+      & = & \frac{-1}{4} \pm i\frac{\sqrt{23}}{4}, \\
+      y & = & e^{-t/4} 
+      \lp A_1 \cos\lp \frac{\sqrt{23}}{4} t \rp + A_2 \sin\lp \frac{\sqrt{23}}{4} t \rp \rp.
+    \end{eqnarray*}
+
+    It decays like $e^{-t/4}$ and oscillates with a period of $\frac{8\pi}{\sqrt{23}}$.
+  }
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    y'' + 4 y' + 8y & = & 0.
+  \end{eqnarray*}
+
+  \uncover<2->
+  {
+    \begin{eqnarray*}
+      r^2 + 4r + 8 & = & 0, \\
+      r & = & \frac{-4\pm\sqrt{16-32}}{2} \\
+      & = & -2 \pm 2i \\
+      y & = & e^{-2t} \lp A_1 \cos(2t) + A_2 \sin(2t) \rp.
+    \end{eqnarray*}
+  }
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    y^v - 4 y'& = & 0.
+  \end{eqnarray*}
+
+  \uncover<2->
+  {
+    \begin{eqnarray*}
+      r^5 - 4r & = & 0, \\
+      r & = & 0 \\
+      \mathrm{or~} r^4 & = & 4 \\
+      & = & \sqrt{2},~\sqrt{2}e^{i \pi/2}, ~ \sqrt{2}e^{i \pi},~ \sqrt{2}e^{i 3\pi/2} \\
+      & = & \sqrt{2},~i\sqrt{2},~-\sqrt{2},~-i\sqrt{2} \\
+      y & = & C_1 + C_2 e^{\sqrt{2}t} + C_3 e^{-\sqrt{2}t} + 
+      A_1 \cos(\sqrt{2}t) + A_2 \sin(\sqrt{2}t).
+    \end{eqnarray*}
+  }
+
+
+\end{frame}
+
+\subsection{An LRC Circuit}
+
+\begin{frame}
+  \frametitle{An LRC Circuit}
+
+  An LRC circuit has a 30,0000 ohm resistor, a $5\times 10^{-6}$ F
+  capacitor, and a 2000 Henries Inductor. Find the general equation
+  describing  the charge in the capacitor at any time.
+
+  \uncover<2->
+  {
+    \begin{eqnarray*}
+      2000 Q'' + 30,000 Q' + \frac{Q}{5\times 10^{-6}} & = & 0 \\
+      Q'' + 15 Q' + 100 Q & = & 0 \\
+      r^2 + 15 r + 100 & = & 0 
+    \end{eqnarray*}
+    \begin{eqnarray*}
+      r & = & \frac{-15\pm\sqrt{15^2-400}}{2} \\
+      r & = & \frac{-15}{2} \pm i\frac{5\sqrt{7}}{2} \\
+      Q & = & e^{-15/2 t} 
+      \lp A_1 \cos\lp \frac{5\sqrt{7}}{2} t\rp + A_2 \sin\lp \frac{5\sqrt{7}}{2} t \rp \rp.
+    \end{eqnarray*}
+    
+  }
+
+\end{frame}
+
+\subsection{Design a Spring Mass System}
+
+\begin{frame}
+  \frametitle{Design a Spring Mass System}
+
+  Design a spring mass system so that a spring with spring constant
+  $k=0.2$ N/m will oscillate a mass through two oscillations every
+  three seconds, and the amplitude should decay like $e^{-t/2}$.
+
+  \uncover<2->
+  {
+    \begin{eqnarray*}
+      m x'' + bx' + 0.2x & = & 0. \\
+      m r^2 + br + 0.2 & = & 0, \\
+      r & = & \frac{-b\pm\sqrt{b^2-.8m}}{2m}, \\
+      r & = & \frac{-b}{2m} \pm i \frac{\sqrt{.8m - b^2}}{2m}.
+    \end{eqnarray*}
+    
+  }
+
+\end{frame}
+
+
+\begin{frame}
+
+  The solution satisfies the following equation
+  \begin{eqnarray*}
+    x & = & e^{-b/2m t} 
+    \lp A_1 \cos\lp\frac{\sqrt{.8m - b^2}}{2m} t\rp + A_2 \sin\lp\frac{\sqrt{.8m - b^2}}{2m} t \rp \rp.
+  \end{eqnarray*}
+
+  First the exponential term should satisfy
+  \begin{eqnarray*}
+    -\frac{b}{2m} t & = & -\frac{t}{2} \\
+    \Rightarrow b & = & m.
+  \end{eqnarray*}
+
+  Second, the frequency should satisfy
+  \begin{eqnarray*}
+    \frac{\sqrt{.8m - b^2}}{2m} \frac{3}{2} & = & 2 \pi.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+
+  If we let $b=m$ and solve for $m$ in the second equation we get
+  \begin{eqnarray*}
+    m & = & \frac{0.8}{1 + \frac{64 \pi^2}{9}}, \\
+    b & = & \frac{0.8}{1 + \frac{64 \pi^2}{9}}.  
+  \end{eqnarray*}
+
+\end{frame}
+
+
+% LocalWords:  Clarkson pausesection hideothersubsections

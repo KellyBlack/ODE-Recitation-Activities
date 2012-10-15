@@ -3,7 +3,8 @@
 \section{Undetermined Coefficients}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Method of Undetermined Coefficients}
+\subtitle{Math 232 - Week 8, Day 1}
+%\subtitle{Math 232 - Method of Undetermined Coefficients}
 \date{15 Oct 2012}
 
 \begin{frame}
@@ -26,9 +27,13 @@
 
   Example: An horizontal spring/mass system that has a constant force
   of 1N to the right.
-
+ 
+  \begin{center}
+    mass $\times$ accelaration = $F_{\text{restoring}} + F_{\text{dampling}}
+   + F_{\text{external}}.$ 
+  \end{center}
   \begin{eqnarray*}
-    \frac{d}{dt} \lp m v_x \rp & = & -b v_x - kx + 1, \\
+    m x'' & = & -b v_x - kx + 1, \\
     m x'' + bx' + kx & = & 1.
   \end{eqnarray*}
 
@@ -38,24 +43,31 @@
 \end{frame}
 
 
-\begin{frame}
-  \frametitle{Solutions to Linear Equations}
-
-  These are linear differential equations. If $y_h(t)$ is a solution
-  to the homogeneous problem and $y_p(t)$ is a solution to the
-  particular problem then
-  \begin{eqnarray*}
-    y & = & y_h(t) + y_p(t)
-  \end{eqnarray*}
-  is also a solution.
-
-\end{frame}
+%\begin{frame}
+%  \frametitle{Solutions to Linear Equations}
+%  General non-homogeneous, constant coefficients, 2nd order DEs:
+%  \begin{eqnarray*}
+%    ay'' + by' +cy & = & f(t) 
+%  \end{eqnarray*}  
+%  These are linear differential equations. If $y_h(t)$ is a solution
+%  to the homogeneous problem: 
+%  \begin{eqnarray*}
+%    ay^{''}_{h} + by^{'}_h +cy_h & = & 0
+%  \end{eqnarray*} 
+%  and $y_p(t)$ is a particular solution to the DE: 
+%  \begin{eqnarray*}
+%    ay^{''}_{p} + by^{'}_p +cy_p & = & f(t)
+%  \end{eqnarray*} 
+%  Then ${\color{red}y=y_h(t) + y_p(t)}$  is the general solution to the DE. 
+%  
+%
+%\end{frame}
 
 
 \begin{frame}
   \frametitle{Overview of the Solution Method}
 
-  Given
+  Given non-homogeneous, constant coefficients DE:
   \begin{eqnarray*}
     a y'' + by' + cy & = & f(t):
   \end{eqnarray*}
@@ -64,14 +76,14 @@
     \begin{eqnarray*}
       a y_h'' + by_h' + cy_h & = & 0.
     \end{eqnarray*}
-  \item Solve the particular solution,
+  \item Solve for a particular solution,
     \begin{eqnarray*}
       a y_p'' + by_p' + cy_p & = & f(t).
     \end{eqnarray*}
-  \item Form the solution
-    \begin{eqnarray*}
+  \item Form the general solution
+   {\color{red} \begin{eqnarray*}
       y(t) & = & y_h(t) + y_p(t).
-    \end{eqnarray*}
+    \end{eqnarray*}}
   \item Determine the constants if initial values are given. \\
     (Do this last!)
   \end{enumerate}
@@ -80,6 +92,29 @@
 \end{frame}
 
 \subsection{Examples}
+
+\begin{frame}
+  \frametitle{General Idea}
+   Finding the homogeneous solution to
+     \begin{eqnarray*}
+      a y'' + b y' + cy  & =& 0
+    \end{eqnarray*}
+   Guess                            
+       {\color{red}$y_h(t)=e^{rt}$}, find the characteristics equation
+       {\color{red}$ar^2+br+c = 0.$}
+  Find the roots are {\color{red}$r_1, r_2$}.
+  \begin{enumerate}
+  \item If {\color{blue}$r_1, r_2$ are distict, real}, then
+      {\color{red}$$y_h(t) = C_1e^{r_1t}+C_2e^{r_2t}$$}\\
+  \item If {\color{blue}$r_1, r_2$ are repeated, real}, i.e., $r_1 = r_2$ then
+     {\color{red}$$y_h(t) = C_1e^{r_1t}+C_2te^{r_1t}$$}\\
+  \item If {\color{blue}$r_1, r_2$ are complex}, i.e., $r_1, r_2 = a\pm bi$, 
+      then
+      {\color{red}$$y_h(t) = e^{at}\left(C_1\cos(bt)+C_2\sin(bt)\right)$$}
+  \end{enumerate}
+
+\end{frame}
+
 
 \iftoggle{clicker}{%
 \begin{frame}
@@ -133,6 +168,21 @@
      }\fi
    
      \ifnum\value{clickerQuiz}=3{%
+       Determine the {\color{blue}general solution} to the differential equation
+        \begin{eqnarray*}
+          y'' + 4y' + 4y & = & 0.
+        \end{eqnarray*}
+
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $y=C_1e^{2t} + C_2te^{2t}$ \\
+          B: & $y=C_1e^{-2t}$ \\
+          C: & $y=C_1e^{-2t} + C_2te^{-2t}$ \\
+          D: & $y=C_1e^{2t}$ \\
+        \end{tabular}
+
 
         \vfill
 
@@ -165,28 +215,28 @@
 
 
 \begin{frame}
-  \frametitle{The Particular Solution}
+  \frametitle{A Particular Solution}
 
-  The particular solution satisfies
+  A particular solution satisfies
   \begin{eqnarray*}
     y_p'' + 4y_p' + 4y_p & = & 1.
   \end{eqnarray*}
 
   
   \uncover<2->{%
-    We make a guess:
+    We make a guess(Yes, it is a guess):
     \begin{eqnarray*}
-      y_p & = & A, \\
+      y_p & = & A, ~~~~~~~~~~~\text{a constant}\\
       y_p' & = 0, \\
       y_p'' & = & 0, \\
       0 + 4(0) + 4A & = & 1, \\
-      A & = & \frac{1}{4}, \\
+      A & = & \frac{1}{4},~~~~~~~~~~~\text{YES! IT WORKS!!!} \\
       {\color{red}y_p} & {\color{red}=} & {\color{red}\frac{1}{4}}
     \end{eqnarray*}
   }
 
   \uncover<3->{%
-    The solution to the problem is
+    The general solution to the problem is
     \begin{eqnarray*}
       y(t) & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\frac{1}{4}}.
     \end{eqnarray*}
@@ -221,6 +271,35 @@
 
 
 \begin{frame}
+  \frametitle{General Idea}
+   Guessing a particular solution to 
+     \begin{eqnarray*}
+      a y'' + b y' + cy  = f(t)
+    \end{eqnarray*}
+
+  \begin{enumerate}
+  \item If {\color{blue}$f(t) = a_nt^n+\cdots a_1t+ a_0$}, then
+      guess {\color{red}$$y_p(t) = b_nt^n+\cdots b_1t+b_0.$$}\\
+
+  \item If {\color{blue} $f(t)= A e^{rt}$}, then guess
+       {\color{red} $y_p(t) = Be^{rt}$.}\\ 
+  \vspace{.5cm}
+  \item If {\color{blue}$f(t) = A\sin(rt)$}, then guess
+      {\color{red}$y_p(t) = C_1\sin(rt) +C_2\cos(rt)$.}\\
+  \vspace{.5cm}
+
+  \item If {\color{blue} $f(t) = B\cos(rt)$}, then guess
+      {\color{red}$y_p(t) = C_1\sin(rt) +C_2\cos(rt)$.}\\
+  \vspace{.5cm}
+
+  \item If {\color{blue}$f(t) = A\sin(rt)+B\cos(rt)$}, then guess
+     {\color{red} $$y_p(t) = C_1\sin(rt) +C_2\cos(rt).$$}
+  \end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
   \frametitle{Example}
 
   \begin{eqnarray*}
@@ -238,13 +317,14 @@
 
 
 \begin{frame}
-  \frametitle{The particular solution}
+  \frametitle{A particular solution}
 
-  Find the particular solution to
+  Find a particular solution to
   \begin{eqnarray*}
     y_p'' + 4y_p' + 4y_p & = & 2t^2.
   \end{eqnarray*}
 
+  Assume a particular solution is in the form of 
   \begin{eqnarray*}
     \uncover<2->{y_p & = & at^2 + bt + c,} \\
     \uncover<3->{%
@@ -256,39 +336,20 @@
   \uncover<4->{%
     Substitute this back into the equation:
     \begin{eqnarray*}
-      2a + 4 (2at+b) + 4 (at^2 + bt + c) & = & 2t^2.
-    \end{eqnarray*}
-  }
-
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{The particular solution}
-
-  Find the particular solution to
-  \begin{eqnarray*}
-    y_p'' + 4y_p' + 4y_p & = & 2t^2.
-  \end{eqnarray*}
-
-  Assume a general form
-  \begin{eqnarray*}
-    y_p & = & at^2 + bt + c,
-  \end{eqnarray*}
-  
-  which gives
-    \begin{eqnarray*}
-      2a + 4 (2at+b) + 4 (at^2 + bt + c) & = & 2t^2, \\
+      2a + 4 (2at+b) + 4 (at^2 + bt + c) & = & 2t^2,\\
       4at^2 + \lp 8a+4b \rp t + \lp 2a + 4b + 4c \rp & = & 2t^2 + 0t + 0, \\
-      \uncover<2->{%
+      \uncover<5->{%
         \Rightarrow
-        a & = & \half \\
-        b & = & -1 \\
-        c & = & \frac{3}{4}
+        a & = & \half,  b  =  -1, c  =  \frac{3}{4}
       }
+      \end{eqnarray*}
+     }
+   \uncover<6->{%
+    \begin{eqnarray*}
+    y_p & = & \half t^2 - t + \frac{3}{4}
     \end{eqnarray*}
-
-
+     }
+ 
 \end{frame}
 
 
@@ -300,7 +361,7 @@
   \begin{eqnarray*}
     y'' + 4y' + 4y & = & 2t^2,
   \end{eqnarray*}
-  has a homeogeneous solution given by
+  has a homogeneous solution given by
   \begin{eqnarray*}
     y_h & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}}
   \end{eqnarray*}
@@ -309,7 +370,7 @@
     y_p & = & {\color{red}\half t^2 - t + \frac{3}{4}}.
   \end{eqnarray*}
 
-  The solution is 
+  The general solution is 
   \begin{eqnarray*}
     y(t) & = & {\color{blue}y_h(t)} + {\color{red}y_p(t)}, \\
          & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\half t^2 - t + \frac{3}{4}}.
@@ -326,7 +387,7 @@
 
         \vfill
 
-        What would be the best guess for the particular solution to the following differential equation:
+        What would be the best guess for a particular solution to the following differential equation:
         \begin{eqnarray*}
           y'' + 4y' + 4y & = & 2e^{3t}?
         \end{eqnarray*}
@@ -350,7 +411,7 @@
 
         \vfill
 
-        What would be the best guess for the particular solution to the following differential equation:
+        What would be the best guess for a particular solution to the following differential equation:
         \begin{eqnarray*}
           y'' + 4y' + 4y & = & 2e^{3t}?
         \end{eqnarray*}
@@ -370,7 +431,21 @@
      }\fi
    
      \ifnum\value{clickerQuiz}=3{%
+       What would be the best guess for a particular solution to the following differential equation:
+        \begin{eqnarray*}
+          y'' + 4y' + 4y & = & 2e^{3t}?
+        \end{eqnarray*}
 
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $y=at^2+bt+c$ \\
+          B: & $y=Ae^{2t}$ \\
+          C: & $y=Ae^{3t}$ \\
+          D: & $y=A\cos(3t)+B\sin(3t)$ \\
+        \end{tabular}
+ 
         \vfill
 
     }\fi
@@ -399,7 +474,7 @@
 
 
 \begin{frame}
-  \frametitle{The particular solution}
+  \frametitle{A particular solution}
 
   Assume a particular solution of the form
   \begin{eqnarray*}
@@ -420,7 +495,7 @@
   }
 
   \uncover<4->{%
-    The solution is 
+    The general solution is 
     \begin{eqnarray*}
       y(t) & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\frac{2}{25} e^{3t}}.
     \end{eqnarray*}
@@ -448,7 +523,7 @@
 
 
 \begin{frame}
-  \frametitle{The particular solution}
+  \frametitle{A particular solution}
 
   Assume a particular solution of the form
   \begin{eqnarray*}
@@ -474,7 +549,7 @@
 
 
 \begin{frame}
-  \frametitle{The particular solution}
+  \frametitle{A particular solution}
 
   Assume a particular solution of the form
   \begin{eqnarray*}
@@ -497,7 +572,7 @@
     \end{eqnarray*}
 
   \uncover<5->{%
-    The solution is 
+    The general solution is 
     \begin{eqnarray*}
       y(t) & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + 
                   {\color{red}\frac{-10}{169}\cos(3t) + \frac{24}{169} \sin(3t)}.
@@ -525,7 +600,7 @@
 
 
 \begin{frame}
-  \frametitle{The particular solution}
+  \frametitle{A particular solution}
 
   \begin{eqnarray*}
     y_p & = & at^2 + bt + c + d e^{3t}, \\
@@ -535,12 +610,12 @@
 
   Substitute this back into the equation:
   \begin{eqnarray*}
-    2a + 9de^{3t} + 4 (2at+b + 3 e^{3t}) + 4 (at^2 + bt + c + e^{3t}) & = & 2t^2+2e^{3t}, \\
+    2a+9de^{3t}+4(2at+b + 3 e^{3t})+4(at^2+bt+c+e^{3t})&=&2t^2+2e^{3t}\\
     \Rightarrow 
     a & = & \half \\
     b & = & -1 \\
     c & = & \frac{3}{4} \\
-    d & = & \frac{2}{25} e^{3t}
+    d & = & \frac{2}{25}
   \end{eqnarray*}
 
 \end{frame}
@@ -549,7 +624,7 @@
 \begin{frame}
   \frametitle{The  solution}
 
-  To find the solution to the differential equation
+  To find the general solution to the differential equation
   \begin{eqnarray*}
     y'' + 4y' + 4y & = & 2t^2 + 2 e^{3t},
   \end{eqnarray*}
@@ -557,12 +632,12 @@
   \begin{eqnarray*}
     y_h & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}}.
   \end{eqnarray*}
-  We then find the particular solution,
+  We then find a particular solution,
   \begin{eqnarray*}
     y_p & = & {\color{red}\half t^2 - t +  \frac{3}{4} + \frac{2}{25} e^{3t}}.
   \end{eqnarray*}
 
-  The solution is then formed using the homogeneous and particular solutions,
+  The general solution is then formed using the homogeneous and particular solutions,
   \begin{eqnarray*}
     y(t) & = & {\color{blue}y_h(t)} + {\color{red}y_p(t)}, \\
          & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\half t^2 - t + \frac{3}{4} + \frac{2}{25} e^{3t}}.
@@ -590,7 +665,7 @@
 
 
 \begin{frame}
-  \frametitle{The particular solution}
+  \frametitle{A particular solution}
 
   \begin{eqnarray*}
     y_p & = & a \cos(3t) + b \sin(3t) + ce^{3t}, \\
@@ -616,7 +691,7 @@
 
 \begin{frame}
 
-  to find the solution to the differential equation
+  to find the general solution to the differential equation
   \begin{eqnarray*}
     y'' + 4y' + 4y & = & 2 \cos(3t) + 2e^{3t},
   \end{eqnarray*}
@@ -624,12 +699,12 @@
   \begin{eqnarray*}
     y_h & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}}.
   \end{eqnarray*}
-  We then find the particular solution
+  We then find a particular solution
   \begin{eqnarray*}
     y_p & = & {\color{red}\frac{-10}{169}\cos(3t) + \frac{24}{169} \sin(3t) + \frac{2}{25}  e^{3t}}.
   \end{eqnarray*}
 
-  The solution is the found
+  The general solution is the found
   \begin{eqnarray*}
     y(t) & = & {\color{blue}y_h(t)} + y_p(t), \\
          & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\frac{-10}{169}\cos(3t) +
