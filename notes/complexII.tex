@@ -15,6 +15,102 @@
   \tableofcontents[pausesection,hideothersubsections]
 \end{frame}
 
+\subsection{Euler's Formula}
+\begin{frame}
+  \frametitle{Euler's Formula}
+
+  \begin{eqnarray*}
+    e^{it} & = & \cos(t) + i\sin(t)\\
+    e^{i\theta} & = & \cos(\theta) + i\sin(\theta)
+  \end{eqnarray*}
+
+  Different format of a complex number:
+    \begin{eqnarray*}
+    z & = & a + bi, \\
+    & = & r\cos(\theta) + ir\sin(\theta), ~ r = \sqrt{a^2+b^2}, \tan(\theta)=\frac{b}{a} \\
+    & = & r \lp \cos(\theta) + i\sin(\theta) \rp \\
+    & = & r e^{i\theta}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    z & = & 2 + 2i \\
+    \uncover<2->
+    {%
+       & = & 2\sqrt{2} \cos(\pi/4) + i 2\sqrt{2} \sin(\pi/4) \\
+       & = & 2\sqrt{2} \lp \cos(\pi/4) + i\sin(pi/4) \rp \\
+       & = & 2\sqrt{2} e^{i\pi/4}
+    }
+  \end{eqnarray*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+  \begin{eqnarray*}
+    z & = & \sqrt{3} + i \\
+    \uncover<2->
+    {%
+         & = & 2 \cos\lp\frac{\pi}{6}\rp + i 2 \sin\lp\frac{\pi}{6}\rp, \\
+         & = & 2 e^{i\frac{\pi}{6}}.
+    }
+  \end{eqnarray*}
+\end{frame}
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        Express -1 in Euler form.
+
+          \begin{tabular}{l@{\hspace{3em}}l}
+            A: & $e^{-i\pi}$, \\
+            B: & $e^{-i\pi/2}$, \\
+            C: & $e^{-i}$, \\
+            D: & $-1$, \\
+          \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        Express -1 in Euler form.
+
+          \begin{tabular}{l@{\hspace{3em}}l}
+            A: & $e^{-i\pi}$, \\
+            B: & $e^{-i\pi/2}$, \\
+            C: & $e^{-i}$, \\
+            D: & $-1$, \\
+          \end{tabular}
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+         Express -1 in Euler form.
+
+          \begin{tabular}{l@{\hspace{3em}}l}
+            A: & $e^{-i\pi}$, \\
+            B: & $e^{-i\pi/2}$, \\
+            C: & $e^{-i}$, \\
+            D: & $-1$, \\
+          \end{tabular}
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
 
 \subsection{Root Finding}
 
@@ -51,7 +147,7 @@
 \begin{frame}
   \frametitle{lol wut?}
 
-  Find the cube root of 3.
+  Find the cube roots of 3.
   \begin{eqnarray*}
     z^3 & = & 1 \\
     z^3 & = & \lp r e^{i\theta} \rp^3 \\
@@ -70,9 +166,9 @@
 
 \begin{frame}
   \frametitle{Root Finding}
-  To find the n\textsuperscript{th} root:
+  To find the n\textsuperscript{th} roots:
   \begin{itemize}
-  \item n\textsuperscript{th} root of $a+bi$
+  \item n\textsuperscript{th} roots of $a+bi$
   \item Convert $a+bi=re^{i\theta}$ 
   \item Find $z^n=re^{i\theta}$
     \begin{eqnarray*}
@@ -91,26 +187,46 @@
   \begin{eqnarray*}
     z & = & R e^{i\alpha} \\
     z^n & = & R^n e^{i n\alpha} \\
-    R & = & r^{1/n} \\
-    \alpha & = & \frac{\theta}{n}, ~ \frac{\theta+2\pi}{n}, ~
-    \frac{\theta+4\pi}{n}, \ldots, ~ \frac{\theta+2(n-1)\pi}{n}
+  \end{eqnarray*}
+  but
+  \begin{eqnarray*}
+    z^n & = & re^{i\theta}, \\
+    \uncover<2->{%
+      \Rightarrow
+      R & = & r^{1/n} \\
+      \alpha & = & \frac{\theta}{n}, ~ \frac{\theta+2\pi}{n}, ~
+      \frac{\theta+4\pi}{n}, \ldots, ~ \frac{\theta+2(n-1)\pi}{n}.
+    }
   \end{eqnarray*}
 \end{frame}
 
 \begin{frame}
   \frametitle{Example}
 
-  Find the fourth root of 16.
-  \begin{eqnarray*}
-    z^4 & = & 16 e^{i0}, ~ 16 e^{i2\pi}, ~ 16 e^{i4\pi}, ~ 16 e^{i6\pi} \\
-    R^4 e^{i4\alpha} & = & 16 e^{i0}, ~ 16 e^{i2\pi}, ~ 16 e^{i4\pi}, ~ 16 e^{i6\pi} 
-  \end{eqnarray*}
+  Find the fourth roots of 16.
+  \only<2->{%
+    Express 16 four different ways:
+    \begin{eqnarray*}
+      z & = & R e^{i\alpha}, \\
+      z^4 & = & 16 e^{i0}, ~ 16 e^{i2\pi}, ~ 16 e^{i4\pi}, ~ 16 e^{i6\pi} \\
+      R^4 e^{i4\alpha} & = & 16 e^{i0}, ~ 16 e^{i2\pi}, ~ 16 e^{i4\pi}, ~ 16 e^{i6\pi} 
+    \end{eqnarray*}
+  }
 
-  Then
-  \begin{eqnarray*}
-    R & = & 2 \\
-    \alpha & = & 0, ~ \frac{\pi}{2}, ~ \pi, ~ \frac{3\pi}{2}
-  \end{eqnarray*}
+  \only<3->{%
+    Then
+    \begin{eqnarray*}
+      R & = & 2 \\
+      \alpha & = & 0, ~ \frac{\pi}{2}, ~ \pi, ~ \frac{3\pi}{2}
+    \end{eqnarray*}
+  }
+
+  \only<4->{%
+    \begin{eqnarray*}
+      z & = & 2 e^{i0},~2e^{i\pi/2},~2e^{i\pi},~2e^{i3\pi/2}, \\
+      & = & 2,~2i,~-2,~-2i.
+    \end{eqnarray*}
+  }
 
 \end{frame}
 
@@ -121,20 +237,23 @@
 
   Find the cubic roots of $2+2i$.
 
-  \begin{eqnarray*}
-    2 + 2i & = & 2\sqrt{2} e^{i\pi/4}
-  \end{eqnarray*}
+  \uncover<2->{%
+    \begin{eqnarray*}
+      2 + 2i & = & 2\sqrt{2} e^{i\pi/4}
+    \end{eqnarray*}
 
-  Let $z=re^{i\theta}$ so $z^3=r^3e^{i3\theta}$:
-  \begin{eqnarray*}
-    r^3e^{i3\theta} & = & 2\sqrt{2} e^{i\pi/4}, ~ 2\sqrt{2} e^{i9\pi/4}, ~ 2\sqrt{2} e^{i17\pi/4}
-  \end{eqnarray*}
+    Let $z=re^{i\theta}$ so $z^3=r^3e^{i3\theta}$:
+    \begin{eqnarray*}
+      r^3e^{i3\theta} & = & 2\sqrt{2} e^{i\pi/4}, ~ 2\sqrt{2} e^{i9\pi/4}, ~ 2\sqrt{2} e^{i17\pi/4}
+    \end{eqnarray*}
 
-  \begin{eqnarray*}
-    r &  = & (2\sqrt{2})^{1/3} \\
-    \theta & = & \frac{\pi}{12}, ~ \frac{9\pi}{12}, ~ \frac{17\pi}{12} \\
-    z & = &  (2\sqrt{2})^{1/3} e^{i\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i9\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i17\pi/12}
-  \end{eqnarray*}
+    \begin{eqnarray*}
+      r &  = & (2\sqrt{2})^{1/3} \\
+      \theta & = & \frac{\pi}{12}, ~ \frac{9\pi}{12}, ~ \frac{17\pi}{12} \\
+      z & = &  (2\sqrt{2})^{1/3} e^{i\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i9\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i17\pi/12}
+    \end{eqnarray*}
+
+  }
 
 \end{frame}
 
@@ -213,6 +332,31 @@
      }\fi
 
       \ifnum\value{clickerQuiz}=3{%
+       Determine the square roots of $\sqrt{3} + i$
+
+        \vfill
+
+        %\begin{eqnarray*}
+        %  \sqrt{3} +  i & = & 2 e^{\pi/6} 
+        %\end{eqnarray*}
+
+        %Let $z=re^{i\theta}$ so $z^2=r^2e^{i2\theta}$:
+        %\begin{eqnarray*}
+        %  r^2e^{i2\theta} & = & 2 e^{\pi/6} , ~ 2 e^{13\pi/6} 
+        %\end{eqnarray*}
+
+        %\begin{eqnarray*}
+        %  r & = & \sqrt{2} \\
+        %  \theta & = & \frac{\pi}{6}, ~ \frac{13\pi}{6}
+        %\end{eqnarray*}
+
+
+        \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
+          A: &  $\sqrt{2}e^{i\frac{\pi}{3}}$, & $\sqrt{2}e^{i\frac{7\pi}{3}}$ \\
+          B: &  $\sqrt{2}e^{i\frac{\pi}{6}}$, & $\sqrt{2} e^{i\frac{13\pi}{6}}$ \\
+          C: &  $2e^{i\frac{\pi}{3}}$, & $2e^{i\frac{7\pi}{3}}$ \\
+          D: &  $2e^{i\frac{\pi}{6}}$, & $2e^{i\frac{13\pi}{6}}$ \\
+        \end{tabular}
 
      }\fi
 

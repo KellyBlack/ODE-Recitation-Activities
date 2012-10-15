@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="solvingTwoUnkowns.svg"
+   inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/solvingTwoUnkowns.png"
+   inkscape:export-xdpi="287.32001"
+   inkscape:export-ydpi="287.32001">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="190.29839"
+     inkscape:cy="659.79631"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1161"
+     inkscape:window-height="997"
+     inkscape:window-x="701"
+     inkscape:window-y="16"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 40,362.36218 620,0"
+       id="path2987"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/solvingTwoUnkowns.png"
+       inkscape:export-xdpi="287.32001"
+       inkscape:export-ydpi="287.32001" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 340,52.362183 0,619.999997"
+       id="path2987-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/solvingTwoUnkowns.png"
+       inkscape:export-xdpi="287.32001"
+       inkscape:export-ydpi="287.32001" />
+    <text
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="648.75"
+       y="388.61218"
+       id="text3775"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/solvingTwoUnkowns.png"
+       inkscape:export-xdpi="287.32001"
+       inkscape:export-ydpi="287.32001"><tspan
+         sodipodi:role="line"
+         id="tspan3777"
+         x="648.75"
+         y="388.61218">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="303.75"
+       y="53.612183"
+       id="text3779"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/solvingTwoUnkowns.png"
+       inkscape:export-xdpi="287.32001"
+       inkscape:export-ydpi="287.32001"><tspan
+         sodipodi:role="line"
+         id="tspan3781"
+         x="303.75"
+         y="53.612183">y</tspan></text>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:2.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 460,52.362183 121.61522,669.53376"
+       id="path3783"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/solvingTwoUnkowns.png"
+       inkscape:export-xdpi="287.32001"
+       inkscape:export-ydpi="287.32001" />
+    <text
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="479.4184"
+       y="65.241119"
+       id="text3785"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/solvingTwoUnkowns.png"
+       inkscape:export-xdpi="287.32001"
+       inkscape:export-ydpi="287.32001"><tspan
+         sodipodi:role="line"
+         id="tspan3787"
+         x="479.4184"
+         y="65.241119">-2x+y=4</tspan></text>
+    <path
+       style="fill:none;stroke:#0038ff;stroke-width:2.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 320,72.362183 480,672.36218"
+       id="path3789"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/solvingTwoUnkowns.png"
+       inkscape:export-xdpi="287.32001"
+       inkscape:export-ydpi="287.32001" />
+    <text
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="496.38895"
+       y="659.21082"
+       id="text3791"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/solvingTwoUnkowns.png"
+       inkscape:export-xdpi="287.32001"
+       inkscape:export-ydpi="287.32001"><tspan
+         sodipodi:role="line"
+         id="tspan3793"
+         x="496.38895"
+         y="659.21082">3x+y=4</tspan></text>
+  </g>
+</svg>
