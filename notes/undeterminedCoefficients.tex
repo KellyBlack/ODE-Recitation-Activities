@@ -43,29 +43,31 @@
 \end{frame}
 
 
-\begin{frame}
-  \frametitle{Solutions to Linear Equations}
-  General non-homogeneous, constant coefficients, 2nd order DEs:
-  \begin{eqnarray*}
-    ay'' + by' +cy & = & f(t) 
-  \end{eqnarray*}  
-  These are linear differential equations. If $y_h(t)$ is a solution
-  to the homogeneous problem: 
-  \begin{eqnarray*}
-    ay^{''}_{h} + by^{'}_h +cy_h & = & 0
-  \end{eqnarray*} 
-  and $y_p(t)$ is a particular solution to the DE: 
-  \begin{eqnarray*}
-    ay^{''}_{p} + by^{'}_p +cy_p & = & f(t)
-  \end{eqnarray*} 
-  Then ${\color{red}y=y_h(t) + y_p(t)}$  is the general solution to the DE. 
-\end{frame}
+%\begin{frame}
+%  \frametitle{Solutions to Linear Equations}
+%  General non-homogeneous, constant coefficients, 2nd order DEs:
+%  \begin{eqnarray*}
+%    ay'' + by' +cy & = & f(t) 
+%  \end{eqnarray*}  
+%  These are linear differential equations. If $y_h(t)$ is a solution
+%  to the homogeneous problem: 
+%  \begin{eqnarray*}
+%    ay^{''}_{h} + by^{'}_h +cy_h & = & 0
+%  \end{eqnarray*} 
+%  and $y_p(t)$ is a particular solution to the DE: 
+%  \begin{eqnarray*}
+%    ay^{''}_{p} + by^{'}_p +cy_p & = & f(t)
+%  \end{eqnarray*} 
+%  Then ${\color{red}y=y_h(t) + y_p(t)}$  is the general solution to the DE. 
+%  
+%
+%\end{frame}
 
 
 \begin{frame}
   \frametitle{Overview of the Solution Method}
 
-  Given
+  Given non-homogeneous, constant coefficients DE:
   \begin{eqnarray*}
     a y'' + by' + cy & = & f(t):
   \end{eqnarray*}
@@ -79,9 +81,9 @@
       a y_p'' + by_p' + cy_p & = & f(t).
     \end{eqnarray*}
   \item Form the general solution
-    \begin{eqnarray*}
+   {\color{red} \begin{eqnarray*}
       y(t) & = & y_h(t) + y_p(t).
-    \end{eqnarray*}
+    \end{eqnarray*}}
   \item Determine the constants if initial values are given. \\
     (Do this last!)
   \end{enumerate}
@@ -90,6 +92,29 @@
 \end{frame}
 
 \subsection{Examples}
+
+\begin{frame}
+  \frametitle{General Idea}
+   Finding the homogeneous solution to
+     \begin{eqnarray*}
+      a y'' + b y' + cy  & =& 0
+    \end{eqnarray*}
+   Guess                            
+       {\color{red}$y_h(t)=e^{rt}$}, find the characteristics equation
+       {\color{red}$ar^2+br+c = 0.$}
+  Find the roots are {\color{red}$r_1, r_2$}.
+  \begin{enumerate}
+  \item If {\color{blue}$r_1, r_2$ are distict, real}, then
+      {\color{red}$$y_h(t) = C_1e^{r_1t}+C_2e^{r_2t}$$}\\
+  \item If {\color{blue}$r_1, r_2$ are repeated, real}, i.e., $r_1 = r_2$ then
+     {\color{red}$$y_h(t) = C_1e^{r_1t}+C_2te^{r_1t}$$}\\
+  \item If {\color{blue}$r_1, r_2$ are complex}, i.e., $r_1, r_2 = a\pm bi$, 
+      then
+      {\color{red}$$y_h(t) = e^{at}\left(C_1\cos(bt)+C_2\sin(bt)\right)$$}
+  \end{enumerate}
+
+\end{frame}
+
 
 \iftoggle{clicker}{%
 \begin{frame}
@@ -143,19 +168,19 @@
      }\fi
    
      \ifnum\value{clickerQuiz}=3{%
-       Determine the solution to the differential equation
+       Determine the {\color{blue}general solution} to the differential equation
         \begin{eqnarray*}
-          y'' - 6y' + 9y & = & 0.
+          y'' + 4y' + 4y & = & 0.
         \end{eqnarray*}
 
 
         \vfill
 
         \begin{tabular}{ll}
-          A: & $y=C_1e^{-3t} + C_2te^{-3t}$ \\
-          B: & $y=C_1e^{-3t}$ \\
-          C: & $y=C_1e^{3t} + C_2te^{3t}$ \\
-          D: & $y=C_1e^{3t}$ \\
+          A: & $y=C_1e^{2t} + C_2te^{2t}$ \\
+          B: & $y=C_1e^{-2t}$ \\
+          C: & $y=C_1e^{-2t} + C_2te^{-2t}$ \\
+          D: & $y=C_1e^{2t}$ \\
         \end{tabular}
 
 
@@ -240,6 +265,35 @@
       a y'' + by' + cy
     \end{eqnarray*}
     is  made up of sines \textbf{and} cosines.
+  \end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{General Idea}
+   Guessing a particular solution to 
+     \begin{eqnarray*}
+      a y'' + b y' + cy  = f(t)
+    \end{eqnarray*}
+
+  \begin{enumerate}
+  \item If {\color{blue}$f(t) = a_nt^n+\cdots a_1t+ a_0$}, then
+      guess {\color{red}$$y_p(t) = b_nt^n+\cdots b_1t+b_0.$$}\\
+
+  \item If {\color{blue} $f(t)= A e^{rt}$}, then guess
+       {\color{red} $y_p(t) = Be^{rt}$.}\\ 
+  \vspace{.5cm}
+  \item If {\color{blue}$f(t) = A\sin(rt)$}, then guess
+      {\color{red}$y_p(t) = C_1\sin(rt) +C_2\cos(rt)$.}\\
+  \vspace{.5cm}
+
+  \item If {\color{blue} $f(t) = B\cos(rt)$}, then guess
+      {\color{red}$y_p(t) = C_1\sin(rt) +C_2\cos(rt)$.}\\
+  \vspace{.5cm}
+
+  \item If {\color{blue}$f(t) = A\sin(rt)+B\cos(rt)$}, then guess
+     {\color{red} $$y_p(t) = C_1\sin(rt) +C_2\cos(rt).$$}
   \end{enumerate}
 
 \end{frame}
