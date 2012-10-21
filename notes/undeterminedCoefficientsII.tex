@@ -3,8 +3,7 @@
 \section{More Undetermined Coefficients}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 8, Day 2}
-%\subtitle{Math 232 - Revenge of the Method of Undetermined Coefficients}
+\subtitle{Math 232 - Revenge of the Method of Undetermined Coefficients}
 \date{17 Oct 2012}
 
 \begin{frame}
@@ -285,31 +284,50 @@
 \end{frame}
 }
 
+
+
 \begin{frame}
   \frametitle{Cauchy-Euler Equations}
-  \vspace{-1cm}
-   \begin{eqnarray*}
+
+  \begin{eqnarray*}
     a t^2 y'' + b t y' + c y & = & 0.
   \end{eqnarray*}
 
-  \uncover<2->
-  {
+  \uncover<2->{%
     Assume that the solution is in the form of
     \begin{eqnarray*}
-      y & = & A t^r\\
+      y & = & A t^r \\
       y' & = & A r t^{r-1} \\
       y'' & = & A r (r-1) t^{r-2}
     \end{eqnarray*}
+  }
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Cauchy-Euler Equations}
+
+  \begin{eqnarray*}
+    a t^2 y'' + b t y' + c y & = & 0.
+  \end{eqnarray*}
+
+  \uncover<2->{%
     Substitute back into the equation to get
     \begin{eqnarray*}
       a t^2 A r (r-1) t^{r-2} + b t A r t^{r-1} + c A t^r & = & 0, \\
-      a A r (r-1) t^{r} + b A r t^{r} + c A t^r & = & 0, \\
+      a A r (r-1) t^{r} + b A r t^{r} + c A t^r & = & 0,  \\
       A t^r \lp a r (r-1) + br + c \rp & = & 0, \\
       a r (r-1) + br + c & = & 0.
     \end{eqnarray*}
   }
+
   \uncover<3->{%
-    The solution is of the form $y = C_1 t^{r_1} + C_2 t^{r_2}.$
+    The solution is of the form
+    \begin{eqnarray*}
+      y & = & C_1 t^{r_1} + C_2 t^{r_2}.
+    \end{eqnarray*}
   }
     
 
@@ -320,7 +338,7 @@
   \frametitle{Example}
 
   \begin{eqnarray*}
-    t^2 y'' + t y' - 3t & = & 0.
+    t^2 y'' + t y' - 3y & = & 0.
   \end{eqnarray*}
 
   \uncover<2->{%
