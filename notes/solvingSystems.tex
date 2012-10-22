@@ -4,8 +4,8 @@
 
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 11, Day 1}
-\date{7 November 2012}
+\subtitle{Math 232 - Solving Systems of Differential Equations}
+\date{26 October 2012}
 
 \begin{frame}
   \titlepage
@@ -23,18 +23,23 @@
 \begin{frame}
   \frametitle{Systems of Differential Equations}
 
-  Conceptual Model: Automobile Suspension
+  Conceptual Model: Coupled System \\
+  \centerline{\includegraphics[width=7cm]{img/doubleSpringMass}}
 
   \begin{eqnarray*}
     \deriv{~}{t} \lp m \vec{v_1} \rp & = & \sum_j \vec{F}_{1j} \\
     \deriv{~}{t} \lp m \vec{v_2} \rp & = & \sum_j \vec{F}_{2j} 
   \end{eqnarray*}
 
+  \uncover<2->{%
+    These two equations depend on each other.
+    }
+
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{Start at the Beginning}
+  \frametitle{Vicini - He Told Me to Go Back To The Beginning}
 
   \begin{eqnarray*}
     \deriv{~}{t} x_1  & = & a_{11} x_1 + a_{12} x_2 + f_1(t), \\
@@ -65,14 +70,18 @@
     \right]
   \end{eqnarray*}
 
-  Definition: if $\vec{f}=\vec{0}$ then the system of equations is
-  homogeneous.
+  \uncover<2->{%
 
-  \begin{itemize}
-  \item Solutions are the sum of homogeneous and particular solutions.
-  \item Solutions are found by assuming a general form and then
-    searching for the ``right answer.''
-  \end{itemize}
+    Definition: if $\vec{f}=\vec{0}$ then the system of equations is
+    homogeneous.
+
+    \begin{itemize}
+    \item Solutions are the sum of homogeneous and particular solutions.
+    \item Solutions are found by assuming a general form and then
+      searching for the ``right answer.''
+    \end{itemize}
+
+  }
 
 \end{frame}
 
@@ -183,13 +192,28 @@
   \begin{eqnarray*}
     \vec{x}(t) & = & \vecTwo{x(t)}{y(t)}.
   \end{eqnarray*}
-  This is a path in the plane.
+  \uncover<2->{This is your location at any time.} \uncover<3->{This is a path in the plane.}
 
-  \begin{itemize}
-  \item One solution represented as a path in the plane is a \textit{solution graph}.
-  \item Many solutions represented as paths in the plane is the \textit{phase plane}.
-  \item If the solutions are unique then they cannot cross.
-  \end{itemize}
+  \uncover<4->{%
+    \begin{itemize}
+    \item One solution represented as a path in the plane is a \textit{solution graph}.
+    \item Many solutions represented as paths in the plane is the \textit{phase plane}.
+    \item If the solutions are unique then they cannot cross.
+    \end{itemize}
+  }
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Graphical View}
+
+  The solution to a system of differential equations has the form
+  \begin{eqnarray*}
+    \vec{x}(t) & = & \vecTwo{x(t)}{y(t)}, \\
+    & = & x(t) \vec{i} + y(t)\vec{j}.
+  \end{eqnarray*}
+
+  \centerline{\includegraphics[width=4cm]{img/phasePlane}}
 
 \end{frame}
 
