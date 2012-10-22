@@ -4,7 +4,7 @@
 
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 10, Day 2}
+\subtitle{Math 232 - Solving Systems of Differential Equations}
 \date{31 October 2012}
 
 \begin{frame}
@@ -23,18 +23,23 @@
 \begin{frame}
   \frametitle{Systems of Differential Equations}
 
-  Conceptual Model: Automobile Suspension
+  Conceptual Model: Coupled System \\
+  \centerline{\includegraphics[width=7cm]{img/doubleSpringMass}}
 
   \begin{eqnarray*}
     \deriv{~}{t} \lp m \vec{v_1} \rp & = & \sum_j \vec{F}_{1j} \\
     \deriv{~}{t} \lp m \vec{v_2} \rp & = & \sum_j \vec{F}_{2j} 
   \end{eqnarray*}
 
+  \uncover<2->{%
+    These two equations depend on each other.
+    }
+
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{Start at the Beginning}
+  \frametitle{Vicini - He Told Me to Go Back To The Beginning}
 
   \begin{eqnarray*}
     \deriv{~}{t} x_1  & = & a_{11} x_1 + a_{12} x_2 + f_1(t), \\
@@ -82,11 +87,50 @@
    \ifnum\value{clickerQuiz}=1{%
 
     \vfill
+   \begin{eqnarray*}
+     \deriv{~}{t} x_1 & = & 5  x_1 + 24 x_2 + 8 e^{-11t}, \\
+     \deriv{~}{t} x_2 & = & -2 x_1 -  9 x_2 + 4 e^{-11t}.
+   \end{eqnarray*}
+
+   Written in matrix/vector form we get\\[12pt]
+
+   \begin{tabular}{ll}
+          A: &  $\deriv{~}{t} \vecTwo{x_1}{x_2}  =  
+      \arrayTwo{5}{24}{-2}{-9} \vecTwo{x_1}{x_2}
+      + \vecTwo{8e^{-11t}}{4e^{-11t}}.$
+       \\[12pt]
+          B: &  $\deriv{~}{t} \vecTwo{x_1}{x_2}  =  
+      \arrayTwo{5}{-2}{24}{-9} \vecTwo{x_1}{x_2}
+      + \vecTwo{8e^{-11t}}{4e^{-11t}}.$
+       \\
+    \end{tabular}
+
+    \vfill
+
  }\fi
 
  \ifnum\value{clickerQuiz}=2{%
- \vfill
+   \vfill
 
+   \begin{eqnarray*}
+     \deriv{~}{t} x_1 & = & 5  x_1 + 24 x_2 + 8 e^{-11t}, \\
+     \deriv{~}{t} x_2 & = & -2 x_1 -  9 x_2 + 4 e^{-11t}.
+   \end{eqnarray*}
+
+   Written in matrix/vector form we get\\[12pt]
+
+   \begin{tabular}{ll}
+     A: &  $\deriv{~}{t} \vecTwo{x_1}{x_2}  =  
+     \arrayTwo{5}{-2}{24}{-9} \vecTwo{x_1}{x_2}
+     + \vecTwo{8e^{-11t}}{4e^{-11t}}.$
+     \\ [12pt]
+     B: &  $\deriv{~}{t} \vecTwo{x_1}{x_2}  =  
+     \arrayTwo{5}{24}{-2}{-9} \vecTwo{x_1}{x_2}
+     + \vecTwo{8e^{-11t}}{4e^{-11t}}.$
+     \\
+   \end{tabular}
+
+   \vfill
 
  }\fi
 
@@ -135,7 +179,7 @@
 
   \uncover<3->
   {
-   Given  
+   A solution is given by
     \begin{eqnarray*}
       \vec{x} & = &  
       \underbrace{C_1 e^{-t} \vecTwo{4}{-1} + C_2 e^{-3t} \vecTwo{-3}{1}}_{\mathrm{homogeneous ~solution~} x_h} 
@@ -228,6 +272,28 @@
 
 \end{frame}
 
+\begin{frame}
+    \frametitle{Graphical View}
+
+  The solution to a system of differential equations has the form
+  \begin{eqnarray*}
+    \vec{x}(t) & = & \vecTwo{x(t)}{y(t)}, \\
+    & = & x(t) \vec{i} + y(t)\vec{j}.
+  \end{eqnarray*}
+
+  \only<1>{%
+    One Solution: \\
+    \centerline{\includegraphics[width=4cm]{img/oneSystemSolution}}
+  }
+
+  \only<2->{%
+    Phase plane: \\
+    \centerline{\includegraphics[width=4cm]{img/phasePlane}}
+  }
+  
+
+\end{frame}
+
 \subsection{General Framework}
 
 \begin{frame}
@@ -245,7 +311,7 @@
     \right].
   \end{eqnarray*}
 
-  The vectors, $\vec{x}_i$, are related to the eigen values and the eigen vectors.
+  The vectors, $\vec{x}_i$, are related to the eigenvalues and the eigenvectors.
 
 \end{frame}
 \iftoggle{clicker}{%
@@ -253,13 +319,43 @@
   \frametitle{Clicker Quiz}
 
    \ifnum\value{clickerQuiz}=1{%
-
     \vfill
+
+   \begin{eqnarray*}
+     \deriv{~}{t} x & = &  4y, \\
+     \deriv{~}{t} y & = & -2 x -3y.
+   \end{eqnarray*}
+
+   Written in matrix/vector form we get\\[12pt]
+
+   \begin{tabular}{ll}
+     A: & $\deriv{~}{t} \vecTwo{x}{y} =  
+     \arrayTwo{0}{-2}{4}{-3} \vecTwo{x}{y}.$\\[12pt]
+     B: & $\deriv{~}{t} \vecTwo{x}{y} =  
+     \arrayTwo{0}{4}{-2}{-3} \vecTwo{x}{y}.$\\[12pt]
+   \end{tabular}
+
+   \vfill
+
  }\fi
   
  \ifnum\value{clickerQuiz}=2{%
- \vfill
-  
+   \vfill
+   \begin{eqnarray*}
+     \deriv{~}{t} x & = &  4y, \\
+     \deriv{~}{t} y & = & -2 x -3y.
+   \end{eqnarray*}
+
+   Written in matrix/vector form we get\\[12pt]
+
+   \begin{tabular}{ll}
+     A: & $\deriv{~}{t} \vecTwo{x}{y} =  
+     \arrayTwo{0}{4}{-2}{-3} \vecTwo{x}{y}.$\\[12pt]
+     B: & $\deriv{~}{t} \vecTwo{x}{y} =  
+     \arrayTwo{0}{-2}{4}{-3} \vecTwo{x}{y}.$\\[12pt]
+   \end{tabular}
+
+   \vfill
 
  }\fi
   
@@ -391,4 +487,4 @@
 \end{frame}
 
 
-% LocalWords:  Clarkson pausesection hideothersubsections
+% LocalWords:  Clarkson pausesection hideothersubsections Vicini
