@@ -4,8 +4,8 @@
 
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 11, Day 2}
-\date{9 November 2012}
+\subtitle{Math 232 - Week 10, Day 3}
+\date{2 November 2012}
 
 \begin{frame}
   \titlepage
@@ -48,7 +48,7 @@
     A \vec{v} & = & \lambda \vec{v}.
   \end{eqnarray*}
 
-  This is an eigen vector/eigen value problem!
+  This is an eigenvalue/eigenvector problem!
 
 \end{frame}
 
@@ -60,8 +60,7 @@
   \begin{eqnarray*}
     \deriv{~}{t} \vec{x} & = & A \vec{x},
   \end{eqnarray*}
-  where $A$ is an $n\times n$ matrix, find the eigen vectors and eigen
-  values. \textbf{If} there are $n$ linearly independent eigen vectors
+  where $A$ is an $n\times n$ matrix, find the eigenvalues and eigenvectors. \textbf{If} there are $n$ linearly independent eigenvectors
   then 
   \begin{eqnarray*}
     \vec{x} & = & c_1 e^{\lambda_1 t} \vec{v}_1 + c_2 e^{\lambda_2 t} \vec{v}_2 +
@@ -72,6 +71,40 @@
 
 \subsection{Examples}
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+\vfill
+
+
+ }\fi
+
+ \ifnum\value{clickerQuiz}=2{%
+\vfill
+
+
+ }\fi
+
+ \ifnum\value{clickerQuiz}=3{%
+  Given matrix 
+  \begin{eqnarray*}
+    A & = & \arrayTwo{5}{24}{-2}{-9}.
+  \end{eqnarray*}
+  Find the eigenvalues of $A$. 
+  \begin{tabular}{ll}
+          A: & $\lambda_1  = 5, \lambda_2 = -9$ \\
+          B: & $\lambda_1  = -1, \lambda_2 = -3$ \\
+          C: & $\lambda_1  = 2, \lambda_2 = -2$ \\
+        \end{tabular}
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
+
 \begin{frame}
   \frametitle{Example}
 
@@ -81,19 +114,19 @@
 
   \uncover<2->
   {
-    First find the eigen values,
+    First find the eigenvalues,
     \begin{eqnarray*}
       0 & = & \det\lp\arrayTwo{5-\lambda}{24}{-2}{-9-\lambda}\rp, \\
-      & = & (\lambda+2)(\lambda+1).
+      & = & (\lambda+1)(\lambda+3).
     \end{eqnarray*}
-    The eigen values are $\lambda_1=-1$ and $\lambda_2=-3$.
+    The eigenvalues are $\lambda_1=-1$ and $\lambda_2=-3$.
   }
 
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{Find the eigen vectors}
+  \frametitle{Find the eigenvectors}
 
   $\lambda_1 = -1$:
   \begin{eqnarray*}
@@ -152,18 +185,43 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{First find the eigen values}
+    \frametitle{First find the eigenvalues}
     \begin{eqnarray*}
       0 & = & \det\lp\arrayTwo{-\lambda}{1}{-6}{-5-\lambda}\rp, \\
       & = & (\lambda+2)(\lambda+3).
     \end{eqnarray*}
-    The eigen values are $\lambda_1=-2$ and $\lambda_2=-3$.
+    The eigenvalues are $\lambda_1=-2$ and $\lambda_2=-3$.
 
 \end{frame}
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+   For  $\lambda_1 = -2$, find the corresponding eigenvectors.
+   \begin{tabular}{ll}
+          A: & $\vec{v}_1  =  \vecTwo{1}{-2}.$ \\
+          B: & $\vec{v}_1  =  \vecTwo{2}{1}.$ \\
+          C: & $\vec{v}_1  =  \vecTwo{1}{2}.$ \\
+        \end{tabular}
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
 
 \begin{frame}
-  \frametitle{Find the eigen vectors}
+  \frametitle{Find the eigenvectors}
 
   $\lambda_1 = -2$:
   \begin{eqnarray*}
@@ -203,15 +261,50 @@
 \end{frame}
 
 
-\subsection{The Phase Plane}
 
+\subsection{Repeated Eigenvalues}
 \begin{frame}
-  \frametitle{Phase Plane Solutions}
-
-
+  \frametitle{Example}
+  \begin{eqnarray*}
+    \deriv{~}{t} \arrayTwo{2}{0}{0}{2} \vec{x}.
+  \end{eqnarray*}
+  \uncover<2->
+  {
+    Find the eigenvalues,
+    \begin{eqnarray*}
+      0 & = & \det\lp\arrayTwo{2-\lambda}{0}{0}{2-\lambda}\rp, \\
+      & = & (2-\lambda)^2.
+    \end{eqnarray*}
+    The eigenvalue is $\lambda=2$.
+  }
 \end{frame}
 
-\subsection{Repeated Eigen Values}
+\begin{frame}
+  \frametitle{Find the Eigenvector}
+  $\lambda_1=2$:
+  \begin{eqnarray*}
+    \arrayTwo{0}{0}{0}{0} \vecTwo{x}{y} & = & \vecTwo{0}{0}, \\
+    \uncover<2->
+    {
+      \Rightarrow \vec{v} & = & \vecTwo{x}{y}, \\
+      & = & x \vecTwo{1}{0} + y \vecTwo{0}{1}, \\
+      \uncover<3->
+      {
+        \vec{v}_1 & = & \vecTwo{1}{0}, \\
+        \vec{v}_2 & = & \vecTwo{0}{1}.
+      }
+    }
+  \end{eqnarray*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Form the Solution}
+  The solution is
+  \begin{eqnarray*}
+    \vec{x} & = & c_1 e^{2t} \vecTwo{1}{0} + c_2 e^{2t} \vecTwo{0}{1}.
+  \end{eqnarray*}
+\end{frame}
+
 
 \begin{frame}
   \frametitle{Example}
@@ -222,7 +315,7 @@
 
   \uncover<2->
   {
-    Find the eigen values:
+    Find the eigenvalues:
     \begin{eqnarray*}
       0 & = & \det\lp\arrayTwo{-\lambda}{-1}{4}{-4-\lambda}\rp, \\
       & = & \lp \lambda + 2 \rp^2,
@@ -234,17 +327,21 @@
 
 
 \begin{frame}
-  \frametitle{Find the eigen vectors}
+  \frametitle{Find the eigenvectors}
 
   \begin{eqnarray*}
-    \arrayTwo{2}{1}{4}{2} \vec{x}{y} & = & \vecTwo{0}{0}, \\
-    2x + y & = & 0, \\
-    4x + 2y & = & 0.
+    \arrayTwo{2}{-1}{4}{-2} \vec{x}{y} & = & \vecTwo{0}{0}, \\
+    2x - y & = & 0, \\
+    4x - 2y & = & 0.
   \end{eqnarray*}
 
-  There is only one eigen vector,
+  There is only one eigenvector,
   \begin{eqnarray*}
-    \vec{v}_1 & = & \vecTwo{1}{-2}.
+    \vec{v}_1 & = & \vecTwo{1}{2}.
+  \end{eqnarray*}
+  One homogeneous solution is 
+  \begin{eqnarray*}
+   \vec{x}_1 & = & e^{-2t}\vecTwo{1}{2}.
   \end{eqnarray*}
 
 \end{frame}
@@ -288,7 +385,7 @@
       \lambda t e^{\lambda t} \vec{v} & = & t e^{\lambda t} A \vec{v}, \\
       \lambda \vec{v} & = & A \vec{v}.
     \end{eqnarray*}
-    (This is the eigen value and eigen vector!)
+    (This is the eigenvalue and eigenvector!)
 
     We also have 
     \begin{eqnarray*}
@@ -304,17 +401,23 @@
 
   In out example we have
   \begin{eqnarray*}
-    \vec{x} & = & t e^{\lambda t} c_1 \vecTwo{1}{2} + e^{\lambda t} \vec{u}, \\
-    \arrayTwo{2}{-1}{4}{-2} \vecTwo{x}{y} & = & \vecTwo{c_1}{2c_1}, \\
-    2x-y & = & c_1 \\
-    4x-2y & = & 2 c_1.
+    \vec{x} & = & t e^{-2 t} \vecTwo{1}{2} + e^{-2 t} \vec{u}, \\
+    \arrayTwo{2}{-1}{4}{-2} \vecTwo{x}{y} & = & \vecTwo{1}{2}, \\
+    2x-y & = & 1 \\
+    4x-2y & = & 2.
   \end{eqnarray*}
 
   The vector, $\vec{u}$, is the following:
   \begin{eqnarray*}
-    \vec{u} & = & \vecTwo{c_2}{2c_2-c_1}.
+    \vec{u} & = & \vecTwo{0}{-1}+\vecTwo{1}{2}x. 
+  ~~~~\text{Let }  \vec{u}  =  \vecTwo{0}{-1}.
   \end{eqnarray*}
-  
+  One homogeneous solution is:
+  \begin{eqnarray*}
+    \vec{x}_2 & = & te^{-2t}\vecTwo{1}{2}+e^{-2t}\vecTwo{0}{-1} 
+     =  e^{-2t}\vecTwo{t}{2t-1}.
+  \end{eqnarray*}
+
 \end{frame}
 
 \begin{frame}
@@ -322,58 +425,8 @@
   
   The solution to the differential equation is
   \begin{eqnarray*}
-    \vec{x}(t) & = & t e^{-2t} c_1 \vecTwo{1}{2} + e^{-2t} \vecTwo{c_2}{2c_2-c_1}, \\
-    & = & e^{-2t} c_1 \vecTwo{t}{2t-1} + e^{-2t} c_2 \vecTwo{1}{2}.
+    \vec{x}(t) & = &  C_1 e^{-2t} \vecTwo{1}{2} + C_2 e^{-2t}\vecTwo{t}{2t-1}.
   \end{eqnarray*}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Example}
-
-  \begin{eqnarray*}
-    \deriv{~}{t} \arrayTwo{2}{0}{0}{2} \vec{x}.
-  \end{eqnarray*}
-
-  \uncover<2->
-  {
-    Find the eigen values,
-    \begin{eqnarray*}
-      0 & = & \det\lp\arrayTwo{2-\lambda}{0}{0}{2-\lambda}\rp, \\
-      & = & (2-\lambda)^2.
-    \end{eqnarray*}
-    The eigen value is $\lambda=2$.
-  }
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Find the Eigen Vector}
-
-  $\lambda_1=2$:
-  \begin{eqnarray*}
-    \arrayTwo{0}{0}{0}{0} \vecTwo{x}{y} & = & \vecTwo{0}{0}, \\
-    \uncover<2->
-    {
-      \Rightarrow \vec{v} & = & \vecTwo{x}{y}, \\
-      & = & x \vecTwo{1}{0} + y \vecTwo{0}{1}, \\
-      \uncover<3->
-      {
-        \vec{v}_1 & = & \vecTwo{1}{0}, \\
-        \vec{v}_2 & = & \vecTwo{0}{1}.
-      }
-    }
-  \end{eqnarray*}
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Form the Solution}
-    
-  The solution is 
-  \begin{eqnarray*}
-    \vec{x} & = & c_1 e^{2t} \vecTwo{1}{0} + c_2 e^{2t} \vecTwo{0}{1}.
-  \end{eqnarray*}
-
 \end{frame}
 
 
@@ -408,7 +461,7 @@
   Written as a system we get
   \begin{eqnarray*}
     \deriv{~}{t} \vecTwo{x}{y} & = & 
-    \arrayTwo{-3/100}{1/50}{3/100}{-3/50} \vecTwo{x}{y}.
+    \arrayTwo{-3/100}{2/50}{3/100}{-3/50} \vecTwo{x}{y}.
   \end{eqnarray*}
   
 \end{frame}
