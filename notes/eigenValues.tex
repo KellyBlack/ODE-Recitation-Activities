@@ -1,10 +1,10 @@
 \part{Eigen-Vectors/Values}
 \lecture{EigenVectors/Values}{Eigen-Vectors/Values}
-\section{Eigenvectors and Eigenvalues}
+\section{Eigenvalues and Eigenvectors}
 
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Eigenvectors and eigenvalues}
+\subtitle{Math 232 - Eigenvalues and eigenvectors}
 \date{24 October 2012}
 
 \begin{frame}
@@ -17,11 +17,11 @@
 \end{frame}
 
 
-\subsection{Eigenvectors and Eigenvalues}
+\subsection{Eigenvalues and Eigenvectors}
 
 
 \begin{frame}
-  \frametitle{Eigenvectors and Eigenvalues}
+  \frametitle{Eigenvalues and Eigenvectors}
 
   Suppose that we have a system of differential equations,
   \begin{eqnarray*}
@@ -33,7 +33,7 @@
   \begin{eqnarray*}
     A \vec{v} & = & \lambda \vec{v},
   \end{eqnarray*}
-  where $\lambda$ is a scalar number?
+  where $\lambda$ is a scalar (number)?
 
 \end{frame}
 
@@ -60,7 +60,7 @@
 
 
 \begin{frame}
-  \frametitle{Eigenvectors and Eigenvalues}
+  \frametitle{Eigenvalues and Eigenvectors}
 
   Definition: Given a square matrix, $A$, an eigenvector, $\vec{v}$, and an
   eigenvalue, $\lambda$, satisfy
@@ -68,7 +68,6 @@
     A \vec{v} & = & \lambda \vec{v}.
   \end{eqnarray*}
 
-  Given $A$ how can we find them?
 
 \end{frame}
 
@@ -120,6 +119,21 @@
    
      \ifnum\value{clickerQuiz}=3{%
         \vfill
+        We want to solve a system of linear equations
+        \begin{eqnarray*}
+          A \vec{x} & = & \vec{b}.
+        \end{eqnarray*}
+        We find the determinant of the matrix $A$, and the determinant is zero.
+
+        What does this imply about the solutions to the linear system.
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & The solution is unique. \\
+          B: & There are infinitely many solutions. \\
+          C: & There are no solutions. \\
+          D: & Either B or C. \\
+        \end{tabular}
 
     }\fi
   
@@ -132,6 +146,7 @@
 \begin{frame}
   \frametitle{How to find}
 
+  Given $A$ how can we find its eigenvalues and eigenvectors?
   \begin{eqnarray*}
     A \vec{v} & = & \lambda \vec{v}, \\
     A \vec{v} - \lambda \vec{v} & = & 0, \\
@@ -147,15 +162,15 @@
     \det\lp A - \lambda I \rp & = & 0.
   \end{eqnarray*}
   Find a value for $\lambda$ that makes this true. (\redText{Note that there
-  will be infinite solutions for $\vec{v}$.})}
+  will be infinitely many solutions for $\vec{v}$.})}
 
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{Finding Eigenvectors and Eigenvalues}
+  \frametitle{Finding Eigenvalues and Eigenvectors}
 
-  Given a square matrix, $A$, to find the eigenvectors and eigenvalues do the following:
+  Given a square matrix, $A$, to find the eigenvalues and eigenvectors do the following:
   \begin{enumerate}
   \item Determine the characteristic equation:
     \begin{eqnarray*}
@@ -166,7 +181,7 @@
     \begin{eqnarray*}
       \lp A - \lambda_j I \rp \vec{v}_j & = & \vec{0}.
     \end{eqnarray*}
-    (Note that there will be infinite solutions for $\vec{v}$.) Solving linear systems means dealing with RREF. Wheeeee!
+    (Note that there will be infinitely many solutions for $\vec{v}$.) Solving linear systems means dealing with RREF. Wheeeee!
   \end{enumerate}
 
 \end{frame}
@@ -180,17 +195,20 @@
     A & = & \arrayTwo{12}{-10}{15}{-13}.
   \end{eqnarray*}
 
-  Find the characteristic equation:
-  \begin{eqnarray*}
-    \det\lp\arrayTwo{12-\lambda}{-10}{15}{-13-\lambda}\rp & = & \lambda^2+\lambda-6.
-  \end{eqnarray*}
+  \uncover<2->
+  {
+    Find the characteristic equation:
+    \begin{eqnarray*}
+      \det\lp\arrayTwo{12-\lambda}{-10}{15}{-13-\lambda}\rp & = & \lambda^2+\lambda-6.
+    \end{eqnarray*}
 
-  Find the values of $\lambda$:
-  \begin{eqnarray*}
-    \lambda^2+\lambda-6 & = & (\lambda-2)(\lambda+3), \\
-    & = & 0.
-  \end{eqnarray*}
-  So \redText{$\lambda_1 = -3$} and \redText{$\lambda_2=2$}.
+    Find the values of $\lambda$:
+    \begin{eqnarray*}
+      \lambda^2+\lambda-6 & = & (\lambda-2)(\lambda+3), \\
+      & = & 0.
+    \end{eqnarray*}
+    So \redText{$\lambda_1 = 2$} and \redText{$\lambda_2=-3$}.
+  }
 
 \end{frame}
 
@@ -255,18 +273,20 @@
     A & = & \arrayTwo{4}{18}{-3}{-11}.
   \end{eqnarray*}
 
-  Find the characteristic equation:
-  \begin{eqnarray*}
-    \det\lp\arrayTwo{4-\lambda}{18}{-3}{-11-\lambda}\rp & = & \lambda^2+7\lambda+10.
-  \end{eqnarray*}
-
-  Find the values of $\lambda$:
-  \begin{eqnarray*}
-    \lambda^2+7\lambda+10 & = & (\lambda+2)(\lambda+5), \\
-    & = & 0.
-  \end{eqnarray*}
-  So \redText{$\lambda_1 = -2$} and \redText{$\lambda_2=-5$}.
-
+  \uncover<2->
+  {
+    Find the characteristic equation:
+    \begin{eqnarray*}
+      \det\lp\arrayTwo{4-\lambda}{18}{-3}{-11-\lambda}\rp & = & \lambda^2+7\lambda+10.
+    \end{eqnarray*}
+    
+    Find the values of $\lambda$:
+    \begin{eqnarray*}
+      \lambda^2+7\lambda+10 & = & (\lambda+2)(\lambda+5), \\
+      & = & 0.
+    \end{eqnarray*}
+    So \redText{$\lambda_1 = -2$} and \redText{$\lambda_2=-5$}.
+  }
 
 \end{frame}
 
@@ -349,70 +369,22 @@
     A & = & \arrayThree{-2}{1}{1}{1}{-2}{1}{1}{1}{-2}.
   \end{eqnarray*}
 
-  Find the characteristic equation:
-  \begin{eqnarray*}
-    \det\lp\arrayThree{-2-\lambda}{1}{1}{1}{-2-\lambda}{1}{1}{1}{-2-\lambda}\rp
-    & = & \lambda (\lambda+3)^2.
-  \end{eqnarray*}
+  \uncover<2->
+  {
+    Find the characteristic equation:
+    \begin{eqnarray*}
+      \det\lp\arrayThree{-2-\lambda}{1}{1}{1}{-2-\lambda}{1}{1}{1}{-2-\lambda}\rp
+      & = & \lambda (\lambda+3)^2.
+    \end{eqnarray*}
 
-  Find the values of $\lambda$:
-  \begin{eqnarray*}
-    \lambda (\lambda+3)^2 & = & 0.
-  \end{eqnarray*}
-  So \redText{$\lambda_1 = 0$} and \redText{$\lambda_2=-3$}.
-
-
-\end{frame}
-
-
-\iftoggle{clicker}{%
-\begin{frame}
-  \frametitle{Clicker Quiz}
-
-      \ifnum\value{clickerQuiz}=1{%
-        We have two distinct eigenvalues for a $3 \times 3$
-        matrix. What does this imply about the number of linearly
-        independent eigenvectors?
-
-        \vfill
-
-        \begin{tabular}{ll}
-          A: & There are  two. \\
-          B: & There are three. \\
-          C: & There could be two or three, but there is not enough information. \\
-          D: & Wut? \\
-        \end{tabular}
-
-        \vfill
-
-      }\fi
-
-      \ifnum\value{clickerQuiz}=2{%
-        We have two distinct eigenvalues for a $3 \times 3$
-        matrix. What does this imply about the number of linearly
-        independent eigenvectors?
-
-        \vfill
-
-        \begin{tabular}{ll}
-          A: & There are  two. \\
-          B: & There are three. \\
-          C: & There could be two or three, but there is not enough information. \\
-          D: & Wut? \\
-        \end{tabular}
-
-        \vfill
-
-     }\fi
-   
-     \ifnum\value{clickerQuiz}=3{%
-        \vfill
-
-    }\fi
-  
+    Find the values of $\lambda$:
+    \begin{eqnarray*}
+      \lambda (\lambda+3)^2 & = & 0.
+    \end{eqnarray*}
+    So \redText{$\lambda_1 = 0$} and \redText{$\lambda_2=-3$}.
+  }
 
 \end{frame}
-}
 
 
 
@@ -500,8 +472,6 @@
 
 \end{frame}
 
-
-
 \begin{frame}
   \frametitle{Example}
 
@@ -509,18 +479,20 @@
     A & = & \arrayThree{2}{1}{1}{0}{1}{1}{0}{0}{1}.
   \end{eqnarray*}
 
-  Find the characteristic equation:
-  \begin{eqnarray*}
-    \det\lp\arrayThree{2-\lambda}{1}{1}{0}{1-\lambda}{1}{0}{0}{1-\lambda}\rp
-    & = & (2-\lambda) (1-\lambda)^2.
-  \end{eqnarray*}
+  \uncover<2->
+  {
+    Find the characteristic equation:
+    \begin{eqnarray*}
+      \det\lp\arrayThree{2-\lambda}{1}{1}{0}{1-\lambda}{1}{0}{0}{1-\lambda}\rp
+      & = & (2-\lambda) (1-\lambda)^2.
+    \end{eqnarray*}
 
-  Find the values of $\lambda$:
-  \begin{eqnarray*}
-    (2-\lambda) (1-\lambda)^2 & = & 0.
-  \end{eqnarray*}
-  So \redText{$\lambda_1 = 2$} and \redText{$\lambda_2=1$}.
-
+    Find the values of $\lambda$:
+    \begin{eqnarray*}
+      (2-\lambda) (1-\lambda)^2 & = & 0.
+    \end{eqnarray*}
+    So \redText{$\lambda_1 = 2$} and \redText{$\lambda_2=1$}.
+  }
 
 \end{frame}
 
@@ -610,6 +582,64 @@
   differential equations we have a problem.
 
 \end{frame}
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+      \ifnum\value{clickerQuiz}=1{%
+        We have two distinct eigenvalues for a $3 \times 3$
+        matrix. What does this imply about the number of linearly
+        independent eigenvectors?
+
+        \vfill
+  
+        \begin{tabular}{ll}
+          A: & There are  two. \\
+          B: & There are three. \\
+          C: & There could be two or three, but there is not enough information. \\
+          D: & Wut? \\
+        \end{tabular}
+
+        \vfill
+  
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+        We have two distinct eigenvalues for a $3 \times 3$
+        matrix. What does this imply about the number of linearly
+        independent eigenvectors?
+  
+        \vfill
+  
+        \begin{tabular}{ll}
+          A: & There are  two. \\
+          B: & There are three. \\
+          C: & There could be two or three, but there is not enough information. \\
+          D: & Wut? \\
+        \end{tabular}
+
+        \vfill
+
+     }\fi
+     \ifnum\value{clickerQuiz}=3{%
+        \vfill
+       We have two distinct eigenvalues for a $3 \times 3$
+        matrix. What does this imply about the number of linearly
+        independent eigenvectors?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & There are  two. \\
+          B: & There are three. \\
+          C: & There could be two or three,
+             but there is not enough information. \\
+          D: & Have no idea.\\
+       \end{tabular}
+
+    }\fi
+\end{frame}
+}
 
 
 

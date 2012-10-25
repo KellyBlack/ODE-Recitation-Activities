@@ -133,7 +133,7 @@
                                                         \sin\lp\lp\omega+\sqrt{\frac{k}{m}}\rp t\rp
   \end{eqnarray*}
 
-  Plots of the equations are given on pages 262-267 in your book.
+  Plots of the function are given on pages 262-267 in your book.
 
 \end{frame}
 
@@ -192,6 +192,20 @@
      }\fi
    
      \ifnum\value{clickerQuiz}=3{%
+         Determine the homogeneous solution to the differential equation
+        \begin{eqnarray*}
+          2 x'' + 10 x & = & 3 \cos(2t)
+        \end{eqnarray*}
+
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $x=C_1e^{5t} + C_2 t e^{5t}$ \\
+          B: & $x=C_1e^{\sqrt{5t}} + C_2 t e^{\sqrt{5}t}$ \\
+          C: & $x=C_1\cos(5t) + C_2\sin(5t)$ \\
+          D: & $x=C_1\cos(\sqrt{5}t) + C_2\sin(\sqrt{5}t)$ \\
+        \end{tabular}
 
         \vfill
 
@@ -231,10 +245,10 @@
 
   The solution is 
   \begin{eqnarray*}
-    x(t) & = & -\frac{3}{2}\cos(\sqrt{5} t) + \frac{3}{2} \sin(\sqrt{5} t), \\
-         & = & \frac{3}{2} \left[ -\cos(\sqrt{5} t) + \sin(\sqrt{5} t) \right], \\
+    x(t) & = & -\frac{3}{2}\cos(\sqrt{5} t) + \frac{3}{2} \sin( 2 t), \\
+         & = & \frac{3}{2} \left[ -\cos(\sqrt{5} t) + \sin( 2 t) \right], \\
          \only<1>{%
-           & = & 3 \sin\lp\frac{2-\sqrt{5}}{2}t\rp \sin\lp\frac{2+\sqrt{5}}{2} t\rp.
+           & = & 3 \sin\lp\frac{2-\sqrt{5}}{2}t\rp \sin\lp\frac{2+\sqrt{5}}{2} t\rp.\\
          }
          \only<2->{%
            & = & 3 \sin\lp\underbrace{\frac{2-\sqrt{5}}{2}}_{\mathrm{long~wave}}t\rp 

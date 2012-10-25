@@ -15,9 +15,98 @@
   \tableofcontents[pausesection,hideothersubsections]
 \end{frame}
 
+\subsection{Review: Undetermined Coefficients and Cauchy-Euler}
 
-\subsection{Variation of Parameters}
+\begin{frame}
+  \frametitle{Undetermined Coefficients Method: general steps}
 
+  Given non-homogeneous, constant coefficients DE:
+  \begin{eqnarray*}
+    a y'' + by' + cy & = & f(t):
+  \end{eqnarray*}
+  \vspace{-0.5cm}
+  \begin{enumerate}
+  \item Solve the homogeneous problem,
+    {\color{blue}\begin{eqnarray*}
+      a y_h'' + by_h' + cy_h & = & 0\\
+      a r^2 + br + c & = & 0.
+    \end{eqnarray*}}
+  \vspace{-0.5cm}
+  \item Solve for a particular solution,
+    {\color{blue}\begin{eqnarray*}
+      a y_p'' + by_p' + cy_p & = & f(t).
+    \end{eqnarray*}}
+  \item Form the general solution
+   {\color{red} \begin{eqnarray*}
+      y(t) & = & y_h(t) + y_p(t).
+    \end{eqnarray*}}
+  \item Determine the constants if initial values are given. \\
+    (Do this last!)
+  \end{enumerate}
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Undetermined Coefficients Method: guessing particular solutions}
+   Guessing a particular solution to
+     \begin{eqnarray*}
+      a y'' + b y' + cy  = f(t)
+    \end{eqnarray*}
+
+  \begin{enumerate}
+  \item If {\color{blue}$f(t) = a_nt^n+\cdots a_1t+ a_0$}, then
+      guess {\color{red}$$y_p(t) = b_nt^n+\cdots b_1t+b_0.$$}\\
+
+  \item If {\color{blue} $f(t)= A e^{rt}$}, then guess
+       {\color{green} $y_p(t) = Be^{rt}, Bte^{rt}, Bt^2e^{rt}$.}\\
+  \vspace{.5cm}
+  \item If {\color{blue}$f(t) = A\sin(rt)$}, then guess
+      {\color{red}$y_p(t) = C_1\sin(rt) +C_2\cos(rt)$.}\\
+  \vspace{.5cm}
+
+  \item If {\color{blue} $f(t) = B\cos(rt)$}, then guess
+      {\color{red}$y_p(t) = C_1\sin(rt) +C_2\cos(rt)$.}\\
+  \vspace{.5cm}
+
+  \item If {\color{blue}$f(t) = A\sin(rt)+B\cos(rt)$}, then guess
+     {\color{red} $$y_p(t) = C_1\sin(rt) +C_2\cos(rt).$$}
+  \end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Cauchy-Euler Equations}
+
+  Find the general solution to
+  {\color{red}\begin{eqnarray*}
+    a t^2 y''+ bt y' + c y  & = & t^d, \\
+  \end{eqnarray*}}
+
+  \begin{enumerate}
+    \item[Step 1] Assume {\color{blue}$y_h=t^r$} is the homogeneous solution. Then 
+    \begin{eqnarray*}
+      ar(r-1) +br + c & = & 0, 
+    \end{eqnarray*}
+    \vspace{-0.5cm}
+    \begin{enumerate}
+    \item[Case 1] Two distinct roots:  
+           {\color{orange}$y_h=C_1t^{r_1}+C_2t^{r_2}$} 
+    \item[Case 2] Repeated root:  
+            {\color{orange}$y_h=C_1t^{r}+C_2t^{r}\ln(t)$ }
+    \end{enumerate}
+
+    \item[Step 2] Assume {\color{blue}$y_p=At^d$}. Find $d$. 
+    \item[Step 3] The general solution {\color{red}$y=y_h+y_p$}. 
+   \end{enumerate}
+ 
+
+
+\end{frame}
+
+
+\subsection{Another Method: Variation of Parameters(Sec 4.5)}
 
 \begin{frame}
   \frametitle{Second order, nonhomogeneous DE}
@@ -117,7 +206,7 @@
  \ifnum\value{clickerQuiz}=3{%
     Find the homogeneous solution to the following differential equation:
         \begin{eqnarray*}
-          y'' + y' & = & \tan(t)?
+          y'' + y & = & \tan(t)?
         \end{eqnarray*}
 
         \begin{tabular}{ll}
@@ -555,7 +644,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
     v_1' & = & \frac{-e^{-t} \frac{1}{1+e^{2t}}}{
       -e^{-t}\lp -2 e^{-2t} \rp + \lp - e^{-t}\rp \lp e^{-2t} \rp} \\
     & = & \frac{-e^{2t}}{1+e^{2t}}, \\
-    v_2 & = & \frac{-e^{-2t}\frac{1}{1+e^{2t}}}{e^{-3t}}, \\
+    v_2' & = & \frac{-e^{-2t}\frac{1}{1+e^{2t}}}{e^{-3t}}, \\
     & = & \frac{e^t}{1+e^{2t}}.
   \end{eqnarray*}
 \end{frame}
