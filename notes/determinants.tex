@@ -22,14 +22,47 @@
   \frametitle{Clicker Quiz}
 
        \ifnum\value{clickerQuiz}=1{%
+         Which matrix is the inverse of 
+         \begin{eqnarray*}
+           \arrayTwo{0}{1}{2}{1}?
+         \end{eqnarray*}
+
+         \vfill
  
-       \vfill
+         \begin{eqnarray*}
+           \begin{array}{llcr}
+             A: &  \arrayTwo{1/2}{1/2}{1}{0}  \\ [12pt]
+             B: &  \arrayTwo{-1/2}{1/2}{1}{0}   \\ [12pt] 
+             C: &  \arrayTwo{0}{1/2}{1}{1/2} \\  [12pt]
+             D: &  \arrayTwo{0}{1}{1/2}{1}
+           \end{array}
+         \end{eqnarray*}
+
+ 
+         \vfill
  
        }\fi
 
          \ifnum\value{clickerQuiz}=2{%
-        
-       \vfill
+         Which matrix is the inverse of 
+         \begin{eqnarray*}
+           \arrayTwo{1}{1}{2}{0}?
+         \end{eqnarray*}
+
+         \vfill
+ 
+         \begin{eqnarray*}
+           \begin{array}{llcr}
+             A: &  \arrayTwo{1/2}{1/2}{1}{0}  \\ [12pt]
+             B: &  \arrayTwo{-1}{1}{1/2}{0}   \\ [12pt] 
+             C: &  \arrayTwo{0}{1/2}{1}{-1/2} \\  [12pt]
+             D: &  \arrayTwo{1/2}{0}{1}{1}
+           \end{array}
+         \end{eqnarray*}
+
+
+         
+         \vfill
         
        }\fi
  
@@ -385,101 +418,6 @@
 
 
 \end{frame}
-
-
-\iftoggle{clicker}{%
-\begin{frame}
-  \frametitle{Clicker Quiz}
-    
-      \ifnum\value{clickerQuiz}=1{%
-
-        \vfill
-
-        Is the matrix
-        \begin{eqnarray*}
-          \mathrm{det}
-          \startRowFour
-          \oneRowFour{4}{3}{-1}{0}
-          \oneRowFour{1}{0}{1}{7}
-          \oneRowFour{0}{1}{2}{6}
-          \oneRowFour{2}{0}{3}{2}
-          \stopRowOps
-        \end{eqnarray*}
-        invertible?
-
-        \vfill
-
-        \begin{tabular}{ll}
-          A: & Yes \\ 
-          B: & No
-        \end{tabular}
-
-        \vfill
-
-     }\fi
-
-     \ifnum\value{clickerQuiz}=2{%
-
-        \vfill
-
-        Is the matrix
-        \begin{eqnarray*}
-          \mathrm{det}
-          \startRowFour
-          \oneRowFour{4}{3}{-1}{0}
-          \oneRowFour{1}{0}{1}{7}
-          \oneRowFour{0}{1}{2}{6}
-          \oneRowFour{2}{0}{3}{2}
-          \stopRowOps
-        \end{eqnarray*}
-        invertible?
-
-        \vfill
-
-        \begin{tabular}{ll}
-          A: & Yes \\ 
-          B: & No
-        \end{tabular}
-
-        \vfill
-
-
-     }\fi
-
-      \ifnum\value{clickerQuiz}=3{%
-        \vfill
-               Is the matrix
-        \begin{eqnarray*}
-          \mathrm{det}
-          \startRowFour
-          \oneRowFour{4}{3}{-1}{0}
-          \oneRowFour{1}{0}{1}{7}
-          \oneRowFour{0}{1}{2}{6}
-          \oneRowFour{2}{0}{3}{2}
-          \stopRowOps
-        \end{eqnarray*}
-        invertible?
-
-        \vfill
-
-        \begin{tabular}{ll}
-          A: & Yes \\
-          B: & No
-        \end{tabular}
-
-        \vfill
- 
-
-     }\fi
-
-    \vfill
-    \vfill
-    \vfill
-
-\end{frame}
-
-}
-
 
 \subsection{Properties of Determinants}
 
