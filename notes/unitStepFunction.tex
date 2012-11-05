@@ -1,12 +1,10 @@
-
-
 \part{The-Unit-Step-Function}
 \lecture{The Unit Step Function}{The-Unit-Step-Function}
 \section{The Unit Step Function}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 14, Day 2}
-\date{7 Dec 2012}
+\subtitle{Math 232 - Week 13, Day 1}
+\date{19 Nov 2012}
 
 \begin{frame}
   \titlepage
@@ -78,7 +76,7 @@
       f(t) & = & 
       \left\{
         \begin{array}{r@{\hspace{2em}}rcl}
-          t-3 & t & \geq & 3 \\
+          2 & t & \geq & 3 \\
           0 & t & < & 3
         \end{array}
       \right.
@@ -87,7 +85,7 @@
   \uncover<2->
   {
     \begin{eqnarray*}
-      f(t) & = & \mathrm{step}(t-3) (t-3).
+      f(t) & = & 2\mathrm{step}(t-3).
     \end{eqnarray*}
   }
 
@@ -101,7 +99,7 @@
       f(t) & = & 
       \left\{
         \begin{array}{rr}
-          2 & 1\leq t < 2 \\
+          2 & 1\leq t < 3 \\
           0 & \mathrm{otherwise}
         \end{array}
       \right.
@@ -110,12 +108,33 @@
   \uncover<2->
   {
     \begin{eqnarray*}
-      f(t) & = & 2\cdot\mathrm{step}(t-1) - 2\cdot\mathrm{step}(t-2).
+      f(t) & = & 2\cdot\mathrm{step}(t-1) - 2\cdot\mathrm{step}(t-3).
     \end{eqnarray*}
   }
 
 \end{frame}
 
+\begin{frame}
+  \frametitle{A little bit harder now}
+
+  \begin{eqnarray*}
+      f(t) & = & 
+      \left\{
+        \begin{array}{rr}
+          t-2 & 1\leq t < 3 \\
+          0 & \mathrm{otherwise}
+        \end{array}
+      \right.
+  \end{eqnarray*}
+
+  \uncover<2->
+  {
+    \begin{eqnarray*}
+      f(t) & = & (t-2)\cdot\mathrm{step}(t-1) - (t-2)\cdot\mathrm{step}(t-3).
+    \end{eqnarray*}
+  }
+
+\end{frame}
 
 \begin{frame}
   \frametitle{A little bit harder now}
@@ -158,9 +177,17 @@
 
   \uncover<2->
   {
+    \begin{eqnarray*}
+      f(t) & = & \sin(t)\mathrm{step}(t-0) - \sin(t)\mathrm{step}(t-2\pi).
+    \end{eqnarray*}
+  }
+
+
+  \uncover<3->
+  {
     Assume that $t\geq 0$:
     \begin{eqnarray*}
-      f(t) & = & \sin(t) - \mathrm{step}(t-2\pi) \sin(t).
+      f(t) & = & \sin(t) - \sin(t)\mathrm{step}(t-2\pi).
     \end{eqnarray*}
   }
 

@@ -4,8 +4,8 @@
 
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 12, Day 2}
-\date{16 November 2012}
+\subtitle{Math 232 - Week 11, Day 3}
+\date{9 November 2012}
 
 \begin{frame}
   \titlepage
@@ -331,7 +331,7 @@
 
   \begin{eqnarray*}
     \frac{x+3}{x^2+x+4} - \frac{1}{x-2} & = & 
-    \frac{(x+3)(x-2)}{x^2+x+4} - \frac{x^2+x+4}{(x-2)(x^2+x+4)}, \\
+    \frac{(x+3)(x-2)}{(x-2)(x^2+x+4)} - \frac{x^2+x+4}{(x-2)(x^2+x+4)}, \\
     & = & \frac{x^2+x-6-(x^2+x+4)}{(x-2)(x^2+x+4)}, \\
     & = & \frac{-10}{(x-2)(x^2+x+4)}. \\
   \end{eqnarray*}
@@ -354,13 +354,29 @@
       a & = & -1.
     \end{eqnarray*}
 
-    Match the polynomial terms:
+    %%%%%%%%%%%%%%%%%%%%
+    Let $x=0$:
     \begin{eqnarray*}
-      -10 & = & -(x^2+x+4) + (bx+c)(x-2), \\
-      -10 & = & -x^2 - x - 4 + bx^2 - 2bx + cx - 2c, \\
-      \Rightarrow b & = & 1, \\
       c & = & 3.
     \end{eqnarray*}
+ 
+    Let $x=1$:
+    \begin{eqnarray*}
+      b & = & 1.
+    \end{eqnarray*}
+
+    Substitute back in to get
+    \begin{eqnarray*}
+     \frac{-10}{(x-2)(x^2+x+4)}= \frac{-1}{x-2} + \frac{x+3}{x^2+x+4}. 
+  \end{eqnarray*}
+
+    %Match the polynomial terms:
+    %\begin{eqnarray*}
+    %  -10 & = & -(x^2+x+4) + (bx+c)(x-2), \\
+    %  -10 & = & -x^2 - x - 4 + bx^2 - 2bx + cx - 2c, \\
+    %  \Rightarrow b & = & 1, \\
+    %  c & = & 3.
+    %\end{eqnarray*}
   }
 
 \end{frame}
@@ -370,8 +386,7 @@
   \frametitle{General Forms}
 
   \begin{eqnarray*}
-    \frac{1}{x^3+1} & = & \frac{1}{(x+1)(x^2-x+1)}, \\
-    & = & \frac{a}{x} + \frac{bx+c}{x^2-x+1}.
+    \frac{1}{x^3+1} & = & \frac{1}{(x+1)(x^2-x+1)}= \frac{a}{x} + \frac{bx+c}{x^2-x+1}.
   \end{eqnarray*}
 
   \begin{eqnarray*}
