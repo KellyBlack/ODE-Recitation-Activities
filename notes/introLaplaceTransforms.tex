@@ -4,8 +4,8 @@
 
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 12, Day 3}
-\date{18 November 2012}
+\subtitle{Math 232 - Week 12, Day 1}
+\date{12 November 2012}
 
 \begin{frame}
   \titlepage
@@ -321,7 +321,7 @@
       f(t) & = & 7t \sin(4t) + 2t^3e^{-4t}, \\
       \uncover<2->
       {
-        \laplace{f} & = & \deriv{~}{s} \frac{28}{s^2+16} - \frac{d^3}{ds^3} \frac{2}{(s+4)}, \\
+        \laplace{f} & = &- \deriv{~}{s} \frac{28}{s^2+16} - \frac{d^3}{ds^3} \frac{2}{(s+4)}, \\
          & = & \frac{56s}{\lp s^2+16\rp^2} + 12 \frac{1}{(s+4)^4}.
       }
     \end{eqnarray*}
@@ -373,7 +373,7 @@
       f(t) & = & 2 e^{-4t}\cos(3t) - 5 t^2 \sin(2t), \\
       \uncover<2->
       {
-        \laplace{f} & = & 3 \laplace{\cos(3t)}(s+4) - 5 (-1)^2 \frac{d^2}{ds^2} \laplace{\sin(3t)}, \\
+        \laplace{f} & = & 3 \laplace{\cos(3t)}(s+4) - 5 (-1)^2 \frac{d^2}{ds^2} \laplace{\sin(2t)}, \\
       }
       \uncover<3->
       {
@@ -398,8 +398,8 @@
   {
     Also,
     \begin{eqnarray*}
-      \laplace{\sinh(t)} & = & \frac{a}{s^2-a^2}, \\
-      \laplace{\cosh(t)} & = & \frac{s}{s^2-a^2}.
+      \laplace{\sinh(at)} & = & \frac{a}{s^2-a^2}, \\
+      \laplace{\cosh(at)} & = & \frac{s}{s^2-a^2}.
     \end{eqnarray*}
   }
 
