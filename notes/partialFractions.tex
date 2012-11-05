@@ -4,8 +4,8 @@
 
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 12, Day 2}
-\date{16 November 2012}
+\subtitle{Math 232 - Week 11, Day 3}
+\date{9 November 2012}
 
 \begin{frame}
   \titlepage
@@ -20,6 +20,49 @@
 \subsection{Partial Fractions}
 
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     What is the common denominator for
+     \begin{eqnarray*}
+       \frac{3}{7} + \frac{2}{3}?
+     \end{eqnarray*}
+     \begin{tabular}{ll}
+       A: & $3$  \\ [12pt]
+       B: & $7$  \\ [12pt]
+       C: & $14$ \\ [12pt]
+       D: & $21$ \\ [12pt]
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+     What is the common denominator for
+     \begin{eqnarray*}
+       \frac{-1}{5} + \frac{7}{8}?
+     \end{eqnarray*}
+     \begin{tabular}{ll}
+       A: & $5$  \\ [12pt]
+       B: & $8$  \\ [12pt]
+       C: & $40$ \\ [12pt]
+       D: & $45$ \\ [12pt]
+     \end{tabular}
+
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
+
 \begin{frame}
   \frametitle{Partial Fractions}
 
@@ -28,8 +71,12 @@
   \uncover<2->
   {
     \begin{eqnarray*}
-      \frac{6}{x-3} - \frac{4}{x-2} & = & \frac{6(x-2)}{(x-2)(x-3)} - \frac{4(x-3)}{(x-2)(x-3)}\\
-      & = & \frac{2x}{x^2-5x+6}
+      \frac{6}{x-3} - \frac{4}{x-2} & = & 
+      \uncover<3->
+      {
+        \frac{6(x-2)}{(x-2)(x-3)} - \frac{4(x-3)}{(x-2)(x-3)}\\
+        & = & \frac{2x}{x^2-5x+6}
+      }
     \end{eqnarray*}
   }
 
@@ -73,17 +120,30 @@
   \frametitle{Example}
 
   \begin{eqnarray*}
-    \frac{2x}{x^2-5x+6} & = & \frac{2x}{(x-3)(x-2)}, \\
+    \frac{2x}{x^2-5x+6} & = & 
+    \uncover<2->
+    {
+      \frac{2x}{(x-3)(x-2)}, \\
       & = & \frac{a}{x-3} + \frac{b}{x-2}.
+    }
   \end{eqnarray*}
 
-  Multiply both sides by $(x-3)(x-2)$:
-  \begin{eqnarray*}
-    \lefteqn{\frac{2x}{(x-3)(x-2)} \cdot (x-3)(x-2)  } \\
+  \uncover<3->
+  {
+    Multiply both sides by $(x-3)(x-2)$:
+    \begin{eqnarray*}
+      \lefteqn{\frac{2x}{(x-3)(x-2)} \cdot (x-3)(x-2)  } \\
       & = & \lp \frac{a}{x-3} + \frac{b}{x-2} \rp \cdot (x-3)(x-2), \\
-      & = &  \frac{a}{x-3} \cdot (x-3)(x-2) + \frac{b}{x-2} \cdot (x-3)(x-2), \\
-      2x & = & a (x-2) + b(x-3)
-  \end{eqnarray*}
+      \uncover<4->
+      {
+        & = &  \frac{a}{x-3} \cdot (x-3)(x-2) + \frac{b}{x-2} \cdot (x-3)(x-2), \\
+      }
+      \uncover<5->
+      {
+        2x & = & a (x-2) + b(x-3)
+      }
+    \end{eqnarray*}
+  }
 
 
 \end{frame}
@@ -102,10 +162,13 @@
     \Rightarrow 6 & = & a.
   \end{eqnarray*}
 
-  Substitute back into the original expansion:
-  \begin{eqnarray*}
-    \frac{2x}{x^2-5x+6} & = & \frac{6}{x-3} - \frac{4}{x-2}.
-  \end{eqnarray*}
+  \uncover<2->
+  {
+    Substitute back into the original expansion:
+    \begin{eqnarray*}
+      \frac{2x}{x^2-5x+6} & = & \frac{6}{x-3} - \frac{4}{x-2}.
+    \end{eqnarray*}
+  }
 
 \end{frame}
 
@@ -148,6 +211,47 @@
 
 
 \end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     What is the common denominator for
+     \begin{eqnarray*}
+       \frac{3}{x-5} + \frac{8}{(x-5)^2}?
+     \end{eqnarray*}
+     \begin{tabular}{ll}
+       A: & $x-5$ \\ [12pt]
+       B: & $(x-5)^2$ \\ [12pt]
+       C: & $\ln(x-5)$ 
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+     What is the common denominator for
+     \begin{eqnarray*}
+       \frac{-1}{x+7} + \frac{12}{(x+7)^2}?
+     \end{eqnarray*}
+     \begin{tabular}{ll}
+       A: & $x+7$ \\ [12pt]
+       B: & $(x+7)^2$ \\ [12pt]
+       C: & $\ln(x+7)$ 
+     \end{tabular}
+
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+  \vfill
+ }\fi
+\end{frame}
+}
 
 
 \begin{frame}
@@ -331,7 +435,7 @@
 
   \begin{eqnarray*}
     \frac{x+3}{x^2+x+4} - \frac{1}{x-2} & = & 
-    \frac{(x+3)(x-2)}{x^2+x+4} - \frac{x^2+x+4}{(x-2)(x^2+x+4)}, \\
+    \frac{(x+3)(x-2)}{(x-2)(x^2+x+4)} - \frac{x^2+x+4}{(x-2)(x^2+x+4)}, \\
     & = & \frac{x^2+x-6-(x^2+x+4)}{(x-2)(x^2+x+4)}, \\
     & = & \frac{-10}{(x-2)(x^2+x+4)}. \\
   \end{eqnarray*}
@@ -354,13 +458,29 @@
       a & = & -1.
     \end{eqnarray*}
 
-    Match the polynomial terms:
+    %%%%%%%%%%%%%%%%%%%%
+    Let $x=0$:
     \begin{eqnarray*}
-      -10 & = & -(x^2+x+4) + (bx+c)(x-2), \\
-      -10 & = & -x^2 - x - 4 + bx^2 - 2bx + cx - 2c, \\
-      \Rightarrow b & = & 1, \\
       c & = & 3.
     \end{eqnarray*}
+ 
+    Let $x=1$:
+    \begin{eqnarray*}
+      b & = & 1.
+    \end{eqnarray*}
+
+    Substitute back in to get
+    \begin{eqnarray*}
+     \frac{-10}{(x-2)(x^2+x+4)}= \frac{-1}{x-2} + \frac{x+3}{x^2+x+4}. 
+  \end{eqnarray*}
+
+    %Match the polynomial terms:
+    %\begin{eqnarray*}
+    %  -10 & = & -(x^2+x+4) + (bx+c)(x-2), \\
+    %  -10 & = & -x^2 - x - 4 + bx^2 - 2bx + cx - 2c, \\
+    %  \Rightarrow b & = & 1, \\
+    %  c & = & 3.
+    %\end{eqnarray*}
   }
 
 \end{frame}
@@ -370,8 +490,7 @@
   \frametitle{General Forms}
 
   \begin{eqnarray*}
-    \frac{1}{x^3+1} & = & \frac{1}{(x+1)(x^2-x+1)}, \\
-    & = & \frac{a}{x} + \frac{bx+c}{x^2-x+1}.
+    \frac{1}{x^3+1} & = & \frac{1}{(x+1)(x^2-x+1)}= \frac{a}{x} + \frac{bx+c}{x^2-x+1}.
   \end{eqnarray*}
 
   \begin{eqnarray*}
@@ -386,6 +505,11 @@
   \begin{eqnarray*}
     \frac{4}{x^2(3x^2+2)} & = & \frac{a}{x} + \frac{b}{x^2} + \frac{cx+d}{3x^2+2}.
   \end{eqnarray*}
+
+  \begin{eqnarray*}
+    \frac{4}{x^2(3x^2-2)} & = & \frac{a}{x} + \frac{b}{x^2} + \frac{c}{x+\sqrt{\frac{2}{3}}} + \frac{d}{x-\sqrt{\frac{2}{3}}}.
+  \end{eqnarray*}
+
   
 \end{frame}
 

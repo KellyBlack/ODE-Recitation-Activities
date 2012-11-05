@@ -297,7 +297,7 @@
     \begin{eqnarray*}
       \arrayTwo{-1+i}{1}{-2}{1+i} \vecTwo{x}{y} & = & \vecTwo{0}{0} \\
       y & = & \lp 1-i \rp x, \\
-      \Rightarrow \vec{v}_2 & = & x \lp \vecTwo{1}{1} + i \vecTwo{0}{-1} \rp.
+      \Rightarrow \vec{v}_2 & = & x \lp \vecTwo{1}{1} - i \vecTwo{0}{1} \rp.
     \end{eqnarray*}
 
   }
@@ -311,39 +311,24 @@
   \begin{eqnarray*}
     \uncover<1->
     {
-      \vec{x} & = & A e^{(2+i)t} \lp \vecTwo{1}{1} + i \vecTwo{0}{1} \rp
-      + B e^{(2-i)t} \lp \vecTwo{1}{1} - i \vecTwo{0}{1} \rp \\
+      \vec{x} & = & A e^{(2+i)t} \lp \underbrace{\vecTwo{1}{1}}_{\vec{p}} + i
+      \underbrace{\vecTwo{0}{1}}_{\vec{q}} \rp
+      + B e^{(2-i)t} \lp \underbrace{\vecTwo{1}{1}}_{\vec{p}} -
+      i \underbrace{\vecTwo{0}{1}}_{\vec{q}} \rp \\[12pt]
     }
     \uncover<2->
     {
-      \vec{x} & = & A e^{(2-i)t} \lp \underbrace{\vecTwo{1}{1}}_{\vec{p}} + i
-      \underbrace{\vecTwo{0}{1}}_{\vec{q}} \rp
-      + B e^{(2+i)t} \lp \underbrace{\vecTwo{1}{1}}_{\vec{p}} -
-      i \underbrace{\vecTwo{0}{1}}_{\vec{q}} \rp \\
+      & = & e^{2t} \lp
+        A \lp  \cos(t) + i \sin(t) \rp \lp \vec{p} + i \vec{q} \rp 
+          + 
+        B \lp \cos(t) - i \sin(t) \rp \lp \vec{p} - i \vec{q} \rp 
+      \rp\\[12pt]
     }
     \uncover<3->
     {
-      & = & e^{2t} \lp
-        A \lp \cos(t) + i \sin(t) \rp \lp \vec{p} + i \vec{q} \rp + \right. \\
-        & & \left. ~~~~
-        B \lp \cos(t) - i \sin(t) \rp \lp \vec{p} - i \vec{q} \rp 
-      \rp
-    }
-  \end{eqnarray*}
-
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{More Algebra...}
-
-  \begin{eqnarray*}
-    \vec{x} & = & e^{2t} \lp
-      A\lp \cos(t) + i \sin(t) \rp \lp \vec{p} + i \vec{q} \rp  \right. + \\
-    & & \left.
-  ~~~~ B \lp \cos(t) - i \sin(t) \rp \lp \vec{p} - i \vec{q} \rp \rp \\
-  & = & C_1 e^{t} \lp \cos(t) \vec{p} - \sin(t) \vec{q} \rp
-  + C_2 e^{t} \lp \cos(t) \vec{q} + \sin(t) \vec{p} \rp.
+  & = & C_1 e^{2t} \lp \cos(t) \vec{p} - \sin(t) \vec{q} \rp
+  +  C_2 e^{2t} \lp \cos(t) \vec{q} + \sin(t) \vec{p} \rp.
+   }
   \end{eqnarray*}
 
   (The solutions spiral out clockwise.)
