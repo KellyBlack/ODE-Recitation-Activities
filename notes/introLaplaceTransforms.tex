@@ -24,14 +24,79 @@
   \frametitle{Example}
 
   \begin{eqnarray*}
-    \int^\infty_0 e^{-3t} ~ dt & = & \lim_{M\rightarrow\infty} -\frac{1}{3} e^{-3t} \bigg|^M_0, \\
-    & = & \frac{1}{3}, \\
+    \int^\infty_0 e^{-3t} ~ dt & = & 
     \uncover<2->
-    {
-    \int^\infty_0 e^{-st} ~ dt & = & \lim_{M\rightarrow\infty} -\frac{1}{s} e^{-st} \bigg|^M_0, \\
-    & = & \frac{1}{s}
+    {%
+      \lim_{M\rightarrow\infty} -\frac{1}{3} e^{-3t} \bigg|^M_0, \\
+      & = & \frac{1}{3}.
     }
   \end{eqnarray*}
+
+\end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     Is the integral 
+     \begin{eqnarray*}
+       \int^\infty_0 e^{-7t} ~ dt
+     \end{eqnarray*}
+     a function of time?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & Yes \\ [12pt]
+       B: & No
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+     Is the integral 
+     \begin{eqnarray*}
+       \int^\infty_0 e^{-2t} ~ dt
+     \end{eqnarray*}
+     a function of time?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & Yes \\ [12pt]
+       B: & No
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    \int^\infty_0 e^{-st} ~ dt & = & 
+    \uncover<2->
+    {%
+      \lim_{M\rightarrow\infty} -\frac{1}{s} e^{-st} \bigg|^M_0, \\
+      & = & \frac{1}{s}
+    }
+  \end{eqnarray*}
+  (Assume that $s>0$.)
+
+  \uncover<3->
+  {%
+    Note that this is not a function of $t$. 
+  }
   
 
 \end{frame}
@@ -50,7 +115,59 @@
     \textit{(If it exists.)}
   \end{definition}
 
+  \uncover<2->
+  {%
+    It will turn out that this is useful for solving differential
+    equations because integrals ``undo'' derivatives. The goal is to
+    turn a calculus problem into an algebra problem.
+  }
+
 \end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     Is the the Laplace Transform 
+     \begin{eqnarray*}
+       F(s) & = & \int^\infty_0 f(t) e^{-st} ~ dt
+     \end{eqnarray*}
+     a function of time?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & Yes \\ [12pt]
+       B: & No
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+     Is the the Laplace Transform 
+     \begin{eqnarray*}
+       F(s) & = & \int^\infty_0 f(t) e^{-st} ~ dt
+     \end{eqnarray*}
+     a function of time?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & Yes \\ [12pt]
+       B: & No
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+
+  \vfill
+ }\fi
+\end{frame}
+}
 
 
 \begin{frame}
@@ -78,12 +195,12 @@
 \begin{frame}
   \frametitle{So What?}
 
-  If 
+  If we have the Laplace transform of a function, 
   \begin{eqnarray*}
-    \laplace{f} & = & F(s)
+    \laplace{f} & = & F(s),
   \end{eqnarray*}
-  then given $F(s)$ we can find $f(t)$. (We will do that later.) Also,
-  integrals can ``get rid of'' derivatives.
+  then given $F(s)$ we can find $f(t)$. (We will do that later.) More
+  importantly, integrals can ``get rid of'' derivatives.
 
 \end{frame}
 
@@ -103,21 +220,11 @@
     \end{array}
   \end{eqnarray*}
 
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Example}
-
-  Find the Laplace transform of 
-  \begin{eqnarray*}
-    f(t) & = & 3 + 5t - 8t^2.
-  \end{eqnarray*}
-
-  The Laplace transform is
-  \begin{eqnarray*}
-    \laplace{f} & = & \frac{3}{s} + \frac{5}{s^2} - \frac{16}{s^3}.
-  \end{eqnarray*}
+  \uncover<2->
+  {%
+    We can build up tables of these identities. It is then an issue of
+    finding the right function in the table.
+  }
 
 \end{frame}
 
@@ -127,13 +234,39 @@
 
   Find the Laplace transform of 
   \begin{eqnarray*}
-    f(t) & = & 4 - 3t + 7t^2.
+    f(t) & = & \redText{3} + \blueText{5t} - \fuchsiaText{8t^2}.
   \end{eqnarray*}
 
-  The Laplace transform is
+  \uncover<2->
+  {
+    
+    The Laplace transform is
+    \begin{eqnarray*}
+      \laplace{f} & = & \redText{\frac{3}{s}} + \blueText{\frac{5}{s^2}} - \fuchsiaText{\frac{16}{s^3}}.
+    \end{eqnarray*}
+
+  }
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  Find the Laplace transform of 
   \begin{eqnarray*}
-    \laplace{f} & = & \frac{4}{s} - \frac{3}{s^2} + \frac{14}{s^3}.
+    f(t) & = & \redText{4} - \blueText{3t} + \fuchsiaText{7t^2}.
   \end{eqnarray*}
+
+  \uncover<2->
+  {
+
+    The Laplace transform is
+    \begin{eqnarray*}
+      \laplace{f} & = & \redText{\frac{4}{s}} - \blueText{\frac{3}{s^2}} + \fuchsiaText{\frac{14}{s^3}}.
+    \end{eqnarray*}
+
+  }
 
 \end{frame}
 
@@ -154,16 +287,58 @@
 
   Find the Laplace transform of 
   \begin{eqnarray*}
-    f(t) & = & 5 t^3 - 17 t^5.
+    f(t) & = & \redText{5 t^3} - \blueText{17 t^5}.
   \end{eqnarray*}
 
-  The Laplace transform is
-  \begin{eqnarray*}
-    \laplace{f} & = & 5 \frac{3!}{s^4} - 17 \frac{5!}{s^6}.
-  \end{eqnarray*}
+  \uncover<2->
+  {
+
+    The Laplace transform is
+    \begin{eqnarray*}
+      \laplace{f} & = & \redText{5 \frac{3!}{s^4}} - \blueText{17 \frac{5!}{s^6}}.
+    \end{eqnarray*}
+
+  }
 
 \end{frame}
 
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+
+     What is the Laplace transform of $f(t)=3t-4$?
+
+     \begin{tabular}{ll}
+       A: & $\frac{1}{s^2}-\frac{1}{s}$ \\ [12pt]
+       B: & $\frac{6}{s^2}-\frac{4}{s}$ \\ [12pt]
+       C: & $\frac{3}{s^2}-\frac{4}{s}$ 
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+
+     What is the Laplace transform of $f(t)=2t-6$?
+
+     \begin{tabular}{ll}
+       A: & $\frac{1}{s^2}-\frac{1}{s}$ \\ [12pt]
+       B: & $\frac{2}{s^2}-\frac{6}{s}$ \\ [12pt]
+       C: & $\frac{4}{s^2}-\frac{6}{s}$ 
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+  \vfill
+ }\fi
+\end{frame}
+}
 
 \subsection{Laplace Transform of Exponentials}
 
@@ -187,18 +362,27 @@
     f(t) & = & e^{3t}.
   \end{eqnarray*}
 
-  The Laplace transform is
-  \begin{eqnarray*}
-    \laplace{f} & = & \frac{1}{s-3}.
-  \end{eqnarray*}
-
   \uncover<2->
+  {
+    
+    The Laplace transform is
+    \begin{eqnarray*}
+      \laplace{f} & = & \frac{1}{s-3}.
+    \end{eqnarray*}
+
+  }
+
+  \uncover<3->
   {
     Find the Laplace transform of 
     \begin{eqnarray*}
       g(t) & = & e^{-5t}.
     \end{eqnarray*}
 
+  }
+
+  \uncover<4->
+  {
     The Laplace transform is
     \begin{eqnarray*}
       \laplace{g} & = & \frac{1}{s+5}.
@@ -214,15 +398,60 @@
 
   Find the Laplace transform of 
   \begin{eqnarray*}
-    f(t) & = & 4t^2 - 18 e^{-6t}.
+    f(t) & = & \redText{4t^2} - \blueText{18 e^{-6t}}.
   \end{eqnarray*}
 
-  The Laplace transform is
-  \begin{eqnarray*}
-    \laplace{f} & = & 4 \frac{2!}{s^3} - 18 \frac{1}{s+6}.
-  \end{eqnarray*}
+  \uncover<2->
+  {
+
+    The Laplace transform is
+    \begin{eqnarray*}
+      \laplace{f} & = & \redText{4 \frac{2!}{s^3}} - \blueText{18 \frac{1}{s+6}}.
+    \end{eqnarray*}
+
+  }
 
 \end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+
+     What is the Laplace transform of $f(t)=i$?
+
+     \begin{tabular}{ll}
+       A: & $\frac{1}{s}$ \\ [12pt]
+       B: & $\frac{i}{s}$ \\ [12pt]
+       C: & $\frac{i}{s^2}$ \\ [12pt]
+       D: & Not possible
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+
+     What is the Laplace transform of $f(t)=i$?
+
+     \begin{tabular}{ll}
+       A: & $\frac{1}{s}$ \\ [12pt]
+       B: & $\frac{i}{s}$ \\ [12pt]
+       C: & $\frac{i}{s^2}$ \\ [12pt]
+       D: & Not possible
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+  \vfill
+ }\fi
+\end{frame}
+}
 
 
 \subsection{Laplace Transform of Sines and Cosines}
@@ -235,14 +464,21 @@
     \laplace{e^{iat}} & = & \frac{1}{s-ai}, \\
     & = & \frac{s+ai}{(s-ai)(s+ai)}, \\
     & = & \frac{s+ai}{s^2+a^2}, \\
-    & = & \frac{s}{s^2+a^2} + i \frac{a}{s^2+a^2}.
+    \only<2>{& = & \frac{s}{s^2+a^2} + i \frac{a}{s^2+a^2}. \\}
+    \uncover<3->{& = & \redText{\frac{s}{s^2+a^2}} + i \blueText{\frac{a}{s^2+a^2}}.}
   \end{eqnarray*}
 
-  At the same time, though,
-  \begin{eqnarray*}
-    \laplace{e^{iat}} & = & \laplace{\cos(at) + i \sin(at)}, \\
-    & = & \laplace{\cos(at)} + i \laplace{\sin(at)}.
-  \end{eqnarray*}
+
+  \uncover<4->
+  {
+
+    At the same time, though,
+    \begin{eqnarray*}
+      \laplace{e^{iat}} & = & \laplace{\cos(at) + i \sin(at)}, \\
+      & = & \redText{\laplace{\cos(at)}} + i \blueText{\laplace{\sin(at)}}.
+    \end{eqnarray*}
+
+  }
 
 
 \end{frame}
@@ -266,13 +502,18 @@
 
   Find the Laplace transform of 
   \begin{eqnarray*}
-    f(t) & = & 5t^4 + 2\sin(4t) - 3 e^{8t} + 7 \cos(5t).
+    f(t) & = & \redText{5t^4} + \blueText{2\sin(4t)} - \fuchsiaText{3 e^{8t}} + 7 \cos(5t).
   \end{eqnarray*}
 
-  The Laplace transform is
-  \begin{eqnarray*}
-    \laplace{f} & = & 5 \frac{4!}{s^5} + 2 \frac{4}{s^2+16}  - 3\frac{1}{s-8} + 7 \frac{s}{s^2+25}.
-  \end{eqnarray*}
+  \uncover<2->
+  {
+
+    The Laplace transform is
+    \begin{eqnarray*}
+      \laplace{f} & = & \redText{5 \frac{4!}{s^5}} + \blueText{2 \frac{4}{s^2+16}}  - \fuchsiaText{3\frac{1}{s-8}} + 7 \frac{s}{s^2+25}.
+    \end{eqnarray*}
+
+  }
 
 \end{frame}
 
@@ -318,11 +559,11 @@
 \begin{frame}
   \frametitle{Example}
     \begin{eqnarray*}
-      f(t) & = & 7t \sin(4t) + 2t^3e^{-4t}, \\
+      f(t) & = & \redText{7t \sin(4t)} + \blueText{2t^3e^{-4t}}, \\
       \uncover<2->
       {
-        \laplace{f} & = &- \deriv{~}{s} \frac{28}{s^2+16} - \frac{d^3}{ds^3} \frac{2}{(s+4)}, \\
-         & = & \frac{56s}{\lp s^2+16\rp^2} + 12 \frac{1}{(s+4)^4}.
+        \laplace{f} & = &- \redText{\deriv{~}{s} \frac{28}{s^2+16}} \blueText{- \frac{d^3}{ds^3} \frac{2}{(s+4)}}, \\
+         & = & \redText{\frac{56s}{\lp s^2+16\rp^2}} + \blueText{12 \frac{1}{(s+4)^4}}.
       }
     \end{eqnarray*}
 \end{frame}
@@ -351,17 +592,56 @@
 \end{frame}
 
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+
+     Was that Billy Idol?
+
+     \begin{tabular}{ll}
+       A: & Yes \\ [12pt]
+       B: & Who? \\ [12pt]
+       C: & No, that would be lame.
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+
+     Was that Billy Idol?
+
+     \begin{tabular}{ll}
+       A: & Yes \\ [12pt]
+       B: & Who? \\ [12pt]
+       C: & No, that would be lame.
+     \end{tabular}
+
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
+
 \begin{frame}
   \frametitle{Example}
     \begin{eqnarray*}
-      f(t) & = & 3t^4 e^{2t} - 4 e^{-5t}\sin(3t), \\
+      f(t) & = & \redText{3t^4 e^{2t}} - \blueText{4 e^{-5t}\sin(3t)}, \\
       \uncover<2->
       {
-        \laplace{f} & = & 3 \laplace{t^4}(s-2) - 4 \laplace{\sin(3t)}(s+5), \\
+        \laplace{f} & = & \redText{3 \laplace{t^4}(s-2)} - \blueText{4 \laplace{\sin(3t)}(s+5)}, \\
       }
       \uncover<3->
       {
-        & = & 3 \frac{4!}{(s-2)^5} - 4 \frac{3}{(s+5)^2+9}.
+        & = & \redText{3 \frac{4!}{(s-2)^5}} - \blueText{4 \frac{3}{(s+5)^2+9}}.
       }
     \end{eqnarray*}
 \end{frame}
@@ -370,14 +650,14 @@
 \begin{frame}
   \frametitle{Example}
     \begin{eqnarray*}
-      f(t) & = & 2 e^{-4t}\cos(3t) - 5 t^2 \sin(2t), \\
+      f(t) & = & \redText{2 e^{-4t}\cos(3t)} - \blueText{5 t^2 \sin(2t)}, \\
       \uncover<2->
       {
-        \laplace{f} & = & 3 \laplace{\cos(3t)}(s+4) - 5 (-1)^2 \frac{d^2}{ds^2} \laplace{\sin(2t)}, \\
+        \laplace{f} & = & \redText{3 \laplace{\cos(3t)}(s+4)} - \blueText{5 (-1)^2 \frac{d^2}{ds^2} \laplace{\sin(2t)}}, \\
       }
       \uncover<3->
       {
-        & = & 2 \frac{s+4}{(s+4)^2+9} + 20 \lp -2(s^2+4)^{-3}(2s) + (s^2+4)^{-2} \rp.
+        & = & \redText{2 \frac{s+4}{(s+4)^2+9}} + \blueText{20 \lp -8(s^2+4)^{-3}s^2 + (s^2+4)^{-2} \rp}.
       }
     \end{eqnarray*}
 \end{frame}
@@ -386,8 +666,7 @@
 \begin{frame}
   \frametitle{Oh By The Way....}
 
-  \begin{definition}
-    The hyperbolic sine and hyperbolic cosine:
+  \begin{definition}[The hyperbolic sine and hyperbolic cosine:]
     \begin{eqnarray*}
       \sinh(t) & = & \frac{e^t-e^{-t}}{2}, \\
       \cosh(t) & = & \frac{e^t+e^{-t}}{2}.
@@ -396,13 +675,31 @@
 
   \uncover<2->
   {
-    Also,
+    Why? Because it makes other things easier.
     \begin{eqnarray*}
-      \laplace{\sinh(at)} & = & \frac{a}{s^2-a^2}, \\
-      \laplace{\cosh(at)} & = & \frac{s}{s^2-a^2}.
+      \deriv{~}{t} \cosh(t) & = & \sinh(t), \\
+      \deriv{~}{t} \sinh(t) & = & \cosh(t).
     \end{eqnarray*}
+    (Think about solutions to DEs!)
   }
 
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Oh By The Way....}
+
+  It makes dealing with the inverse Laplace Transform much easier in some cases:
+  \begin{eqnarray*}
+    \laplace{\sinh(at)} & = & \frac{a}{s^2-a^2}, \\
+    \laplace{\cosh(at)} & = & \frac{s}{s^2-a^2}.
+  \end{eqnarray*}
+
+  (We will see why soon.)
+
+  But mostly it is because \textbf{some engineers like to use it}. You
+  have to be prepared to come across this in the future.
   
 \end{frame}
 
