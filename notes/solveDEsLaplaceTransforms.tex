@@ -1,9 +1,9 @@
-\part{Solving-DEs-With-Laplace-Transforms}
-\lecture{Solving DEs With Laplace Transforms}{Solving-DEs-With-Laplace-Transforms}
-\section{Solving DEs with Laplace Transforms}
+\part{Solving-ODEs-With-Laplace-Transforms}
+\lecture{Solving ODEs With Laplace Transforms}{Solving-DEs-With-Laplace-Transforms}
+\section{Solving ODEs with Laplace Transforms}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 12, Day 3}
+\subtitle{Solving ODEs with Laplace Transforms}
 \date{16 Nov 2012}
 
 \begin{frame}
@@ -33,6 +33,13 @@
 
 \end{frame}
 
+\begin{frame}
+  \begin{block}{Laplace Transform of the Derivative}
+    \begin{eqnarray*}
+      \laplace{y'} & = & -y(0) + s \laplace{y}.
+    \end{eqnarray*}
+  \end{block}
+\end{frame}
 
 \begin{frame}
   \frametitle{The Second Derivative}
@@ -46,7 +53,59 @@
 
 \end{frame}
 
-\subsection{Solving DEs}
+\begin{frame}
+  \begin{block}{Laplace Transform of the Derivative}
+    \begin{eqnarray*}
+      \laplace{y'} & = & -y(0) + s \laplace{y}, \\
+      \laplace{y''} & = & -y'(0) - s y(0) + s^2 \laplace{y}.
+    \end{eqnarray*}
+  \end{block}
+\end{frame}
+
+
+\subsection{Solving ODEs}
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     Determine the Laplace transform of the function $f(t)=te^{4t}$.
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & $\frac{1}{(s-4)^2}$ \\ [12pt]
+       B: & $\frac{-1}{(s-4)^2}$ \\ [12pt]
+       C: & $\frac{1}{(s-4)}$ \\ [12pt]
+       D: & $\frac{-1}{(s-4)}$ \\ [12pt]
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+     Determine the Laplace transform of the function $f(t)=te^{2t}$.
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & $\frac{1}{(s-2)^2}$ \\ [12pt]
+       B: & $\frac{-1}{(s-2)^2}$ \\ [12pt]
+       C: & $\frac{1}{(s-2)}$ \\ [12pt]
+       D: & $\frac{-1}{(s-2)}$ \\ [12pt]
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
+
 
 \begin{frame}
   \frametitle{So What?}
@@ -154,6 +213,48 @@
 \end{frame}
 
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     What is the Laplace transform of $y''$?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & $-y(0)-sy'(0)-s^2\laplace{y}$ \\ [12pt]
+       B: & $-y'(0)-sy(0)-s^2\laplace{y}$ \\ [12pt]
+       C: & $y(0)+sy'(0)+s^2\laplace{y}$ \\ [12pt]
+       D: & $y'(0)+sy(0)+s^2\laplace{y}$ \\ [12pt]
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+     What is the Laplace transform of $y''$?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & $-y(0)-sy'(0)-s^2\laplace{y}$ \\ [12pt]
+       B: & $-y'(0)-sy(0)-s^2\laplace{y}$ \\ [12pt]
+       C: & $y(0)+sy'(0)+s^2\laplace{y}$ \\ [12pt]
+       D: & $y'(0)+sy(0)+s^2\laplace{y}$ \\ [12pt]
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
+
+
 \begin{frame}
   \frametitle{Example}
 
@@ -226,6 +327,48 @@
 
 \end{frame}
 
+
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     What is the Laplace transform of $e^{2t}\sin(7t)$?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & $\frac{7}{(s-2)^2+49}$ \\ [12pt]
+       B: & $\frac{s}{(s-2)^2+49}$ \\ [12pt]
+       C: & $\frac{2}{(s-7)^2+4}$ \\ [12pt]
+       D: & $\frac{s}{(s-7)^2+4}$ \\ [12pt]
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+     What is the Laplace transform of $e^{3t}\sin(4t)$?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & $\frac{3}{(s-4)^2+9}$ \\ [12pt]
+       B: & $\frac{s}{(s-4)^2+9}$ \\ [12pt]
+       C: & $\frac{4}{(s-3)^2+16}$ \\ [12pt]
+       D: & $\frac{s}{(s-3)^2+16}$ \\ [12pt]
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+
+  \vfill
+ }\fi
+\end{frame}
+}
 
 
 
