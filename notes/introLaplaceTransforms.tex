@@ -4,8 +4,8 @@
 
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 12, Day 1}
-\date{12 November 2012}
+\subtitle{Math 232 - Week 12, Day 2}
+\date{14 November 2012}
 
 \begin{frame}
   \titlepage
@@ -121,6 +121,40 @@
 
 \end{frame}
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+    Find the Laplace transform of
+    \begin{eqnarray*}
+      f(t) & = & 4 - 3t + 7t^2.
+    \end{eqnarray*}
+
+     \begin{eqnarray*}
+       \frac{-4}{x+9} + \frac{12}{(x+9)^2}?
+     \end{eqnarray*}
+     \begin{tabular}{ll}
+       A: & $\laplace{f} = frac{4}{s} - \frac{3}{s^2} + \frac{14}{s^3}.$\\ [12pt]
+       B: & $\laplace{f} = 4 - \frac{3}{s} + \frac{14}{s^2}.$\\ [12pt]
+       C: & $\laplace{f} = frac{4}{s} - \frac{3}{s^2} + \frac{7}{s^3}.$\\ [12pt]
+     \end{tabular}
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
 
 \begin{frame}
   \frametitle{Example}
@@ -208,6 +242,36 @@
 
 \end{frame}
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+  Find the Laplace transform of
+  \begin{eqnarray*}
+    f(t) & = & 4t^2 - 18 e^{-6t}.
+  \end{eqnarray*}
+   \begin{tabular}{ll}
+       A: & $ \laplace{f} = 4 \frac{2!}{s^3} - 18 \frac{1}{s-6}.$ \\ [12pt]
+       B: & $ \laplace{f} = 4 \frac{1}{s^2} - 18 \frac{1}{s+6}.$ \\ [12pt]
+       C: & $ \laplace{f} = 4 \frac{2!}{s^3} - 18 \frac{1}{s+6}.$ \\ [12pt]
+     \end{tabular}
+
+  \vfill
+ }\fi
+\end{frame}
+}
 
 \begin{frame}
   \frametitle{Example}
