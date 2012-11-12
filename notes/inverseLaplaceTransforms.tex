@@ -50,6 +50,45 @@
 
 \end{frame}
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     What is the Laplace transform of $e^{-3t}$?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: &  $\frac{1}{s+3}$ \\ [12pt]
+       B: &  $\frac{1}{s-3}$ 
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+
+     What is the Laplace transform of $e^{-3t}$?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: &  $\frac{1}{s+3}$ \\ [12pt]
+       B: &  $\frac{1}{s-3}$ 
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
+
+
 \subsection{The Inverse Laplace Transform}
 
 
@@ -161,6 +200,55 @@
 \end{frame}
 
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+
+     Complete the square:
+     \begin{eqnarray*}
+       x^2+6x+12 & = & ?
+     \end{eqnarray*}
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: &  $(x+3)^2+3$ \\ [12pt]
+       B: &  $(x+3)^2-3$ \\ [12pt]
+       C: &  $(x+3)^2+12$ \\ [12pt]
+       D: &  $(x+3)^2$ \\ [12pt]
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+
+     Complete the square:
+     \begin{eqnarray*}
+       x^2+6x+12 & = & ?
+     \end{eqnarray*}
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: &  $(x+3)^2+3$ \\ [12pt]
+       B: &  $(x+3)^2-3$ \\ [12pt]
+       C: &  $(x+3)^2+12$ \\ [12pt]
+       D: &  $(x+3)^2$ \\ [12pt]
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
+
 \begin{frame}
   \frametitle{Example}
 
@@ -235,7 +323,7 @@
         \laplace{g} & = & \frac{s^2-14s-58}{s^3+2s^2+21s-58}, \\
         & = & \frac{s^2-14s-58}{(s-2)(s^2+4s+29)}, \\
         & = & \frac{as+b}{s^2+4s+29}+\frac{c}{s-2}, \\
-        & = & 3\frac{s+2}{(s+2)^2+25} - 3\frac{2}{(s+1)^2+25}-\frac{2}{s-2}.
+        & = & 3\frac{s+2}{(s+2)^2+25} - 3\frac{2}{(s+2)^2+25}-\frac{2}{s-2}.
       \end{eqnarray*}
     }
 
