@@ -72,6 +72,17 @@
    }\fi
 
   \ifnum\value{clickerQuiz}=3{%
+     Is the integral
+     \begin{eqnarray*}
+       \int^\infty_0 e^{-5t} ~ dt
+     \end{eqnarray*}
+     a function of time?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & Yes \\ [12pt]
+       B: & No
+     \end{tabular}
 
 
   \vfill
@@ -162,6 +173,17 @@
    }\fi
 
   \ifnum\value{clickerQuiz}=3{%
+      Is the the Laplace Transform
+     \begin{eqnarray*}
+       F(s) & = & \int^\infty_0 f(t) e^{-st} ~ dt
+     \end{eqnarray*}
+     a function of time?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & Yes \\ [12pt]
+       B: & No
+     \end{tabular}
 
 
   \vfill
@@ -269,13 +291,10 @@
       f(t) & = & 4 - 3t + 7t^2.
     \end{eqnarray*}
 
-     \begin{eqnarray*}
-       \frac{-4}{x+9} + \frac{12}{(x+9)^2}?
-     \end{eqnarray*}
      \begin{tabular}{ll}
-       A: & $\laplace{f} = frac{4}{s} - \frac{3}{s^2} + \frac{14}{s^3}.$\\ [12pt]
+       A: & $\laplace{f} = \frac{4}{s} - \frac{3}{s^2} + \frac{14}{s^3}.$\\ [12pt]
        B: & $\laplace{f} = 4 - \frac{3}{s} + \frac{14}{s^2}.$\\ [12pt]
-       C: & $\laplace{f} = frac{4}{s} - \frac{3}{s^2} + \frac{7}{s^3}.$\\ [12pt]
+       C: & $\laplace{f} = \frac{4}{s} - \frac{3}{s^2} + \frac{7}{s^3}.$\\ [12pt]
      \end{tabular}
 
   \vfill
@@ -337,42 +356,50 @@
 \end{frame}
 
 
-\iftoggle{clicker}{%
-\begin{frame}
-  \frametitle{Clicker Quiz}
-
-   \ifnum\value{clickerQuiz}=1{%
-
-     What is the Laplace transform of $f(t)=3t-4$?
-
-     \begin{tabular}{ll}
-       A: & $\frac{1}{s^2}-\frac{1}{s}$ \\ [12pt]
-       B: & $\frac{6}{s^2}-\frac{4}{s}$ \\ [12pt]
-       C: & $\frac{3}{s^2}-\frac{4}{s}$ 
-     \end{tabular}
-
-     \vfill
-   }\fi
-
-   \ifnum\value{clickerQuiz}=2{%
-
-     What is the Laplace transform of $f(t)=2t-6$?
-
-     \begin{tabular}{ll}
-       A: & $\frac{1}{s^2}-\frac{1}{s}$ \\ [12pt]
-       B: & $\frac{2}{s^2}-\frac{6}{s}$ \\ [12pt]
-       C: & $\frac{4}{s^2}-\frac{6}{s}$ 
-     \end{tabular}
-
-   \vfill
-   }\fi
-
-  \ifnum\value{clickerQuiz}=3{%
-
-  \vfill
- }\fi
-\end{frame}
-}
+%\iftoggle{clicker}{%
+%\begin{frame}
+%  \frametitle{Clicker Quiz}
+%
+%   \ifnum\value{clickerQuiz}=1{%
+%
+%     What is the Laplace transform of $f(t)=3t-4$?
+%
+%     \begin{tabular}{ll}
+%       A: & $\frac{1}{s^2}-\frac{1}{s}$ \\ [12pt]
+%       B: & $\frac{6}{s^2}-\frac{4}{s}$ \\ [12pt]
+%       C: & $\frac{3}{s^2}-\frac{4}{s}$ 
+%     \end{tabular}
+%
+%     \vfill
+%   }\fi
+%
+%   \ifnum\value{clickerQuiz}=2{%
+%
+%     What is the Laplace transform of $f(t)=2t-6$?
+%
+%     \begin{tabular}{ll}
+%       A: & $\frac{1}{s^2}-\frac{1}{s}$ \\ [12pt]
+%       B: & $\frac{2}{s^2}-\frac{6}{s}$ \\ [12pt]
+%       C: & $\frac{4}{s^2}-\frac{6}{s}$ 
+%     \end{tabular}
+%
+%   \vfill
+%   }\fi
+%
+%  \ifnum\value{clickerQuiz}=3{%
+%    
+%     What is the Laplace transform of $f(t)=6t-3$?
+%
+%     \begin{tabular}{ll}
+%       A: & $\frac{6}{s^2}-\frac{1}{s}$ \\ [12pt]
+%       B: & $\frac{12}{s^2}-\frac{3}{s}$ \\ [12pt]
+%       C: & $\frac{6}{s^2}-\frac{3}{s}$
+%     \end{tabular}
+%
+%  \vfill
+% }\fi
+%\end{frame}
+%}
 
 \subsection{Laplace Transform of Exponentials}
 
@@ -511,6 +538,14 @@
    }\fi
 
   \ifnum\value{clickerQuiz}=3{%
+     What is the Laplace transform of $f(t)=i$?
+
+     \begin{tabular}{ll}
+       A: & $\frac{1}{s}$ \\ [12pt]
+       B: & $\frac{i}{s}$ \\ [12pt]
+       C: & $\frac{i}{s^2}$ \\ [12pt]
+       D: & Not possible
+     \end{tabular}
 
   \vfill
  }\fi
@@ -688,6 +723,13 @@
    }\fi
 
   \ifnum\value{clickerQuiz}=3{%
+    Was that Billy Idol?
+
+     \begin{tabular}{ll}
+       A: & Yes \\ [12pt]
+       B: & Who? \\ [12pt]
+       C: & No, that would be lame.
+     \end{tabular}
 
   \vfill
  }\fi
