@@ -20,7 +20,51 @@
 
 
 \begin{frame}
+  \frametitle{Wouldn't it be nice....}
+
+  \centerline{\includegraphics[width=5cm]{img/unitStepAta}}
+
+  \uncover<2->
+  {%
+
+    Despite what you may have heard, nature is not continuous, and it
+    is not differentiable.  In mechanical systems switches flip on and
+    off, and things break. A function like this could be used to
+    describe piecewise defined functions and help us deal with
+    discontinuous functions. (We will see how later.)
+
+  }
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{First...}
+
+
+  \begin{columns}
+  
+    \column{.5\textwidth}
+    If I am given $f(t)$....\\
+    \centerline{\includegraphics[width=4cm]{img/unshifted}}
+
+    \column{.5\textwidth}
+    \uncover<2->
+    {%
+
+      I can shift it to the right by translating the domain, $f(t-a)$:\\
+      \centerline{\includegraphics[width=4cm]{img/shifted}}
+
+    }
+
+  \end{columns}
+  
+
+\end{frame}
+
+\begin{frame}
   \frametitle{The Unit Step Function}
+
+  \centerline{\includegraphics[width=3cm]{img/unitStepFunction}}
 
   A new name for an old function:
   \begin{eqnarray*}
@@ -53,6 +97,8 @@
 \begin{frame}
   \frametitle{Shifted Version}
 
+  \centerline{\includegraphics[width=3cm]{img/unitStepAta}}
+
     The function shifted $a$ units to the right is
     \begin{eqnarray*}
       \mathrm{step}(t-a) & = & 
@@ -69,8 +115,70 @@
 
 \subsection{Examples Using the Unit Step Function}
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     Express the function
+     \begin{eqnarray*}
+       f(t) & = & 
+       \left\{
+         \begin{array}{r@{\hspace{2em}}rcl}
+           2 & t & \geq & 0 \\
+           0 & t & < & 0
+         \end{array}
+       \right.
+     \end{eqnarray*}
+     in terms of the unit step function.
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & step(t) \\ [12pt]
+       B: & $2\cdot$step(t) \\ [12pt]
+       C: & step(t-2)
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+     Express the function
+     \begin{eqnarray*}
+       f(t) & = & 
+       \left\{
+         \begin{array}{r@{\hspace{2em}}rcl}
+           2 & t & \geq & 0 \\
+           0 & t & < & 0
+         \end{array}
+       \right.
+     \end{eqnarray*}
+     in terms of the unit step function.
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & step(t) \\ [12pt]
+       B: & $2\cdot$step(t) \\ [12pt]
+       C: & step(t-2)
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
+
+
 \begin{frame}
   \frametitle{So What?}
+
+  \centerline{\includegraphics[width=5cm]{img/stepEx1}}
 
   \begin{eqnarray*}
       f(t) & = & 
@@ -92,8 +200,69 @@
 \end{frame}
 
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     Express the function
+     \begin{eqnarray*}
+       f(t) & = & 
+       \left\{
+         \begin{array}{r@{\hspace{2em}}rcl}
+           0 & t & \geq & 0 \\
+           1 & t & < & 0
+         \end{array}
+       \right.
+     \end{eqnarray*}
+     in terms of the unit step function.
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & -step(t) \\ [12pt]
+       B: & $1-$step(t) \\ [12pt]
+       C: & step(t-1)
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+     Express the function
+     \begin{eqnarray*}
+       f(t) & = & 
+       \left\{
+         \begin{array}{r@{\hspace{2em}}rcl}
+           0 & t & \geq & 0 \\
+           1 & t & < & 0
+         \end{array}
+       \right.
+     \end{eqnarray*}
+     in terms of the unit step function.
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & -step(t) \\ [12pt]
+       B: & $1-$step(t) \\ [12pt]
+       C: & step(t-1)
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
+
 \begin{frame}
   \frametitle{A little bit harder now}
+
+  \centerline{\includegraphics[width=5cm]{img/stepEx2}}
 
   \begin{eqnarray*}
       f(t) & = & 
@@ -117,6 +286,8 @@
 \begin{frame}
   \frametitle{A little bit harder now}
 
+  \centerline{\includegraphics[width=5cm]{img/stepEx3}}
+
   \begin{eqnarray*}
       f(t) & = & 
       \left\{
@@ -138,6 +309,8 @@
 
 \begin{frame}
   \frametitle{A little bit harder now}
+
+  \centerline{\includegraphics[width=5cm]{img/stepEx4}}
 
   \begin{eqnarray*}
       f(t) & = & 
@@ -164,6 +337,8 @@
 
 \begin{frame}
   \frametitle{A little bit harder now}
+
+  \centerline{\includegraphics[width=4cm]{img/stepEx5}}
 
   \begin{eqnarray*}
       f(t) & = & 
@@ -198,6 +373,8 @@
 
 \begin{frame}
   \frametitle{A little bit harder now}
+
+  \centerline{\includegraphics[width=5cm]{img/stepEx6}}
 
   \begin{eqnarray*}
       f(t) & = & 
@@ -279,7 +456,10 @@
 
 
 \begin{frame}
-  \frametitle{Example}
+  \frametitle{RC Circuit}
+
+  \input{img/stepFunctionCircuit}    
+
 
   \begin{eqnarray*}
     8q' + 4q & = & v(t), \\
