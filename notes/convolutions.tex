@@ -22,31 +22,51 @@
 \begin{frame}
   \frametitle{Time Averaging}
 
-  What if we want a ``time average'' based on the past?
+  What if we want a ``time average'' based on the past? 
 
-  % include graphics
+  \centerline{\includegraphics[width=4cm]{img/linearAverage}}
 
-  \uncover<3->
+  \uncover<2->
   {%
 
-    The effect of $f$ depends on what happened in the past. One way to
-    do it is by integrating
+    The effect of $f$ depends on what happened in the past. 
+    In Calc II the average of a function from $0$ to $T$ was defined to be 
     \begin{eqnarray*}
-      \int^t_0 e^{-u} ~ du & = & 1-e^{-t}.
+      \frac{1}{T} \int^T_0 f(u) ~ du
     \end{eqnarray*}
 
-    % include graphics
   }
 
-  \uncover<4->
-  {%
-
-    This is an ``average'' that weighs everything equally. Usually we
-    want the recent past to matter more than the distant past.
-    
-  }
 
 \end{frame}
+
+\begin{frame}
+  \frametitle{Time Averaging}
+
+  \vspace*{-1em}
+  What if we want a ``time average'' based on the past? \\
+  \centerline{\includegraphics[width=4cm]{img/linearAverage}}
+
+  Example: \\
+  If $f(t)=t$, the average value is 
+  \begin{eqnarray*}
+    \frac{1}{T} \int^T_0 u ~ du & = & \half T
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Time Averaging}
+
+  \centerline{\includegraphics[width=5cm]{img/linearAverage}}
+
+  Problem: \\
+  All points in the past are equally ``weighted.'' What if the
+  \textit{recent} is more important?
+
+\end{frame}
+
 
 \begin{frame}
   \begin{definition}
@@ -60,14 +80,24 @@
 \begin{frame}
   \frametitle{Translation}
 
-  Note that given $f(t)$
+  \begin{columns}
 
-  % graphic goes here
+    \column{.5\textwidth}
+    \vfill
 
-  when you translate it by $f(t-w)$, you shift it and run it
-  ``backwards.''
+    Note that given $f(t)$
 
-  % graphic goes here.
+    \centerline{\includegraphics[width=5cm]{img/exponentialDecay}}
+
+    \column{.5\textwidth}
+    \vfill
+
+    when you translate it by $f(t-w)$, you shift it and run it
+    ``backwards.''
+    
+    \centerline{\includegraphics[width=5cm]{img/backwardsExponentialDecay}}
+
+  \end{columns}
 
 \end{frame}
 
@@ -80,16 +110,23 @@
     g(t) & = & t.
   \end{eqnarray*}
 
+
   \uncover<2->
   {%
 
-    \begin{eqnarray*}
-      f*g & = & \int^t_0 e^{-(t-w)} w ~ dw, \\
-      & = & \int^t_0 e^{-t} e^{w} w ~ dw, \\
-      & = & e^{-t} \int^t_0 e^{w} w ~ dw, \\
-      & = & e^{-t} \lp t e^t - e^t + 1 \rp, \\
-      & = & t - 1 + e^{-t}.
-    \end{eqnarray*}
+    \begin{columns}
+      \column{.3\textwidth}
+      \begin{eqnarray*}
+        f*g & = & \int^t_0 e^{-(t-w)} w ~ dw, \\
+        & = & \int^t_0 e^{-t} e^{w} w ~ dw, \\
+        & = & e^{-t} \int^t_0 e^{w} w ~ dw, \\
+        & = & e^{-t} \lp t e^t - e^t + 1 \rp, \\
+        & = & t - 1 + e^{-t}.
+      \end{eqnarray*}
+
+      \column{.7\textwidth}
+      \uncover<3->{\centerline{\includegraphics[width=5cm]{img/weightedLinearAverage}}}
+    \end{columns}
 
   }
 
