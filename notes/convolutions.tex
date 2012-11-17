@@ -134,46 +134,6 @@
 
 
 
-\iftoggle{clicker}{%
-\begin{frame}
-  \frametitle{Clicker Quiz}
-
-   \ifnum\value{clickerQuiz}=1{%
-     Determine the Laplace transform of the function $f(t)=te^{4t}$.
-
-     \vspace{2em}
-     \begin{tabular}{ll}
-       A: & $\frac{1}{(s-4)^2}$ \\ [12pt]
-       B: & $\frac{-1}{(s-4)^2}$ \\ [12pt]
-       C: & $\frac{1}{(s-4)}$ \\ [12pt]
-       D: & $\frac{-1}{(s-4)}$ \\ [12pt]
-     \end{tabular}
-
-     \vfill
-   }\fi
-
-   \ifnum\value{clickerQuiz}=2{%
-     Determine the Laplace transform of the function $f(t)=te^{2t}$.
-
-     \vspace{2em}
-     \begin{tabular}{ll}
-       A: & $\frac{1}{(s-2)^2}$ \\ [12pt]
-       B: & $\frac{-1}{(s-2)^2}$ \\ [12pt]
-       C: & $\frac{1}{(s-2)}$ \\ [12pt]
-       D: & $\frac{-1}{(s-2)}$ \\ [12pt]
-     \end{tabular}
-
-   \vfill
-   }\fi
-
-  \ifnum\value{clickerQuiz}=3{%
-
-
-  \vfill
- }\fi
-\end{frame}
-}
-
 
 \subsection{The Laplace Transform of the Convolution}
 
@@ -189,6 +149,48 @@
 
 
 \end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     Determine the inverse Laplace transform of the function $\frac{2}{s^3}$.
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & $t^2$ \\ [12pt]
+       B: & $t^3$ \\ [12pt]
+       C: & $e^t$ \\ [12pt]
+       D: & $e^{-t}$ \\ [12pt]
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+     Determine the inverse Laplace transform of the function $\frac{2}{s^3}$.
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & $t^2$ \\ [12pt]
+       B: & $t^3$ \\ [12pt]
+       C: & $e^t$ \\ [12pt]
+       D: & $e^{-t}$ \\ [12pt]
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
 
 
 \begin{frame}
