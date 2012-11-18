@@ -58,8 +58,8 @@
      \begin{tabular}{ll}
        A: &  Source \\
        B: &  Sink \\
-       C: &  Spiral Source \\
-       D: &  Spiral Sink
+       C: &  Repelling Spiral \\
+       D: &  Attracting Spiral 
      \end{tabular}
 
      \vfill
@@ -80,8 +80,8 @@
      \begin{tabular}{ll}
        A: &  Source \\
        B: &  Sink \\
-       C: &  Spiral Source \\
-       D: &  Spiral Sink
+       C: &  Repelling Spiral \\
+       D: &  Attracting Spiral
      \end{tabular}
 
      \vfill
@@ -190,6 +190,29 @@
     \deriv{~}{t} \vec{x} & = & \arrayTwo{2}{4}{1}{3} \vec{x}.
   \end{eqnarray*}
 
+  \uncover<2->
+  {
+    \begin{eqnarray*}
+      D & = & 2, \\
+      T & = & 5.
+    \end{eqnarray*}
+  }
+
+  \uncover<3->
+  {
+    \begin{eqnarray*}
+      D & = & 2, \\
+      D=2 & > & 0, \\
+      D = 2 & < & \frac{25}{4} = \frac{T^2}{4}.
+    \end{eqnarray*}
+  }
+
+  \uncover<4->
+  {
+    This is a source.
+  }
+
+
 \end{frame}
 
 
@@ -269,6 +292,61 @@
     \deriv{~}{t} \vec{x} & = & \arrayTwo{1}{k}{1}{0} \vec{x}.
   \end{eqnarray*}
   for all values of $k$?
+
+  \only<2-3>
+  {
+    \begin{eqnarray*}
+      D & = & -k, \\
+      T & = & 1.
+    \end{eqnarray*}
+  }
+
+
+
+  \only<3>
+  {
+    Where is it a saddle?
+    \begin{eqnarray*}
+      D & = & -k \\
+      -k & < & 0, \\ 
+      k & > & 0.
+    \end{eqnarray*}
+    Saddle if $k>0$.
+  }
+
+  \only<4>
+  {
+    Where is it a source?
+    \begin{eqnarray*}
+      \begin{array}{rcccl}
+        0 & < & D & < & \frac{T^2}{4}, \\
+        0 & < & -k & < & \frac{1}{4}, \\\
+        0 & > &  k & > & -\frac{1}{4}.
+      \end{array}
+    \end{eqnarray*}
+    It is a source if $0 > k  > -\frac{1}{4}$.
+  }
+
+  \only<5>
+  {
+    Where is it a repelling spiral?
+    \begin{eqnarray*}
+        D  & > & \frac{T^2}{4}, \\
+        -k & > & \frac{1}{4}, \\\
+        k  & < & -\frac{1}{4}.
+    \end{eqnarray*}
+    It is a repelling spiral if $k < -\frac{1}{4}$.  
+
+  }
+
+  \only<6->
+  {
+    \begin{tabular}{ll}
+      saddle           & $k>0$\\
+      source           & $0 > k  > -\frac{1}{4}$ \\
+      repelling spiral & $k < -\frac{1}{4}$
+    \end{tabular}
+  }
   
 
 \end{frame}
@@ -283,6 +361,26 @@
   \end{eqnarray*}
   for all values of $k$?
 
+  \only<2-3>
+  {
+    \begin{eqnarray*}
+      D & = & -k^2, \\
+      T & = & -2.
+    \end{eqnarray*}
+  }
+
+
+
+  \only<3>
+  {
+    Where is it a saddle?
+    \begin{eqnarray*}
+      D & = & -k^2 \\
+      -k^2 & < & 0, \\ 
+    \end{eqnarray*}
+    True for all $k\neq 0$.
+  }
+
 
 \end{frame}
 
@@ -296,6 +394,62 @@
   \end{eqnarray*}
   for all values of $k$?
 
+  \only<2-3>
+  {
+    \begin{eqnarray*}
+      D & = & -2-k, \\
+      T & = & -1.
+    \end{eqnarray*}
+  }
+
+
+
+  \only<3>
+  {
+    Where is it a saddle?
+    \begin{eqnarray*}
+      D & = & -2-k \\
+      -2-k & < & 0, \\ 
+      k & > & -2.
+    \end{eqnarray*}
+    True for all $k>-2$.
+  }
+
+
+  \only<4>
+  {
+    Where is it a sink?
+    \begin{eqnarray*}
+      \begin{array}{rcccl}
+        0 & < & D & < & \frac{T^2}{4}, \\
+        0 & < & -2-k & < & \frac{1}{4}, \\\
+        -2 & > &  k & > -\frac{9}{4}.& 
+      \end{array}
+    \end{eqnarray*}
+    It is a sink if $-2 > k  > -\frac{9}{4}$.
+  }
+
+  \only<5>
+  {
+    Where is it an attracting spiral?
+    \begin{eqnarray*}
+        D  & > & \frac{T^2}{4}, \\
+        -2-k & > & \frac{1}{4}, \\\
+        k  & < & -\frac{9}{4}.
+    \end{eqnarray*}
+    It is an attracting spiral if $k < -\frac{9}{4}$.
+  }
+
+  \only<6->
+  {
+    \begin{tabular}{ll}
+      saddle            & $k>-2$, \\
+      source            & $-2 > k  > -\frac{9}{4}$, \\
+      attracting spiral & $k < -\frac{9}{4}.$
+    \end{tabular}
+  }
+
+
 
 \end{frame}
 
@@ -308,6 +462,83 @@
     \deriv{~}{t} \vec{x} & = & \arrayTwo{k}{2}{-1}{0} \vec{x}.
   \end{eqnarray*}
   for all values of $k$?
+
+
+  \only<2-3>
+  {
+    \begin{eqnarray*}
+      D & = & 2, \\
+      T & = & k.
+    \end{eqnarray*}
+  }
+
+
+
+  \only<3>
+  {
+    Where is it a sink/source?
+    \begin{eqnarray*}
+      D & < & \frac{T^2}{4}, \\
+      2 & < & \frac{k^2}{4}, \\
+      8 & < & k^2
+    \end{eqnarray*}
+    True for all $k^2>8$.
+  }
+
+
+  \only<4>
+  {
+    Where is it a sink?
+    \begin{eqnarray*}
+      k & < & -\sqrt{8}.
+    \end{eqnarray*}
+  }
+
+  \only<5>
+  {
+    Where is it an attracting spiral?
+    \begin{eqnarray*}
+      \begin{array}{rcccl}
+        -\sqrt{8} < & T & < & 0, \\
+        -\sqrt{8} < & k & < & 0. \\
+      \end{array}
+    \end{eqnarray*}
+    It is an attracting spiral if $-\sqrt{8}<k<0$.
+  }
+
+  \only<6>
+  {
+    Where is it a repelling spiral?
+    \begin{eqnarray*}
+      \begin{array}{rcccl}
+        0 < & T & < & \sqrt{8}, \\
+        0 < & k & < & \sqrt{8}.
+      \end{array}
+    \end{eqnarray*}
+    It is a repelling spiral if $0<k<\sqrt{8}$.
+  }
+
+  \only<7>
+  {
+    Where is it a source?
+    \begin{eqnarray*}
+        T & > & \sqrt{8}, \\
+        k & > & \sqrt{8}, \\
+    \end{eqnarray*}
+    It is a  source if $k>\sqrt{8}$.
+  }
+
+
+  \only<8->
+  {
+    \begin{tabular}{ll}
+      sink              & $k>-\sqrt{8}$\\
+      attracting spiral & $-\sqrt{8} < k < 0$ \\
+      repelling  spiral & $0 < k < \sqrt{8}$ \\
+      source            & $k>\sqrt{8}$
+    \end{tabular}
+  }
+
 
 
 \end{frame}

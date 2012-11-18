@@ -108,7 +108,7 @@
   \begin{eqnarray*}
     \arrayTwo{-9-3i}{30}{-3}{9-3i} \vecTwo{x}{y} & = & \vecTwo{0}{0} \\
     x & = & \lp 3 - i \rp y, \\
-    \Rightarrow \vec{v}_1 & = & y \lp \vecTwo{3}{1} + \vecTwo{-i}{0} \rp.
+    \Rightarrow \vec{v}_1 & = & y \lp \vecTwo{3}{1} + i\vecTwo{-1}{0} \rp.
   \end{eqnarray*}
 
   \uncover<2->
@@ -117,7 +117,7 @@
     \begin{eqnarray*}
       \arrayTwo{-9+3i}{30}{-3}{9+3i} \vecTwo{x}{y} & = & \vecTwo{0}{0} \\
       x & = & \lp 3+i \rp y, \\
-      \Rightarrow \vec{v}_2 & = & y \lp \vecTwo{3}{1} - \vecTwo{-i}{0} \rp.
+      \Rightarrow \vec{v}_2 & = & y \lp \vecTwo{3}{1} -i \vecTwo{-1}{0} \rp.
     \end{eqnarray*}
   }
 
@@ -130,46 +130,47 @@
   \begin{eqnarray*}
     \uncover<1->
     {
-      \vec{x} & = & A e^{(1+3i)t} \lp \vecTwo{3}{1} + \vecTwo{-i}{0} \rp
-      + B e^{(1-3i)t} \lp \vecTwo{3}{1} - \vecTwo{-i}{0} \rp \\
+      \vec{x} & = & A e^{(1+3i)t} \lp \vecTwo{3}{1} + i\vecTwo{-1}{0} \rp
+      + B e^{(1-3i)t} \lp \vecTwo{3}{1} - i\vecTwo{-1}{0} \rp \\
     }
     \uncover<2->
     {
       \vec{x} & = & A e^{(1+3i)t} \lp \underbrace{\vecTwo{3}{1}}_{\vec{p}} + 
-      \underbrace{\vecTwo{-i}{0}}_{i\vec{q}} \rp
+      i\underbrace{\vecTwo{-1}{0}}_{i\vec{q}} \rp
       + B e^{(1-3i)t} \lp \underbrace{\vecTwo{3}{1}}_{\vec{p}} -
-      \underbrace{\vecTwo{-i}{0}}_{i\vec{q}} \rp \\
+      i\underbrace{\vecTwo{-1}{0}}_{i\vec{q}} \rp \\
     }
     \uncover<3->
     {
-      & = & e^{t} \lp
-        A \lp \cos(3t) + i \sin(3t) \rp \lp \vec{p} + i \vec{q} \rp + \right. \\
-        & & \left. ~~~~
-        B \lp \cos(3t) - i \sin(3t) \rp \lp \vec{p} - i \vec{q} \rp 
-      \rp
-    }
+      & = & 
+        C_1 e^{t} \lp \cos(3t)\vecTwo{3}{1} - \sin(3t)\vecTwo{-1}{0} \rp  \\
+      &  & +  C_2 e^{t} \lp\cos(3t) \vecTwo{-1}{0}+\sin(3t)\vecTwo{3}{1}\rp 
+     }
   \end{eqnarray*}
+
 
 \end{frame}
 
-
 \begin{frame}
-  \frametitle{More Algebra...}
+  \frametitle{The solutions spiral out clockwise}
+   %(The solutions spiral out clockwise.)
 
-  \begin{eqnarray*}
-    \vec{x} & = & e^{t} \lp
-      A\lp \cos(3t) + i \sin(3t) \rp \lp \vec{p} + i \vec{q} \rp  \right. + \\
-    & & \left.
-  ~~~~ B \lp \cos(3t) - i \sin(3t) \rp \lp \vec{p} - i \vec{q} \rp \rp \\
-  & = & C_1 e^{t} \lp \cos(3t) \vec{p} - \sin(3t) \vec{q} \rp
-  + C_2 e^{t} \lp \cos(3t) \vec{q} + \sin(3t) \vec{p} \rp.
-  \end{eqnarray*}
-
-  (The solutions spiral out clockwise.)
-
-  \only<2>{\centerline{\includegraphics[width=4.5cm]{img/complexPhaseOne}}}
+ \only<2>{\centerline{\includegraphics[width=4.5cm]{img/complexPhaseOne}}}
   \only<3>{\centerline{\includegraphics[width=4.5cm]{img/complexPhaseTwo}}}
   \only<4>{\centerline{\includegraphics[width=4.5cm]{img/complexPhaseThree}}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Remark}
+
+  \begin{eqnarray*}
+    \vec{x} & = & Ae^{(a+bi)t} \lp \vec{p} + i \vec{q} \rp 
+             + Be^{(a-bi)t}\lp \vec{p} - i \vec{q} \rp \\
+    & = & Ae^{at} \lp \cos(bt) + i \sin(bt) \rp \lp \vec{p} + i \vec{q} \rp \\
+    & & + Be^{at}\lp \cos(bt) - i \sin(bt) \rp \lp \vec{p} - i \vec{q} \rp \\
+  & = & C_1 e^{at} \lp \cos(bt) \vec{p} - \sin(bt) \vec{q} \rp
+  + C_2 e^{at} \lp \cos(bt) \vec{q} + \sin(bt) \vec{p} \rp.
+  \end{eqnarray*}
 
 \end{frame}
 
@@ -186,9 +187,9 @@
 
   If $\lambda$'s are complex, $\lambda = a \pm ib$:
   \begin{enumerate}
-  \item If $\alpha>0$ then it is a repelling spiral (spiral source).
-  \item If $\alpha<0$ then it is an attracting spiral (spiral sink).
-  \item If $\alpha=0$ then the solutions are neutrally stable.
+  \item If $a>0$ then it is a repelling spiral (spiral source).
+  \item If $a<0$ then it is an attracting spiral (spiral sink).
+  \item If $a=0$ then the solutions are neutrally stable.
   \end{enumerate}
 
 \end{frame}
