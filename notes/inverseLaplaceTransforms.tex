@@ -6,6 +6,7 @@
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 12, Day 3}
 \date{16 November 2012}
+%\subtitle{Inverse Laplace Transforms}
 
 \begin{frame}
   \titlepage
@@ -278,8 +279,8 @@
   \uncover<2->
   {
     \begin{eqnarray*}
-      \laplace{e^{t}g(t)} & = & \frac{s+1}{(s+1)^2+9}, \\
-      \Rightarrow f(t) & = & e^{t} g(t), \\
+      \laplace{e^{-t}g(t)} & = & \frac{s+1}{(s+1)^2+9}, \\
+      \Rightarrow f(t) & = & e^{-t} g(t), \\
       \laplace{g} & = & \frac{s}{s^2+9}
     \end{eqnarray*}
   }
@@ -296,7 +297,7 @@
       \Rightarrow a & = & 3, \\
       \laplace{g} & = & \frac{s}{s^2+9}, \\
       g(t) & = & \cos(3t), \\ [10pt]
-      f(t) & = & e^{t}\cos(3t).
+      f(t) & = & e^{-t}\cos(3t).
     \end{eqnarray*}
 
 \end{frame}
