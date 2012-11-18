@@ -4,8 +4,9 @@
 
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 12, Day 2}
-\date{14 November 2012}
+\subtitle{Math 232 - Week 12, Day 3}
+\date{16 November 2012}
+%\subtitle{Inverse Laplace Transforms}
 
 \begin{frame}
   \titlepage
@@ -49,6 +50,52 @@
 
 
 \end{frame}
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+     What is the Laplace transform of $e^{-3t}$?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: &  $\frac{1}{s+3}$ \\ [12pt]
+       B: &  $\frac{1}{s-3}$ 
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+
+     What is the Laplace transform of $e^{-3t}$?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: &  $\frac{1}{s+3}$ \\ [12pt]
+       B: &  $\frac{1}{s-3}$ 
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+      What is the Laplace transform of $e^{-3t}$?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: &  $\frac{1}{s+3}$ \\ [12pt]
+       B: &  $\frac{1}{s-3}$
+     \end{tabular}
+
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
+
 
 \subsection{The Inverse Laplace Transform}
 
@@ -161,6 +208,67 @@
 \end{frame}
 
 
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+
+     Complete the square:
+     \begin{eqnarray*}
+       x^2+6x+12 & = & ?
+     \end{eqnarray*}
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: &  $(x+3)^2+3$ \\ [12pt]
+       B: &  $(x+3)^2-3$ \\ [12pt]
+       C: &  $(x+3)^2+12$ \\ [12pt]
+       D: &  $(x+3)^2$ \\ [12pt]
+     \end{tabular}
+
+     \vfill
+   }\fi
+
+   \ifnum\value{clickerQuiz}=2{%
+
+     Complete the square:
+     \begin{eqnarray*}
+       x^2+6x+12 & = & ?
+     \end{eqnarray*}
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: &  $(x+3)^2+3$ \\ [12pt]
+       B: &  $(x+3)^2-3$ \\ [12pt]
+       C: &  $(x+3)^2+12$ \\ [12pt]
+       D: &  $(x+3)^2$ \\ [12pt]
+     \end{tabular}
+
+   \vfill
+   }\fi
+
+  \ifnum\value{clickerQuiz}=3{%
+    Complete the square:
+     \begin{eqnarray*}
+       x^2+6x+12 & = & ?
+     \end{eqnarray*}
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: &  $(x+3)^2+3$ \\ [12pt]
+       B: &  $(x+3)^2-3$ \\ [12pt]
+       C: &  $(x+3)^2+12$ \\ [12pt]
+       D: &  $(x+3)^2$ \\ [12pt]
+     \end{tabular}
+
+
+  \vfill
+ }\fi
+\end{frame}
+}
+
+
 \begin{frame}
   \frametitle{Example}
 
@@ -171,8 +279,8 @@
   \uncover<2->
   {
     \begin{eqnarray*}
-      \laplace{e^{t}g(t)} & = & \frac{s+1}{(s+1)^2+9}, \\
-      \Rightarrow f(t) & = & e^{t} g(t), \\
+      \laplace{e^{-t}g(t)} & = & \frac{s+1}{(s+1)^2+9}, \\
+      \Rightarrow f(t) & = & e^{-t} g(t), \\
       \laplace{g} & = & \frac{s}{s^2+9}
     \end{eqnarray*}
   }
@@ -189,7 +297,7 @@
       \Rightarrow a & = & 3, \\
       \laplace{g} & = & \frac{s}{s^2+9}, \\
       g(t) & = & \cos(3t), \\ [10pt]
-      f(t) & = & e^{t}\cos(3t).
+      f(t) & = & e^{-t}\cos(3t).
     \end{eqnarray*}
 
 \end{frame}
@@ -235,7 +343,7 @@
         \laplace{g} & = & \frac{s^2-14s-58}{s^3+2s^2+21s-58}, \\
         & = & \frac{s^2-14s-58}{(s-2)(s^2+4s+29)}, \\
         & = & \frac{as+b}{s^2+4s+29}+\frac{c}{s-2}, \\
-        & = & 3\frac{s+2}{(s+2)^2+25} - 3\frac{2}{(s+1)^2+25}-\frac{2}{s-2}.
+        & = & 3\frac{s+2}{(s+2)^2+25} - 3\frac{2}{(s+2)^2+25}-\frac{2}{s-2}.
       \end{eqnarray*}
     }
 
