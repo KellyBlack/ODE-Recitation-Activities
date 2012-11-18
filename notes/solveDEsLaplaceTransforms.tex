@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Solving ODEs with Laplace Transforms}
-\date{16 Nov 2012}
+\date{19 Nov 2012}
 
 \begin{frame}
   \titlepage
@@ -98,6 +98,26 @@
    }\fi
 
   \ifnum\value{clickerQuiz}=3{%
+     %Determine the Laplace transform of the function $f(t)=t^2e^{3t}$.
+
+     %\vspace{2em}
+     %\begin{tabular}{ll}
+     %  A: & $\frac{3!}{(s-2)^2}$ \\ [12pt]
+     %  B: & $\frac{2!}{(s-3)^3}$ \\ [12pt]
+     %  C: & $\frac{3!}{(s+2)^3}$ \\ [12pt]
+     %  D: & $\frac{2!}{(s+3)^2}$ \\ [12pt]
+     %\end{tabular}
+     Determine the Laplace transform of the function $f(t)=te^{3t}$.
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & $\frac{1}{(s-3)^2}$ \\ [12pt]
+       B: & $\frac{-1}{(s-3)^2}$ \\ [12pt]
+       C: & $\frac{1}{(s-2)}$ \\ [12pt]
+       D: & $\frac{-1}{(s-2)}$ \\ [12pt]
+     \end{tabular}
+
+
 
 
   \vfill
@@ -223,8 +243,8 @@
      \vspace{2em}
      \begin{tabular}{ll}
        A: & $-y(0)-sy'(0)-s^2\laplace{y}$ \\ [12pt]
-       B: & $-y'(0)-sy(0)-s^2\laplace{y}$ \\ [12pt]
-       C: & $y(0)+sy'(0)+s^2\laplace{y}$ \\ [12pt]
+       B: & $-y'(0)-sy(0)+s^2\laplace{y}$ \\ [12pt]
+       C: & $y(0)+sy'(0)-s^2\laplace{y}$ \\ [12pt]
        D: & $y'(0)+sy(0)+s^2\laplace{y}$ \\ [12pt]
      \end{tabular}
 
@@ -237,8 +257,8 @@
      \vspace{2em}
      \begin{tabular}{ll}
        A: & $-y(0)-sy'(0)-s^2\laplace{y}$ \\ [12pt]
-       B: & $-y'(0)-sy(0)-s^2\laplace{y}$ \\ [12pt]
-       C: & $y(0)+sy'(0)+s^2\laplace{y}$ \\ [12pt]
+       B: & $-y'(0)-sy(0)+s^2\laplace{y}$ \\ [12pt]
+       C: & $y(0)+sy'(0)-s^2\laplace{y}$ \\ [12pt]
        D: & $y'(0)+sy(0)+s^2\laplace{y}$ \\ [12pt]
      \end{tabular}
 
@@ -246,6 +266,15 @@
    }\fi
 
   \ifnum\value{clickerQuiz}=3{%
+     What is the Laplace transform of $y''$?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & $-y(0)-sy'(0)-s^2\laplace{y}$ \\ [12pt]
+       B: & $-y'(0)-sy(0)+s^2\laplace{y}$ \\ [12pt]
+       C: & $y(0)+sy'(0)-s^2\laplace{y}$ \\ [12pt]
+       D: & $y'(0)+sy(0)+s^2\laplace{y}$ \\ [12pt]
+     \end{tabular}
 
 
   \vfill
@@ -363,6 +392,15 @@
    }\fi
 
   \ifnum\value{clickerQuiz}=3{%
+     What is the Laplace transform of $e^{-5t}\sin(3t)$?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & $\frac{3}{(s+5)^2+9}$ \\ [12pt]
+       B: & $\frac{s}{(s+5)^2+9}$ \\ [12pt]
+       C: & $\frac{5}{(s-3)^2+25}$ \\ [12pt]
+       D: & $\frac{s}{(s-3)^2+25}$ \\ [12pt]
+     \end{tabular}
 
 
   \vfill
