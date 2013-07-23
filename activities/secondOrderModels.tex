@@ -78,11 +78,14 @@
 
   \begin{problem}
   \item Find the solution to the following differential equation:
-    \begin{eqnarray*}
+    \begin{eqnarray}
       y'' - 2y' - 8y & = & 3t + 4.
-    \end{eqnarray*}
+      \label{eqn:secondOrderExample}
+    \end{eqnarray}
     \begin{subproblem}
-    \item Write out the homogeneous equation.
+    \item Write out the homogeneous equation. Label one function as
+      $y_1$ and the other $y_2$. (Define these two functions which are
+      solutions to the homogeneous problem.)
       \vspace{2em}
     \item Find the solution to the homogeneous equation.
       \vfill
@@ -90,12 +93,66 @@
     \clearpage
 
   \item Write out the general form of the particular solution:
-    \vspace{2em}
+    \vspace{4em}
 
   \item Substitute your particular solution into the non-homogeneous equation.
     \vfill
 
   \item Solve for the constants.
+    \vfill
+
+    \clearpage
+
+    \item Now solve the problem a different way. Using your
+      homogeneous solution express the solution as 
+      \begin{eqnarray*}
+        y(t) & = & y_1(t) u_1(t) + y_2(t) u_2(t).
+      \end{eqnarray*}
+      Substitute your values for the $y_1$ and $y_2$. 
+
+      \vspace{2em}
+
+    \item Determine the first derivative of $y(t)$ above using the
+      product rule.
+
+      \vfill
+
+    \item Assume that $y_1(t) u_1'(t) + y_2(t) u_2'(t)$ is equal to
+      zero. Write out the new equation for $y(t)$ using this
+      assumption.
+
+      \vfill
+
+    \item Determine the second derivative of $y(t)$ above using the
+      product rule and the previous result.
+
+      \vfill
+
+    \clearpage
+
+  \item Substitute your results for the function $y(t)$ and its
+    derivatives into the differential equation, equation
+    (\ref{eqn:secondOrderExample}).
+
+    \vfill
+
+  \item Write out the two equations that you have. (The first equation
+    comes from assuming $y_1(t) u_1'(t) + y_2(t) u_2'(t)=0$.
+
+    \vfill
+
+  \item Solve the equations for $u_1'(t)$ and $u_2'(t)$.
+
+    \vfill
+
+    \clearpage
+
+  \item Solve the integrals to determine $u_1$ and $u_2$.
+
+    \vfill
+
+  \item Determine the solution to the differential equation.
+
     \vfill
 
   \end{subproblem}
