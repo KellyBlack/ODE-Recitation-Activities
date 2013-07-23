@@ -19,6 +19,14 @@
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic color additions
+\definecolor{fuchsia}{RGB}{255,0.0,255}
+
+\newcommand{\redText}[1]{{\color{red}#1}}
+\newcommand{\blueText}[1]{{\color{blue}#1}}
+\newcommand{\fuchsiaText}[1]{{\color{fuchsia}#1}}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Basic linear algebra commands
 
 \newcommand{\arrayTwo}[4]{
@@ -33,7 +41,7 @@
 \newcommand{\vecTwo}[2]{
   \left[
   \begin{array}{r}
-    #1 \\  #2
+    #1 \\ #2
   \end{array}
   \right]
 }
@@ -41,7 +49,7 @@
 
 \newcommand{\stateTwo}[2]{
   \begin{array}{rr}
-    \mbox{\fontsize{6}{6}\selectfont $#1$} \\  \mbox{\fontsize{6}{6}\selectfont $#2$}
+    \mbox{\fontsize{6}{6}\selectfont $#1$} \\ \mbox{\fontsize{6}{6}\selectfont $#2$}
   \end{array}
 }
 
@@ -74,7 +82,7 @@
 \newcommand{\vecThree}[3]{
   \left[
   \begin{array}{r}
-    #1 \\  #2 \\ #3
+    #1 \\ #2 \\ #3
   \end{array}
   \right]
 }
@@ -82,8 +90,8 @@
 
 \newcommand{\stateThree}[3]{
   \begin{array}{r}
-    \mbox{\fontsize{6}{6}\selectfont $#1$} \\  
-    \mbox{\fontsize{6}{6}\selectfont $#2$} \\ 
+    \mbox{\fontsize{6}{6}\selectfont $#1$} \\
+    \mbox{\fontsize{6}{6}\selectfont $#2$} \\
     \mbox{\fontsize{6}{6}\selectfont $#3$}
   \end{array}
 }
@@ -158,7 +166,7 @@
 
 
 
-%%% Local Variables: 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: t
 %%% End: 

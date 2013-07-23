@@ -3,8 +3,8 @@
 \section{Ordinary Differential Equations}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 8, Day 1}
-\date{17 Oct 2012}
+\subtitle{Math 232 - Week 7, Day 3}
+\date{12 Oct 2012}
 
 \begin{frame}
   \titlepage
@@ -23,12 +23,9 @@
   \frametitle{Second Order, Homogeneous Differential Equations}
 
   \begin{eqnarray*}
-    a y'' + by' + cy & = & 0,
+    a y'' + by' + cy & = & 0, a, b, c \text{are constants}, 
   \end{eqnarray*}
-  $a$, $b$, and $c$ are constants, then assume
-  \begin{eqnarray*}
-    y & = & A e^{rt},
-  \end{eqnarray*}
+  Assume that $y =  A e^{rt}$, 
   which implies that
   \begin{eqnarray*}
     a r^2 + b r + c & = & 0, \\
@@ -37,6 +34,25 @@
 
   Three cases: two distinct real roots, one repeated real root, and
   two complex roots.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Second Order, Homogeneous Differential Equations}
+Since 
+  \begin{eqnarray*}
+  e^{d+ih} & = & e^d\left(\cos(h)+i\sin(h)\right) \\ 
+  e^{d-ih} & = & e^d\left(\cos(-h)+i\sin(-h)\right)  \\
+           & = & e^d\left(\cos(h)-i\sin(h)\right).  
+  \end{eqnarray*}
+Then  
+  \begin{eqnarray*}
+   &   &  C_1e^{d+ih} + C_2e^{d-ih}\\
+   & = & C_1e^d\left(\cos(h)+i\sin(h)\right) 
+       + C_2 e^d\left(\cos(h)-i\sin(h)\right)\\
+   & = & e^d\left((C_1+C_2)\cos(h)+i(C_1-C_2)\sin(h)\right)\\
+   & = & e^d\left(A_1\cos(h)+A_2\sin(h)\right)  
+  \end{eqnarray*}
 
 \end{frame}
 
@@ -79,25 +95,26 @@
   \begin{eqnarray*}
     a y'' + by' + cy & = & 0,
   \end{eqnarray*}
-  $a$, $b$, and $c$ are constants, then assume
-  \begin{eqnarray*}
-    y & = & A e^{rt},
-  \end{eqnarray*}
-  which implies that
+  where $a$, $b$, and $c$ are constants, then assume
+  $ y  =  A e^{rt}$,which implies that
   \begin{eqnarray*}
     a r^2 + b r + c & = & 0, \\
     r & = & \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
   \end{eqnarray*}
 
-  If
-  \begin{eqnarray*}
-    b^2-4ac & < & 0
-  \end{eqnarray*}
+  If $b^2-4ac  < 0$, 
   then the system has oscillations and
   \begin{eqnarray*}
     r & = & \frac{-b}{2a} \pm i \frac{\sqrt{4ac-b^2}}{2a}.
   \end{eqnarray*}
-
+   The general solution is 
+  \begin{eqnarray*}
+    y(t) & = & e^{\frac{-b}{2a}} \left(
+           A_1 \cos\left(\frac{\sqrt{4ac-b^2}}{2a}\right)
+           +A_2 \sin\left(\frac{\sqrt{4ac-b^2}}{2a}\right)
+           \right) 
+  \end{eqnarray*}
+ 
 \end{frame}
 
 \subsection{Examples}

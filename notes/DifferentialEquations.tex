@@ -1,4 +1,4 @@
-\documentclass{beamer}  % {article} %
+\documentclass{beamer} % {article} %
 \usepackage{etoolbox}
 \mode<presentation>
 %\usepackage{beamerarticle}
@@ -6,6 +6,7 @@
 
 
 
+\usepackage{tikz}
 
 
 \usetheme{Frankfurt}%
@@ -25,15 +26,15 @@
 
 \input{latexDefinitions}
 
-\includeonlylecture{Second-Order-DEs}
-\includeonly{secondOrderDEs}
+%\includeonlylecture{The-Unit-Step-Function}
+\includeonly{convolutions}
 %test
 
 \newtoggle{clicker}
 \toggletrue{clicker}
 %\togglefalse{clicker}
 \newcounter{clickerQuiz} % Create a counter to determine which clicker quiz to give
-\setcounter{clickerQuiz}{3} % Set the counter to 1, 2, or 3 for the section number
+\setcounter{clickerQuiz}{2} % Set the counter to 1, 2, or 3 for the section number
 
 \begin{document}
 
@@ -78,7 +79,7 @@
 
 \include{secondOrderDEs}
 \include{solutionsToSecondOrderDEs}
-\include{realRoots}
+\include{complexRoots}
 \include{undeterminedCoefficients}
 \include{undeterminedCoefficientsII}
 \include{variationParameters}
@@ -105,10 +106,10 @@
 \include{inverseLaplaceTransforms}
 \include{solveDEsLaplaceTransforms}
 \include{unitStepFunction}
-
+\include{convolutions}
 
 
 
 \end{document}
 
-% LocalWords:  Clarkson pausesection hideothersubsections
+% LocalWords: Clarkson pausesection hideothersubsections
