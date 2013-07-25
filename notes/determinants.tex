@@ -1,0 +1,570 @@
+\part{Determinants}
+\lecture{Determinants}{Determinants}
+\section{Determinants}
+
+\title{Ordinary Differential Equations}
+\subtitle{Math 232 - Determinants}
+\date{3 Oct 2012}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[pausesection,hideothersubsections]
+\end{frame}
+
+
+\subsection{Determinants}
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+       \ifnum\value{clickerQuiz}=1{%
+         Which matrix is the inverse of 
+         \begin{eqnarray*}
+           \arrayTwo{0}{1}{2}{1}?
+         \end{eqnarray*}
+
+         \vfill
+ 
+         \begin{eqnarray*}
+           \begin{array}{llcr}
+             A: &  \arrayTwo{1/2}{1/2}{1}{0}  \\ [12pt]
+             B: &  \arrayTwo{-1/2}{1/2}{1}{0}   \\ [12pt] 
+             C: &  \arrayTwo{0}{1/2}{1}{1/2} \\  [12pt]
+             D: &  \arrayTwo{0}{1}{1/2}{1}
+           \end{array}
+         \end{eqnarray*}
+
+ 
+         \vfill
+ 
+       }\fi
+
+         \ifnum\value{clickerQuiz}=2{%
+         Which matrix is the inverse of 
+         \begin{eqnarray*}
+           \arrayTwo{1}{1}{2}{0}?
+         \end{eqnarray*}
+
+         \vfill
+ 
+         \begin{eqnarray*}
+           \begin{array}{llcr}
+             A: &  \arrayTwo{1/2}{1/2}{1}{0}  \\ [12pt]
+             B: &  \arrayTwo{-1}{1}{1/2}{0}   \\ [12pt] 
+             C: &  \arrayTwo{0}{1/2}{1}{-1/2} \\  [12pt]
+             D: &  \arrayTwo{1/2}{0}{1}{1}
+           \end{array}
+         \end{eqnarray*}
+
+
+         
+         \vfill
+        
+       }\fi
+ 
+
+      \ifnum\value{clickerQuiz}=3{%
+       Calculate the inverse of 
+        \begin{eqnarray*}
+         \arrayTwo{2}{0}{1}{1}.
+        \end{eqnarray*}
+
+        \vfill
+ 
+         \begin{eqnarray*}
+          \begin{array}{llcr}
+            A: &  \arrayTwo{1/2}{0}{-1/2}{1}\\ 
+            B: &  \arrayTwo{1/2}{0}{1}{1}\\ 
+            C: &  \arrayTwo{1/2}{0}{1/2}{1}\\ 
+            D: &  \arrayTwo{-1/2}{0}{-1}{1}\\ 
+          \end{array}
+        \end{eqnarray*}
+
+        \vfill
+
+     }\fi
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
+
+
+\begin{frame}
+  \frametitle{Definition of the Determinant}
+
+  The determinant of a $2\times 2$ matrix is defined to be
+  \begin{eqnarray*}
+    |A| & = & \detTwo{a}{b}{c}{d} \\
+    & = & ad - bc
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Why?}
+
+  Suppose I want to solve the following system of equations:
+  \begin{eqnarray*}
+    \arrayTwo{a}{b}{c}{d} \vecTwo{x}{y} & = & \vecTwo{\#}{\#} \\
+    \uncover<1->{%
+      \startRowOpsTwo
+      \oneRowOpsTwo{a}{b}{1}{0}
+      \oneRowOpsTwo{c}{d}{0}{1}
+      \stopRowOps} \\
+    \uncover<1->{%
+      \stateTwo{}{-cR_1+aR_2}
+      \startRowOpsTwo
+      \oneRowOpsTwo{a}{b}{1}{0}
+      \oneRowOpsTwo{0}{ad-bc}{-c}{a}
+      \stopRowOps
+    }
+  \end{eqnarray*}
+
+  \uncover<1->
+  {
+    If $ad-bc$ is zero then there is no inverse. The linear system
+    does not have a unique solution.
+  }
+
+  \uncover<1->
+  {
+    In general if the determinant of a matrix is zero its inverse does
+    not exist. 
+  }
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    A & = & \arrayTwo{2}{-1}{3}{1}, \\
+    |A| & = & 2(1)-3(-1), \\
+    & = & 5.
+  \end{eqnarray*}
+
+\end{frame}
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        What is determinant of the following matrix
+        \begin{eqnarray*}
+          M & = & \arrayTwo{3}{-1}{4}{1}?
+        \end{eqnarray*}
+        
+        \begin{eqnarray*}
+          \begin{array}{llcr}
+            A: & |M| &  = & 11 \\ 
+            B: & |M| &  = &  1 \\ 
+            C: & |M| &  = & -1 \\
+            D: & |M| &  = &  7
+          \end{array}
+        \end{eqnarray*}
+
+          \vfill
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+
+        What is determinant of the following matrix
+        \begin{eqnarray*}
+          M & = & \arrayTwo{2}{-1}{5}{1}?
+        \end{eqnarray*}
+        
+        \begin{eqnarray*}
+          \begin{array}{llcr}
+            A: & |M| &  = &  7 \\ 
+            B: & |M| &  = & -3 \\ 
+            C: & |M| &  = &  3 \\
+            D: & |M| &  = & 10
+          \end{array}
+        \end{eqnarray*}
+
+          \vfill
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+        \vfill
+      What is determinant of the following matrix
+        \begin{eqnarray*}
+          M & = & \arrayTwo{-2}{1}{5}{2}?
+        \end{eqnarray*}
+
+        \begin{eqnarray*}
+          \begin{array}{llcr}
+            A: & |M| &  = &  1 \\ 
+            B: & |M| &  = & -9 \\ 
+            C: & |M| &  = &  -1 \\
+            D: & |M| &  = & 9
+          \end{array}
+        \end{eqnarray*}
+
+          \vfill
+
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
+
+
+
+\subsection{Higher Dimensions}
+
+\begin{frame}
+  \frametitle{Higher Dimensions}
+
+  Definition: Given a \textbf{square} matrix:
+  \begin{eqnarray*}
+    A & = & 
+    \left[
+      \begin{array}{rrr|r|rr}
+        a_{11} & a_{12} & \cdots & {\color{red}a_{1j}}  & \cdots & a_{1n} \\
+        \vdots &       &       & {\color{red}\vdots} &        & \vdots \\ \hline
+        {\color{green}a_{i1}} & {\color{green}a_{i2}}  & {\color{green}\cdots} & {\color{blue}a_{ij}} & {\color{green}\cdots} & {\color{green}a_{in}} \\ \hline
+        \vdots &       &       & {\color{red}\vdots} &        & \vdots \\
+        a_{n1} & a_{n2} & \cdots & {\color{red}a_{nj}}  & \cdots & a_{nn} \\
+      \end{array}
+    \right]
+  \end{eqnarray*}
+
+  The \textbf{minor}, $M_{ij}$ of a matrix is found by removing row
+  $i$ and column $j$.
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{The Cofactor of a matrix}
+
+  The \textbf{cofactor}, $c_{ij}$, of a matrix is defined to be 
+  \begin{eqnarray*}
+    c_{ij} & = & (-1)^{i+j}\left| M_{ij} \right|.
+  \end{eqnarray*}
+
+  Note:
+  \begin{eqnarray*}
+    \left| M_{ij} \right|
+  \end{eqnarray*}
+  is the determinant of $M_{ij}$.
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Determinants in Higher Dimensions}
+
+  The determinant of a square matrix with more than two rows is
+  defined to be
+  \begin{eqnarray*}
+    \left| A \right| & = & \sum^n_{j=1} a_{ij} c_{ij}.
+  \end{eqnarray*}
+  This is the determinant by expansion along the $i^{\mathrm{th}}$
+  row.
+
+  An equivalent definition:
+  \begin{eqnarray*}
+    \left| A \right| & = & \sum^n_{i=1} a_{ij} c_{ij}.
+  \end{eqnarray*}
+  This is the determinant by expansion along the $j^{\mathrm{th}}$
+  column.
+
+  
+
+\end{frame}
+
+
+\subsection{Examples of Determinants}
+
+\begin{frame}
+  \frametitle{Example}
+
+  Find the determinant of the following matrix:
+
+  \only<1>{%
+    \begin{eqnarray*}
+      \mathrm{det}
+      \arrayThree{3}{2}{-1}{4}{6}{2}{1}{3}{1}
+    \end{eqnarray*}
+  }
+
+  \only<1>{%
+    \begin{eqnarray*}
+      \mathrm{det}
+      \arrayThree{{\color{red}3}}{\color{red}{2}}{\color{red}{-1}}{4}{6}{2}{1}{3}{1}
+    \end{eqnarray*}
+  }  
+
+  \only<1>{%
+    \begin{eqnarray*}
+      \mathrm{det}
+      \arrayThree{{\color{blue}(+)}{\color{red}3}}{{\color{blue}(-)}{\color{red}2}}{{\color{blue}(+)}{\color{red}-1}}{4}{6}{2}{1}{3}{1}
+    \end{eqnarray*}
+  }  
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+
+  Find the determinant of the following matrix:
+
+  \begin{eqnarray*}
+    \mathrm{det}
+    \arrayThree{{\color{red}3}}{{\color{red}2}}{{\color{red}-1}}{4}{6}{2}{1}{3}{1}
+    & = & 
+    {\color{red}3} \detTwo{6}{2}{3}{1} - {\color{red}2} \detTwo{4}{2}{1}{1}
+    + {\color{red}(-1)} \detTwo{4}{6}{1}{3} \\
+    & = & 3 (6-6) - 2(4-2) + (-1) (12-6) \\
+    & = & -10
+  \end{eqnarray*}
+
+\end{frame}
+
+
+
+
+\begin{frame}
+  \frametitle{Example}
+  Find the determinant of the following matrix:
+
+  \only<1>{%
+    \begin{eqnarray*}
+      \mathrm{det}
+      \startRowFour
+      \oneRowFour{4}{3}{-1}{0}
+      \oneRowFour{1}{0}{1}{7}
+      \oneRowFour{0}{1}{2}{6}
+      \oneRowFour{2}{0}{3}{2}
+      \stopRowOps
+    \end{eqnarray*}
+  }
+
+
+  \only<1>{%
+    \begin{eqnarray*}
+      \mathrm{det}
+      \startRowFour
+      \oneRowFour{4}{{\color{red}3}}{-1}{0}
+      \oneRowFour{1}{{\color{red}0}}{1}{7}
+      \oneRowFour{0}{{\color{red}1}}{2}{6}
+      \oneRowFour{2}{{\color{red}0}}{3}{2}
+      \stopRowOps
+    \end{eqnarray*}
+  }
+
+  \only<1>{%
+    \begin{eqnarray*}
+      \mathrm{det}
+      \startRowFour
+      \oneRowFour{4}{{\color{green}(-)}{\color{red}3}}{-1}{0}
+      \oneRowFour{1}{{\color{green}(+)}{\color{red}0}}{1}{7}
+      \oneRowFour{0}{{\color{green}(-)}{\color{red}1}}{2}{6}
+      \oneRowFour{2}{{\color{green}(+)}{\color{red}0}}{3}{2}
+      \stopRowOps
+    \end{eqnarray*}
+  }
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  Find the determinant of the following matrix:
+
+  \begin{eqnarray*}
+    \mathrm{det}
+    \startRowFour
+    \oneRowFour{4}{{\color{red}3}}{-1}{0}
+    \oneRowFour{1}{{\color{red}0}}{1}{7}
+    \oneRowFour{0}{{\color{red}1}}{2}{6}
+    \oneRowFour{2}{{\color{red}0}}{3}{2}
+    \stopRowOps
+    & = & 
+    {\color{red}-3} \color{green}{\detThree{1}{1}{7}{0}{2}{6}{2}{3}{2}}
+    + {\color{red}0} \color{blue}{\detThree{4}{-1}{0}{0}{2}{6}{2}{3}{2}} \\
+    & & 
+    - {\color{red}1} \color{orange}{\detThree{4}{-1}{0}{1}{1}{7}{2}{3}{2}}
+    + {\color{red}0} \color{cyan}{\detThree{4}{-1}{0}{1}{1}{7}{0}{2}{6}} \\
+    & = & 178
+  \end{eqnarray*}
+
+
+\end{frame}
+
+\subsection{Properties of Determinants}
+
+\begin{frame}
+  \frametitle{Properties of Determinants}
+
+  \begin{eqnarray*}
+    \mathrm{det}(AB) & = & \mathrm{det}(A) \cdot \mathrm{det}(B) \\
+    \mathrm{det}(I_n) & = & 1
+  \end{eqnarray*}
+
+  \uncover<1->{%
+    Note:
+    \begin{eqnarray*}
+      A A^{-1} & = & I_n \\
+      \mathrm{det}(A A^{-1}) & = & \mathrm{det}(I_n) \\
+      \mathrm{det}(A) \mathrm{det}(A^{-1}) & = & 1 \\
+      \mathrm{det}(A^{-1}) & = & \frac{1}{\mathrm{det}(A)}
+    \end{eqnarray*}
+  }
+
+  \uncover<1->{%
+    Read Cramer's rule pp. 160-162.
+  }
+
+\end{frame}
+
+
+\subsection{Vector Spaces}
+
+\begin{frame}
+  \frametitle{Vector Spaces}
+
+  Definition of a vector space, V:
+  \begin{itemize}
+  \item Elements in V are called ``vectors.''
+  \item If $\vec{x}$, $\vec{y}$ are members of V then
+    $\vec{x}+\vec{y}$ is in V.
+  \item If $c$ is a real number and $\vec{x}$ is in V then so is
+    $c\vec{x}$.
+  \item There is a ``zero vector'' where $\vec{x}+\vec{0}=\vec{x}$ for
+    every member of V.
+  \item For any $\vec{x}$ in V there is another $\vec{y}$ in V where
+    $\vec{x}+\vec{y}=\vec{0}$. ($\vec{y}$ is called ``$-\vec{x}$.'')
+  \end{itemize}
+
+  See p. 168 for definition and properties.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+
+  $\mathbb{R}^2$ is a vector space.
+  \only<1->{Suppose that $x$,  $y$, $u$, $v$, and $c$ are real numbers.}
+  \begin{eqnarray*}
+    \only<1->{\vecTwo{x}{y} & \in & \mathbb{R}^2} \\
+    \only<1->{\vecTwo{x}{y} + \vecTwo{u}{v} & = & \vecTwo{x+u}{y+v}} \\
+    \only<1->{c \vecTwo{x}{y} & = & \vecTwo{cx}{cy}} \\
+    \only<1->{\vec{0} & = & \vecTwo{0}{0}} \\
+    \only<1->{\vecTwo{x}{y} + \vecTwo{-x}{-y} & = & \vec{0}}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example - Continuous Functions}
+
+  The set of continuous functions ($C_0$) is a vector space.
+  Suppose $f(t),~g(t)~\in~C_o$:
+  \begin{itemize}
+  \item<1-> $f(t)+g(t)$ is continuous.
+  \item<1-> $c f(t)$ is continuous if $c$ is a real number.
+  \item<1-> $h(t)=0$ is the zero vector.
+  \item<1-> For any function
+    \begin{eqnarray*}
+      f(t) + (-1)f(t) & = & (1 + (-1))f(t), \\
+      & = & 0 f(t), \\
+      & = & 0.
+    \end{eqnarray*}
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example - Quadratic Functions}
+
+  The set of quadratic functions is a vector space:
+
+  \uncover<1->{%
+    \begin{eqnarray*}
+      h(x) & = & a x^2 + bx + c, \\
+      g(x) & = & dx^2 + ex + f,
+    \end{eqnarray*}
+    where $a$, $b$, $c$, $d$, $e$, and $f$ are real numbers.
+  }
+
+  \only<1>{%
+    \color{red}{Addition:}{~}
+    \begin{eqnarray*}
+      h(x)+g(x) & = & (a+d) x^2 + (b+e) x + (c+f)
+    \end{eqnarray*}
+    is a quadratic function.
+  }
+
+  \only<1>{%
+    \color{red}{Scalar multiplication}, if $r$ is a real number:
+    \begin{eqnarray*}
+      r h(x) & = & ra x^2 + rb x + rc
+    \end{eqnarray*}
+    is a quadratic.
+  }
+
+  \only<1>{%
+    The function $h(x) =  0$ 
+    is a quadratic and is the \color{red}{``zero vector.''}
+  }
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Counter Example}
+
+  The set of straight lines through $(0,1)$ is not a vector space:
+  \uncover<1->{%
+    \begin{eqnarray*}
+      h(x) & = & ax + 1 \\
+      g(x) & = & bx + 1
+    \end{eqnarray*}
+  }
+
+  \uncover<1->{%
+    It fails the addition test:
+    \begin{eqnarray*}
+      h(x) + g(x) & = & (a+b)x + 2
+    \end{eqnarray*}
+    is a straight line but does not go through $(0,1)$.
+  }
+
+\end{frame}
+
+
+
+
+
+% LocalWords:  Clarkson pausesection hideothersubsections

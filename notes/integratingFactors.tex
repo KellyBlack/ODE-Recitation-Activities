@@ -1,0 +1,521 @@
+\part{First-Order-Linear-Equations}
+\lecture{First Order Linear Equations}{First-Order-Linear-Equations}
+\section{First Order Linear Equations}
+
+\title{Ordinary Differential Equations}
+\subtitle{Math 232 - Week 2, Day 2}
+\date{5 Sep 2012}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[pausesection,hideothersubsections]
+\end{frame}
+
+
+\subsection{First Order Linear Equations}
+
+\iftoggle{clicker}{%
+
+  \begin{frame}
+    \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        Which differential equation is a linear equation?
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y'=y^2$. \\
+         B: & $y'' + 3y'-2y=0$. \\
+         C: & $y'+\sqrt{y}=\sin(t)$. \\
+         D: & $y' + \cos(t)y  =  \ln(t)$. \\
+         E: & A and B. \\
+         F: & B and D.
+       \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        Which differential equation is a linear equation?
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y'=3y$. \\
+         B: & $y'' + 3\sin(t)y'-2y=0$. \\
+         C: & $y''+ y^2 =\sin(t)$. \\
+         D: & $y' + y y'  =  \ln(t)$. \\
+         E: & A and B. \\
+         F: & A and D.
+       \end{tabular}
+
+
+     }\fi
+    
+
+      \ifnum\value{clickerQuiz}=3{%
+       Which differential equation is a linear equation?
+      \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y'-y^2 = 0$. \\
+\vspace{0.3cm}
+         B: & $y'' + 3y'-2y=t^2$. \\
+\vspace{0.3cm}
+         C: & $y'+\cos{y}=\sqrt(t)$. \\
+\vspace{0.3cm}
+         D: & $y' + \ln(t)y  =  \cos(t)$. \\
+\vspace{0.3cm}
+         E: & A and B. \\
+\vspace{0.3cm}
+         F: & B and D.
+\vspace{0.3cm}
+       \end{tabular}
+
+      }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+  \end{frame}
+
+}
+
+
+\begin{frame}
+  \frametitle{Another ``Special Form''}
+
+  \begin{eqnarray*}
+    y' + p(t) y & = & f(t)
+  \end{eqnarray*}
+
+  read pages 63-66 
+
+  I will only cover integrating factors in class.
+
+\end{frame}
+
+\subsection{Product Rule}
+
+\begin{frame}
+  \frametitle{The Product Rule}
+
+  \begin{eqnarray*}
+    \frac{d}{dt} \lp u v \rp & = & u' v + u v'
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    y ' & = & - y + t \\
+    \uncover<2->{ y' + y & = & t} \\
+    \uncover<3->{y' e^t + y e^ t & = & t e^t } \\
+    \uncover<4->{\deriv{~}{t} \lp y e^t \rp & = & t e^t } \\
+    \uncover<5->{y e^t  & = & \int t e^t ~ dt } \\
+    \uncover<6->{y e^t  & = & t e^t - e^t + C } \\
+    \uncover<7->{ y & = & t -1 + Ce^{-t}}
+  \end{eqnarray*}
+
+  \uncover<8->{How did I know how to do this?}
+
+
+\end{frame}
+
+
+\subsection{Integrating Factors}
+
+\begin{frame}
+  \frametitle{Let's Backup}
+
+  \begin{eqnarray*}
+    y' + p(t) y & = & f(t) \\
+    e^{G(t)} y' + p(t) e^{G(t)} y & = & e^{G(t)} f(t)
+  \end{eqnarray*}
+
+
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Product Rule Redux}
+
+  \begin{eqnarray*}
+    \frac{d}{dt} \lp e^{G(t)} \rp & = & G'(t) e^{G(t)} 
+  \end{eqnarray*}
+
+  Let
+  \begin{eqnarray*}
+    G'(t) & = & p(t) \\
+    \Rightarrow G(t) & = & \int p(t) ~ dt.
+  \end{eqnarray*}
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Product Rule Redux}
+
+  \begin{eqnarray*}
+    \frac{d}{dt} \lp e^{G(t)} y \rp & = & e^{G(t)} y' + G'(t) e^{G(t)} y \\
+    & = & e^{G(t)} y' + p(t) e^{G(t)} y \\
+    & = & e^{G(t)} \lp y' + p(t) y \rp \\
+    & = & f(t) e^{G(t)}
+  \end{eqnarray*}
+
+  or
+  \begin{eqnarray*}
+    e^{G(t)} y & = & \int f(t) e^{G(t)} ~ dt
+  \end{eqnarray*}
+  \textit{Hope and pray!}
+
+\end{frame}
+
+
+\subsection{Examples}
+
+\begin{frame}
+  \frametitle{Example}
+
+  \vspace*{-3em}
+  \begin{eqnarray*}
+    y' + 2y & = & t \\
+    p(t) & = & 2, \\
+    \int 2 ~ dt & = & 2t + K, \\
+    e^{2t} & & 
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    e^{2t} y' + 2 e^{2t} y & = & t e^{2t}, \\
+    \frac{d}{dt} \lp e^{2t} y \rp & = & t e^{2t} \\
+    e^{2t} y & = & \int t e^{2t} ~ dt \\
+    e^{2t} y & = & \half t e^{2t} - \frac{1}{4} e^{2t} + C \\
+    y & = & \half t - \frac{1}{4} + C e^{-2t}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        What is the integrating factor for the equation
+        \begin{eqnarray*}
+          y' & = & ty + 1 ?
+        \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $e^{t}$. \\
+         B: & $e^{-t}$. \\
+         C: & $e^{t^2/2}$. \\
+         D: & $e^{-t^2/2}$. \\
+       \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        What is the integrating factor for the equation
+        \begin{eqnarray*}
+          y' & = & ty + t^4 ?
+        \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $e^{t}$. \\
+         B: & $e^{-t}$. \\
+         C: & $e^{t^2/2}$. \\
+         D: & $e^{-t^2/2}$. \\
+       \end{tabular}
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+            What is the integrating factor for the equation
+        \begin{eqnarray*}
+          3 y' + y & = & 3t ?
+        \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $e^{t}$. \\
+         B: & $e^{-t}$. \\
+         C: & $e^{t/2}$. \\
+         D: & $e^{t/3}$. \\
+       \end{tabular}
+
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \vspace*{-3em}
+  \begin{eqnarray*}
+    y' & = & ty + t^3 \\
+    y' - ty & = & t^3 \\
+    p(t) & = & -t, \\
+    \int -t ~ dt & = & -\half t^2 + K \\
+    e^{-\half t^2} & & 
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    y' e^{-\half t^2} - t e^{-\half t^2} y & = & t^3 e^{-\half t^2} \\
+    \frac{d}{dt} \lp y e^{-\half t^2} \rp & = & \int t^3 e^{-\half t^2} ~ dt \\
+    y e^{-\half t^2} & = & -t^2 e^{-\half t^2} - 2 e^{-\half t^2} + C \\
+    y & = & -t^2 - 2 + C e^{\half t^2}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    
+      \ifnum\value{clickerQuiz}=1{%
+
+        What is the integrating factor for the equation
+        \begin{eqnarray*}
+          y' & = & -\frac{4}{t} y + 4 ?
+        \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $4t$. \\
+         B: & $4\ln(t)$. \\
+         C: & $t^4$. \\
+         D: & $t^{-4}$. \\
+       \end{tabular}
+
+     }\fi
+
+     \ifnum\value{clickerQuiz}=2{%
+
+        What is the integrating factor for the equation
+        \begin{eqnarray*}
+          y' & = & -\frac{4}{t} y + t^3?
+        \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $t^{-4}$. \\
+         B: & $t^4$. \\
+         C: & $4\ln(t)$. \\
+         D: & $4t$. \\
+       \end{tabular}
+
+
+     }\fi
+
+      \ifnum\value{clickerQuiz}=3{%
+       What is the integrating factor for the equation
+        \begin{eqnarray*}
+          y' & = & \frac{3}{t} y + 7?
+        \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $t^{-3}$. \\
+         B: & $t^3$. \\
+         C: & $3\ln(t)$. \\
+         D: & $3t$. \\
+       \end{tabular}
+
+     }\fi
+
+    \vfill
+    \vfill
+    \vfill
+
+\end{frame}
+
+}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    y' & = & -\frac{4}{t} y + 4 t \\
+    y' + \frac{4}{t} y & = & 4 t \\
+    p(t) & = & \frac{4}{t} \\
+    \int \frac{4}{t} ~ dt & = & 4 \ln(t) + K \\
+    e^{4 \ln(t) } & = & t^4
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example - continues}
+
+  \begin{eqnarray*}
+    t^4 y' + 4t^3& = & 4 t^5 \\
+    \frac{d}{dt} \lp t^4 y \rp & = & 4 t^5 \\
+    t^4 y & = & \int 4 t^5 ~ dt \\
+    t^4 y & = & \frac{4}{6} t^6 + C \\
+    y & = & \frac{2}{3} t^2 + \frac{C}{t^4}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \vspace*{-3em}
+  \begin{eqnarray*}
+    y' & = & -\frac{1}{t} y + \frac{1}{t^2 -1} \\
+    y' + \frac{1}{t} y & = & \frac{1}{t^2 -1} \\
+    p(t) & = & \frac{1}{t}, ~~  \int \frac{1}{t} ~ dt  =  \ln(t) + k \\
+    \mu ( t ) = e^{\ln(t)} & = & t
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    t y' + y & = & \frac{t}{t^2-1} \\
+    \frac{d}{dt} \lp t y \rp & = & \frac{t}{t^2-1} \\
+    t y & = & \int \frac{t}{t^2-1} ~ dt
+%  \end{eqnarray*}
+%\end{frame}
+%\begin{frame}
+%  \frametitle{Partial Fractions}
+%  \frametitle{Example}
+%
+%  \vspace{-3em}
+%  \begin{eqnarray*}
+%    \frac{t}{(t-1)(t+1)} & = & \frac{A}{t-1} + \frac{B}{t+1} \\
+%    t & = & A(t+1) + B(t-1)
+%  \end{eqnarray*}
+%
+%  Let $t=-1$
+%  \begin{eqnarray*}
+%    -1 & = & -2B, \\
+%    B & = & \half
+%  \end{eqnarray*}
+%
+%  Let $t=1$
+%  \begin{eqnarray*}
+%    1 & = & 2A \\
+%    A & = & \half
+%  \end{eqnarray*}
+%  \begin{eqnarray*}
+%    t y & = & \int \frac{\half}{t-1} + \frac{\half}{t+1} ~ dt \\
+%    t y & = & \half \ln(t-1) + \half \ln(t+1) \\
+%    t y & 
+%=  \half \ln(|t^2-1|) + C \\
+%    y &  = &  (\half \ln(|t^2-1|) + C )t^{-1}
+ \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Solving the Integral}
+
+  Let $u=t^2-1$, and $du=2t$:
+  \begin{eqnarray*}
+    ty & = & \int \half \frac{1}{u} ~ du, \\
+    t y & = & \half \ln(u) + C, \\
+    t y & = & \half \ln \lp t^2 - 1 \rp + C, \\
+    y & = & \frac{\ln\lp t^2-1 \rp}{t} + \frac{C}{t}.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Partial Fractions}
+
+  \vspace{-3em}
+  \begin{eqnarray*}
+    \frac{t}{(t-1)(t+1)} & = & \frac{A}{t-1} + \frac{B}{t+1} \\
+    t & = & A(t+1) + B(t-1)
+  \end{eqnarray*}
+
+  Let $t=-1$
+  \begin{eqnarray*}
+    -1 & = & -2B, \\
+    B & = & \half
+  \end{eqnarray*}
+
+  Let $t=1$
+  \begin{eqnarray*}
+    1 & = & 2A \\
+    A & = & \half
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    t y & = & \int \frac{\half}{t-1} + \frac{\half}{t+1} ~ dt \\
+    t y & = & \half \ln(t-1) + \half \ln(t+1) \\
+    y &  = & \frac{\half \ln(t-1) + \half \ln(t+1)}{t}
+  \end{eqnarray*}
+>>>>>>> 278de6b032600a7f55e724dc12cedc9e5989eded
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    y' & = & \cos(t) y - \cos(t) \\
+    \uncover<2->{ y' & = & \cos(t) \lp y-1 \rp,} \\
+    \uncover<3->{\frac{y'}{y-1} & = & \cos(t) \\
+      \ln(y-1) & = & \sin(t) + C \\
+      y - 1 & = & k e^{\sin(t)} \\
+      y & = & 1 + ke^{\sin(t)} }
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    y' & = & y^2 + 1, \\
+    \uncover<2->{ \frac{y'}{y^2+1} & = & 1,} \\
+    \uncover<3->{\int \frac{y'}{y^2+1} ~ dt  & = & \int 1 ~ dt, \\
+      \arctan(y) & = & t + C \\
+      y  & = & \tan(t+C) }
+  \end{eqnarray*}
+
+\end{frame}
+
+
+
+% LocalWords:  Clarkson pausesection hideothersubsections

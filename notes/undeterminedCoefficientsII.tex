@@ -1,0 +1,533 @@
+\part{More-Undetermined-Coefficients}
+\lecture{More Undetermined Coefficients}{More-Undetermined-Coefficients}
+\section{More Undetermined Coefficients}
+
+\title{Ordinary Differential Equations}
+\subtitle{Math 232 - Revenge of the Method of Undetermined Coefficients}
+\date{17 Oct 2012}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[pausesection,hideothersubsections]
+\end{frame}
+
+
+\subsection{Non-homogeneous Equations (continued)}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        Determine the roots to the characteristic equation for
+        \begin{eqnarray*}
+          y'' + 3y' + 2y & = & 0.
+        \end{eqnarray*}
+
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $r_1 = -3/2+\sqrt{3}/2 i$, $-3/2-\sqrt{3}/2i$ \\ [12pt]
+          B: & $r_1 = -3/2+\sqrt{3}/2$, $-3/2-\sqrt{3}/2$ \\
+          C: & $r_1=-2$, $r_2=-1$ \\ [12pt]
+          D: & $r_1=2$, $r_2=1$ \\ [12pt]
+        \end{tabular}
+
+        \vfill
+
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+
+        Determine the roots to the characteristic equation for
+        \begin{eqnarray*}
+          y'' + 3y' + 2y & = & 0.
+        \end{eqnarray*}
+
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $r_1=-2$, $r_2=-1$ \\ [12pt]
+          B: & $r_1=2$, $r_2=1$ \\ [12pt]
+          C: & $r_1 = -3/2+\sqrt{3}/2 i$, $-3/2-\sqrt{3}/2i$ \\ [12pt]
+          D: & $r_1 = -3/2+\sqrt{3}/2$, $-3/2-\sqrt{3}/2$ \\
+        \end{tabular}
+
+        \vfill
+
+     }\fi
+   
+     \ifnum\value{clickerQuiz}=3{%
+         \vfill
+
+        Determine the roots to the characteristic equation for
+        \begin{eqnarray*}
+          y'' + 3y' + 2y & = & 0.
+        \end{eqnarray*}
+
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & $r_1=-2$, $r_2=-1$ \\ [12pt]
+          B: & $r_1=2$, $r_2=1$ \\ [12pt]
+          C: & $r_1 = -3/2+\sqrt{3}/2 i$, $-3/2-\sqrt{3}/2i$ \\ [12pt]
+          D: & $r_1 = -3/2+\sqrt{3}/2$, $-3/2-\sqrt{3}/2$ \\
+        \end{tabular}
+
+        \vfill
+
+    }\fi
+  
+
+\end{frame}
+}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    y'' + 3y' + 2y & = & 4 e^{-t}.
+  \end{eqnarray*}
+
+  \uncover<2->
+  {
+    Homogeneous solution:
+    \begin{eqnarray*}
+      y_h'' + 3y_h' + 2y_h & = & 0, \\
+      r^2 + 3r + 2 & = & 0, \\
+      (r+2)(r+1) & = & 0, \\
+      \blueText{y_h} & \blueText{=} & \blueText{C_1 e^{-2t} + C_2 e^{-t}}.
+    \end{eqnarray*}
+  }
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Particular Solution}
+
+
+  \begin{eqnarray*}
+    y_p'' + 3y_p' + 2y_p & = & 4 e^{-t}.
+  \end{eqnarray*}
+
+  \uncover<2->{%
+    \begin{eqnarray*}
+      y_p & = & A t e^{-t} \\
+      y_p' & = & \redText{ A e^{-t} - Ate^{-t}} \\
+      y_p'' & = & \blueText{-2A e^{-t} + At e^{-t}}
+    \end{eqnarray*}
+  }
+
+  \uncover<3->{%
+    \begin{eqnarray*}
+      \blueText{-2A e^{-t} + At e^{-t}} + 3 \redText{\lp A e^{-t} - Ate^{-t} \rp}
+      + 2 A t e^{-t} & = & 4 e^{-t}, \\
+      A e^{-t} & = & 4 e^{-t} \\
+      A & = & 4.
+    \end{eqnarray*}
+  }
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Solution}
+
+  \begin{eqnarray*}
+    y(t) & = & \blueText{y_h(t)} + \redText{y_p(t)}, \\
+         & = & \blueText{C_1 e^{-2t} + C_2 e^{-t}} + \redText{4te^{-t}}.
+  \end{eqnarray*}
+
+  \textit{Apply boundary conditions here if they are given in the original problem statement.}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    y'' + 4y' + 4y & = & 5 e^{-2t}.
+  \end{eqnarray*}
+
+  \uncover<2->
+  {
+    Homogeneous solution:
+    \begin{eqnarray*}
+      r^2 + 4r + 4 & = & 0, \\
+      (r+2)^2 & = & 0, \\
+      \redText{y_h} & \redText{=} & \redText{C_1 e^{-2t} + C_2 t e^{-2t}}.
+    \end{eqnarray*}
+  }
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Particular Solution}
+  
+  \begin{eqnarray*}
+    y_p & = & A t^2 e^{-2t}, \\
+    y_p' & = & -2 A t^2 e^{-2t} + A 2t e^{-2t}, \\
+    y_p'' & = & 4 A t^2 e^{-2t} - 8A t e^{-2t} + 2 A e^{-2t}.
+  \end{eqnarray*}
+
+  \uncover<2->{%
+    \begin{eqnarray*}
+      \redText{y_p''} + 4\blueText{y_p'} + 4y_p & = & 5 e^{-2t}, \\
+      \redText{4 A t^2 e^{-2t} - 8A t e^{-2t} + 2 A e^{-2t}} & & \\
+      + 4 \blueText{\lp -2 A t^2 e^{-2t} + A 2t e^{-2t} \rp} & & \\
+      + 4 A t^2 e^{-2t} & = & 5 e^{-2t} \\
+      2 A e^{-2t} & = & 5 e^{-2t} \\
+      A & = & \frac{5}{2}, \\
+      \blueText{y_p(t)} & \blueText{=} & \blueText{\frac{5}{2} t^2 e^{-2t}}.
+    \end{eqnarray*}
+  }
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{The General Solution}
+  Solution:
+  \begin{eqnarray*}
+    y(t) & = & \redText{y_h(t)} + \blueText{y_p(t)}, \\
+         & = & \redText{C_1 e^{-2t} + C_2 t e^{-2 t}} + \blueText{\frac{5}{2} t^2 e^{-2t}}.
+  \end{eqnarray*}
+
+  \textit{Apply boundary conditions here if they are given in the original problem statement.}
+
+\end{frame}
+
+
+\subsection{Cauchy-Euler Equations}
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+
+        \vfill
+
+        Is the equation
+        \begin{eqnarray*}
+          t^2 y'' + 3t y' + 2y & = & 0
+        \end{eqnarray*}
+        linear or nonlinear?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Linear \\ [12pt]
+          B: & Not Linear \\ [12pt]
+        \end{tabular}
+
+        \vfill
+
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+
+        \vfill
+
+        Is the equation
+        \begin{eqnarray*}
+          t^2 y'' + 3t y' + 2y & = & 0
+        \end{eqnarray*}
+        linear or nonlinear?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Linear \\ [12pt]
+          B: & Not Linear \\ [12pt]
+        \end{tabular}
+
+        \vfill
+
+     }\fi
+   
+     \ifnum\value{clickerQuiz}=3{%
+       \vfill
+
+        Is the equation
+        \begin{eqnarray*}
+          t^2 y'' + 3t y' + 2y & = & 0
+        \end{eqnarray*}
+        linear or nonlinear?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & Linear \\ [12pt]
+          B: & Not Linear \\ [12pt]
+        \end{tabular}
+
+        \vfill
+
+    }\fi
+  
+
+\end{frame}
+}
+
+
+
+\begin{frame}
+  \frametitle{Cauchy-Euler Equations}
+
+  \begin{eqnarray*}
+    a t^2 y'' + b t y' + c y & = & 0.
+  \end{eqnarray*}
+
+  \uncover<2->{%
+    Assume that the solution is in the form of
+    \begin{eqnarray*}
+      y & = & A t^r \\
+      y' & = & A r t^{r-1} \\
+      y'' & = & A r (r-1) t^{r-2}
+    \end{eqnarray*}
+  }
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Cauchy-Euler Equations}
+
+  \begin{eqnarray*}
+    a t^2 y'' + b t y' + c y & = & 0.
+  \end{eqnarray*}
+
+  \uncover<2->{%
+    Substitute back into the equation to get
+    \begin{eqnarray*}
+      a t^2 A r (r-1) t^{r-2} + b t A r t^{r-1} + c A t^r & = & 0, \\
+      a A r (r-1) t^{r} + b A r t^{r} + c A t^r & = & 0,  \\
+      A t^r \lp a r (r-1) + br + c \rp & = & 0, \\
+      a r (r-1) + br + c & = & 0.
+    \end{eqnarray*}
+  }
+
+  \uncover<3->{%
+    The solution is of the form
+    \begin{eqnarray*}
+      y & = & C_1 t^{r_1} + C_2 t^{r_2}.
+    \end{eqnarray*}
+  }
+    
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    t^2 y'' + t y' - 3y & = & 0.
+  \end{eqnarray*}
+
+  \uncover<2->{%
+    Assume that the solution is in the form of $y=At^r$:
+    \begin{eqnarray*}
+      r(r-1) + r - 3 & = & 0, \\
+      r^2 - 3 & = & 0, \\
+      r & = & \pm \sqrt{3}.
+    \end{eqnarray*}
+  }
+
+  \uncover<3->{%
+    The solution is
+    \begin{eqnarray*}
+      y & = & C_1 t^{\sqrt{3}} + C_2 t^{-\sqrt{3}}.
+    \end{eqnarray*}
+  }
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+
+  \begin{eqnarray*}
+    t y'' - 4 y' + 3 \frac{y}{t} & = & 0, \\
+    \uncover<2->
+    {
+      t^2 y'' - 4t y' + 3y & = & 0
+    }
+  \end{eqnarray*}
+
+  \uncover<3->
+  {
+    Assume that the solution is in the form of $y=At^r$:
+    \begin{eqnarray*}
+      r(r-1) - 4r + 3 & = & 0, \\
+      r^2 - 5r + 3 & = & 0, \\
+      r & = & \frac{5 \pm \sqrt{13}}{2}
+    \end{eqnarray*}
+  }
+
+  \uncover<4->
+  {
+    The solution is
+    \begin{eqnarray*}
+      y & = & C_1 t^{\frac{5 + \sqrt{13}}{2}} + C_2 t^{\frac{5 - \sqrt{13}}{2}}.
+    \end{eqnarray*}
+  }
+
+
+\end{frame}
+
+
+\subsection{Reduction of Order}
+
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    y'' + 2 y' + y & = & 2 e^{-t}.
+  \end{eqnarray*}
+
+  The characteristic equation for the homogeneous solution is
+  \begin{eqnarray*}
+    r^2 + 2r + 1 & = & 0, \\
+    (r+1)^2 & = & 0, \\
+    r & = & -1.
+  \end{eqnarray*}
+
+  The homogeneous solution is
+  \begin{eqnarray*}
+    \redText{y_h} & \redText{=} & \redText{C_1 e^{-t} + C_2 t e^{-t}}.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Reduction of Order}
+
+  Go back to the original ODE,
+  \begin{eqnarray*}
+    y'' + 2 y' + y & = & 2 e^{-t}.
+  \end{eqnarray*}
+
+  Let
+  \begin{eqnarray*}
+    y & = & u(t) e^{-t}.
+  \end{eqnarray*}
+
+  \uncover<2->{%
+    Take the derivatives
+    \begin{eqnarray*}
+      y' & = & \redText{u'(t) e^{-t} - u(t) e^{-t}}. \\
+      y'' & = & \blueText{u''(t) e^{-t} - 2 u'(t) e^{-t} + u(t) e^{-t}}.
+    \end{eqnarray*}
+  }
+
+\end{frame}
+
+\begin{frame}
+
+  Go back to the original ODE,
+  \begin{eqnarray*}
+    y'' + 2 y' + y & = & 2 e^{-t}.
+  \end{eqnarray*}
+  Let $y=\redText{u(t)}e^{-t}$ and substitute into the equation.
+
+  \uncover<2->{%
+    Substitute back into the original equation:
+    \begin{eqnarray*}
+      \blueText{u'' e^{-t} - 2 u' e^{-t} + u e^{-t}} + 2 \lp \redText{u' e^{-t} - ue^{-t}}\rp + u e^{-t} & = & 2 e^{-t} \\
+      u'' e^{-t} & = & 2 e^{-t} \\
+      \fuchsiaText{u''} & \fuchsiaText{=} & \fuchsiaText{2}.
+    \end{eqnarray*}
+  }
+
+  \uncover<3->{%
+    Solving this differential equation we get
+    \begin{eqnarray*}
+      u & = & \fuchsiaText{t^2 + C_1 t + C_2}, \\
+      y & = & \lp \fuchsiaText{t^2 + C_1 t + C_2} \rp e^{-t}
+    \end{eqnarray*}
+  }
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Reduction of Order}
+
+  Suppose that $y_1(t)$ is \textbf{a} solution to the homogeneous part
+  of
+  \begin{eqnarray*}
+    a y'' + by' + cy & = & f(t).
+  \end{eqnarray*}
+
+  \uncover<2->
+  {
+    Let
+    \begin{eqnarray*}
+      y_p & = & u(t) y_1(t), \\
+      \uncover<3->{y_p' & = & \redText{u'(t) y_1(t) + u(t) y_1'(t)}} \\
+      \uncover<4->{y_p'' & = & \blueText{u''(t) y_1(t) + 2 u'(t) y_1'(t) + u(t) y_1''(t)}}
+    \end{eqnarray*}
+  }
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Substitute this back into the original equation}
+
+  \begin{eqnarray*}
+    a \lp \redText{u''(t) y_1(t) + 2 u'(t) y_1'(t) + u(t) y_1''(t)} \rp & & \\
+    + b \lp \blueText{u'(t) y_1(t) + u(t) y_1'(t)} \rp & & \\
+    c u(t) y_1(t) & = & f(t)
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    \begin{array}{r|r|cl}
+      \cline{2-2}
+      \redText{ a u''(t) y_1(t) + 2 a u'(t) y_1'(t) +} & \redText{a u(t) y_1''(t)} & & \\
+      \blueText{+ b u'(t) y_1(t) + } & \blueText{b u(t) y_1'(t)} & & \\
+      & c u(t) y_1(t) & = & f(t) \\ \cline{2-2}
+    \end{array}
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Reduction of Order}
+
+  The equation reduces to
+  \begin{eqnarray*}
+    a \redText{u''(t)} \blueText{y_1(t)} + 2 a \redText{u'(t)} \blueText{y_1'(t)} + b \redText{u'(t)} \blueText{y_1(t)} & = & f(t).
+  \end{eqnarray*}
+
+  Let $v=u'$ so the equation is now
+  \begin{eqnarray*}
+    a \redText{v'} y_1 + 2 a \redText{v} y_1' + b \redText{v} y_1 & = & f(t).
+  \end{eqnarray*}
+  This is a first order, linear equation! We can solve this!
+
+
+\end{frame}
+
+% LocalWords: Clarkson pausesection hideothersubsections

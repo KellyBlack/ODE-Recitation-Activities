@@ -1,0 +1,647 @@
+\part{Eigen-Vectors/Values}
+\lecture{EigenVectors/Values}{Eigen-Vectors/Values}
+\section{Eigenvalues and Eigenvectors}
+
+
+\title{Ordinary Differential Equations}
+\subtitle{Math 232 - Eigenvalues and eigenvectors}
+\date{24 October 2012}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[pausesection,hideothersubsections]
+\end{frame}
+
+
+\subsection{Eigenvalues and Eigenvectors}
+
+
+\begin{frame}
+  \frametitle{Eigenvalues and Eigenvectors}
+
+  Suppose that we have a system of differential equations,
+  \begin{eqnarray*}
+    \frac{d}{dt} \vec{x} & = & A \vec{x}.
+  \end{eqnarray*}
+  Assume that $A$ is a square matrix.
+
+  What if we can find a vector, $\vec{v}$, that satisfies
+  \begin{eqnarray*}
+    A \vec{v} & = & \lambda \vec{v},
+  \end{eqnarray*}
+  where $\lambda$ is a scalar (number)?
+
+\end{frame}
+
+
+\begin{frame}
+  If so. then....
+  \begin{eqnarray*}
+    \frac{d}{dt} \vec{v} & = & A \vec{v}, \\
+    & = & \lambda \vec{v}.
+  \end{eqnarray*}
+  
+  This implies that
+  \begin{eqnarray*}
+    \deriv{x_1}{t} & = & \lambda x_1, \\
+    \deriv{x_2}{t} & = & \lambda x_2, \\
+    \deriv{x_3}{t} & = & \lambda x_3, \\
+    \vdots         &   & \vdots \\
+    \deriv{x_n}{t} & = & \lambda x_n
+  \end{eqnarray*}
+
+  We can solve each one of these equations separately!
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Eigenvalues and Eigenvectors}
+
+  Definition: Given a square matrix, $A$, an eigenvector, $\vec{v}$, and an
+  eigenvalue, $\lambda$, satisfy
+  \begin{eqnarray*}
+    A \vec{v} & = & \lambda \vec{v}.
+  \end{eqnarray*}
+
+
+\end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+      \ifnum\value{clickerQuiz}=1{%
+        We want to solve a system of linear equations
+        \begin{eqnarray*}
+          A \vec{x} & = & \vec{b}.
+        \end{eqnarray*}
+        We find the determinant of the matrix $A$, and the determinant is zero. 
+
+        What does this imply about the solutions to the linear system.
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & The solution is unique. \\
+          B: & There are infinite solutions. \\
+          C: & There are no solutions. \\
+          D: & Either B or C. \\
+        \end{tabular}
+        \vfill
+
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+        We want to solve a system of linear equations
+        \begin{eqnarray*}
+          A \vec{x} & = & \vec{b}.
+        \end{eqnarray*}
+        We find the determinant of the matrix $A$, and the determinant is zero. 
+
+        What does this imply about the solutions to the linear system.
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & The solution is unique. \\
+          B: & There are infinite solutions. \\
+          C: & There are no solutions. \\
+          D: & Either B or C. \\
+        \end{tabular}
+
+        \vfill
+
+     }\fi
+   
+     \ifnum\value{clickerQuiz}=3{%
+        \vfill
+        We want to solve a system of linear equations
+        \begin{eqnarray*}
+          A \vec{x} & = & \vec{b}.
+        \end{eqnarray*}
+        We find the determinant of the matrix $A$, and the determinant is zero.
+
+        What does this imply about the solutions to the linear system.
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & The solution is unique. \\
+          B: & There are infinitely many solutions. \\
+          C: & There are no solutions. \\
+          D: & Either B or C. \\
+        \end{tabular}
+
+    }\fi
+  
+
+\end{frame}
+}
+
+
+
+\begin{frame}
+  \frametitle{How to find}
+
+  Given $A$ how can we find its eigenvalues and eigenvectors?
+  \begin{eqnarray*}
+    A \vec{v} & = & \lambda \vec{v}, \\
+    A \vec{v} - \lambda \vec{v} & = & 0, \\
+    A \vec{v} - \lambda I \vec{v} & = & 0, \\
+    \lp A - \lambda I \rp \vec{v} & = & 0.
+  \end{eqnarray*}
+
+  \uncover<2->{\redText{One solution is $\vec{v}=\vec{0}$.}} 
+  \uncover<3->{\blueText{We do not like this solution.}}
+  \uncover<4->{We must have a situation where there is not a unique solution. If there
+    is not a unique solution then this implies that
+  \begin{eqnarray*}
+    \det\lp A - \lambda I \rp & = & 0.
+  \end{eqnarray*}
+  Find a value for $\lambda$ that makes this true. (\redText{Note that there
+  will be infinitely many solutions for $\vec{v}$.})}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Finding Eigenvalues and Eigenvectors}
+
+  Given a square matrix, $A$, to find the eigenvalues and eigenvectors do the following:
+  \begin{enumerate}
+  \item Determine the characteristic equation:
+    \begin{eqnarray*}
+      \det\lp A - \lambda I \rp & = & 0.
+    \end{eqnarray*}
+  \item Solve the equation for the values of $\lambda$.
+  \item Find the eigenvector associated with each value of $\lambda$,
+    \begin{eqnarray*}
+      \lp A - \lambda_j I \rp \vec{v}_j & = & \vec{0}.
+    \end{eqnarray*}
+    (Note that there will be infinitely many solutions for $\vec{v}$.) Solving linear systems means dealing with RREF. Wheeeee!
+  \end{enumerate}
+
+\end{frame}
+
+\subsection{Examples}
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    A & = & \arrayTwo{12}{-10}{15}{-13}.
+  \end{eqnarray*}
+
+  \uncover<2->
+  {
+    Find the characteristic equation:
+    \begin{eqnarray*}
+      \det\lp\arrayTwo{12-\lambda}{-10}{15}{-13-\lambda}\rp & = & \lambda^2+\lambda-6.
+    \end{eqnarray*}
+
+    Find the values of $\lambda$:
+    \begin{eqnarray*}
+      \lambda^2+\lambda-6 & = & (\lambda-2)(\lambda+3), \\
+      & = & 0.
+    \end{eqnarray*}
+    So \redText{$\lambda_1 = 2$} and \redText{$\lambda_2=-3$}.
+  }
+
+\end{frame}
+
+
+\begin{frame}
+  Find the vectors:
+
+  $\lambda_1 = 2$:
+  \begin{eqnarray*}
+    \arrayTwo{10}{-10}{15}{-15} \vecTwo{x}{y} & = & \vecTwo{0}{0}, \\
+    10x - 10y & = & 0, \\
+    15x - 15y & = & 0, \\
+    x & = & y.
+  \end{eqnarray*}
+
+  The first eigenvector is 
+  \begin{eqnarray*}
+    \vec{v}_1 & = & \vecTwo{y}{y}, \\
+    & = & y \vecTwo{1}{1}.
+  \end{eqnarray*}
+
+  \redText{Let}
+  \begin{eqnarray*}
+    \redText{\vec{v}_1} & \redText{=} & \redText{\vecTwo{1}{1}}.
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  Find the vectors:
+
+  $\lambda_2 = -3$:
+  \begin{eqnarray*}
+    \arrayTwo{15}{-10}{15}{-10} \vecTwo{x}{y} & = & \vecTwo{0}{0}, \\
+    15x - 10y & = & 0, \\
+    15x - 10y & = & 0, \\
+    x & = & \frac{2}{3} y.
+  \end{eqnarray*}
+
+  The second eigenvector is 
+  \begin{eqnarray*}
+    \vec{v}_2 & = & \vecTwo{\frac{2}{3}y}{y}, \\
+    & = & y \vecTwo{\frac{2}{3}}{1}.
+  \end{eqnarray*}
+
+  \redText{Let}
+  \begin{eqnarray*}
+    \redText{\vec{v}_2} & \redText{=} & \redText{\vecTwo{2}{3}}.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    A & = & \arrayTwo{4}{18}{-3}{-11}.
+  \end{eqnarray*}
+
+  \uncover<2->
+  {
+    Find the characteristic equation:
+    \begin{eqnarray*}
+      \det\lp\arrayTwo{4-\lambda}{18}{-3}{-11-\lambda}\rp & = & \lambda^2+7\lambda+10.
+    \end{eqnarray*}
+    
+    Find the values of $\lambda$:
+    \begin{eqnarray*}
+      \lambda^2+7\lambda+10 & = & (\lambda+2)(\lambda+5), \\
+      & = & 0.
+    \end{eqnarray*}
+    So \redText{$\lambda_1 = -2$} and \redText{$\lambda_2=-5$}.
+  }
+
+\end{frame}
+
+
+\begin{frame}
+  Find the vectors:
+
+  $\lambda_1 = -2$:
+  \begin{eqnarray*}
+    \arrayTwo{6}{18}{-3}{-9} \vecTwo{x}{y} & = & \vecTwo{0}{0}, \\
+    6x + 18y & = & 0, \\
+    -3x - 9y & = & 0, \\
+    x & = & -3y.
+  \end{eqnarray*}
+
+  The first eigenvector is 
+  \begin{eqnarray*}
+    \vec{v}_1 & = & \vecTwo{-3y}{y}, \\
+    & = & y \vecTwo{-3}{1}.
+  \end{eqnarray*}
+
+  \redText{Let}
+  \begin{eqnarray*}
+    \redText{\vec{v}_1} & \redText{=} & \redText{\vecTwo{-3}{1}}.
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  Find the vectors:
+
+  $\lambda_2 = -5$:
+  \begin{eqnarray*}
+    \arrayTwo{9}{18}{-3}{-6} \vecTwo{x}{y} & = & \vecTwo{0}{0}, \\
+    9x + 18y & = & 0, \\
+    -3x - 6y & = & 0, \\
+    x & = & -2 y.
+  \end{eqnarray*}
+
+  The second eigenvector is 
+  \begin{eqnarray*}
+    \vec{v}_2 & = & \vecTwo{-2y}{y}, \\
+    & = & y \vecTwo{-2}{1}.
+  \end{eqnarray*}
+
+  \redText{Let}
+  \begin{eqnarray*}
+    \redText{\vec{v}_2} & \redText{=} & \redText{\vecTwo{-2}{1}}.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Theorem - Distinct Eigenvalues Makes Life Easier}
+
+  Theorem: If the eigenvalues of an $n\times n$ matrix include $n$
+  distinct values then the eigenvectors are linearly independent.
+
+  \vfill
+
+  \uncover<2->
+  {
+    So what? When we start solving DEs it will mean we are essentially
+    done. 
+  }
+
+  \vfill
+
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  See example 5 on page 318.
+  \begin{eqnarray*}
+    A & = & \arrayThree{-2}{1}{1}{1}{-2}{1}{1}{1}{-2}.
+  \end{eqnarray*}
+
+  \uncover<2->
+  {
+    Find the characteristic equation:
+    \begin{eqnarray*}
+      \det\lp\arrayThree{-2-\lambda}{1}{1}{1}{-2-\lambda}{1}{1}{1}{-2-\lambda}\rp
+      & = & \lambda (\lambda+3)^2.
+    \end{eqnarray*}
+
+    Find the values of $\lambda$:
+    \begin{eqnarray*}
+      \lambda (\lambda+3)^2 & = & 0.
+    \end{eqnarray*}
+    So \redText{$\lambda_1 = 0$} and \redText{$\lambda_2=-3$}.
+  }
+
+\end{frame}
+
+
+
+\begin{frame}
+  Find the vectors:
+
+  $\lambda_1 = 0$:
+  \begin{eqnarray*}
+    \arrayThree{-2}{1}{1}{1}{-2}{1}{1}{1}{-2}\vecThree{x}{y}{z} & = & \vecThree{0}{0}{0}, \\
+  \end{eqnarray*}
+
+  Express this system in an augmented matrix and put it in reduced row
+  echelon form:
+  \begin{eqnarray*}
+    \mathrm{RREF}\startRowFour
+    \oneRowFour{-2}{1}{1}{0} 
+    \oneRowFour{1}{-2}{1}{0}
+    \oneRowFour{1}{1}{-2}{0}
+    \stopRowOps
+    & = & 
+    \startRowFour
+    \oneRowFour{1}{0}{-1}{0} 
+    \oneRowFour{0}{1}{-1}{0}
+    \oneRowFour{0}{0}{0}{0}
+    \stopRowOps
+  \end{eqnarray*}
+
+
+\end{frame}
+
+\begin{frame}
+  The first eigenvector is 
+  \begin{eqnarray*}
+    \vec{v}_1 & = & \vecThree{z}{z}{z}, \\
+    & = & z \vecThree{1}{1}{1}.
+  \end{eqnarray*}
+
+  Let
+  \begin{eqnarray*}
+    \vec{v}_1 & = & \vecThree{1}{1}{1}.
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  Find the vectors:
+
+  $\lambda_2 = -3$:
+  \begin{eqnarray*}
+    \arrayThree{1}{1}{1}{1}{1}{1}{1}{1}{1}
+    \vecThree{x}{y}{z} & = & \vecThree{0}{0}{0}, \\
+  \end{eqnarray*}
+
+  Express this system in an augmented matrix and put it in reduced row
+  echelon form:
+  \begin{eqnarray*}
+    \mathrm{RREF}\startRowFour
+    \oneRowFour{1}{1}{1}{0} 
+    \oneRowFour{1}{1}{1}{0}
+    \oneRowFour{1}{1}{1}{0}
+    \stopRowOps
+    & = & 
+    \startRowFour
+    \oneRowFour{1}{1}{1}{0} 
+    \oneRowFour{0}{0}{0}{0}
+    \oneRowFour{0}{0}{0}{0}
+    \stopRowOps
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+
+  The second eigenvector is 
+  \begin{eqnarray*}
+    \vec{v}_2 & = & \vecThree{-y-z}{y}{z}, \\
+    & = & y \vecThree{-1}{1}{0} + z \vecThree{-1}{0}{1}.
+  \end{eqnarray*}
+
+  Let
+  \begin{eqnarray*}
+    \vec{v}_2 & = & \vecThree{-1}{1}{0}, \\
+    \vec{v}_3 & = & \vecThree{-1}{0}{1}.
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+
+  \begin{eqnarray*}
+    A & = & \arrayThree{2}{1}{1}{0}{1}{1}{0}{0}{1}.
+  \end{eqnarray*}
+
+  \uncover<2->
+  {
+    Find the characteristic equation:
+    \begin{eqnarray*}
+      \det\lp\arrayThree{2-\lambda}{1}{1}{0}{1-\lambda}{1}{0}{0}{1-\lambda}\rp
+      & = & (2-\lambda) (1-\lambda)^2.
+    \end{eqnarray*}
+
+    Find the values of $\lambda$:
+    \begin{eqnarray*}
+      (2-\lambda) (1-\lambda)^2 & = & 0.
+    \end{eqnarray*}
+    So \redText{$\lambda_1 = 2$} and \redText{$\lambda_2=1$}.
+  }
+
+\end{frame}
+
+
+\begin{frame}
+  Find the vectors:
+
+  $\lambda_1 = 2$:
+  \begin{eqnarray*}
+    \arrayThree{0}{1}{1}{0}{-1}{1}{0}{0}{-1}\vecThree{x}{y}{z} & = & \vecThree{0}{0}{0}, \\
+  \end{eqnarray*}
+
+  Express this system in an augmented matrix and put it in reduced row
+  echelon form:
+  \begin{eqnarray*}
+    \mathrm{RREF}\startRowFour
+    \oneRowFour{0}{1}{1}{0} 
+    \oneRowFour{0}{-1}{1}{0}
+    \oneRowFour{0}{0}{-1}{0}
+    \stopRowOps
+    & = & 
+    \startRowFour
+    \oneRowFour{0}{1}{0}{0} 
+    \oneRowFour{0}{0}{1}{0}
+    \oneRowFour{0}{0}{0}{0}
+    \stopRowOps
+  \end{eqnarray*}
+
+
+\end{frame}
+
+\begin{frame}
+  The first eigenvector is 
+  \begin{eqnarray*}
+    \vec{v}_1 & = & \vecThree{x}{0}{0}, \\
+    & = & x \vecThree{1}{0}{0}.
+  \end{eqnarray*}
+
+  Let
+  \begin{eqnarray*}
+    \vec{v}_1 & = & \vecThree{1}{0}{0}.
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  Find the vectors:
+
+  $\lambda_2 = 1$:
+  \begin{eqnarray*}
+    \arrayThree{1}{1}{1}{0}{0}{1}{0}{0}{0}
+    \vecThree{x}{y}{z} & = & \vecThree{0}{0}{0}, \\
+  \end{eqnarray*}
+
+  Express this system in an augmented matrix and put it in reduced row
+  echelon form:
+  \begin{eqnarray*}
+    \mathrm{RREF}\startRowFour
+    \oneRowFour{1}{1}{1}{0} 
+    \oneRowFour{0}{0}{1}{0}
+    \oneRowFour{0}{0}{0}{0}
+    \stopRowOps
+    & = & 
+    \startRowFour
+    \oneRowFour{1}{1}{0}{0} 
+    \oneRowFour{0}{0}{1}{0}
+    \oneRowFour{0}{0}{0}{0}
+    \stopRowOps
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+
+  The second eigenvector is 
+  \begin{eqnarray*}
+    \vec{v}_2 & = & \vecThree{-y}{y}{0}, \\
+    & = & y \vecThree{-1}{1}{0}.
+  \end{eqnarray*}
+
+  Let
+  \begin{eqnarray*}
+    \vec{v}_2 & = & \vecThree{-1}{1}{0}.
+  \end{eqnarray*}
+
+  There are only two eigenvectors! If we want to solve a system of
+  differential equations we have a problem.
+
+\end{frame}
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+      \ifnum\value{clickerQuiz}=1{%
+        We have two distinct eigenvalues for a $3 \times 3$
+        matrix. What does this imply about the number of linearly
+        independent eigenvectors?
+
+        \vfill
+  
+        \begin{tabular}{ll}
+          A: & There are  two. \\
+          B: & There are three. \\
+          C: & There could be two or three, but there is not enough information. \\
+          D: & Wut? \\
+        \end{tabular}
+
+        \vfill
+  
+      }\fi
+
+      \ifnum\value{clickerQuiz}=2{%
+        We have two distinct eigenvalues for a $3 \times 3$
+        matrix. What does this imply about the number of linearly
+        independent eigenvectors?
+  
+        \vfill
+  
+        \begin{tabular}{ll}
+          A: & There are  two. \\
+          B: & There are three. \\
+          C: & There could be two or three, but there is not enough information. \\
+          D: & Wut? \\
+        \end{tabular}
+
+        \vfill
+
+     }\fi
+     \ifnum\value{clickerQuiz}=3{%
+        \vfill
+       We have two distinct eigenvalues for a $3 \times 3$
+        matrix. What does this imply about the number of linearly
+        independent eigenvectors?
+
+        \vfill
+
+        \begin{tabular}{ll}
+          A: & There are  two. \\
+          B: & There are three. \\
+          C: & There could be two or three,
+             but there is not enough information. \\
+          D: & Have no idea.\\
+       \end{tabular}
+
+    }\fi
+\end{frame}
+}
+
+
+
+
+% LocalWords:  Clarkson pausesection hideothersubsections Eigen eigen

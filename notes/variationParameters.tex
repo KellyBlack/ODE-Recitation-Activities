@@ -1,0 +1,787 @@
+\part{Variation-of-Parameters}
+\lecture{Variation of Parameters}{Variation-of-Parameters}
+\section{Variation of Parameters}
+
+\title{Ordinary Differential Equations}
+\subtitle{Math 232 - Variation of Parameters}
+\date{19 October 2012}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[pausesection,hideothersubsections]
+\end{frame}
+
+\subsection{Review: Undetermined Coefficients and Cauchy-Euler}
+
+\begin{frame}
+  \frametitle{Undetermined Coefficients Method: general steps}
+
+  Given non-homogeneous, constant coefficients DE:
+  \begin{eqnarray*}
+    a y'' + by' + cy & = & f(t):
+  \end{eqnarray*}
+  \vspace{-0.5cm}
+  \begin{enumerate}
+  \item Solve the homogeneous problem,
+    {\color{blue}\begin{eqnarray*}
+      a y_h'' + by_h' + cy_h & = & 0\\
+      a r^2 + br + c & = & 0.
+    \end{eqnarray*}}
+  \vspace{-0.5cm}
+  \item Solve for a particular solution,
+    {\color{blue}\begin{eqnarray*}
+      a y_p'' + by_p' + cy_p & = & f(t).
+    \end{eqnarray*}}
+  \item Form the general solution
+   {\color{red} \begin{eqnarray*}
+      y(t) & = & y_h(t) + y_p(t).
+    \end{eqnarray*}}
+  \item Determine the constants if initial values are given. \\
+    (Do this last!)
+  \end{enumerate}
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Undetermined Coefficients Method: guessing particular solutions}
+   Guessing a particular solution to
+     \begin{eqnarray*}
+      a y'' + b y' + cy  = f(t)
+    \end{eqnarray*}
+
+  \begin{enumerate}
+  \item If {\color{blue}$f(t) = a_nt^n+\cdots a_1t+ a_0$}, then
+      guess {\color{red}$$y_p(t) = b_nt^n+\cdots b_1t+b_0.$$}\\
+
+  \item If {\color{blue} $f(t)= A e^{rt}$}, then guess
+       {\color{green} $y_p(t) = Be^{rt}, Bte^{rt}, Bt^2e^{rt}$.}\\
+  \vspace{.5cm}
+  \item If {\color{blue}$f(t) = A\sin(rt)$}, then guess
+      {\color{red}$y_p(t) = C_1\sin(rt) +C_2\cos(rt)$.}\\
+  \vspace{.5cm}
+
+  \item If {\color{blue} $f(t) = B\cos(rt)$}, then guess
+      {\color{red}$y_p(t) = C_1\sin(rt) +C_2\cos(rt)$.}\\
+  \vspace{.5cm}
+
+  \item If {\color{blue}$f(t) = A\sin(rt)+B\cos(rt)$}, then guess
+     {\color{red} $$y_p(t) = C_1\sin(rt) +C_2\cos(rt).$$}
+  \end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Cauchy-Euler Equations}
+
+  Find the general solution to
+  {\color{red}\begin{eqnarray*}
+    a t^2 y''+ bt y' + c y  & = & t^d, \\
+  \end{eqnarray*}}
+
+  \begin{enumerate}
+    \item[Step 1] Assume {\color{blue}$y_h=t^r$} is the homogeneous solution. Then 
+    \begin{eqnarray*}
+      ar(r-1) +br + c & = & 0, 
+    \end{eqnarray*}
+    \vspace{-0.5cm}
+    \begin{enumerate}
+    \item[Case 1] Two distinct roots:  
+           {\color{orange}$y_h=C_1t^{r_1}+C_2t^{r_2}$} 
+    \item[Case 2] Repeated root:  
+            {\color{orange}$y_h=C_1t^{r}+C_2t^{r}\ln(t)$ }
+    \end{enumerate}
+
+    \item[Step 2] Assume {\color{blue}$y_p=At^d$}. Find $d$. 
+    \item[Step 3] The general solution {\color{red}$y=y_h+y_p$}. 
+   \end{enumerate}
+ 
+
+
+\end{frame}
+
+
+\subsection{Another Method: Variation of Parameters(Sec 4.5)}
+
+\begin{frame}
+  \frametitle{Second order, nonhomogeneous DE}
+  \vspace{-1cm}
+  \begin{eqnarray}\label{eqn1}
+    y'' + p(t) y' + q(t) y & = & f(t)
+  \end{eqnarray}
+  \begin{itemize}
+  \item[Step 1] Find the homogeneous solutions,
+    \begin{eqnarray*}
+      \redText{y_h} & \redText{=} & \redText{C_1 y_1(t) + C_2 y_2(t)}.
+    \end{eqnarray*}
+  \item[Step 2] Determine the form of a particular solution,
+    \begin{eqnarray*}
+      \blueText{y_p} & \blueText{=} & \blueText{v_1(t) y_1(t) + v_2(t) y_2(t)}.
+    \end{eqnarray*}
+  \item[Step 3] Substitute $y_p$ into (\ref{eqn1}) and solve  for $v_1(t), v_2(t)$.
+  \item[Step 4] The general solution is 
+    \begin{eqnarray*}
+      y & = & \redText{y_h}+\blueText{y_p}, \\
+        & = & \redText{C_1 y_1(t) + C_2 y_2(t)} + \blueText{v_1(t) y_1(t) + v_2(t) y_2(t)}.
+    \end{eqnarray*}
+
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Note}
+
+  The form of this equation,
+  \begin{eqnarray*}
+    y_p & = & v_1(t) y_1(t) + v_2(t) y_2(t),
+  \end{eqnarray*}
+  has two unknown functions, $v_1(t)$ and $v_2(t)$.
+  
+  \vfill
+
+  \uncover<2->{%
+    When we substitute this back into the original differential equation
+    \redText{we only have one equation}.
+  }
+
+  \vfill
+
+  \uncover<3->{%
+    We can pick \textbf{any} other equation that we want as long as
+    \blueText{the original differential equation is satisfied}.
+  }
+
+  \vfill
+
+\end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+    Find the homogeneous solution to the following differential equation:
+        \begin{eqnarray*}
+          y'' + y & = & \tan(t)?
+        \end{eqnarray*}
+
+        \begin{tabular}{ll}
+          A: & $y_h=C_1\cos(t)+C_2\sin(t)$ \\ [12pt]
+          B: & $y_h=e^t(C_1\cos(t)+C_2\sin(t))$ \\ [12pt]
+          C: & $y_h=C_1e^{0t}+C_2e^{1t}$ \\ [12pt]
+          D: & $y_h=C_1e^t+C_2e^{-t}$
+        \end{tabular}
+
+        \vfill
+
+ 
+ }\fi
+
+ \ifnum\value{clickerQuiz}=2{%
+    Find the homogeneous solution to the following differential equation:
+        \begin{eqnarray*}
+          y'' + y & = & \tan(t)?
+        \end{eqnarray*}
+
+        \begin{tabular}{ll}
+          A: & $y_h=e^t(C_1\cos(t)+C_2\sin(t))$ \\ [12pt]
+          B: & $y_h=C_1\cos(t)+C_2\sin(t)$ \\ [12pt]
+          C: & $y_h=C_1e^t+C_2e^{-t}$  \\ [12pt]
+          D: & $y_h=C_1e^{0t}+C_2e^{1t}$
+        \end{tabular}
+
+        \vfill
+
+
+ }\fi
+
+ \ifnum\value{clickerQuiz}=3{%
+    Find the homogeneous solution to the following differential equation:
+        \begin{eqnarray*}
+          y'' + y & = & \tan(t)?
+        \end{eqnarray*}
+
+        \begin{tabular}{ll}
+          A: & $y_h=C_1e^{0t}+C_2e^{1t}$ \\
+          B: & $y_h=C_1e^t+C_2e^{-t}$ \\
+          C: & $y_h=C_1\cos(t)+C_2\sin(t)$ \\
+          D: & $y_h=e^t(C_1\cos(t)+C_2\sin(t))$ \\
+        \end{tabular}
+
+        \vfill
+ }\fi
+\end{frame}
+}
+
+
+
+\begin{frame}
+  \frametitle{Example 1}
+  Find the general solution to the following DE:
+  \begin{eqnarray*}
+    y'' + y & = & \tan(t).
+  \end{eqnarray*}
+
+  \uncover<2->
+  {
+    The homogeneous solutions are
+    \begin{eqnarray*}
+      y_h & = & C_1 \cos(t) + C_2 \sin(t).
+    \end{eqnarray*}
+  }
+
+  \uncover<3->
+  {
+    Define the particular solution to be in the following form:
+    \begin{eqnarray*}
+      y & = & v_1 \cos(t) + v_2 \sin(t), \\
+      y_1 & = & \cos(t), \\
+      y_2 & = & \sin(t).
+    \end{eqnarray*}
+  }
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Substitute Into the Original Equation}
+
+  \begin{eqnarray*}
+    y' & = & v_1' \cos(t) - v_1 \sin(t) + v_2' \sin(t) + v_2 \cos(t).
+  \end{eqnarray*}
+
+  \uncover<2->{%
+    Make the following constraint:
+    \begin{eqnarray*}
+      \redText{v_1' \cos(t) + v_2' \sin(t)}  & \redText{=} & \redText{0}.
+    \end{eqnarray*}
+  }
+
+  \uncover<3->{%
+    The derivative reduces to
+    \begin{eqnarray*}
+      y' & = & - v_1 \sin(t) + v_2 \cos(t), \\
+      y'' & = & - v_1' \sin(t) - v_1 \cos(t) + v_2' \cos(t) - v_2 \sin(t).
+    \end{eqnarray*}
+  }
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Substitute Into the Original DE}
+
+  \begin{eqnarray*}
+    - v_1' \sin(t) - v_1 \cos(t) + v_2' \cos(t) - v_2 \sin(t) & & \\
+    + v_1 \cos(t) + v_2 \sin(t) & = & \tan(t).
+  \end{eqnarray*}
+
+  \uncover<2->{%
+    The two equations are
+    \begin{eqnarray*}
+      \redText{v_1' \cos(t) + v_2' \sin(t)}    & \redText{=}  & \redText{0}, \\
+      \blueText{- v_1' \sin(t) + v_2' \cos(t)} & \blueText{=} & \blueText{\tan(t)}.
+    \end{eqnarray*}
+  }
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Solve For the Two Functions}
+
+  When you solve the system for the two functions you get
+  \begin{eqnarray*}
+    v_1' & = & \frac{-\sin(t)\tan(t)}{\sin(t)\sin(t)+\cos(t)\cos(t)}, \\
+    & = & -\sin(t)\tan(t), \\
+    & = & \frac{-\sin^2(t)}{\cos(t)}, \\
+    v_2' & = & \cos(t)\tan(t), \\
+    & = & \sin(t).
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Integrate the Relationships}
+
+  \begin{eqnarray*}
+    v_1 & = & \int \frac{-\sin^2(t)}{\cos(t)} ~ dt \\
+    & = & -\ln\lp\sec(t)+\tan(t)\rp + \sin(t) + C_1. \\
+    v_2 & = & \int \sin(t) ~ dt \\ 
+    & = & -\cos(t) + C_2.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Form the Solution}
+
+  \begin{eqnarray*}
+    y & = & v_1 y_1 + v_2 y_2 \\
+    & = & \lp -\ln\lp\sec(t)+\tan(t)\rp + \sin(t) + C_1 \rp \cos(t) \\
+    & & 
+    + \lp -\cos(t) + C_2 \rp \sin(t) \\
+    & = & - \ln\lp\sec(t)+\tan(t)\rp \cos(t) + C_1 \cos(t) + C_2 \sin(t)
+  \end{eqnarray*}
+
+\end{frame}
+%...........................................
+
+\subsection{General Derivation}
+
+\begin{frame}
+General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$  
+  \frametitle{The other equation}
+
+  We find the homogeneous solution 
+  \begin{eqnarray*}
+    y_h & = & C_1  y_1 + C_1 y_2. 
+  \end{eqnarray*}
+  Assume we have a particular solution
+  \begin{eqnarray*}
+    y_p & = & v_1 y_1 + v_2 y_2, \\
+    y_p' & = & v_1' y_1 + v_1 y_1' + v_2' y_2 + v_2 y_2'. 
+  \end{eqnarray*}
+
+  Yuck, that is too messy. We want a first order equation in the end
+  so {\color{red}we make up a new equation
+  \begin{eqnarray}
+    \label{eqn:firstConstraint}
+    v_1' y_1 + v_2' y_2 & = & 0.
+  \end{eqnarray}}
+
+\end{frame}
+
+
+\begin{frame}
+General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$  
+  \frametitle{The other equation}
+
+  We find the homogeneous solution 
+  \begin{eqnarray*}
+    y_h & = & C_1  y_1 + C_1 y_2. 
+  \end{eqnarray*}
+  Assume  a particular solution and assume an extra condition
+  \begin{eqnarray*}
+    y_p & = & v_1 y_1 + v_2 y_2, \\
+    v_1' y_1 + v_2' y_2 & = & 0.
+  \end{eqnarray*}
+
+
+  This results in the following equations:
+  \begin{eqnarray*}
+    y_p   & = & v_1 y_1 + v_2 y_2, \\
+    y_p'  & = & v_1 y_1' + v_2 y_2', \\
+    y_p'' & = & v_1' y_1' + v_1 y_1'' + v_2' y_2' + v_2 y_2''. 
+  \end{eqnarray*}
+
+
+\end{frame}
+
+
+
+
+\begin{frame}
+  \frametitle{Substitute Back Into the Original DE}
+
+  \begin{eqnarray*}
+    v_1' y_1' + v_1 y_1'' + v_2' y_2' + v_2 y_2'' & & \\
+    + p(t) \lp v_1 y_1' + v_2 y_2' \rp & & \\
+    + q(t) \lp v_1 y_1 + v_2 y_2 \rp & = & f(t)
+  \end{eqnarray*}
+
+  Collect the like terms:
+  \begin{eqnarray*}
+    v_1' y_1' + v_2' y_2'  & & \\
+    + v_1 y_1'' + v_2 y_2'' & & \\
+    p(t) \lp v_1 y_1' + v_2 y_2' \rp & & \\
+    q(t) \lp v_1 y_1 + v_2 y_2 \rp & = & f(t)
+  \end{eqnarray*}
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Factor the Terms}
+
+  \begin{eqnarray*}
+    v_1' y_1' + v_2' y_2'  & & \\
+    + v_1 y_1'' + p(t) v_1 y_1' + q(t) v_1 y_1 & & \\
+    + v_2 y_2'' + p(t) v_2 y_2' + q(t) v_2 y_2 & = & f(t)
+  \end{eqnarray*}
+
+  or 
+
+  \begin{eqnarray*}
+    v_1' y_1' + v_2' y_2'  & & \\
+    + v_1 \lp  \redText{y_1'' + p(t) y_1' + q(t) y_1} \rp & & \\
+    + v_2 \lp \blueText{y_2'' + p(t) y_2' + q(t) y_2} \rp & = & f(t)
+  \end{eqnarray*}
+
+  Since $y_1$ and $y_2$ are homogeneous solutions this reduces to 
+  \begin{eqnarray}
+    \label{eqn:secondConstraint}
+    v_1' y_1' + v_2' y_2'  & = & f(t).
+  \end{eqnarray}
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{We Have Two Equations and Two Unknowns}
+
+  \begin{eqnarray*}
+    v_1' y_1 + v_2' y_2 & = & 0 \\
+    v_1' y_1' + v_2' y_2'  & = & f(t).
+  \end{eqnarray*}
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Solving the System of Equations}
+
+  Solve the first equation for $v_1'$
+  \begin{eqnarray*}
+    v_1' & = & -v_2' \frac{y_2}{y_1}.
+  \end{eqnarray*}
+
+  Substitute into the second equation
+  \begin{eqnarray*}
+    -v_2' \frac{y_2}{y_1} y_1' + v_2' y_2'  & = & f(t), \\
+    v_2' \lp -\frac{y_2}{y_1} y_1' + y_2' \rp  & = & f(t), \\
+    v_2' & = & \frac{f(t)}{-\frac{y_2}{y_1} y_1' + y_2'}, \\
+    v_2' & = & \frac{y_1 f(t)}{-y_2 y_1' + y_1 y_2'}. \\
+    v_2' & = & \frac{y_1 f(t)}{y_1 y_2'-y_2 y_1'}. \\
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Isolate $v_1$}
+
+  The first function has been solved in terms of the second
+  \begin{eqnarray*}
+    v_1' & = & -v_2' \frac{y_2}{y_1}, \\
+    v_1' & = & - \frac{y_1 f(t)}{y_1 y_2'-y_2 y_1'} \cdot \frac{y_2}{y_1}, \\
+    v_1' & = & \frac{ -y_2 f(t)}{y_1 y_2'-y_2 y_1'}. \\
+  \end{eqnarray*}
+  
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{One More Time}
+
+  We know the functions $y_1$ and $y_2$ and have the following:
+  \begin{eqnarray*}
+    v_1' & = & \frac{ -y_2 f(t)}{y_1 y_2'-y_2 y_1'} \\
+    v_2' & = & \frac{y_1 f(t)}{y_1 y_2'-y_2 y_1'}
+  \end{eqnarray*}
+  Integrate the right-hand side, we can find $v_1(t), v_2(t)$ such that
+  \begin{eqnarray*}
+      y_p & = & v_1(t) y_1(t) + v_2(t) y_2(t)
+    \end{eqnarray*}
+  form a particular solution.   
+\end{frame}
+
+\subsection{Examples}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+    Find the homogeneous solution to the following differential equation:
+        \begin{eqnarray*}
+          y'' + 3y' + 2y & = & \frac{1}{1+e^{2t}} 
+        \end{eqnarray*}
+
+        \begin{tabular}{ll}
+          A: & $y_h  =  C_1 e^{2t} + C_2 e^{t}$\\ [12pt]
+          B: & $y_h  =  C_1 e^{-2t} + C_2 e^{-t}$ \\ [12pt]
+          C: & $y_h  =  C_1 e^{2t} + C_2 e^{-t}$\\ [12pt]
+          D: & $y_h  =  C_1 e^{-2t} + C_2 e^{t}$ 
+        \end{tabular}
+        \vfill
+
+
+ }\fi
+
+ \ifnum\value{clickerQuiz}=2{%
+    Find the homogeneous solution to the following differential equation:
+        \begin{eqnarray*}
+          y'' + 3y' + 2y & = & \frac{1}{1+e^{2t}} 
+        \end{eqnarray*}
+
+        \begin{tabular}{ll}
+          A: & $y_h  =  C_1 e^{-2t} + C_2 e^{-t}$ \\ [12pt]
+          B: & $y_h  =  C_1 e^{2t} + C_2 e^{t}$  \\ [12pt]
+          C: & $y_h  =  C_1 e^{-2t} + C_2 e^{t}$  \\ [12pt] 
+          D: & $y_h  =  C_1 e^{2t} + C_2 e^{-t}$
+        \end{tabular}
+
+        \vfill
+
+
+ }\fi
+
+ \ifnum\value{clickerQuiz}=3{%
+    Find the homogeneous solution to the following differential equation:
+        \begin{eqnarray*}
+          y'' + 3y' + 2y & = & \frac{1}{1+e^{2t}} 
+        \end{eqnarray*}
+
+        \begin{tabular}{ll}
+          A: & $y_h  =  C_1 e^{2t} + C_2 e^{-t}$\\
+          B: & $y_h  =  C_1 e^{-2t} + C_2 e^{t}$\\
+          C: & $y_h  =  C_1 e^{2t} + C_2 e^{t}$\\
+          D: & $y_h  =  C_1 e^{-2t} + C_2 e^{-t}$
+        \end{tabular}
+
+        \vfill
+ }\fi
+\end{frame}
+}
+
+
+\begin{frame}
+  \frametitle{Example 2}
+  Find the general solution to the following DE: 
+  \begin{eqnarray*}
+          y'' + 3y' + 2y & = & \frac{1}{1+e^{2t}}.
+  \end{eqnarray*}
+ 
+  \uncover<2->
+  {
+    Find the homogeneous solution:
+    \begin{eqnarray*}
+      y & = & C_1 e^{-2t} + C_2 e^{-t}.
+    \end{eqnarray*}
+  }
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Variation of Parameters}
+
+  Assume that the solution is in the form
+  \begin{eqnarray*}
+    y & = & v_1 e^{-2t} + v_2 e^{-t}.
+  \end{eqnarray*}
+
+  With this definition
+  \begin{eqnarray*}
+    y_1 & = & e^{-2t}, \\
+    y_2 & = & e^{-t}.
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Take the Derivatives}
+  \begin{eqnarray*}
+    y' & = & v_1'e^{-2t} -2 v_1 e^{-2t} + v_2' e^{-t} - v_2 e^{-t}.
+  \end{eqnarray*}
+
+  Make a completely crazy and insane assumption
+  \begin{eqnarray*}
+    \redText{v_1'e^{-2t} + v_2' e^{-t}} & \redText{=} & \redText{0}.
+  \end{eqnarray*}
+
+  The second derivative is
+  \begin{eqnarray*}
+    y'' & = & -2 v_1' e^{-2t} + 4 v_1 e^{-2t} - v_2' e^{-t} + v_2 e^{-t}.
+  \end{eqnarray*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Plug This Back Into the Original DE}
+
+  \begin{eqnarray*}
+    -2 v_1' e^{-2t} + 4 v_1 e^{-2t} - v_2' e^{-t} + v_2 e^{-t} & & \\
+    + 3 \lp -2 v_1 e^{-2t} - v_2 e^{-t} \rp & & \\
+    2 \lp v_1 e^{-2t} + v_2 e^{-t} \rp & = & \frac{1}{1+e^{2t}}.
+  \end{eqnarray*}
+
+  Simplify to get
+  \begin{eqnarray*}
+    \blueText{-2 v_1' e^{-2t}  - v_2' e^{-t}} & \blueText{=} & \blueText{\frac{1}{1+e^{2t}}}.
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Two Equations}
+
+  We now have two equations and two unknowns
+  \begin{eqnarray*}
+    v_1'e^{-2t} + v_2' e^{-t}& = & 0 \\
+    -2 v_1' e^{-2t}  - v_2' e^{-t} & = & \frac{1}{1+e^{2t}}. 
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Solve for the unknowns}
+  \begin{eqnarray*}
+    v_1' & = & \frac{-e^{-t} \frac{1}{1+e^{2t}}}{
+      -e^{-t}\lp -2 e^{-2t} \rp + \lp - e^{-t}\rp \lp e^{-2t} \rp} \\
+    & = & \frac{-e^{2t}}{1+e^{2t}}, \\
+    v_2' & = & \frac{-e^{-2t}\frac{1}{1+e^{2t}}}{e^{-3t}}, \\
+    & = & \frac{e^t}{1+e^{2t}}.
+  \end{eqnarray*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Integrate}
+  
+  \begin{eqnarray*}
+    v_1 & = & \int \frac{-e^{2t}}{1+e^{2t}} ~ dt, \\
+    & = & -\half \ln\lp 1 + e^{2t} \rp + C_1 \\
+    v_2 & = & \int \frac{e^t}{1+e^{2t}} ~ dt, \\
+    & = & \arctan\lp e^t \rp + C_2.
+  \end{eqnarray*}
+
+  Form the solution:
+  \begin{eqnarray*}
+    y & = & \lp -\half \ln\lp 1 + e^{2t} \rp + C_1 \rp e^{-2t} + \lp \arctan\lp e^t \rp + C_2 \rp e^{-t} \\
+    & = & -\half e^{-2t} \ln \lp 1 + e^{2t} \rp + C_1 e^{-2t} + e^{-t} \arctan\lp e^t \rp + C_2 e^{-t}.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+   \ifnum\value{clickerQuiz}=1{%
+    Find the homogeneous solution to the following differential equation:
+        \begin{eqnarray*}
+          t^2 y'' - 2t y' - 4y & = & \ln(t).
+        \end{eqnarray*}
+
+        \begin{tabular}{ll}
+          A: & $y_h  =  C_1 t^4 + C_2 t^{-1}$ \\ [12pt]
+          B: & $y_h  =  C_1 \ln(4t) + C_2 \ln(-t)$\\ [12pt]
+          C: & $y_h  =  C_1 e^{(1-\sqrt{5})t} + C_2 e^{(1+\sqrt{5})t}$ 
+        \end{tabular}
+    \vfill
+
+
+ }\fi
+
+ \ifnum\value{clickerQuiz}=2{%
+    Find the homogeneous solution to the following differential equation:
+        \begin{eqnarray*}
+          t^2 y'' - 2t y' - 4y & = & \ln(t).
+        \end{eqnarray*}
+
+        \begin{tabular}{ll}
+          A: & $y_h  =  C_1 \ln(4t) + C_2 \ln(-t)$\\ [12pt]
+          B: & $y_h  =  C_1 t^4 + C_2 t^{-1}$ \\ [12pt]
+          C: & $y_h  =  C_1 e^{(1-\sqrt{5})t} + C_2 e^{(1+\sqrt{5})t}$ 
+        \end{tabular}
+    \vfill
+
+ \vfill
+
+
+ }\fi
+
+ \ifnum\value{clickerQuiz}=3{%
+    Find the homogeneous solution to the following differential equation:
+        \begin{eqnarray*}
+          t^2 y'' - 2t y' - 4y & = & \ln(t).
+        \end{eqnarray*}
+
+        \begin{tabular}{ll}
+          A: & $y_h  =  C_1 t^4 + C_2 t^{-1}$ \\
+          B: & $y_h  =  C_1 e^{(1-\sqrt{5})t} + C_2 e^{(1+\sqrt{5})t}$\\
+          C: & $y_h  =  C_1 \ln(4t) + C_2 \ln(-t)$\\
+        \end{tabular}
+
+        \vfill
+ }\fi
+\end{frame}
+}
+
+
+\begin{frame}
+  \frametitle{Example 3}
+  Find the general solution to the following DE:
+  \begin{eqnarray*}
+    t^2 y'' - 2t y' - 4y & = & \ln(t).
+  \end{eqnarray*}
+
+  \uncover<2->
+  {
+
+    The homogeneous solution is 
+    \begin{eqnarray*}
+      y & = & C_1 t^4 + C_2 t^{-1}, \\
+      y_1 & = & t^4, \\
+      y_2 & = & t^{-1}.
+    \end{eqnarray*}
+
+    Rewrite it in the proper form:
+    \begin{eqnarray*}
+      y'' - \frac{2}{t} y' - \frac{4}{t^2} & = & \frac{1}{t^2} \ln(t), \\
+      f(t) & = & \frac{1}{t^2} \ln(t).
+    \end{eqnarray*}
+
+  }
+\end{frame}
+
+\begin{frame}
+  \frametitle{Variation of Parameters}
+
+  \begin{eqnarray*}
+    v_1' & = & \frac{-t^{-1}\frac{1}{t^2}\ln(t)}{t^4 \lp -t^{-2} \rp - t^{-1} \lp 4 t^3 \rp}, \\
+    & = & \frac{-t^{-3}\ln(t)}{-5t^2}, \\
+    & = & \frac{1}{5} t^{-5} \ln(t), \\
+    v_2' & = & \frac{t^4 \frac{1}{t^2} \ln(t)}{-5t^2}, \\
+    & = & \frac{-1}{5} \ln(t).
+  \end{eqnarray*}
+  
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Integrate}
+
+  \begin{eqnarray*}
+    v_1 & = & \int \frac{1}{5} t^{-5} \ln(t) ~ dt  \\
+    & = & -\frac{1}{20} t^{-4} \ln(t) - \frac{1}{80} t^{-4} + C_1 \\
+    v_2 & = & \int \frac{-1}{5} \ln(t) ~ dt, \\
+    & = & -\frac{1}{5} t \ln(t) + \frac{1}{5} t + C_2.
+  \end{eqnarray*}
+
+  Form the solution
+  \begin{eqnarray*}
+    y & = & t^4 \lp -\frac{1}{20} t^{-4} \ln(t) - \frac{1}{80} t^{-4} + C_1 \rp \\
+    & & + t^{-1} \lp -\frac{1}{5} t \ln(t) + \frac{1}{5} t + C_2 \rp, \\
+    & = & -\frac{1}{4} \ln(t) + \frac{3}{16} + C_1 t^4 + C_2 t^{-1}.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+% LocalWords:  Clarkson pausesection hideothersubsections

@@ -7,9 +7,11 @@
 \usepackage{ifpdf}
 \usepackage{etoolbox}
 
+
+
 \newtoggle{solutions}
 \toggletrue{solutions}
-%\togglefalse{solutions}
+\togglefalse{solutions}
 
 \ifpdf 
    \pdfcompresslevel=9
@@ -48,63 +50,7 @@
 \input{header}
 \setcounter{activity}{0}
 
-
-\newcommand{\arrayTwo}[4]{
-  \left[
-  \begin{array}{rr}
-    #1 & #2 \\
-    #3 & #4
-  \end{array}
-  \right]
-}
-
-
-\newcommand{\vecTwo}[2]{
-  \left[
-  \begin{array}{r}
-    #1 \\  #2
-  \end{array}
-  \right]
-}
-
-\newcommand{\stateTwo}[2]{
-  \begin{array}{rr}
-    \mbox{\fontsize{6}{6}\selectfont $#1$} \\  \mbox{\fontsize{6}{6}\selectfont $#2$}
-  \end{array}
-}
-
-
-\newcommand{\startRowOpsTwo}{
-  \left[
-    \begin{array}{rr|rr}
-}
-
-\newcommand{\oneRowOpsTwo}[4] {
-      #1 & #2 & #3 & #4 \\
-}
-
-
-\newcommand{\startRowOpsThree}{
-  \left[
-    \begin{array}{rrr|rrr}
-}
-
-
-\newcommand{\stopRowOps}{
-    \end{array}
-  \right]
-}
-
-
-\newcommand{\vecFour}[4]{
-  \left[
-  \begin{array}{r}
-    #1 \\  #2 \\ #3 \\ #4
-  \end{array}
-  \right]
-}
-
-
+\input{latexDefinitions}
 
 %\includeonly{laplace}
 
@@ -167,9 +113,6 @@
 \include{eigenSystems}      % 11
 
 \chapter{Laplace Transforms}
-
-\newcommand{\laplace}[1]{\makebox{$ {\cal L} \{ #1 \}$}}
-\newcommand{\invlaplace}[1]{\makebox{$ {\cal L}^{-1} \left\{ #1 \right\}$}}
 
 \include{partialFraction}   % 12
 \include{laplace}           % 13

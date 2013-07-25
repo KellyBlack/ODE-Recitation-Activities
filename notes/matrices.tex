@@ -1,0 +1,403 @@
+\part{Matrices}
+\lecture{Matrices}{Matrices}
+\section{Matrices}
+
+\title{Ordinary Differential Equations}
+\subtitle{Math 232 - Matrices}
+\date{28 Sep 2012}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[pausesection,hideothersubsections]
+\end{frame}
+
+
+\subsection{Matrix Inverse}
+
+
+\begin{frame}
+  \frametitle{Inverse of a Matrix}
+
+  Suppose that we have the following system:
+  \begin{eqnarray*}
+    3x + y & = & 4 \\
+    2x + y & = & -1
+  \end{eqnarray*}
+
+  Another way to express this:
+  \begin{eqnarray*}
+    \arrayTwo{3}{1}{2}{1} \vecTwo{x}{y} & = & \vecTwo{4}{-1}.
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Interesting Coincidence}
+
+  Note that
+  \begin{eqnarray*}
+    \arrayTwo{1}{-1}{-2}{3} \arrayTwo{3}{1}{2}{1}  & = & \arrayTwo{1}{0}{0}{1}.
+  \end{eqnarray*}
+
+  This means that we can go back to the previous equation to get
+  \begin{eqnarray*}
+    \arrayTwo{3}{1}{2}{1} \vecTwo{x}{y} & = & \vecTwo{4}{-1}, \\
+    \arrayTwo{1}{-1}{-2}{3} \arrayTwo{3}{1}{2}{1} \vecTwo{x}{y} & = & 
+          \arrayTwo{1}{-1}{-2}{3}\vecTwo{4}{-1}, \\
+    \arrayTwo{1}{0}{0}{1} \vecTwo{x}{y} & = & \vecTwo{5}{-11}, \\
+    \vecTwo{x}{y} & = & \vecTwo{5}{-11}.
+  \end{eqnarray*}
+
+
+\end{frame}
+
+\subsection{Notation}
+
+\begin{frame}
+  \frametitle{Notation}
+
+  \begin{eqnarray*}
+    A & = & \arrayTwo{3}{1}{2}{1} \\
+    B & = & \arrayTwo{1}{-1}{-2}{3} 
+  \end{eqnarray*}
+
+  Then
+  \begin{eqnarray*}
+    A\cdot B & = & I_2
+  \end{eqnarray*}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{The Inverse}
+
+  \begin{definition}[The Matrix Inverse]
+    
+    If two matrices satisfy
+    \begin{eqnarray*}
+      A\cdot B & = & I
+    \end{eqnarray*}
+    then $B$ is the \textit{inverse} of $A$.
+
+    It is denoted as $A^{-1}$.
+  \end{definition}
+
+
+  \uncover<2->{%
+    Note most matrices do not have an inverse! If $A^{-1}$ exists then
+    we say that $A$ is \textit{invertible}.
+  }
+
+
+\end{frame}
+
+\subsection{Calculating the Inverse}
+
+\begin{frame}
+  \frametitle{Calculating the Inverse}
+
+  How do we find $A^{-1}$?
+  \begin{eqnarray*}
+    \startRowOpsTwo
+    \oneRowOpsTwo{3}{1}{1}{0}
+    \oneRowOpsTwo{2}{1}{0}{1}
+    \stopRowOps
+  \end{eqnarray*}
+
+  We put this in RREF. If we can make the left half look like the
+  identity matrix then the right half is the inverse.
+
+\end{frame}
+
+
+\begin{frame}
+
+  \begin{eqnarray*}
+    \stateTwo{1/3 R_1}{~} 
+    \startRowOpsTwo
+    \oneRowOpsTwo{1}{1/3}{1/3}{0}
+    \oneRowOpsTwo{2}{1}{0}{1}
+    \stopRowOps \\
+    \uncover<2->
+    {
+      \stateTwo{~}{-2R_1+R_2} 
+      \startRowOpsTwo
+      \oneRowOpsTwo{1}{1/3}{1/3}{0}
+      \oneRowOpsTwo{0}{1/3}{-2/3}{1}
+      \stopRowOps \\
+    }
+    \uncover<3->
+    {
+      \stateTwo{~}{3R_2} 
+      \startRowOpsTwo
+      \oneRowOpsTwo{1}{1/3}{1/3}{0}
+      \oneRowOpsTwo{0}{1}{-2}{3}
+      \stopRowOps 
+    }
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  \begin{eqnarray*}
+      \stateTwo{~}{3R_2} 
+      \startRowOpsTwo
+      \oneRowOpsTwo{1}{1/3}{1/3}{0}
+      \oneRowOpsTwo{0}{1}{-2}{3}
+      \stopRowOps \\
+    \uncover<2->
+    {
+      \stateTwo{-1/3R_2+R_1}{~} 
+      \startRowOpsTwo
+      \oneRowOpsTwo{1}{0}{1}{-1}
+      \oneRowOpsTwo{0}{1}{-2}{3}
+      \stopRowOps 
+    }
+  \end{eqnarray*}
+
+  \uncover<3->
+  {
+    The inverse of the matrix is 
+    \begin{eqnarray*}
+      A^{-1} & = & \arrayTwo{1}{-1}{-2}{3}
+    \end{eqnarray*}
+  }
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+  Is the matrix
+  \begin{eqnarray*}
+    \left[\begin{array}{rrr}
+        2 & 4 & 4 \\
+        1 & 1 & 2 \\
+        0 & -1 & 2
+      \end{array}\right]
+  \end{eqnarray*}
+  invertible?
+
+  \uncover<2->
+  {
+    \begin{eqnarray*}
+      \startRowOpsThree
+      \oneRowOpsThree{2}{4}{4}{1}{0}{0}
+      \oneRowOpsThree{1}{1}{2}{0}{1}{0}
+      \oneRowOpsThree{0}{-1}{2}{0}{0}{1}
+      \stopRowOps
+    \end{eqnarray*}
+  }
+
+\end{frame}
+
+
+
+\begin{frame}
+
+    \begin{eqnarray*}
+      \startRowOpsThree
+      \oneRowOpsThree{2}{4}{4}{1}{0}{0}
+      \oneRowOpsThree{1}{1}{2}{0}{1}{0}
+      \oneRowOpsThree{0}{-1}{2}{0}{0}{1}
+      \stopRowOps \\
+      \uncover<2->
+      {
+        \stateThree{1/2 R_1}{~}{~}
+        \startRowOpsThree
+        \oneRowOpsThree{1}{2}{2}{1/2}{0}{0}
+        \oneRowOpsThree{1}{1}{2}{0}{1}{0}
+        \oneRowOpsThree{0}{-1}{2}{0}{0}{1}
+        \stopRowOps \\
+      }
+      \uncover<3->
+      {
+        \stateThree{~}{-R_1+R_2}{~}
+        \startRowOpsThree
+        \oneRowOpsThree{1}{2}{2}{1/2}{0}{0}
+        \oneRowOpsThree{0}{-1}{0}{-1/2}{1}{0}
+        \oneRowOpsThree{0}{-1}{2}{0}{0}{1}
+        \stopRowOps 
+      }
+    \end{eqnarray*}
+
+
+\end{frame}
+
+
+
+\begin{frame}
+  \begin{eqnarray*}
+    \stateThree{~}{~}{~}
+    \startRowOpsThree
+    \oneRowOpsThree{1}{2}{2}{1/2}{0}{0}
+    \oneRowOpsThree{0}{-1}{0}{-1/2}{1}{0}
+    \oneRowOpsThree{0}{-1}{2}{0}{0}{1}
+    \stopRowOps \\
+    \uncover<2->
+    {
+      \stateThree{~}{-R_2}{~}
+      \startRowOpsThree
+      \oneRowOpsThree{1}{2}{2}{1/2}{0}{0}
+      \oneRowOpsThree{0}{1}{0}{1/2}{-1}{0}
+      \oneRowOpsThree{0}{-1}{2}{0}{0}{1}
+      \stopRowOps  \\
+    }
+    \uncover<3->
+    {
+      \stateThree{~}{R_2+R_3}{~}
+      \startRowOpsThree
+      \oneRowOpsThree{1}{2}{2}{1/2}{0}{0}
+      \oneRowOpsThree{0}{1}{0}{1/2}{-1}{0}
+      \oneRowOpsThree{0}{0}{2}{1/2}{-1}{1}
+      \stopRowOps 
+    }
+  \end{eqnarray*}
+\end{frame}
+
+
+
+
+\begin{frame}
+  \begin{eqnarray*}
+    \stateThree{~}{~}{~}
+      \startRowOpsThree
+      \oneRowOpsThree{1}{2}{2}{1/2}{0}{0}
+      \oneRowOpsThree{0}{1}{0}{1/2}{-1}{0}
+      \oneRowOpsThree{0}{0}{2}{1/2}{-1}{1}
+      \stopRowOps \\
+    \uncover<2->
+    {
+      \stateThree{~}{~}{1/2 R_3}
+      \startRowOpsThree
+      \oneRowOpsThree{1}{2}{2}{1/2}{0}{0}
+      \oneRowOpsThree{0}{1}{0}{1/2}{-1}{0}
+      \oneRowOpsThree{0}{0}{1}{1/4}{-1/2}{1/2}
+      \stopRowOps  \\
+    }
+    \uncover<3->
+    {
+      \stateThree{-2R_3+R_1}{~}{~}
+      \startRowOpsThree
+      \oneRowOpsThree{1}{2}{0}{0}{1}{-1}
+      \oneRowOpsThree{0}{1}{0}{1/2}{-1}{0}
+      \oneRowOpsThree{0}{0}{1}{1/4}{-1/2}{1/2}
+      \stopRowOps 
+    }
+  \end{eqnarray*}
+\end{frame}
+
+
+\begin{frame}
+  \begin{eqnarray*}
+      \stateThree{~}{~}{~}
+      \startRowOpsThree
+      \oneRowOpsThree{1}{2}{0}{0}{1}{-1}
+      \oneRowOpsThree{0}{1}{0}{1/2}{-1}{0}
+      \oneRowOpsThree{0}{0}{1}{1/4}{-1/2}{1/2}
+      \stopRowOps \\
+    \uncover<2->
+    {
+      \stateThree{-2R_2+R_1}{~}{~}
+      \startRowOpsThree
+      \oneRowOpsThree{1}{0}{0}{-1}{3}{-1}
+      \oneRowOpsThree{0}{1}{0}{1/2}{-1}{0}
+      \oneRowOpsThree{0}{0}{1}{1/4}{-1/2}{1/2}
+      \stopRowOps 
+    }
+  \end{eqnarray*}
+
+  \uncover<3->
+  {
+    \begin{eqnarray*}
+      A^{-1} & =  & \arrayThree{-1}{3}{-1}{1/2}{-1}{0}{1/4}{-1/2}{1/2}
+    \end{eqnarray*}
+  }
+  \uncover<4->
+  {
+   If you cannot make an identity matrix on the left hand side then the
+   matrix is \textit{not invertible}.
+  }
+\end{frame}
+
+\subsection{Algebraic Properties}
+
+\begin{frame}
+  \frametitle{Inverse of the product}
+
+  {\color{red}Theorem:} Suppose that two matrices $A$ and $B$ have inverses
+    $A^{-1}$ and $B^{-1}$, respectively. 
+    Then the inverse of the product of two matrices exists and 
+    {\color{orange}$(AB)^{-1} = B^{-1}A^{-1}$}.\\
+
+  \textit{{\color{blue}Proof.}} Since $A^{-1}$ and $B^{-1}$ exist,  
+   \begin{equation*} A \cdot A^{-1} = I, B \cdot B^{-1}  =  I. \end{equation*}
+    Then, 
+   \begin{eqnarray*}
+    \lp B^{-1} A^{-1} \rp \lp A B \rp & = & B^{-1} \lp A^{-1} A \rp B \\
+    & = & B^{-1} I B \\
+    & = & B^{-1} B \\
+    & = & I
+  \end{eqnarray*}
+
+  the inverse of $AB$ is $B^{-1}A^{-1}$.
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Solving Linear Systems}
+
+  Suppose we want to solve a linear system
+  \begin{eqnarray*}
+    A \vec{x} & = & \vec{b}.
+  \end{eqnarray*}
+
+  \textbf{If} $A^{-1}$ exists then 
+  \begin{eqnarray*}
+    A^{-1} A \vec{x} & = & A^{-1} \vec{b} \\
+    \vec{x} & = & A^{-1} \vec{b}
+  \end{eqnarray*}
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Solving Homogeneous Systems}
+  {\color{blue}
+  Suppose we want to solve a linear system
+  \begin{eqnarray*}
+    A \vec{x} & = & \vec{0}.
+  \end{eqnarray*}
+  If $A$ is invertible then the homogeneous solution is the
+  zero vector.
+  }
+  {\color{red}Why?} 
+   The homogeneous solution is a solution to the following system:
+  \begin{eqnarray*}
+    A \vec{x}_h & = & \vec{0}.
+  \end{eqnarray*}
+
+  \textbf{If} $A^{-1}$ exists then 
+  \begin{eqnarray*}
+    A^{-1} A \vec{x}_h & = & A^{-1} \vec{0}, \\
+    \vec{x}_h & = & A^{-1} \vec{0}, \\
+    & = & \vec{0}.
+  \end{eqnarray*}
+
+  {\color{red}If the inverse exists then the solution is unique.}
+
+\end{frame}
+
+
+
+
+
+% LocalWords:  Clarkson pausesection hideothersubsections
