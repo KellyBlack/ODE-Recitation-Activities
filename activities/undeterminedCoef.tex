@@ -1,0 +1,215 @@
+
+
+
+\preClass{Second order, constant coefficient equations.}
+
+\begin{problem}
+\item Suppose that a function is a polynomial of degree 2,
+  \begin{eqnarray*}
+    p(t) & = & 4t^2 + 3t - 1
+  \end{eqnarray*}
+
+  \begin{subproblem}
+  \item Determine the first derivative of $p(t)$. What degree polynomial is
+    the derivative?
+
+    \vspace{4cm}
+
+  \item Determine the second derivative of $p(t)$. What degree
+    polynomial is the second derivative?  
+
+    \vspace{4cm}
+
+  \item Determine the value of $p''(t)+3p'(t)+2p(t)$. What is the
+    degree of this new polynomial? 
+
+    % 8 t^2 + 30t + 15
+
+    \vfill
+
+  \end{subproblem}
+
+\end{problem}
+
+
+\actTitle{Second Order Equations}
+  \begin{problem}
+
+    \item Determine the solution to the differential equation
+      \begin{eqnarray*}
+        x''(t) + 3x'(t) + 2x(t) & = & 8 t^2 + 30t + 15.
+      \end{eqnarray*}
+
+      \begin{subproblem}
+        \item First, determine the homogeneous solution to the
+          equation.
+
+          \vfill
+
+        \item Now assume a general form for the particular
+          solution. Here we are looking for a function, $p(t)$, so
+          that 
+          \begin{eqnarray}
+            p''(t) + 3p'(t) + 2p(t) & = & 8 t^2 + 30t + 15.
+            \label{eqn:quadraticParticular}
+          \end{eqnarray}
+          If $p(t)$ is a quadratic polynomial then we would expect the
+          left hand side to be equal to a quadratic polynomial.
+
+          Express $p(t)$ as a general quadratic polynomial.
+
+          \vspace*{4em}
+
+        \item Find the first and second derivatives of the general
+          form of $p(t)$.
+
+          \vfill
+
+          \clearpage
+
+        \item Substitute the previous results into equation
+          \ref{eqn:quadraticParticular}.
+
+          \vfill
+
+        \item Simplify the expression by collecting all the terms to
+          one side and collect the constant, linear, and quadratic
+          terms together.
+
+          \vfill
+
+        \item Set each coefficient to zero and determine the three
+          equations that must be true.
+
+          \vfill
+
+          \clearpage
+
+        \item Determine the particular solution.
+          \vfill
+
+        \item Using the homogeneous and particular solutions determine
+          the solution to the differential equation.
+
+          \vfill
+
+      \end{subproblem}
+
+      \clearpage
+
+    \item Determine the solution to the differential equation
+      \begin{eqnarray*}
+        x''(t) + 3x'(t) + 2x(t) & = & -10 t^3 - 45 t^2 - 32 t + 5.
+      \end{eqnarray*}
+
+      \vfill
+      \clearpage
+
+
+    \item Determine the solution to the differential equation
+      \begin{eqnarray*}
+        x''(t) + 3x'(t) + 2x(t) & = & -10 t^3.
+      \end{eqnarray*}
+
+      \vfill
+      \clearpage
+
+    \item Determine the solution to the differential equation
+      \begin{eqnarray*}
+        x''(t) + 3x'(t) + 2x(t) & = & e^{4t}.
+      \end{eqnarray*}
+
+      \vfill
+
+
+      \clearpage
+
+
+\end{problem}
+
+\actTitle{Second Order Equations}
+\begin{problem}
+
+\item Now we solve the problem a different way. Recall the
+  differential equation,
+  \begin{eqnarray}
+    x''(t) + 3x'(t) + 2x(t) & = & 8 t^2 + 30t + 15.
+    \label{eqn:secondOrderExample}
+  \end{eqnarray}
+
+  \begin{subproblem}
+    \item Determine the homogeneous solutions:
+      \vspace*{4em}
+
+    \item Using your homogeneous solutions, $y_1$ and $y_2$, express
+      the solution as
+    \begin{eqnarray*}
+      y(t) & = & y_1(t) u_1(t) + y_2(t) u_2(t).
+    \end{eqnarray*}
+    The functions $u_1$ and $u_2$ are unknown, and our goal is to find
+    new equations to help us determine a formula for these two
+    functions.  Substitute your values for $y_1$ and $y_2$ as the
+    homogeneous solutions.
+
+    \vspace{4em}
+
+  \item Determine the first derivative of $y(t)$ above using the
+    product rule.
+
+    \vfill
+
+  \item Assume that $y_1(t) u_1'(t) + y_2(t) u_2'(t)$ is equal to
+    zero. Write out the new equation for $y(t)$ using this assumption.
+
+    \vfill
+
+  \item Determine the second derivative of $y(t)$ above using the
+    product rule and the previous result.
+
+    \vfill
+
+    \clearpage
+
+  \item Substitute your results for the function $y(t)$ and its
+    derivatives into the differential equation, equation
+    (\ref{eqn:secondOrderExample}).
+
+    \vfill
+
+  \item Write out the two equations that you have. (The first equation
+    comes from assuming $y_1(t) u_1'(t) + y_2(t) u_2'(t)=0$.
+
+    \vfill
+
+  \item Solve the equations for $u_1'(t)$ and $u_2'(t)$.
+
+    \vfill
+
+    \clearpage
+
+  \item Solve the integrals to determine $u_1$ and $u_2$.
+
+    \vfill
+
+  \item Determine the solution to the differential equation.
+
+    \vfill
+
+
+  \end{subproblem}
+
+  \clearpage
+
+\item Repeat the previous steps for the equation
+  \begin{eqnarray*}
+    x''(t) + 3x'(t) + 2x(t) & = & e^{4t}.
+  \end{eqnarray*}
+
+
+\end{problem}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
