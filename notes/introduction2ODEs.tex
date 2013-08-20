@@ -12,7 +12,7 @@
 
 \begin{frame}
   \frametitle{Outline}
-  \tableofcontents[pausesection,hideothersubsections,sectionstyle=show/hide]
+  \tableofcontents[hideothersubsections,sectionstyle=show/hide]
 \end{frame}
 
 \subsection{Syllabus}
@@ -158,7 +158,41 @@ November.
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Expectations}\small
+  Our evaluation is based on the following expectations: \\
+  \hspace*{-2em}
+\begin{tabular}{|l@{\hspace{2em}}l|} \hline
+  Quality of Work    & Expectations \\ \hline
+  Needs Improvement  & Cannot identify basic equations \\
+                     & Cannot determine solutions for basic \\
+                     & systems of equations \\ \hline
+  Satisfactory       & Can identify and solve all basic equations \\ 
+                     & Can determine stability characteristics of \\
+                     & all basic equations \\ \hline
+  Good               & Derive own systems \\
+                     & Determine solutions and stability of own systems \\ \hline
+  Excellent          & Tie together linear algebra concepts to \\
+                     & solution techniques \\
+                     & Can determine solution to any one system using \\
+                     & a variety of techniques \\ \hline
+\end{tabular}
+\end{frame}
+
 \subsection{What is a Differential Equation}
+
+\begin{frame}{Topics}\small
+\begin{tabular}{|l@{\hspace{2em}}l|} \hline
+  Topic & Important Ideas \\  \hline
+  First Degree Equations  & Linear Equations, Nonlinear Equations, \\
+                          & Laplace Transforms \\ \hline
+  Second Degree Equations & Linear Equations, Cauchy-Euler Equations, \\
+                          & Laplace Transforms \\ \hline
+  Systems of Equations    & Linear Algebra, Eigen Systems \\ \hline
+  Modeling and Stability  & Mathematical Models, Qualitative Behavior \\ \hline
+\end{tabular}
+
+\centerline{\includegraphics[height=12em]{img/topics}}
+\end{frame}
 
 
 \begin{frame}
@@ -328,6 +362,88 @@ November.
 
     Question: What is the temperature at any given time?
 
+\end{frame}
+
+
+\begin{frame}{Extra Topic (Outside of class) }
+
+  Checking your solution:
+  \begin{itemize}
+  \item You have a differential equation.
+  \item You have a function that you think is the solution.
+  \end{itemize}
+
+  How do you check to see if it is correct?
+
+  \uncover<2>{\color{red} You plug it back into the equation!}
+
+  \uncover<3>{This is something that causes a large amount of
+    confusion. If you are asked to \textbf{check} a solution you only
+    need to plug it back into the equation and see if the
+    \blueText{left side} is equal to the \fuchsiaText{right side} of
+    the equation. This also means that you can always check your work
+    using the skills you learned in Calculus I.}
+  
+\end{frame}
+
+
+\begin{frame}{Example}
+
+  Show that {\color{red} $y=t\cos(t)$} is a solution to the differential equation
+  \begin{eqnarray*}
+    \blueText{y' - \frac{1}{t}y} & = & \fuchsiaText{-t\sin(t)}.
+  \end{eqnarray*}
+
+  \only<2>{
+
+    \begin{itemize}
+    \item We will take the necessary derivatives of the function. (In this
+      case one.)
+    \item We will plug it into the equation.
+    \item We will check to see if the \blueText{left hand side} is
+      equal to the \fuchsiaText{right hand side}.
+    \end{itemize}
+
+  }
+
+  \only<3-5>{
+
+    \begin{eqnarray*}
+      \redText{y} & = & \redText{t\cos(t)}, \\
+      y' & = & \cos(t) - t\sin(t).
+    \end{eqnarray*}
+  }
+
+  \only<4->{
+
+    Plug the result into the left hand side of the equation:
+    \begin{eqnarray*}
+      \blueText{y' - \frac{1}{t}y} & = & \cos(t) - t\sin(t) - \frac{1}{t} t \cos(t), \\
+      & = & \cos(t) - t\sin(t) - \cos(t), \\
+      & = & -t\sin(t).
+    \end{eqnarray*}
+
+  }
+
+  \only<5->{
+
+    Plug the result into the right hand side of the equation (easy in
+    this case!):
+    \begin{eqnarray*}
+      \fuchsiaText{-t\sin(t)}.
+    \end{eqnarray*}
+
+  }
+
+  \only<6->{
+
+    Note the result.... They are the same! The function satisfies the
+    differential equation so it is \textbf{a} solution. Note that if
+    there had been extra conditions we would have to check
+    \textbf{all} of them.
+
+  }
+  
 \end{frame}
 
 
