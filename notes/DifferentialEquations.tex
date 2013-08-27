@@ -26,13 +26,54 @@
 
 \input{latexDefinitions}
 
-%\includeonlylecture{The-Unit-Step-Function}
-\includeonly{introduction2ODEs}
+%\includeonly{introduction2ODEs}
+\includeonly{solutionsToDEs}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Methods to solve and classify select differential equations
+%\includeonly{separableEqns}
+%\includeonly{linearEquations}
+%\includeonly{integratingFactors}
+%\includeonly{growthDecay}
+%\includeonly{conservation}
+%\includeonly{autonomous}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Start of complex numbers and linear algebra
+%\includeonly{complexI}
+%\includeonly{complexII}
+%\includeonly{introLinearAlgebra}
+%\includeonly{solutionsToLinearEquations}
+%\includeonly{matrices}
+%\includeonly{determinants}
+%\includeonly{spanOfVectors}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Second order differential equations
+%\includeonly{secondOrderDEs}
+%\include{solutionsToSecondOrderDEs}
+%\includeonly{complexRoots}
+%\includeonly{undeterminedCoefficients}
+%\includeonly{undeterminedCoefficientsII}
+%\includeonly{variationParameters}
+%\includeonly{forcedOscillations}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Back to eigen values and linear algebrea
+%\includeonly{eigenValues}
+%\includeonly{solvingSystems}
+%\includeonly{solvingSystemsII}
+%\includeonly{complexEigenValues}
+%\includeonly{traceDeterminant}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Laplace Transforms
+%\includeonly{partialFractions}
+%\includeonly{introLaplaceTransforms}
+%\includeonly{inverseLaplaceTransforms}
+%\includeonly{solveDEsLaplaceTransforms}
+%\includeonly{unitStepFunction}
+%\includeonly{convolutions}
 %test
 
 \newtoggle{clicker}
 \toggletrue{clicker}
-%\togglefalse{clicker}
+\togglefalse{clicker}
 \newcounter{clickerQuiz} % Create a counter to determine which clicker quiz to give
 \setcounter{clickerQuiz}{2} % Set the counter to 1, 2, or 3 for the section number
 
@@ -48,8 +89,6 @@
 \include{introduction2ODEs}
 \include{solutionsToDEs}
 
-
-
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Methods to solve and classify select differential equations
 
@@ -59,8 +98,6 @@
 \include{growthDecay}
 \include{conservation}
 \include{autonomous}
-
-
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Start of complex numbers and linear algebra
