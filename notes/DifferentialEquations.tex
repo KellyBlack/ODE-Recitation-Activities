@@ -25,12 +25,18 @@
 \setbeamercolor{titlelike}{bg=clarksonGreen,fg=white} % parent=palette quaternary}
 
 \input{latexDefinitions}
+%
+\newtoggle{clicker}
+\toggletrue{clicker}
+%\togglefalse{clicker}
+\newcounter{clickerQuiz} % Create a counter to determine which clicker quiz to give
+\setcounter{clickerQuiz}{3} % Set the counter to 1, 2, or 3 for the section number
 
 %\includeonly{introduction2ODEs}
-\includeonly{solutionsToDEs}
+%\includeonly{solutionsToDEs}
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Methods to solve and classify select differential equations
-%\includeonly{separableEqns}
+\includeonly{separableEqns}
 %\includeonly{linearEquations}
 %\includeonly{integratingFactors}
 %\includeonly{growthDecay}
@@ -71,11 +77,6 @@
 %\includeonly{convolutions}
 %test
 
-\newtoggle{clicker}
-\toggletrue{clicker}
-\togglefalse{clicker}
-\newcounter{clickerQuiz} % Create a counter to determine which clicker quiz to give
-\setcounter{clickerQuiz}{2} % Set the counter to 1, 2, or 3 for the section number
 
 \begin{document}
 
