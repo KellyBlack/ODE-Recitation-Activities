@@ -5,7 +5,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 1, Day 3}
-\date{30 August 2012}
+\date{30 August 2013}
 
 \begin{frame}
   \titlepage
@@ -18,67 +18,67 @@
 
 
 \subsection{The Chain Rule}
-%
-%\begin{frame}
-%  \frametitle{Clicker Quiz}
-%    \iftoggle{clicker}{%
-    
-%      \ifnum\value{clickerQuiz}=1%
 
-%       Which function is a solution to the differential equation
-%       \begin{eqnarray*}
-%         y' & = & y\sin(t)?
-%       \end{eqnarray*}
-%
-%       \vfill
-%
-%       \begin{tabular}{l@{\hspace{3em}}l}
-%         A: & $y=3e^{-\sin(t)}$. \\
-%         B: & $y=2e^{\sin(t)}$. \\
-%         C: & $y=4e^{-\cos(t)}$. \\
-%         D: & $y=7e^{\cos(t)}$. \\
-%       \end{tabular}
- %     \fi
+\begin{frame}
+  \frametitle{Clicker Quiz}
+    \iftoggle{clicker}{%
+   
+      \ifnum\value{clickerQuiz}=1%
 
-%      \ifnum\value{clickerQuiz}=2%
-%       Which function is a solution to the differential equation
-%       \begin{eqnarray*}
-%         y' & = & y\cdot t?
-%       \end{eqnarray*}
-%
-%       \vfill
-%
-%       \begin{tabular}{l@{\hspace{3em}}l}
-%         A: & $y=4e^{\half t^2}$. \\
-%         B: & $y=2e^{t^2}$. \\
-%         C: & $y=7e^{2 t}$. \\
-%         D: & $y=3e^{t}$. \\
-%       \end{tabular}
-%      \fi
-%
-%      \ifnum\value{clickerQuiz}=3%
-%       Which function is a solution to the differential equation
-%       \begin{eqnarray*}
-%         y' & = & ?
-%       \end{eqnarray*}
-%
-%       \vfill
+       Which function is a solution to the differential equation
+       \begin{eqnarray*}
+         y' & = & y\sin(t)?
+       \end{eqnarray*}
 
-%       \begin{tabular}{l@{\hspace{3em}}l}
-%         A: & $?$. \\
-%         B: & $?$. \\
-%         C: & $?$. \\
-%         D: & $?$. \\
-%       \end{tabular}
-%      \fi
-%
-%    \vfill
-%    \vfill
-%    \vfill
-%
-%}
-%
-%\end{frame}
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y=e^{-\sin(t)}$. \\
+         B: & $y=e^{\sin(t)}$. \\
+         C: & $y=e^{-\cos(t)}$. \\
+         D: & $y=e^{\cos(t)}$. \\
+       \end{tabular}
+     \fi
+
+      \ifnum\value{clickerQuiz}=2%
+       Which function is a solution to the differential equation
+       \begin{eqnarray*}
+         y' & = & y\cdot t?
+       \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y=e^{\half t^2}$. \\
+         B: & $y=e^{t^2}$. \\
+         C: & $y=e^{2 t}$. \\
+         D: & $y=e^{t}$. \\
+       \end{tabular}
+      \fi
+
+      \ifnum\value{clickerQuiz}=3%
+       Which function is a solution to the differential equation
+       \begin{eqnarray*}
+         y' & = &  y\sin(t)?
+       \end{eqnarray*}
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & $y=3e^{-\sin(t)}$. \\
+         B: & $y=2e^{\sin(t)}$. \\
+         C: & $y=4e^{-\cos(t)}$. \\
+         D: & $y=7e^{\cos(t)}$. \\
+      \end{tabular}
+      \fi
+
+    \vfill
+    \vfill
+    \vfill
+
+}
+
+\end{frame}
 
 
 
@@ -102,7 +102,7 @@
   \end{eqnarray*}
 
   \uncover<2->{
-    Let $u=1+\ln(t)$ then $du=\frac{1}{t}.$
+    Let $u=1+\ln(t)$ then $du=\frac{1}{t}dt.$
   }
 
   \uncover<3-> {
@@ -124,7 +124,7 @@
   \end{eqnarray*}
 
   \uncover<2->{
-    Let $y=1+\ln(t)$ then $dy=\frac{1}{t}.$
+    Let $y=1+\ln(t)$ then $dy=\frac{1}{t}dt.$
   }
 
   \uncover<3-> {
