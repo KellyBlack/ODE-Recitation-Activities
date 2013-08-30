@@ -5,7 +5,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 2, Day 1}
-\date{3 Sep 2012}
+\date{2 Sep 2013}
 
 \begin{frame}
   \titlepage
@@ -13,7 +13,7 @@
 
 \begin{frame}
   \frametitle{Outline}
-  \tableofcontents[pausesection,hideothersubsections]
+  \tableofcontents[hideothersubsections]
 \end{frame}
 
 
@@ -115,10 +115,18 @@
   \frametitle{Linear Differential Equations}
 
   In the context of DEs an equation is linear if it is in the form
-  \begin{eqnarray*}
-    a_0(t) y(t) + a_1(t) \frac{d}{dt}y(t) + \cdots +
-    a_n(t) \frac{d^n}{dt^n}y(t) & = & f(t).
-  \end{eqnarray*}
+  \only<1>{
+    \begin{eqnarray*}
+      a_0(t) y(t) + a_1(t) \frac{d}{dt}y(t) + \cdots +
+      a_n(t) \frac{d^n}{dt^n}y(t) & = & f(t).
+    \end{eqnarray*}
+  }
+  \only<2>{
+    \begin{eqnarray*}
+      a_0\redText{(t)} y(t) + a_1\redText{(t)} \frac{d}{dt}y(t) + \cdots +
+      a_n\redText{(t)} \frac{d^n}{dt^n}y(t) & = & f\redText{(t)}.
+    \end{eqnarray*}
+  }
 
   if $f(t)$ is zero the equation is \textbf{homogeneous}.
 
@@ -143,7 +151,7 @@
     3 y' -y'' & = & 4 y
   \end{eqnarray*}
   \centerline{\color{red}{\uncover<4->{Linear, constant coefficients, homogeneous!}}}
-  \centerline{\uncover<5->{Linear, \textbf{constant coefficient}, and homogeneous}}
+  \centerline{\uncover<5->{Linear, \blueText{\textbf{constant coefficient}}, and homogeneous}}
 
   Recognizing the form is the hardest part!
 
@@ -302,16 +310,16 @@
 
   Suppose that an equation is linear but not homogeneous,
   \begin{eqnarray*}
-    a_0(t) y_p(t) + a_1(t) \frac{d}{dt} y_p(t) + \cdot + a_n(t) \frac{d^n}{dt^n} y_p(t) & = & f(t)
+    a_0(t) y_{\blueText{p}}(t) + a_1(t) \frac{d}{dt} y_{\blueText{p}}(t) + \cdot + a_n(t) \frac{d^n}{dt^n} y_{\blueText{p}}(t) & = & f(t)
   \end{eqnarray*}
   where $f(t)$ is not zero.
 
   The homogeneous version is
   \begin{eqnarray*}
-    a_0(t) y_h(t) + a_1(t) \frac{d}{dt} y_h(t) + \cdot + a_n(t) \frac{d^n}{dt^n} y_h(t) & = & 0.
+    a_0(t) y_{\redText{h}}(t) + a_1(t) \frac{d}{dt} y_{\redText{h}}(t) + \cdot + a_n(t) \frac{d^n}{dt^n} y_{\redText{h}}(t) & = & 0.
   \end{eqnarray*}
 
-  then $y_p(t)+y_h(t)$ is a solution to the original equation!
+  then $y_{\blueText{p}}(t)+y_{\redText{h}}(t)$ is a solution to the original equation!
 
 
 \end{frame}
@@ -331,7 +339,7 @@
     -1 - (-t -1) & = & t.
   \end{eqnarray*}
 
-  Homogeneous: $y_h = k e^t$
+  Homogeneous: $y_h = \redText{k} e^t$
 
   \begin{eqnarray*}
     y'_h - y_h & = & 0, \\
@@ -348,8 +356,9 @@
     y' - y & = & t
   \end{eqnarray*}
 
+  We can the homogeneous and particular solutions to get a new solution:
   \begin{eqnarray*}
-    y & = & -t - 1 + ke^t, \\
+    y & = & -t - 1 + \redText{k}e^t, \\
     y' & = & -1 + ke^t, \\
     -1-ke^t - (-t-1-ke^t) & = & t.
   \end{eqnarray*}
@@ -377,7 +386,7 @@
 
   \begin{eqnarray*}
     y''_h + 4y_h & = & 0, \\
-    y_h & = & C_1 \cos(2t) + C_2 \sin(2t), \\
+    y_h & = & \redText{C_1} \cos(2t) + \redText{C_2} \sin(2t), \\
     y'_h & = & -2 C_1 \sin(2t) + 2 C_2 \cos(2t), \\
     y''_h & = & -4 C_1 \cos(2t) - 4 C_2 \sin(2t),
   \end{eqnarray*}
@@ -391,9 +400,10 @@
 \begin{frame}
   \frametitle{Example - Bring them together}
 
+  We can add the particular and homogeneous solutions to get a new solution:
   \begin{eqnarray*}
     y & = & y_p + y_h \\
-    & = & \frac{1}{4} t + C_1 \cos(2t) + C_2 \sin(2t), \\
+    & = & \frac{1}{4} t + \redText{C_1} \cos(2t) + \redText{C_2} \sin(2t), \\
     y' & = & \frac{1}{4} - 2 C_1 \sin(2t) + 2 C_2 \cos(2t), \\
     y'' & = & - 4 C_1 \cos(2t) - 4 C_2 \sin(2t),
   \end{eqnarray*}
@@ -414,7 +424,7 @@
 
   \begin{eqnarray*}
     y_p & = & -\frac{4}{3}, \\
-    y_h & = & k e^{3t}
+    y_h & = & \redText{k} e^{3t}
   \end{eqnarray*}
 
   \begin{eqnarray*}
@@ -436,7 +446,7 @@
 
   \begin{eqnarray*}
     y_p & = & -\frac{1}{3} t^2 - \frac{2}{9}, \\
-    y_h & = & k e^{\frac{3}{2}t^2}
+    y_h & = & \redText{k} e^{\frac{3}{2}t^2}
   \end{eqnarray*}
 
   \begin{eqnarray*}
