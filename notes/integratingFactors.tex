@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 2, Day 2}
-\date{5 Sep 2012}
+\date{4 Sep 2013}
 
 \begin{frame}
   \titlepage
@@ -12,7 +12,7 @@
 
 \begin{frame}
   \frametitle{Outline}
-  \tableofcontents[pausesection,hideothersubsections]
+  \tableofcontents[hideothersubsections]
 \end{frame}
 
 
@@ -108,8 +108,16 @@
   \frametitle{The Product Rule}
 
   \begin{eqnarray*}
-    \frac{d}{dt} \lp u v \rp & = & u' v + u v'
+    \frac{d}{dt} \lp u(t) v(t) \rp & = & u'(t) v(t) + u(t) v'(t)
   \end{eqnarray*}
+
+  \only<2->{
+    Special case, $v(t)=\redText{e^{f(t)}}$.
+    \begin{eqnarray*}
+      \frac{d}{dt} \lp u(t) \redText{e^{f(t)}} \rp & = & 
+      u'(t) \redText{e^{f(t)}} + u(t) \redText{f'(t) e^{f(t)}}.
+    \end{eqnarray*}
+  }
 
 \end{frame}
 
@@ -140,7 +148,7 @@
 
   \begin{eqnarray*}
     y' + p(t) y & = & f(t) \\
-    e^{G(t)} y' + p(t) e^{G(t)} y & = & e^{G(t)} f(t)
+    \redText{e^{G(t)}} y' + p(t) \redText{e^{G(t)}} y & = & \redText{e^{G(t)}} f(t)
   \end{eqnarray*}
 
 
@@ -152,7 +160,7 @@
   \frametitle{Product Rule Redux}
 
   \begin{eqnarray*}
-    \frac{d}{dt} \lp e^{G(t)} \rp & = & G'(t) e^{G(t)} 
+    \frac{d}{dt} \lp \redText{e^{G(t)}} \rp & = & \blueText{G'(t)} \redText{e^{G(t)}}.
   \end{eqnarray*}
 
   Let
@@ -169,10 +177,10 @@
   \frametitle{Product Rule Redux}
 
   \begin{eqnarray*}
-    \frac{d}{dt} \lp e^{G(t)} y \rp & = & e^{G(t)} y' + G'(t) e^{G(t)} y \\
-    & = & e^{G(t)} y' + p(t) e^{G(t)} y \\
-    & = & e^{G(t)} \lp y' + p(t) y \rp \\
-    & = & f(t) e^{G(t)}
+    \frac{d}{dt} \lp \redText{e^{G(t)}} y \rp & = & \redText{e^{G(t)}} y' + \blueText{G'(t)} \redText{e^{G(t)}} y \\
+    & = & \redText{e^{G(t)}} y' + \blueText{p(t)} \redText{e^{G(t)}} y \\
+    & = & \redText{e^{G(t)}} \lp y' + \blueText{p(t)} y \rp \\
+    & = &  \redText{e^{G(t)}} f(t)
   \end{eqnarray*}
 
   or
@@ -191,17 +199,17 @@
 
   \vspace*{-3em}
   \begin{eqnarray*}
-    y' + 2y & = & t \\
-    p(t) & = & 2, \\
-    \int 2 ~ dt & = & 2t + K, \\
-    e^{2t} & & 
+    y' + \blueText{2}y & = & t \\
+    \blueText{p(t)} & = & \blueText{2}, \\
+    \int \blueText{2} ~ dt & = & 2t + K, \\
+    \redText{e^{2t}} & & 
   \end{eqnarray*}
 
   \begin{eqnarray*}
-    e^{2t} y' + 2 e^{2t} y & = & t e^{2t}, \\
-    \frac{d}{dt} \lp e^{2t} y \rp & = & t e^{2t} \\
-    e^{2t} y & = & \int t e^{2t} ~ dt \\
-    e^{2t} y & = & \half t e^{2t} - \frac{1}{4} e^{2t} + C \\
+    \redText{e^{2t}} y' + \blueText{2} \redText{e^{2t}} y & = & t \redText{e^{2t}}, \\
+    \frac{d}{dt} \lp \redText{e^{2t}} y \rp & = & t \redText{e^{2t}} \\
+    \redText{e^{2t}} y & = & \int t \redText{e^{2t}} ~ dt \\
+    \redText{e^{2t}} y & = & \half t e^{2t} - \frac{1}{4} e^{2t} + C \\
     y & = & \half t - \frac{1}{4} + C e^{-2t}
   \end{eqnarray*}
 
@@ -282,16 +290,16 @@
   \vspace*{-3em}
   \begin{eqnarray*}
     y' & = & ty + t^3 \\
-    y' - ty & = & t^3 \\
-    p(t) & = & -t, \\
-    \int -t ~ dt & = & -\half t^2 + K \\
-    e^{-\half t^2} & & 
+    y' \blueText{- t}y & = & t^3 \\
+    \blueText{p(t)} & = & \blueText{-t}, \\
+    \int \blueText{-t} ~ dt & = & -\half t^2 + K \\
+    \redText{e^{-\half t^2}} & & 
   \end{eqnarray*}
 
   \begin{eqnarray*}
-    y' e^{-\half t^2} - t e^{-\half t^2} y & = & t^3 e^{-\half t^2} \\
-    \frac{d}{dt} \lp y e^{-\half t^2} \rp & = & \int t^3 e^{-\half t^2} ~ dt \\
-    y e^{-\half t^2} & = & -t^2 e^{-\half t^2} - 2 e^{-\half t^2} + C \\
+    y' \redText{e^{-\half t^2}} \blueText{ - t} \redText{e^{-\half t^2}} y & = & t^3 \redText{e^{-\half t^2}} \\
+    \frac{d}{dt} \lp y \redText{e^{-\half t^2}} \rp & = & \int t^3 \redText{e^{-\half t^2}} ~ dt \\
+    y \redText{e^{-\half t^2}} & = & -t^2 e^{-\half t^2} - 2 e^{-\half t^2} + C \\
     y & = & -t^2 - 2 + C e^{\half t^2}
   \end{eqnarray*}
 
@@ -370,10 +378,10 @@
 
   \begin{eqnarray*}
     y' & = & -\frac{4}{t} y + 4 t \\
-    y' + \frac{4}{t} y & = & 4 t \\
-    p(t) & = & \frac{4}{t} \\
-    \int \frac{4}{t} ~ dt & = & 4 \ln(t) + K \\
-    e^{4 \ln(t) } & = & t^4
+    y' + \blueText{\frac{4}{t}} y & = & 4 t \\
+    \blueText{p(t)} & = & \blueText{\frac{4}{t}} \\
+    \int \blueText{\frac{4}{t}} ~ dt & = & 4 \ln(t) + K \\
+    \redText{e^{4 \ln(t) }} & = & \redText{t^4}
   \end{eqnarray*}
 
 \end{frame}
@@ -382,10 +390,10 @@
   \frametitle{Example - continues}
 
   \begin{eqnarray*}
-    t^4 y' + 4t^3& = & 4 t^5 \\
-    \frac{d}{dt} \lp t^4 y \rp & = & 4 t^5 \\
-    t^4 y & = & \int 4 t^5 ~ dt \\
-    t^4 y & = & \frac{4}{6} t^6 + C \\
+    \redText{t^4} y' + \blueText{4t^3} & = & 4 t^5 \\
+    \frac{d}{dt} \lp \redText{t^4} y \rp & = & 4 t^5 \\
+    \redText{t^4} y & = & \int 4 t^5 ~ dt \\
+    \redText{t^4} y & = & \frac{4}{6} t^6 + C \\
     y & = & \frac{2}{3} t^2 + \frac{C}{t^4}
   \end{eqnarray*}
 
@@ -399,15 +407,15 @@
   \vspace*{-3em}
   \begin{eqnarray*}
     y' & = & -\frac{1}{t} y + \frac{1}{t^2 -1} \\
-    y' + \frac{1}{t} y & = & \frac{1}{t^2 -1} \\
-    p(t) & = & \frac{1}{t}, ~~  \int \frac{1}{t} ~ dt  =  \ln(t) + k \\
-    \mu ( t ) = e^{\ln(t)} & = & t
+    y' + \blueText{\frac{1}{t}} y & = & \frac{1}{t^2 -1} \\
+    \blueText{p(t)} & = & \blueText{\frac{1}{t}}, ~~  \int \blueText{\frac{1}{t}} ~ dt  =  \ln(t) + k \\
+    u ( t ) = \redText{e^{\ln(t)}} & = & \redText{t}
   \end{eqnarray*}
 
   \begin{eqnarray*}
-    t y' + y & = & \frac{t}{t^2-1} \\
-    \frac{d}{dt} \lp t y \rp & = & \frac{t}{t^2-1} \\
-    t y & = & \int \frac{t}{t^2-1} ~ dt
+    \redText{t} y' + y & = & \frac{t}{t^2-1} \\
+    \frac{d}{dt} \lp \redText{t} y \rp & = & \frac{t}{t^2-1} \\
+    \redText{t} y & = & \int \frac{t}{t^2-1} ~ dt
 %  \end{eqnarray*}
 %\end{frame}
 %\begin{frame}
@@ -447,9 +455,9 @@
 
   Let $u=t^2-1$, and $du=2t$:
   \begin{eqnarray*}
-    ty & = & \int \half \frac{1}{u} ~ du, \\
-    t y & = & \half \ln(u) + C, \\
-    t y & = & \half \ln \lp t^2 - 1 \rp + C, \\
+    \redText{t}y & = & \int \half \frac{1}{u} ~ du, \\
+    \redText{t} y & = & \half \ln(u) + C, \\
+    \redText{t} y & = & \half \ln \lp t^2 - 1 \rp + C, \\
     y & = & \frac{\ln\lp t^2-1 \rp}{t} + \frac{C}{t}.
   \end{eqnarray*}
 
@@ -479,10 +487,9 @@
 
   \begin{eqnarray*}
     t y & = & \int \frac{\half}{t-1} + \frac{\half}{t+1} ~ dt \\
-    t y & = & \half \ln(t-1) + \half \ln(t+1) \\
-    y &  = & \frac{\half \ln(t-1) + \half \ln(t+1)}{t}
+    t y & = & \half \ln(t-1) + \half \ln(t+1) + C \\
+    y &  = & \frac{\half \ln(t-1) + \half \ln(t+1)}{t} + \frac{C}{t}
   \end{eqnarray*}
->>>>>>> 278de6b032600a7f55e724dc12cedc9e5989eded
 
 
 \end{frame}
@@ -507,11 +514,11 @@
   \frametitle{Example}
 
   \begin{eqnarray*}
-    y' & = & y^2 + 1, \\
-    \uncover<2->{ \frac{y'}{y^2+1} & = & 1,} \\
-    \uncover<3->{\int \frac{y'}{y^2+1} ~ dt  & = & \int 1 ~ dt, \\
-      \arctan(y) & = & t + C \\
-      y  & = & \tan(t+C) }
+    y' & = & y^2 + 4, \\
+    \uncover<2->{ \frac{y'}{y^2+4} & = & 1,} \\
+    \uncover<3->{\int \frac{y'}{y^2+4} ~ dt  & = & \int 1 ~ dt, \\
+      \half \arctan(y) & = & t + C \\
+      y  & = & \tan(2t+2C) }
   \end{eqnarray*}
 
 \end{frame}
