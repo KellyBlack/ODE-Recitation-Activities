@@ -57,7 +57,7 @@
 
 
      }\fi
-    
+
 
       \ifnum\value{clickerQuiz}=3{%
        Which differential equation is a linear equation?
@@ -96,7 +96,7 @@
     y' + p(t) y & = & f(t)
   \end{eqnarray*}
 
-  read pages 63-66 
+  read pages 63-66
 
   I will only cover integrating factors in class.
 
@@ -114,7 +114,7 @@
   \only<2->{
     Special case, $v(t)=\redText{e^{f(t)}}$.
     \begin{eqnarray*}
-      \frac{d}{dt} \lp u(t) \redText{e^{f(t)}} \rp & = & 
+      \frac{d}{dt} \lp u(t) \redText{e^{f(t)}} \rp & = &
       u'(t) \redText{e^{f(t)}} + u(t) \redText{f'(t) e^{f(t)}}.
     \end{eqnarray*}
   }
@@ -202,7 +202,7 @@
     y' + \blueText{2}y & = & t \\
     \blueText{p(t)} & = & \blueText{2}, \\
     \int \blueText{2} ~ dt & = & 2t + K, \\
-    \redText{e^{2t}} & & 
+    \redText{e^{2t}} & &
   \end{eqnarray*}
 
   \begin{eqnarray*}
@@ -219,7 +219,7 @@
 \iftoggle{clicker}{%
 \begin{frame}
   \frametitle{Clicker Quiz}
-    
+
       \ifnum\value{clickerQuiz}=1{%
 
         What is the integrating factor for the equation
@@ -293,12 +293,13 @@
     y' \blueText{- t}y & = & t^3 \\
     \blueText{p(t)} & = & \blueText{-t}, \\
     \int \blueText{-t} ~ dt & = & -\half t^2 + K \\
-    \redText{e^{-\half t^2}} & & 
+    \redText{e^{-\half t^2}} & &
   \end{eqnarray*}
 
   \begin{eqnarray*}
     y' \redText{e^{-\half t^2}} \blueText{ - t} \redText{e^{-\half t^2}} y & = & t^3 \redText{e^{-\half t^2}} \\
-    \frac{d}{dt} \lp y \redText{e^{-\half t^2}} \rp & = & \int t^3 \redText{e^{-\half t^2}} ~ dt \\
+    \frac{d}{dt} \lp y \redText{e^{-\half t^2}} \rp & = &  t^3 \redText{e^{-\half t^2}} \\
+     y \redText{e^{-\half t^2}}  & = & \int t^3 \redText{e^{-\half t^2}} ~ dt \\
     y \redText{e^{-\half t^2}} & = & -t^2 e^{-\half t^2} - 2 e^{-\half t^2} + C \\
     y & = & -t^2 - 2 + C e^{\half t^2}
   \end{eqnarray*}
@@ -309,7 +310,7 @@
 \iftoggle{clicker}{%
 \begin{frame}
   \frametitle{Clicker Quiz}
-    
+
       \ifnum\value{clickerQuiz}=1{%
 
         What is the integrating factor for the equation
@@ -409,7 +410,7 @@
     y' & = & -\frac{1}{t} y + \frac{1}{t^2 -1} \\
     y' + \blueText{\frac{1}{t}} y & = & \frac{1}{t^2 -1} \\
     \blueText{p(t)} & = & \blueText{\frac{1}{t}}, ~~  \int \blueText{\frac{1}{t}} ~ dt  =  \ln(t) + k \\
-    u ( t ) = \redText{e^{\ln(t)}} & = & \redText{t}
+    \text{integrating factor} \redText{e^{\ln(t)}} & = & \redText{t}
   \end{eqnarray*}
 
   \begin{eqnarray*}
@@ -442,7 +443,7 @@
 %  \begin{eqnarray*}
 %    t y & = & \int \frac{\half}{t-1} + \frac{\half}{t+1} ~ dt \\
 %    t y & = & \half \ln(t-1) + \half \ln(t+1) \\
-%    t y & 
+%    t y &
 %=  \half \ln(|t^2-1|) + C \\
 %    y &  = &  (\half \ln(|t^2-1|) + C )t^{-1}
  \end{eqnarray*}
@@ -453,12 +454,12 @@
 \begin{frame}
   \frametitle{Solving the Integral}
 
-  Let $u=t^2-1$, and $du=2t$:
+  Let $u=t^2-1$, and $du=2tdt$:
   \begin{eqnarray*}
     \redText{t}y & = & \int \half \frac{1}{u} ~ du, \\
     \redText{t} y & = & \half \ln(u) + C, \\
     \redText{t} y & = & \half \ln \lp t^2 - 1 \rp + C, \\
-    y & = & \frac{\ln\lp t^2-1 \rp}{t} + \frac{C}{t}.
+    y & = & \frac{\ln\lp t^2-1 \rp}{2t} + \frac{C}{t}.
   \end{eqnarray*}
 
 \end{frame}
@@ -517,8 +518,8 @@
     y' & = & y^2 + 4, \\
     \uncover<2->{ \frac{y'}{y^2+4} & = & 1,} \\
     \uncover<3->{\int \frac{y'}{y^2+4} ~ dt  & = & \int 1 ~ dt, \\
-      \half \arctan(y) & = & t + C \\
-      y  & = & \tan(2t+2C) }
+      \half \arctan(\half y) & = & t + C \\
+      y  & = & 2\tan(2t+2C) }
   \end{eqnarray*}
 
 \end{frame}
