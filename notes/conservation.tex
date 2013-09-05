@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 3, Day 1}
-\date{10 Sep 2012}
+\date{9 Sep 2013}
 
 \begin{frame}
   \titlepage
@@ -24,12 +24,12 @@
 \begin{frame}
   \frametitle{Example}
 
-  Brine is pumped into a tank at 50 liters per hour and has .5 kg per
-  liter of salt. The volume of the tank is 500 liters, and initially
-  the tank contains pure water. The well mixed solution is pumped out
-  at 50 liters per hour.
+  {\color{red}Brine is pumped into a tank at 50 liters per hour and has .5 kg per
+  liter of salt.} {\color{blue}The volume of the tank is 500 liters, and initially
+  the tank contains pure water.} {\color{purple}The well mixed solution is pumped out
+  at 50 liters per hour.}
 
-  What is the concentration of the tank at any time?
+  What is the concentration of the solution in the tank at any time?
 
 \end{frame}
 
@@ -44,9 +44,9 @@
   \uncover<3->{
 
     \begin{eqnarray*}
-      \Rightarrow ~ \frac{dA}{dt} & = & \mathrm{Rate ~ it ~ changes ~
+      \Rightarrow ~ \frac{dA}{dt} & = & \mathrm{{\color{red}Rate ~ it ~ changes} ~
         (kg/hr)} \\
-      & = & \mathrm{rate ~ in ~ - ~ rate ~ out}.
+      & = & \mathrm{{\color{red}rate ~ in ~ - ~ rate ~ out}}.
     \end{eqnarray*}
 
   }
@@ -57,8 +57,8 @@
 \begin{frame}
 
   \begin{eqnarray*}
-    \mathrm{rate~in~kg/hr} & = & \uncover<2->{.5 \frac{kg}{l} \cdot 50 \frac{l}{hour} \\
-    & = & 25 \frac{kg}{hour}}
+    \mathrm{rate~in~kg/hr} & = & \uncover<2->{.5 \frac{kg}{l} \cdot 50 \frac{l}{hr} \\
+    & = & 25 \frac{kg}{hr}}
   \end{eqnarray*}
 
   \uncover<3->{
@@ -113,12 +113,14 @@
 \begin{frame}
   \frametitle{Example}
 
-  A 2000 liter tank initially contains water with a solution of 0.2 kg
-  per liter of salt. Brine is pumped in at a rate of 100 liters per
-  hour with a concentration of 0.3 kg per liter. The well mixed
-  solution is pumped out at a rate of 100 liters per hour. Determine
+  {\color{red}A 2000 liter tank initially contains water with a solution of 0.2 kg
+  per liter of salt.} {\color{blue} Brine is pumped in at a rate of 100 liters per
+  hour with a concentration of 0.3 kg per liter.} {\color{purple}The well mixed
+  solution is pumped out at a rate of 100 liters per hour.} Determine
   the amount of salt in the tank at any time.
 
+  \vspace{1cm}
+  Let $A(t)$ be the amount of salt in the tank at time $t$.
 \end{frame}
 
 
@@ -158,6 +160,16 @@
      }\fi
 
       \ifnum\value{clickerQuiz}=3{%
+    What is the rate that salt flows into the tank?
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & 10000 kg/hr. \\
+         B: & 333.33 kg/hr. \\
+         C: & 30 kg/hr. \\
+         D: & 0.3 kg/hr. \\
+       \end{tabular}
 
      }\fi
 
@@ -205,6 +217,17 @@
      }\fi
 
       \ifnum\value{clickerQuiz}=3{%
+        What is the rate that salt flows out of the tank?
+
+       \vfill
+
+       \begin{tabular}{l@{\hspace{3em}}l}
+         A: & A/20  kg/hr. \\
+         B: & A/100 kg/hr. \\
+         C: & 1/20  kg/hr. \\
+         D: & 100   kg/hr. \\
+       \end{tabular}
+
 
      }\fi
 
@@ -271,11 +294,11 @@
 \begin{frame}
   \frametitle{Example}
 
-  A 500 liter tank is initially full and contains fresh water. Brine
-  with a concentration of 0.1 kg per liter is pumped into the tank at
-  a rate of 20 liters per hour. The well mixed solution is pumped out
-  at a rate of 30 liters per hour. What will the concentration be at
-  the moment the tank is half full?
+  {\color{red}A 500 liter tank is initially full and contains fresh water.} 
+  {\color{blue}Brine with a concentration of 0.1 kg per liter is pumped into 
+  the tank at a rate of 20 liters per hour.} {\color{purple}The well mixed 
+  solution is pumped out at a rate of 30 liters per hour.}  
+  What will the concentration be at the moment the tank is half full?
 
 \end{frame}
 
@@ -353,13 +376,13 @@
 \begin{frame}
   \frametitle{Newton's Law of Cooling}
 
-  the rate of change of the temperature of an object is proportional
-  to the difference in the objects temperature and the difference in
-  the object's surroundings.
+  {\color{red}The rate of change of the temperature of an object is 
+  proportional to the difference between the temperature of the 
+  object and the temperature of the surroundings.}
 
-  Let M be the ambient temperature
+  Let M be the ambient (the surroundings) temperature.  
 
-  Let $T(t)$ be the temperature
+  Let $T(t)$ be the temperature of the object at time $t$. 
 
   \begin{eqnarray*}
     T'(t) & = & k (M-T)
@@ -373,10 +396,9 @@
 \begin{frame}
   \frametitle{Example}
 
-  A brick is pulled out of a furnace and is 350 degrees Celsius. It is
-  placed outside where the temperature is 20 degrees Celsius. After
-  one hour the temperature of the brick is 280 degrees Celsius. What
-  will the temperature of the brick be after 6 hours?
+  {\color{red}A brick is pulled out of a furnace and is 350 degrees Celsius.} 
+  {\color{blue}It is placed outside where the temperature is 20 degrees Celsius.} 
+  {\color{purple}After one hour the temperature of the brick is 280 degrees Celsius.}  What will the temperature of the brick be after 6 hours?
 
   \uncover<2->{
     
@@ -398,14 +420,14 @@
   \begin{eqnarray*}
     T' & = & k (20-T) \\
     \frac{T'}{20-T} & = & k \\
-    -\ln(20-T) & = & kt + C \\
-    T & = & 20 - A e^{-kt}
+    -\ln(T-20) & = & kt + C,  \text{since} T > 20\\
+    T & = & 20 + A e^{-kt}
   \end{eqnarray*}
 
   \begin{eqnarray*}
     T(0) & = & 350 \\
-    & = & 20 - A \\
-    A & = & -330, \\
+    & = & 20 + A \\
+    A & = & 330, \\
     T(t) & = & 20 + 330 e^{-kt}
   \end{eqnarray*}
 
@@ -432,17 +454,18 @@
 \begin{frame}
   \frametitle{Example}
 
-  A cup of coffee is found. The temperature when it is found is 70
-  degrees Celsius. Thirty minutes later it's temperature is 65 degrees
-  Celsius. The temperature in the room is 18 degrees Celsius. When the
-  coffee was poured the temperature was 85 degrees Celsius. When was
-  the coffee poured?
+  A cup of coffee is found. {\color{red}The temperature when it is found is 70
+  degrees Celsius.} {\color{blue}Thirty minutes later its temperature is 65 degrees
+  Celsius.} {\color{purple}The temperature in the room is 18 degrees Celsius.} 
+  {\color{orange}When the coffee was poured the temperature was 85 degrees Celsius.} 
+  When was the coffee poured?
 
   \uncover<2->{
     
     \begin{eqnarray*}
       t_0 & = & \mathrm{time~when~the~coffee~was~found.} \\
       M & = & 18 \\
+      T(0) & = & 85   \\
       T(t_0) & = & 70 \\
       T(t_0+30) & = & 65.
     \end{eqnarray*}
@@ -457,8 +480,8 @@
   \begin{eqnarray*}
     T' & = & k(18-T) \\
     \frac{T'}{18-T} & = & k \\
-    -\ln(18-T) & = & kt + C \\
-    T & = & 18 - A e^{-kt} 
+    -\ln(T-18) & = & kt + C \\
+    T & = & 18 + A e^{-kt} 
   \end{eqnarray*}
 
 \end{frame}
@@ -468,15 +491,15 @@
   At time $t_0$:
   \begin{eqnarray*}
     T(t_0) & = & 70 \\
-    & = & 18 - Ae^{-kt_0} \\
-    \Rightarrow Ae^{-kt_0} & = & -52
+    & = & 18 + Ae^{-kt_0} \\
+    \Rightarrow Ae^{-kt_0} & = & 52
   \end{eqnarray*}
 
   At time $t_0+30$:
   \begin{eqnarray*}
     A(t_0+30) & = & 65 \\
-    & = & 18 - A e^{-kt_0-30k} \\
-    & = & 18 - A e^{-kt_0} e^{-30k} \\
+    & = & 18 + A e^{-kt_0-30k} \\
+    & = & 18 + A e^{-kt_0} e^{-30k} \\
     & = & 18 + 52 e^{30k} \\
     \Rightarrow k & = & -\frac{1}{30} \ln\lp\frac{47}{52}\rp.
   \end{eqnarray*}
@@ -488,8 +511,8 @@
 
   \begin{eqnarray*}
     T(0) & = & 85 \\
-    & = & 18 - A e^{0} \\
-    \Rightarrow A & = & -67
+    & = & 18 + A e^{0} \\
+    \Rightarrow A & = & 67
   \end{eqnarray*}
 
   \begin{eqnarray*}
