@@ -12,7 +12,7 @@
 
 \begin{frame}
   \frametitle{Outline}
-  \tableofcontents[pausesection,hideothersubsections]
+  \tableofcontents[hideothersubsections]
 
   Section 2.4 of the book.
 \end{frame}
@@ -33,6 +33,13 @@
 
 \end{frame}
 
+
+\begin{frame}{Collect the Given Information}
+
+  \only<1>{\includegraphics[width=8cm]{img/singleTank}}
+  \only<2>{\includegraphics[width=8cm]{img/singleTankAnnotated}}
+  
+\end{frame}
 
 \begin{frame}
   \frametitle{Conservation of Mass}
@@ -64,9 +71,9 @@
   \uncover<3->{
 
     \begin{eqnarray*}
-      \mathrm{rate~out~kg/hr} & = & \uncover<4->{A~kg \cdot
+      \mathrm{rate~out~kg/hr} & = & \uncover<4->{A(t)~kg \cdot
         \frac{1}{500~l} \cdot 50 \frac{l}{hr} \\
-        & = & \frac{1}{10}A}
+        & = & \frac{1}{10}A(t)}
     \end{eqnarray*}
 
   }
@@ -74,7 +81,7 @@
   \uncover<5->{
 
     \begin{eqnarray*}
-      A' & = & 25 - \frac{1}{10} A, \\
+      A'(t) & = & 25 - \frac{1}{10} A(t), \\
       A(0) & = & 0
     \end{eqnarray*}
 
@@ -397,8 +404,11 @@
   \frametitle{Example}
 
   {\color{red}A brick is pulled out of a furnace and is 350 degrees Celsius.} 
-  {\color{blue}It is placed outside where the temperature is 20 degrees Celsius.} 
-  {\color{purple}After one hour the temperature of the brick is 280 degrees Celsius.}  What will the temperature of the brick be after 6 hours?
+  {\color{blue}It is placed outside where the air temperature is 20 degrees Celsius.} 
+  {\color{purple}After one hour the temperature of the brick is 280
+    degrees Celsius.}  
+  What will the temperature of the brick be after 6 hours from when it
+  was first pulled out of the furnace?
 
   \uncover<2->{
     
