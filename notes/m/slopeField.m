@@ -93,7 +93,7 @@ for numt = 0:1:number(1),
 
         % Calc. the slope of the indicator. This is from the ODE
         % YOU NEED TO CHANGE THIS!!!! (It is a scalar)
-        slope = 2*y*(3-y);
+        slope = y*y-5;
         
         
         if((abs(slope) > 1.0e6) || (abs(slope) == Inf) || (slope == NaN)),
