@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 3, Day 2}
-\date{12 Sep 2012}
+\date{11 September 2013}
 
 \begin{frame}
   \titlepage
@@ -12,7 +12,7 @@
 
 \begin{frame}
   \frametitle{Outline}
-  \tableofcontents[pausesection,hideothersubsections]
+  \tableofcontents[hideothersubsections]
 
   Section 2.5 in book.
 \end{frame}
@@ -111,10 +111,11 @@
      }\fi
 
       \ifnum\value{clickerQuiz}=3{%
-      Look at the slope field:
+        Given the slope field for the equation
         \begin{eqnarray*}
-          x' & = & x^2-4?
+          x' & = & x^2-5?,
         \end{eqnarray*}
+        determine if the equation is stable at $x=-\sqrt{5}$.
 
 
         \begin{columns}
@@ -150,18 +151,44 @@
 \begin{frame}
   \frametitle{Autonomous DEs}
 
-  A differential equation is \textit{autonomous} if it can be
-  expressed in the form
-  \begin{eqnarray*}
-    y' & = & f(y).
-  \end{eqnarray*}
-
+  \begin{definition}
+    A differential equation is \redText{\textit{autonomous}} if it can be
+    expressed in the form
+    \begin{eqnarray*}
+      y' & = & f(y).
+    \end{eqnarray*}
+  \end{definition}
   i.e. the DE does not have a time term explicitly given in the
   equation.
 
 
 \end{frame}
 
+
+\begin{frame}{Example}
+  
+  \begin{columns}
+    \column{.5\textwidth} 
+
+    Autonomous:
+    \begin{itemize}
+    \item $y'=y$ 
+    \item $y'=y^2+1$
+    \item $y'=e^{-y}$.
+    \end{itemize}
+
+    \column{.5\textwidth} 
+
+    Not Autonomous:
+    \begin{itemize}
+    \item $y'=y+t$ 
+    \item $y'=\frac{y^2+1}{t}$
+    \item $y'=e^{t-y}$.
+    \end{itemize}
+
+  \end{columns}
+
+\end{frame}
 
 \begin{frame}
   \frametitle{The slope only depends on y!}
@@ -186,9 +213,11 @@
 \begin{frame}
   \frametitle{The Phase Line}
 
-  The phase line for a differential equation is a vertical line that
-  indicates whether the slope is positive, negative, or zero for
-  different values of $y$.
+  \begin{definition}
+    The phase line for a differential equation is a vertical line that
+    indicates whether the slope is positive, negative, or zero for
+    different values of $y$.
+  \end{definition}
 \end{frame}
 
 \begin{frame}
@@ -355,7 +384,7 @@
       -\ln\lp 1 - \frac{y}{L}\rp + \ln(y) & = & rt + C \\
       \ln\lp\frac{y}{1 - \frac{y}{L}}\rp & = & rt + C \\
       \frac{y}{1 - \frac{y}{L}} & = & k e^{rt} \\
-      \Rightarrow y & = & \frac{k e^{rt}}{1 + \frac{1}{L} k e^{rt}}  
+      \Rightarrow y & = & \frac{k e^{rt}}{1 + \frac{k}{L} k e^{rt}}  
   \end{eqnarray*}
 
 
@@ -368,6 +397,110 @@
 
 \end{frame}
 
+\begin{frame}{Project}
 
+  \begin{tabular}{rclcl}
+    rate of change & $=$ & rate in & $-$ & rate out.
+  \end{tabular}
+
+  \uncover<2->{
+
+    \vfill 
+
+    We look at the population of fish in an area. Modeling
+    assumptions: 
+
+    \vfill
+
+    \begin{tabular}{ll}
+      Small population: & linear grown rate. \\
+      Large population: & Quadratic death rate.
+    \end{tabular}
+
+    \vfill
+    This is another way to think about the logistic equation!
+    }
+  
+\end{frame}
+
+
+\begin{frame}{The terms:}
+
+  \begin{tabular}{ll}
+    Population: & $x(t)$ \\
+    Parameter:  & A constant value that will be defined later.
+  \end{tabular}
+  
+\end{frame}
+
+
+\begin{frame}{The Model}
+
+  \begin{eqnarray*}
+    \dfrac{dx}{dt} =  bx(t) - (m+cx(t))x(t) - sx(t),
+  \end{eqnarray*}
+  where we assume that $r = b-m$ is a positive number.
+
+  \vfill
+
+  Here we include one other term, a harvest function, $h(t) = s x(t)$. The
+  idea is that the harvest is proportional to how many fish are
+  present.
+ 
+\end{frame}
+
+\begin{frame}{Goals}
+
+  \begin{enumerate}
+  \item Take part in a meaningful writing exercise!
+  \item Your write up should include the following:
+    \begin{itemize}
+    \item Motivate the model itself and justify the choices made.
+    \item Determine the long term behavior of the solution to the
+      differential equation.
+    \item Determine the stability characteristics of the solution to the
+      equation. 
+    \item Provide a recommendation for the best value of the harvest
+      parameter, $s$, and justify your recommendation.
+    \item Determine the solution to the equation and determine if it
+      satisfies the predicted behaviors given above.
+    \end{itemize}
+  \end{enumerate}
+  
+\end{frame}
+
+\begin{frame}{Plagiarism}
+
+  \redText{You are expected to submit your own work for this project.}
+  If you make use of an idea from another source you are expected to
+  provide a citation. If you copy the words from another source you
+  are expected to put them in quotes and provide a citation. If you
+  make use of a figure or diagram from another source you are expected
+  to provide a citation. To do otherwise is plagiarism.
+
+  \vfill
+
+  \redText{Any submission found to plagiarize another work will
+    receive a zero.}
+
+  \vfill
+
+  You can and are expected to consult written sources or sources on
+  the web. Consultation of any living person is limited to an
+  instructor for this course, a teaching assistant for this course, or
+  your partners. You are expected to consult with the faculty and
+  staff at the writing center, but that should be limited to the
+  structure of your submission and the writing found in your paper.
+
+\end{frame}
+
+\begin{frame}{Read the Description!}
+
+  It is on moodle.
+
+  Read it for the details. We will use when grading for the
+  guidelines.
+  
+\end{frame}
 
 % LocalWords:  Clarkson pausesection hideothersubsections

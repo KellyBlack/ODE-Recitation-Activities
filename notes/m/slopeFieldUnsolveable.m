@@ -124,7 +124,7 @@ for numt = 0:1:number(1),
     end
     
 end
-print -dpng 'week3-D3SlopeExample' '-r 800'
+print -dpng 'week3-D3SlopeExample.png' '-r 1200'
 
 % Add an approximation
 starting = [1.2,-0.2,-3.0,-5.0];
@@ -146,4 +146,4 @@ for initial=starting,
     end
     plot(time,y,'r','lineWidth',2.0);
 end
-print -dpng 'week3-D3SlopeExampleSolutions' '-r 800'
+print -dpng 'week3-D3SlopeExampleSolutions' '-r 1200'
