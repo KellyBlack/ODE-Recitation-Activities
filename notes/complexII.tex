@@ -3,8 +3,8 @@
 \section{Complex Numbers II}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 5, Day 1}
-\date{21 Sep 2012}
+\subtitle{Math 232 - Week 4, Day 2}
+\date{18 September 2013}
 
 \begin{frame}
   \titlepage
@@ -12,13 +12,14 @@
 
 \begin{frame}
   \frametitle{Outline}
-  \tableofcontents[pausesection,hideothersubsections]
+  \tableofcontents[currentsection]
 \end{frame}
 
 \subsection{Euler's Formula}
 \begin{frame}
-  \frametitle{Euler's Formula}
+  \frametitle{Important Results From Previous Meeting}
 
+  Euler's formula:
   \begin{eqnarray*}
     e^{it} & = & \cos(t) + i\sin(t)\\
     e^{i\theta} & = & \cos(\theta) + i\sin(\theta)
@@ -34,32 +35,68 @@
 
 \end{frame}
 
+\begin{frame}{Different Forms}
+
+  \begin{definition}
+    The \redText{rectangular form} for a complex number is 
+    \begin{eqnarray*}
+      z & = & a + bi.
+    \end{eqnarray*}
+  \end{definition}
+
+  \begin{definition}
+    The \redText{polar form} for a complex number is 
+    \begin{eqnarray*}
+      z & = & r\lp \cos(\theta) + \sin(\theta) i \rp.
+    \end{eqnarray*}
+  \end{definition}
+
+  \begin{definition}
+    The \redText{Euler form} for a complex number is 
+    \begin{eqnarray*}
+      z & = & e^{i\theta}.
+    \end{eqnarray*}
+  \end{definition}
+
+  
+\end{frame}
+
 
 \begin{frame}
   \frametitle{Example}
 
   \begin{eqnarray*}
-    z & = & 2 + 2i \\
-    \uncover<2->
-    {%
-       & = & 2\sqrt{2} \cos(\pi/4) + i 2\sqrt{2} \sin(\pi/4) \\
-       & = & 2\sqrt{2} \lp \cos(\pi/4) + i\sin(pi/4) \rp \\
-       & = & 2\sqrt{2} e^{i\pi/4}
-    }
+    z & = & -2 + 2i \\
   \end{eqnarray*}
+
+  \begin{columns}
+    \column{.25\textwidth}
+    \uncover<2->%
+    {
+      \includegraphics[width=8em]{img/complexQuadTwo}
+    } 
+    \column{.75\textwidth}
+    \uncover<3-> {%
+      \begin{eqnarray*}
+        -2 + 2i & = & 2\sqrt{2} \cos(3\pi/4) + i 2\sqrt{2} \sin(3\pi/4) \\
+        & = & 2\sqrt{2} \lp \cos(3\pi/4) + i\sin(3\pi/4) \rp \\
+        & = & 2\sqrt{2} e^{i3\pi/4}
+      \end{eqnarray*}
+    }
+  \end{columns}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Example}
-  \begin{eqnarray*}
-    z & = & \sqrt{3} + i \\
-    \uncover<2->
-    {%
-         & = & 2 \cos\lp\frac{\pi}{6}\rp + i 2 \sin\lp\frac{\pi}{6}\rp, \\
-         & = & 2 e^{i\frac{\pi}{6}}.
-    }
-  \end{eqnarray*}
-\end{frame}
+%\begin{frame}
+%  \frametitle{Example}
+%  \begin{eqnarray*}
+%    z & = & \sqrt{3} + i \\
+%    \uncover<2->
+%    {%
+%         & = & 2 \cos\lp\frac{\pi}{6}\rp + i 2 \sin\lp\frac{\pi}{6}\rp, \\
+%         & = & 2 e^{i\frac{\pi}{6}}.
+%    }
+%  \end{eqnarray*}
+%\end{frame}
 
 \iftoggle{clicker}{%
 \begin{frame}
@@ -182,6 +219,17 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}{The Original Problem}
+
+  Recall, we want to solve
+  \begin{eqnarray*}
+    z^n & = & a + bi, \\
+        & = & r e^{i\theta},
+  \end{eqnarray*}
+  for $z$.
+  
+\end{frame}
+
 \begin{frame}
   If 
   \begin{eqnarray*}
@@ -242,14 +290,14 @@
       2 + 2i & = & 2\sqrt{2} e^{i\pi/4}
     \end{eqnarray*}
 
-    Let $z=re^{i\theta}$ so $z^3=r^3e^{i3\theta}$:
+    Let $z=Re^{i\alpha}$ so $z^3=R^3e^{i3\alpha}$:
     \begin{eqnarray*}
-      r^3e^{i3\theta} & = & 2\sqrt{2} e^{i\pi/4}, ~ 2\sqrt{2} e^{i9\pi/4}, ~ 2\sqrt{2} e^{i17\pi/4}
+      R^3e^{i3\alpha} & = & 2\sqrt{2} e^{i\pi/4}, ~ 2\sqrt{2} e^{i9\pi/4}, ~ 2\sqrt{2} e^{i17\pi/4}
     \end{eqnarray*}
 
     \begin{eqnarray*}
       r &  = & (2\sqrt{2})^{1/3} \\
-      \theta & = & \frac{\pi}{12}, ~ \frac{9\pi}{12}, ~ \frac{17\pi}{12} \\
+      \alpha & = & \frac{\pi}{12}, ~ \frac{9\pi}{12}, ~ \frac{17\pi}{12} \\
       z & = &  (2\sqrt{2})^{1/3} e^{i\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i9\pi/12}, ~ (2\sqrt{2})^{1/3} e^{i17\pi/12}
     \end{eqnarray*}
 
@@ -352,10 +400,10 @@
 
 
         \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
-          A: &  $\sqrt{2}e^{i\frac{\pi}{3}}$, & $\sqrt{2}e^{i\frac{7\pi}{3}}$ \\
-          B: &  $\sqrt{2}e^{i\frac{\pi}{6}}$, & $\sqrt{2} e^{i\frac{13\pi}{6}}$ \\
-          C: &  $2e^{i\frac{\pi}{3}}$, & $2e^{i\frac{7\pi}{3}}$ \\
-          D: &  $2e^{i\frac{\pi}{6}}$, & $2e^{i\frac{13\pi}{6}}$ \\
+          A: &  $\sqrt{2}e^{i\frac{\pi}{6}}$, & $\sqrt{2}e^{i\frac{7\pi}{6}}$ \\
+          B: &  $\sqrt{2}e^{i\frac{\pi}{12}}$, & $\sqrt{2} e^{i\frac{13\pi}{12}}$ \\
+          C: &  $2e^{i\frac{\pi}{6}}$, & $2e^{i\frac{7\pi}{6}}$ \\
+          D: &  $2e^{i\frac{\pi}{12}}$, & $2e^{i\frac{13\pi}{12}}$ \\
         \end{tabular}
 
      }\fi
@@ -368,6 +416,10 @@
 
 }
 
+
+\subsection{Other Material (if time - but read on your own!)}
+
+\subsubsection{Important Properties}
 
 \begin{frame}
   \frametitle{Important Properties}
@@ -410,6 +462,7 @@
 
 \end{frame}
 
+\subsubsection{General Exponentials}
 
 \begin{frame}
   \frametitle{Another thing...}
@@ -439,7 +492,7 @@
 
 \end{frame}
 
-\subsection{Derivatives and Integrals}
+\subsubsection{Derivatives and Integrals}
 
 \begin{frame}
   \frametitle{Derivatives and Integrals}
@@ -479,7 +532,8 @@
 
 \end{frame}
 
-\subsection{What does this have to do with DEs?}
+
+\subsubsection{What does this have to do with DEs?}
 
 \begin{frame}
   \frametitle{Why do we care?}
