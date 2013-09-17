@@ -3,8 +3,8 @@
 \section{Complex Numbers}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 4, Day 2}
-\date{19 Sep 2012}
+\subtitle{Math 232 - Week 4, Day 1}
+\date{16 September 2013}
 
 \begin{frame}
   \titlepage
@@ -12,7 +12,7 @@
 
 \begin{frame}
   \frametitle{Outline}
-  \tableofcontents[pausesection,hideothersubsections]
+  \tableofcontents[currentsection]
 \end{frame}
 
 
@@ -22,9 +22,9 @@
 \begin{frame}
   \frametitle{The Letter i}
 
-  Definition: 
+  Definition:
   \begin{eqnarray*}
-    i & = & \sqrt{-1} 
+    i & = & \sqrt{-1}
   \end{eqnarray*}
 
   Which means....
@@ -38,11 +38,14 @@
 \begin{frame}
   \frametitle{Complex Numbers}
 
-  Definition: A complex number is a  number that can be expressed as
-  \begin{eqnarray*}
-    a + bi,
-  \end{eqnarray*}
-  where $a$ and $b$ are real numbers.
+  \begin{definition}
+    A \redText{complex number} is a number that can be expressed as
+    \begin{eqnarray*}
+      a + bi,
+    \end{eqnarray*}
+    where $a$ and $b$ are real numbers.
+  \end{definition}
+
 
 \end{frame}
 
@@ -64,17 +67,17 @@
   \frametitle{Addition}
 
   \begin{eqnarray*}
-    (3+2i) + (5-7i) & = & 
+    (3+2i) + (5-7i) & = &
     \uncover<2->{%
       (3+5) + (2-7)i \\
       & = & 8 - 5i\\
     }
     ~ \\
-    (4-2i) + (6-3i) & = & 
+    (4-2i) + (6-3i) & = &
     \uncover<3->{%
       (4+6) + (-2-3)i \\
       & = & 10 - 5i
-    } 
+    }
   \end{eqnarray*}
 
 \end{frame}
@@ -83,7 +86,7 @@
   \frametitle{Multiplication}
 
   \begin{eqnarray*}
-    (3+2i)(5-7i) & = & 
+    (3+2i)(5-7i) & = &
     \uncover<2->{%
       15 + 10i - 21i - 14 i^2 \\
       & = & 15 - 11i + 14 \\
@@ -92,7 +95,7 @@
   \end{eqnarray*}
 
   \begin{eqnarray*}
-    (4-2i)(6+3i) & = & 
+    (4-2i)(6+3i) & = &
     \uncover<3->{%
       24 - 12i + 12 i - 6i^2 \\
       & = & 24 + 6 \\
@@ -108,14 +111,21 @@
 \begin{frame}
   \frametitle{The Complex Conjugate}
 
-  Definition: The complex conjugate of $z$, denoted $\bar{z}$, is
-  found by reversing the sign of the imaginary part.
+  \begin{definition}
+    The \redText{complex conjugate} of $z$, denoted $\bar{z}$, is
+    found by reversing the sign of the imaginary part.
+  \end{definition}
+
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> 5aff3be819a5e3e45e415346143eb989565538b4
   Example:
   For each of the numbers given below:
   \begin{eqnarray*}
     z_1 & = & 3 + 2i, \\
-    z_2 & = & 5 - 6i, 
+    z_2 & = & 5 - 6i,
   \end{eqnarray*}
   the complex conjugates are the following:
   \begin{eqnarray*}
@@ -143,7 +153,7 @@
   \frametitle{So What?}
 
   \begin{eqnarray*}
-    \frac{5-3i}{2+3i} & = & 
+    \frac{5-3i}{2+3i} & = &
     \uncover<2->{%
       \frac{(5-3i)(2-3i)}{(2+3i)(2-3i)} \\
       & = & \frac{10-6i-15i+9i^2}{4+6i-6i-9i^2} \\
@@ -158,7 +168,7 @@
   \frametitle{Example}
 
   \begin{eqnarray*}
-    \frac{2+3i}{5-3i} & = & 
+    \frac{2+3i}{5-3i} & = &
     \uncover<2->{%
       \frac{(2+3i)(5+3i)}{(5-3i)(5+3i)} \\
       & = & \frac{10+15i+6i+9i^2}{25-15i+15i-9i^2} \\
@@ -176,7 +186,7 @@
 
   \only<1>{\centerline{\includegraphics[width=4cm]{img/complexPlane}}}
   \only<2>{\centerline{\includegraphics[width=4cm]{img/complexPlanePolar}}}
-  
+
   \begin{eqnarray*}
     a & = & r\cos(\theta) \\
     b & = & r\sin(\theta) \\
@@ -192,7 +202,11 @@
   \frametitle{Example}
 
   \begin{eqnarray*}
-    x & = &  2 + 2i
+<<<<<<< HEAD
+    z & = & 2 + 2i
+=======
+    z & = &  2 + 2i
+>>>>>>> 5aff3be819a5e3e45e415346143eb989565538b4
   \end{eqnarray*}
 
   \uncover<2->
@@ -202,7 +216,7 @@
       r & = & \sqrt{2^2+2^2}, \\
         & = & 2\sqrt{2}, \\
       \tan(\theta) & = & \frac{2}{2}, \\
-      \theta       & = & \frac{\pi}{4}.
+      \theta & = & \frac{\pi}{4}.
     \end{eqnarray*}
 
   }
@@ -213,7 +227,7 @@
 \iftoggle{clicker}{%
 \begin{frame}
   \frametitle{Clicker Quiz}
-    
+
       \ifnum\value{clickerQuiz}=1{%
 
         Determine the radius and angle for the following complex number:
@@ -223,10 +237,10 @@
 
 
           \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
-            A: &  $r=2$, & $\theta= -\pi/4$ \\
-            B: &  $r=2$, & $\theta= 3\pi/4$ \\
-            C: &  $r=2\sqrt{2}$, & $\theta= -\pi/4$ \\
-            D: &  $r=2\sqrt{2}$, & $\theta= 3\pi/4$ \\ 
+            A: & $r=2$, & $\theta= -\pi/4$ \\
+            B: & $r=2$, & $\theta= 3\pi/4$ \\
+            C: & $r=2\sqrt{2}$, & $\theta= -\pi/4$ \\
+            D: & $r=2\sqrt{2}$, & $\theta= 3\pi/4$ \\
           \end{tabular}
 
      }\fi
@@ -240,15 +254,36 @@
 
 
           \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
-            A: &  $r=2$, & $\theta= -\pi/4$ \\
-            B: &  $r=2$, & $\theta= 5\pi/4$ \\
-            C: &  $r=2\sqrt{2}$, & $\theta= -\pi/4$ \\
-            D: &  $r=2\sqrt{2}$, & $\theta= 5\pi/4$ \\ 
+            A: & $r=2$, & $\theta= -\pi/4$ \\
+            B: & $r=2$, & $\theta= 5\pi/4$ \\
+            C: & $r=2\sqrt{2}$, & $\theta= -\pi/4$ \\
+            D: & $r=2\sqrt{2}$, & $\theta= 5\pi/4$ \\
           \end{tabular}
 
      }\fi
 
       \ifnum\value{clickerQuiz}=3{%
+
+        Determine the radius and angle for the following complex number:
+          \begin{eqnarray*}
+            z & = & -2 + 2i
+          \end{eqnarray*}
+
+
+          \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
+<<<<<<< HEAD
+            A: & $r=2$, & $\theta= -\pi/4$ \\
+            B: & $r=2$, & $\theta= 3\pi/4$ \\
+            C: & $r=2\sqrt{2}$, & $\theta= -\pi/4$ \\
+            D: & $r=2\sqrt{2}$, & $\theta= 3\pi/4$ \\
+=======
+            A: &  $r=2$, & $\theta= -\pi/4$ \\
+            B: &  $r=2$, & $\theta= 3\pi/4$ \\
+            C: &  $r=2\sqrt{2}$, & $\theta= -\pi/4$ \\
+            D: &  $r=2\sqrt{2}$, & $\theta= 3\pi/4$ \\ 
+>>>>>>> 5aff3be819a5e3e45e415346143eb989565538b4
+          \end{tabular}
+
 
      }\fi
 
@@ -260,14 +295,14 @@
 
 }
 
-    
+
 
 \subsection{Euler's Formula}
 
 \begin{frame}
   \frametitle{A Differential Equation}
 
-  Note: $i$ is a constant.
+  \textbf{Note: \redText{$i$ is a constant.}}
   \begin{eqnarray*}
     \Rightarrow \frac{d}{dt} e^{it} & = & i e^{it}.
   \end{eqnarray*}
@@ -276,7 +311,7 @@
   \begin{eqnarray*}
     y(t) & = & e^{it}
   \end{eqnarray*}
-  is a solution to the differential equation
+  is \textbf{\redText{the}} solution to the differential equation
   \begin{eqnarray*}
     y' & = & iy, \\
     y(0) & = & 1.
@@ -304,16 +339,19 @@
 \begin{frame}
   \frametitle{Euler's Formula}
 
+  \begin{block}{Euler's Formula}
+    \begin{eqnarray*}
+      e^{it} & = & \cos(t) + i\sin(t)
+    \end{eqnarray*}
+  \end{block}
+
+  \vfill
+
+  An alternative way to express Euler's Formula:
   \begin{eqnarray*}
-    e^{it} & = & \cos(t) + i\sin(t)
+    e^{i\theta} & = & \cos(\theta) + i\sin(\theta).
   \end{eqnarray*}
 
-  or
-
-  \begin{eqnarray*}
-    e^{i\theta} & = & \cos(\theta) + i\sin(\theta)
-  \end{eqnarray*}
-  
 \end{frame}
 
 \begin{frame}
@@ -327,13 +365,21 @@
     & = & r e^{i\theta}
   \end{eqnarray*}
 
-  This is the ``Euler form'' for the complex number.
+
+  \begin{definition}
+    The \redText{Euler Form} for a complex number is
+    \begin{eqnarray*}
+      z & = & r e^{i\theta},
+    \end{eqnarray*}
+    where $r$ is the radius and $\theta$ is the angle from the polar
+    form of the number.
+  \end{definition}
 
 \end{frame}
 
 \begin{frame}
   \frametitle{Example}
-  
+
   \begin{eqnarray*}
     z & = & 2 + 2i \\
     \uncover<2->
@@ -350,7 +396,7 @@
 \begin{frame}
   \frametitle{Example}
   \begin{eqnarray*}
-    z & = & \sqrt{3} + i  \\
+    z & = & \sqrt{3} + i \\
     \uncover<2->
     {%
          & = & 2 \cos\lp\frac{\pi}{6}\rp + i 2 \sin\lp\frac{\pi}{6}\rp, \\
@@ -363,16 +409,16 @@
 \iftoggle{clicker}{%
 \begin{frame}
   \frametitle{Clicker Quiz}
-    
+
       \ifnum\value{clickerQuiz}=1{%
 
         Express -1 in Euler form.
 
           \begin{tabular}{l@{\hspace{3em}}l}
-            A: &  $e^{-i\pi}$, \\
-            B: &  $e^{-i\pi/2}$, \\
-            C: &  $e^{-i}$, \\
-            D: &  $-1$, \\ 
+            A: & $e^{-i\pi}$, \\
+            B: & $e^{-i\pi/2}$, \\
+            C: & $e^{-i}$, \\
+            D: & $-1$, \\
           \end{tabular}
 
      }\fi
@@ -382,16 +428,26 @@
         Express -1 in Euler form.
 
           \begin{tabular}{l@{\hspace{3em}}l}
-            A: &  $e^{-i\pi}$, \\
-            B: &  $e^{-i\pi/2}$, \\
-            C: &  $e^{-i}$, \\
-            D: &  $-1$, \\ 
+            A: & $e^{-i\pi}$, \\
+            B: & $e^{-i\pi/2}$, \\
+            C: & $e^{-i}$, \\
+            D: & $-1$, \\
           \end{tabular}
 
 
      }\fi
 
       \ifnum\value{clickerQuiz}=3{%
+
+        Express -1 in Euler form.
+
+          \begin{tabular}{l@{\hspace{3em}}l}
+            A: &  $e^{-i\pi}$, \\
+            B: &  $e^{-i\pi/2}$, \\
+            C: &  $e^{-i}$, \\
+            D: &  $-1$, \\ 
+          \end{tabular}
+
 
      }\fi
 
@@ -404,5 +460,28 @@
 }
 
 
+\begin{frame}{Ominous Foreshadowing}
 
-% LocalWords:  Clarkson pausesection hideothersubsections
+  What \textbf{\redText{are}} the cube root\textbf{\redText{s}} of
+  one?
+
+  \uncover<2->{
+    \begin{eqnarray*}
+      1,~e^{i2\pi/3},~e^{i4\pi/3}.
+    \end{eqnarray*}
+  }
+
+  \uncover<3->{
+    Because...
+    \begin{eqnarray*}
+      1^3 & = & 1, \\
+      \lp e^{i2\pi/3}\rp^3 & = & e^{i2\pi}~=~1, \\
+      \lp e^{i4\pi/3}\rp^3 & = & e^{i4\pi}~=~1.
+    \end{eqnarray*}
+  }
+
+  \uncover<4->{ruh roh...}
+\end{frame}
+
+
+% LocalWords: Clarkson pausesection hideothersubsections
