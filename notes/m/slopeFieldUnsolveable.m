@@ -7,7 +7,7 @@
 % specify within the code below.
 %
 % ######################################################################
-% Copyright (c) 2010, Kelly Black
+% Copyright (c) 2010-2013, Kelly Black
 % All rights reserved.
 %
 % Redistribution and use in source and binary forms, with or without
@@ -51,7 +51,7 @@
 % Specify the bounds on the values of t and y.
 % Bounds specified in the form:
 %    bounds   = [ [lowx highx] ; [lowy highy]];
-bounds   = [ [0 5] ; [-5 5]];
+bounds   = [ [0 5.25] ; [-5.25 5.3]];
 
 
 % Specify the number of slope indicators to plot.
@@ -84,6 +84,7 @@ plot([0 0],[bounds(1,1) bounds(1,2)],'k-');
 
 % Loop through each slope indicator, calc the slope and plot the
 % tick mark.
+theSlope = @(x,t) x*x + t*t;
 for numt = 0:1:number(1),
     for numy = 0:1:number(2),
 
@@ -93,7 +94,7 @@ for numt = 0:1:number(1),
 
         % Calc. the slope of the indicator. This is from the ODE
         % YOU NEED TO CHANGE THIS!!!! (It is a scalar)
-        slope = y*y-5;
+        slope = theSlope(y,t);
         
         
         if((abs(slope) > 1.0e6) || (abs(slope) == Inf) || (slope == NaN)),
@@ -123,3 +124,26 @@ for numt = 0:1:number(1),
     end
     
 end
+print -dpng 'week3-D3SlopeExample.png' '-r 1200'
+
+% Add an approximation
+starting = [1.2,-0.2,-3.0,-5.0];
+for initial=starting,
+    y    = [initial];
+    t    = 0.0;
+    time = [t];
+    dt = 0.05;
+    N = 1;
+    while((y(N) < 5.5) && (y(N) > -5.5))
+        k1 = theSlope(y(N),t);
+        k2 = theSlope(y(N)+dt*0.5*k1,t+dt*0.5);
+        k3 = theSlope(y(N)+dt*0.5*k2,t+dt*0.5);
+        k4 = theSlope(y(N)+dt*k3,t+dt);
+        N = N + 1;
+        y(N) = y(N-1) + dt/6.0*(k1+2*k2+2*k3+k4);
+        t = t + dt;
+        time(N) = t;
+    end
+    plot(time,y,'r','lineWidth',2.0);
+end
+print -dpng 'week3-D3SlopeExampleSolutions' '-r 1200'
