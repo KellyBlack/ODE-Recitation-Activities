@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Complex Values Roots}
-\date{12 Oct 2012}
+\date{27 September 2013}
 
 \begin{frame}
   \titlepage
@@ -219,10 +219,11 @@ Formula 3:
 \begin{frame}
   \frametitle{In General}
 
+  Assuming we have a linear, constant coefficient equation,
   \begin{eqnarray*}
     a y'' + by' + cy & = & 0,
   \end{eqnarray*}
-  $a$, $b$, and $c$ are constants, then assume
+  where $a$, $b$, and $c$ are constants, then assume
   \begin{eqnarray*}
     y & = & A e^{rt},
   \end{eqnarray*}
@@ -232,12 +233,34 @@ Formula 3:
     {\color{red}r} & {\color{red}=} & \frac{{\color{red}-b\pm}\sqrt{{\color{blue}b^2-4ac}}}{{\color{red}2a}}.
   \end{eqnarray*}
 
+  The term under the square root, $\sqrt{\color{blue}b^2-4ac}$,
+  determines how we interpret the solution to the equation: \\
+  \begin{tabular}{ll}
+    $b^2-4ac > 0$  & Distinct, real roots \\
+    $b^2-4ac = 0$  & Repeated, real roots \\
+    $b^2-4ac < 0$  & Complex roots.
+  \end{tabular}
+
+\end{frame}
+
+\begin{frame}{In General}
+
+  We have a linear, constant coefficient equation,
+  \begin{eqnarray*}
+    a y'' + by' + cy & = & 0.
+  \end{eqnarray*}
+
   {\color{fuchsia}If} ${\color{fuchsia}b^2-4ac} {\color{fuchsia}<}  {\color{fuchsia}0}$
   then the system has oscillations and
   \begin{eqnarray*}
-    {\color{red}r} & {\color{red}=} & \frac{{\color{red}-b\pm}{\color{blue}i}\sqrt{{\color{blue}4ac-b^2}}}{{\color{red}2a}}.
+    {\color{red}r} & {\color{red}=} & \frac{{\color{red}-b\pm}\sqrt{{\color{blue}b^2-4ac}}}{{\color{red}2a}}, \\
+    & = & \frac{\color{red}-b}{\color{red}2a} \pm \frac{\sqrt{{\color{blue}b^2-4ac}}}{\color{blue}2a}, \\
+    & = & \frac{\color{red}-b}{\color{red}2a} \pm \frac{\sqrt{{\color{blue} (-1) (-b^2+4ac)}}}{\color{blue}2a}, \\
+    & = & \frac{\color{red}-b}{\color{red}2a} \pm \frac{{\color{fuchsia}i}\sqrt{{\color{blue}4ac-b^2}}}{\color{blue}2a},
   \end{eqnarray*}
-
+  (Notice that the change of sign changes the term under the square
+  root!)
+  
 \end{frame}
 
 \subsection{Examples}
@@ -259,9 +282,23 @@ Formula 3:
       \lp A_1 \cos\lp {\color{blue}\frac{\sqrt{23}}{4} t} \rp + A_2 \sin\lp {\color{blue}\frac{\sqrt{23}}{4} t} \rp \rp.
     \end{eqnarray*}
 
-    It decays like $e^{-t/4}$ and oscillates with a period of $\frac{8\pi}{\sqrt{23}}$.
+
   }
 
+\end{frame}
+
+\begin{frame}{Example - Continued}
+
+    \begin{eqnarray*}
+      y & = & e^{{\color{red}-t/4}} 
+      \lp A_1 \cos\lp {\color{blue}\frac{\sqrt{23}}{4} t} \rp + A_2 \sin\lp {\color{blue}\frac{\sqrt{23}}{4} t} \rp \rp.
+    \end{eqnarray*}
+
+
+    It decays like $e^{-t/4}$ and oscillates with a period of $\frac{8\pi}{\sqrt{23}}$.
+
+    \centerline{\includegraphics[height=12em]{img/decayOfConstantCoeffI}}
+  
 \end{frame}
 
 
@@ -280,10 +317,16 @@ Formula 3:
       & = & {\color{red}-3} \pm {\color{blue}2i} \\
       y & = & e^{{\color{red}-3t}} \lp A_1 \cos({\color{blue}2t}) + A_2 \sin({\color{blue}2t}) \rp.
     \end{eqnarray*}
-
-    It decays like $e^{-3t}$ and oscillates with a period of $\pi$.
   }
 
+\end{frame}
+
+\begin{frame}{Example - Continued}
+
+    It decays like $e^{-3t}$ and oscillates with a period of $\pi$.
+
+    \centerline{\includegraphics[height=12em]{img/decayOfConstantCoeffII}}
+  
 \end{frame}
 
 
@@ -307,6 +350,10 @@ Formula 3:
     \end{eqnarray*}
   }
 
+  \uncover<3->
+  {
+    The dominant growth term is $e^{\sqrt{2}t}$. 
+  }
 
 \end{frame}
 
@@ -318,6 +365,11 @@ Formula 3:
   An LRC circuit has a 30,0000 ohm resistor, a $5\times 10^{-6}$ F
   capacitor, and a 2000 Henries Inductor. Find the general equation
   describing  the charge in the capacitor at any time.
+
+  \only<1>
+  {
+    \input{img/LRCcircuit}
+  }
 
   \uncover<2->
   {
@@ -437,7 +489,7 @@ Formula 3:
   The solution satisfies the following equation
   \begin{eqnarray*}
     x & = & e^{{\color{red}-b/2m t}}
-    \lp A_1 \cos\lp\frac{{\color{blue}\sqrt{.8m - b^2}}}{2m} t\rp + A_2 \sin\lp {\color{blue}\frac{\sqrt{.8m - b^2}}{2m} t }\rp \rp.
+    \lp A_1 \cos\lp{\color{blue}\frac{\sqrt{.8m - b^2}}{2m}} t\rp + A_2 \sin\lp {\color{blue}\frac{\sqrt{.8m - b^2}}{2m} t }\rp \rp.
   \end{eqnarray*}
 
   First the exponential term should satisfy
