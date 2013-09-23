@@ -5,7 +5,7 @@
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Week 8, Day 1}
 %\subtitle{Math 232 - Method of Undetermined Coefficients}
-\date{15 Oct 2012}
+\date{2 Oct 2013}
 
 \begin{frame}
   \titlepage
@@ -27,10 +27,10 @@
 
   Example: An horizontal spring/mass system that has a constant force
   of 1N to the right.
- 
+
   \begin{center}
     mass $\times$ accelaration = $F_{\text{restoring}} + F_{\text{dampling}}
-   + F_{\text{external}}.$ 
+   + F_{\text{external}}.$
   \end{center}
   \begin{eqnarray*}
     m x'' & = & -b v_x - kx + 1, \\
@@ -47,19 +47,19 @@
 %  \frametitle{Solutions to Linear Equations}
 %  General non-homogeneous, constant coefficients, 2nd order DEs:
 %  \begin{eqnarray*}
-%    ay'' + by' +cy & = & f(t) 
-%  \end{eqnarray*}  
+%    ay'' + by' +cy & = & f(t)
+%  \end{eqnarray*}
 %  These are linear differential equations. If $y_h(t)$ is a solution
-%  to the homogeneous problem: 
+%  to the homogeneous problem:
 %  \begin{eqnarray*}
 %    ay^{''}_{h} + by^{'}_h +cy_h & = & 0
-%  \end{eqnarray*} 
-%  and $y_p(t)$ is a particular solution to the DE: 
+%  \end{eqnarray*}
+%  and $y_p(t)$ is a particular solution to the DE:
 %  \begin{eqnarray*}
 %    ay^{''}_{p} + by^{'}_p +cy_p & = & f(t)
-%  \end{eqnarray*} 
-%  Then ${\color{red}y=y_h(t) + y_p(t)}$  is the general solution to the DE. 
-%  
+%  \end{eqnarray*}
+%  Then ${\color{red}y=y_h(t) + y_p(t)}$  is the general solution to the DE.
+%
 %
 %\end{frame}
 
@@ -94,12 +94,12 @@
 \subsection{Examples}
 
 \begin{frame}
-  \frametitle{General Idea}
+  \frametitle{Review Homogeneous Solution}
    Finding the homogeneous solution to
      \begin{eqnarray*}
       a y'' + b y' + cy  & =& 0
     \end{eqnarray*}
-   Guess                            
+   Guess
        {\color{red}$y_h(t)=e^{rt}$}, find the characteristics equation
        {\color{red}$ar^2+br+c = 0.$}
   Find the roots are {\color{red}$r_1, r_2$}.
@@ -108,7 +108,7 @@
       {\color{red}$$y_h(t) = C_1e^{r_1t}+C_2e^{r_2t}$$}\\
   \item If {\color{blue}$r_1, r_2$ are repeated, real}, i.e., $r_1 = r_2$ then
      {\color{red}$$y_h(t) = C_1e^{r_1t}+C_2te^{r_1t}$$}\\
-  \item If {\color{blue}$r_1, r_2$ are complex}, i.e., $r_1, r_2 = a\pm bi$, 
+  \item If {\color{blue}$r_1, r_2$ are complex}, i.e., $r_1, r_2 = a\pm bi$,
       then
       {\color{red}$$y_h(t) = e^{at}\left(C_1\cos(bt)+C_2\sin(bt)\right)$$}
   \end{enumerate}
@@ -166,7 +166,7 @@
         \vfill
 
      }\fi
-   
+
      \ifnum\value{clickerQuiz}=3{%
        Determine the {\color{blue}general solution} to the differential equation
         \begin{eqnarray*}
@@ -187,7 +187,7 @@
         \vfill
 
     }\fi
-  
+
 
 \end{frame}
 }
@@ -222,7 +222,7 @@
     y_p'' + 4y_p' + 4y_p & = & 1.
   \end{eqnarray*}
 
-  
+
   \uncover<2->{%
     We make a guess(Yes, it is a guess):
     \begin{eqnarray*}
@@ -252,19 +252,19 @@
   \begin{enumerate}
   \item If $y(t)$ is a polynomial of degree $n$ then
     \begin{eqnarray*}
-      a y'' + b y' + cy 
+      a y'' + b y' + cy
     \end{eqnarray*}
     is also a polynomial of degree $n$.
   \item If $y(t)$ is an exponential function then
     \begin{eqnarray*}
-      a y'' + by' + cy 
+      a y'' + by' + cy
     \end{eqnarray*}
     is also an exponential function.
-  \item If $y(t)$ is made up of sines \textbf{or} cosines then
+  \item If $y(t)$ is made up of sines \textbf{\color{red}or} cosines then
     \begin{eqnarray*}
       a y'' + by' + cy
     \end{eqnarray*}
-    is  made up of sines \textbf{and} cosines.
+    is  made up of sines \textbf{\color{red}and} cosines.
   \end{enumerate}
 
 \end{frame}
@@ -272,17 +272,17 @@
 
 \begin{frame}
   \frametitle{General Idea}
-   Guessing a particular solution to 
+   Guessing a particular solution to
      \begin{eqnarray*}
       a y'' + b y' + cy  = f(t)
     \end{eqnarray*}
 
   \begin{enumerate}
-  \item If {\color{blue}$f(t) = a_nt^n+\cdots a_1t+ a_0$}, then
-      guess {\color{red}$$y_p(t) = b_nt^n+\cdots b_1t+b_0.$$}\\
+  \item If {\color{blue}$f(t) = a_nt^n+a_{n-1}t^{n-1}+\cdots a_1t+ a_0$}, then
+      guess {\color{red}$$y_p(t) = b_nt^n+b_{n-1}t^{n-1}+\cdots +b_1t+b_0.$$}\\
 
   \item If {\color{blue} $f(t)= A e^{rt}$}, then guess
-       {\color{red} $y_p(t) = Be^{rt}$.}\\ 
+       {\color{red} $y_p(t) = Be^{rt}$.}\\
   \vspace{.5cm}
   \item If {\color{blue}$f(t) = A\sin(rt)$}, then guess
       {\color{red}$y_p(t) = C_1\sin(rt) +C_2\cos(rt)$.}\\
@@ -324,7 +324,7 @@
     y_p'' + 4y_p' + 4y_p & = & 2t^2.
   \end{eqnarray*}
 
-  Assume a particular solution is in the form of 
+  Assume a particular solution is in the form of
   \begin{eqnarray*}
     \uncover<2->{y_p & = & at^2 + bt + c,} \\
     \uncover<3->{%
@@ -349,7 +349,7 @@
     y_p & = & \half t^2 - t + \frac{3}{4}
     \end{eqnarray*}
      }
- 
+
 \end{frame}
 
 
@@ -370,7 +370,7 @@
     y_p & = & {\color{red}\half t^2 - t + \frac{3}{4}}.
   \end{eqnarray*}
 
-  The general solution is 
+  The general solution is
   \begin{eqnarray*}
     y(t) & = & {\color{blue}y_h(t)} + {\color{red}y_p(t)}, \\
          & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\half t^2 - t + \frac{3}{4}}.
@@ -429,7 +429,7 @@
         \vfill
 
      }\fi
-   
+
      \ifnum\value{clickerQuiz}=3{%
        What would be the best guess for a particular solution to the following differential equation:
         \begin{eqnarray*}
@@ -445,11 +445,11 @@
           C: & $y=Ae^{3t}$ \\
           D: & $y=A\cos(3t)+B\sin(3t)$ \\
         \end{tabular}
- 
+
         \vfill
 
     }\fi
-  
+
 
 \end{frame}
 }
@@ -489,13 +489,13 @@
     Substitute this back into the equation:
     \begin{eqnarray*}
       9 A e^{3t} + 4 (3 A e^{3t}) + 4 (A e^{3t}) & = & 2 e^{3t}, \\
-      \Rightarrow 
+      \Rightarrow
       A & = & \frac{2}{25}
     \end{eqnarray*}
   }
 
   \uncover<4->{%
-    The general solution is 
+    The general solution is
     \begin{eqnarray*}
       y(t) & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\frac{2}{25} e^{3t}}.
     \end{eqnarray*}
@@ -537,7 +537,7 @@
   \uncover<3->{%
     Substitute this back into the equation:
     \begin{eqnarray*}
-      -9 a \cos(3t) - 9b \sin(3t) 
+      -9 a \cos(3t) - 9b \sin(3t)
       + 4 \lp -3 a \sin(3t) + 3b \cos(3t) \rp & & \\
       + 4 \lp a \cos(3t) + b \sin(3t) \rp
       & = & 2 \cos(3t)
@@ -565,16 +565,16 @@
       \uncover<3->{%
         (-5a+12b) \cos(3t) + (-12a-5b) \sin(3t) & = & 2 \cos(3t) + 0 \sin(3t),} \\
       \uncover<4->{%
-        \Rightarrow 
+        \Rightarrow
         a & = & \frac{-10}{169} \\
         b & = & \frac{24}{169}
       }
     \end{eqnarray*}
 
   \uncover<5->{%
-    The general solution is 
+    The general solution is
     \begin{eqnarray*}
-      y(t) & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + 
+      y(t) & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} +
                   {\color{red}\frac{-10}{169}\cos(3t) + \frac{24}{169} \sin(3t)}.
     \end{eqnarray*}
   }
@@ -611,7 +611,7 @@
   Substitute this back into the equation:
   \begin{eqnarray*}
     2a+9de^{3t}+4(2at+b + 3 e^{3t})+4(at^2+bt+c+e^{3t})&=&2t^2+2e^{3t}\\
-    \Rightarrow 
+    \Rightarrow
     a & = & \half \\
     b & = & -1 \\
     c & = & \frac{3}{4} \\
@@ -679,10 +679,10 @@
     + 4 \lp -3 a \sin(3t) + 3b \cos(3t) + 3c e^{3t}\rp  & & \\
     + 4 \lp a \cos(3t) + b \sin(3t) + c e^{3t}\rp
      & = & 2 \cos(3t), \\
-    \Rightarrow 
+    \Rightarrow
     a & = & \frac{-10}{169} \\
     b & = & \frac{24}{169} \\
-    c & = & \frac{2}{25} 
+    c & = & \frac{2}{25}
   \end{eqnarray*}
 
 
@@ -710,7 +710,7 @@
          & = & {\color{blue}C_1 e^{-2t} + C_2 t e^{-2t}} + {\color{red}\frac{-10}{169}\cos(3t) +
                \frac{24}{169} \sin(3t) + \frac{2}{25}  e^{3t}}.
   \end{eqnarray*}
-  
+
 \end{frame}
 
 
