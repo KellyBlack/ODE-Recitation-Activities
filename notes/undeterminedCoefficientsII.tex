@@ -177,23 +177,34 @@
 \begin{frame}
   \frametitle{Particular Solution}
 
+  \vspace*{-3em}
   \begin{eqnarray*}
     y_p & = & A t^2 e^{-2t}, \\
     y_p' & = & -2 A t^2 e^{-2t} + A 2t e^{-2t}, \\
     y_p'' & = & 4 A t^2 e^{-2t} - 8A t e^{-2t} + 2 A e^{-2t}.
   \end{eqnarray*}
-
+  \vspace*{-2.5em}
   \uncover<2->{%
     \begin{eqnarray*}
-      \redText{y_p''} + 4\blueText{y_p'} + 4y_p & = & 5 e^{-2t}, \\
-      \redText{4 A t^2 e^{-2t} - 8A t e^{-2t} + 2 A e^{-2t}} & & \\
-      + 4 \blueText{\lp -2 A t^2 e^{-2t} + A 2t e^{-2t} \rp} & & \\
-      + 4 A t^2 e^{-2t} & = & 5 e^{-2t} \\
-      2 A e^{-2t} & = & 5 e^{-2t} \\
-      A & = & \frac{5}{2}, \\
-      \blueText{y_p(t)} & \blueText{=} & \blueText{\frac{5}{2} t^2 e^{-2t}}.
+      \begin{array}{rcccccl}
+        \redText{y_p''} & + & 4\blueText{y_p'} & + & 4y_p & = & 5 e^{-2t}, \\ [5pt]  \hline
+        ~ \\
+        \redText{4 A t^2 e^{-2t}} & \redText{-} & \redText{8A t e^{-2t}} & \redText{+} & \redText{2 A e^{-2t}} & & \\
+      + 4 \blueText{\lp -2 A t^2 e^{-2t}\right.} & \blueText{+} &  \blueText{\left.  A 2t e^{-2t} \rp}  & & \\
+      + 4 A t^2 e^{-2t} &&&&& = & 5 e^{-2t} \\
+      \end{array} 
     \end{eqnarray*}
+
+    \uncover<3->{%
+      \begin{eqnarray*}
+        2 A e^{-2t} & = & 5 e^{-2t} \\
+        A & = & \frac{5}{2}, \\
+        \blueText{y_p(t)} & \blueText{=} & \blueText{\frac{5}{2} t^2 e^{-2t}}.
+      \end{eqnarray*}
+    }
   }
+
+
 
 
 \end{frame}
