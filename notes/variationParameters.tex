@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Variation of Parameters}
-\date{19 October 2012}
+\date{7 October 2013}
 
 \begin{frame}
   \titlepage
@@ -107,6 +107,19 @@
 
 
 \subsection{Another Method: Variation of Parameters(Sec 4.5)}
+
+\begin{frame}{Variation of Parameters}
+
+  Works only for equations in the form
+  \begin{eqnarray}\label{eqn1}
+    y'' + p(t) y' + q(t) y & = & f(t).
+  \end{eqnarray}
+
+  Note that the coefficient for $y''(t)$ is 1. If the equation is not
+  in this form you must take the algebraic steps to convert it into
+  this form.
+  
+\end{frame}
 
 \begin{frame}
   \frametitle{Second order, nonhomogeneous DE}
@@ -254,7 +267,7 @@
   \frametitle{Substitute Into the Original Equation}
 
   \begin{eqnarray*}
-    y' & = & v_1' \cos(t) - v_1 \sin(t) + v_2' \sin(t) + v_2 \cos(t).
+    y' & = & \redText{v_1' \cos(t)} - v_1 \sin(t) + \redText{v_2' \sin(t)} + v_2 \cos(t).
   \end{eqnarray*}
 
   \uncover<2->{%
@@ -393,17 +406,17 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
   \frametitle{Substitute Back Into the Original DE}
 
   \begin{eqnarray*}
-    v_1' y_1' + v_1 y_1'' + v_2' y_2' + v_2 y_2'' & & \\
-    + p(t) \lp v_1 y_1' + v_2 y_2' \rp & & \\
-    + q(t) \lp v_1 y_1 + v_2 y_2 \rp & = & f(t)
+    v_1' y_1' + \redText{v_1 y_1''} + v_2' y_2' + \blueText{v_2 y_2''} & & \\
+    + p(t) \lp \redText{v_1 y_1'} + \blueText{v_2 y_2'} \rp & & \\
+    + q(t) \lp \redText{v_1 y_1} + \blueText{v_2 y_2} \rp & = & f(t)
   \end{eqnarray*}
 
   Collect the like terms:
   \begin{eqnarray*}
     v_1' y_1' + v_2' y_2'  & & \\
-    + v_1 y_1'' + v_2 y_2'' & & \\
-    p(t) \lp v_1 y_1' + v_2 y_2' \rp & & \\
-    q(t) \lp v_1 y_1 + v_2 y_2 \rp & = & f(t)
+    + \redText{v_1 y_1''} + \blueText{v_2 y_2''} & & \\
+    p(t) \lp \redText{v_1 y_1'} + \blueText{v_2 y_2'} \rp & & \\
+    q(t) \lp \redText{v_1 y_1}  + \blueText{v_2 y_2} \rp & = & f(t)
   \end{eqnarray*}
 
 
@@ -415,8 +428,8 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
 
   \begin{eqnarray*}
     v_1' y_1' + v_2' y_2'  & & \\
-    + v_1 y_1'' + p(t) v_1 y_1' + q(t) v_1 y_1 & & \\
-    + v_2 y_2'' + p(t) v_2 y_2' + q(t) v_2 y_2 & = & f(t)
+    + \redText{ v_1 y_1'' + p(t) v_1 y_1' + q(t) v_1 y_1} & & \\
+    + \blueText{v_2 y_2'' + p(t) v_2 y_2' + q(t) v_2 y_2} & = & f(t)
   \end{eqnarray*}
 
   or 
@@ -441,10 +454,12 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
   \frametitle{We Have Two Equations and Two Unknowns}
 
   \begin{eqnarray*}
-    v_1' y_1 + v_2' y_2 & = & 0 \\
-    v_1' y_1' + v_2' y_2'  & = & f(t).
+    \fuchsiaText{v_1'} y_1 + \fuchsiaText{v_2'} y_2 & = & 0 \\
+    \fuchsiaText{v_1'} y_1' + \fuchsiaText{v_2'} y_2'  & = & f(t).
   \end{eqnarray*}
 
+  We do not know $\fuchsiaText{v_1'}$ nor $\fuchsiaText{v_2'}$. Solve
+  this linear system for the two unknowns.
 
 \end{frame}
 
@@ -452,18 +467,18 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
 \begin{frame}
   \frametitle{Solving the System of Equations}
 
-  Solve the first equation for $v_1'$
+  Solve the first equation for $\fuchsiaText{v_1'}$
   \begin{eqnarray*}
-    v_1' & = & -v_2' \frac{y_2}{y_1}.
+    \fuchsiaText{v_1'} & = & -\fuchsiaText{v_2'} \frac{y_2}{y_1}.
   \end{eqnarray*}
 
   Substitute into the second equation
   \begin{eqnarray*}
-    -v_2' \frac{y_2}{y_1} y_1' + v_2' y_2'  & = & f(t), \\
-    v_2' \lp -\frac{y_2}{y_1} y_1' + y_2' \rp  & = & f(t), \\
-    v_2' & = & \frac{f(t)}{-\frac{y_2}{y_1} y_1' + y_2'}, \\
-    v_2' & = & \frac{y_1 f(t)}{-y_2 y_1' + y_1 y_2'}. \\
-    v_2' & = & \frac{y_1 f(t)}{y_1 y_2'-y_2 y_1'}. \\
+    -\fuchsiaText{v_2'} \frac{y_2}{y_1} y_1' + \fuchsiaText{v_2'} y_2'  & = & f(t), \\
+    \fuchsiaText{v_2'} \lp -\frac{y_2}{y_1} y_1' + y_2' \rp  & = & f(t), \\
+    \fuchsiaText{v_2'} & = & \frac{f(t)}{-\frac{y_2}{y_1} y_1' + y_2'}, \\
+    \fuchsiaText{v_2'} & = & \frac{y_1 f(t)}{-y_2 y_1' + y_1 y_2'}. \\
+    \fuchsiaText{v_2'} & = & \frac{y_1 f(t)}{y_1 y_2'-y_2 y_1'}. \\
   \end{eqnarray*}
 
 \end{frame}
@@ -474,9 +489,9 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
 
   The first function has been solved in terms of the second
   \begin{eqnarray*}
-    v_1' & = & -v_2' \frac{y_2}{y_1}, \\
-    v_1' & = & - \frac{y_1 f(t)}{y_1 y_2'-y_2 y_1'} \cdot \frac{y_2}{y_1}, \\
-    v_1' & = & \frac{ -y_2 f(t)}{y_1 y_2'-y_2 y_1'}. \\
+    \fuchsiaText{v_1'} & = & -\fuchsiaText{v_2'} \frac{y_2}{y_1}, \\
+    \fuchsiaText{v_1'} & = & - \frac{y_1 f(t)}{y_1 y_2'-y_2 y_1'} \cdot \frac{y_2}{y_1}, \\
+    \fuchsiaText{v_1'} & = & \frac{ -y_2 f(t)}{y_1 y_2'-y_2 y_1'}. \\
   \end{eqnarray*}
   
 
@@ -642,7 +657,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
   \frametitle{Solve for the unknowns}
   \begin{eqnarray*}
     v_1' & = & \frac{-e^{-t} \frac{1}{1+e^{2t}}}{
-      -e^{-t}\lp -2 e^{-2t} \rp + \lp - e^{-t}\rp \lp e^{-2t} \rp} \\
+      -e^{-t}\lp e^{-2t} \rp + \lp - e^{-t}\rp \lp -2 e^{-2t} \rp} \\
     & = & \frac{-e^{2t}}{1+e^{2t}}, \\
     v_2' & = & \frac{-e^{-2t}\frac{1}{1+e^{2t}}}{e^{-3t}}, \\
     & = & \frac{e^t}{1+e^{2t}}.
