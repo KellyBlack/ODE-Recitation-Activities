@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Introduction to Linear Algebra}
-\date{13 October 2013}
+\date{14 October 2013}
 
 \begin{frame}
   \titlepage
@@ -30,8 +30,9 @@
 
   \uncover<2->
   {
+    Alternate representation:
     \begin{eqnarray*}
-      \arrayTwo{3}{2}{4}{-1} \vecTwo{x}{y} & = & \vecTwo{7}{1}
+      \arrayTwo{3}{2}{4}{-1} \vecTwo{x}{y} & = & \vecTwo{7}{1}.
     \end{eqnarray*}
 
     A matrix is an array of numbers arranged in rows and columns.
@@ -75,7 +76,8 @@
 
   Switch the rows and the columns:
   \begin{eqnarray*}
-    \arrayTwo{2}{7}{4}{6}^T & = & \arrayTwo{2}{4}{7}{6} \\
+    \arrayTwo{\redText{2}}{\redText{7}}{\blueText{4}}{\blueText{6}}^T & = & 
+      \arrayTwo{\redText{2}}{\blueText{4}}{\redText{7}}{\blueText{6}} \\
     \left[
     \begin{array}{r}
       1 \\ 7 \\ 3 \\ 2
@@ -125,7 +127,7 @@
 
   Entry in row i and column j is 
   \begin{eqnarray*}
-    c_{ij} & = & a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{im}b_{mj}
+    c_{ij} & = & \redText{a_{i1}}\blueText{b_{1j}} + \redText{a_{i2}}\blueText{b_{2j}} + \cdots + \redText{a_{im}}\blueText{b_{mj}}
   \end{eqnarray*}
 
 \end{frame}
@@ -135,8 +137,8 @@
   \frametitle{Example}
 
   \begin{eqnarray*}
-    \arrayTwo{2}{7}{4}{6} \cdot \arrayTwo{2}{1}{-2}{1} & = & 
-    \arrayTwo{-10}{9}{-4}{10} \\
+    \arrayTwo{\redText{2}}{\redText{7}}{4}{6} \cdot \arrayTwo{\blueText{2}}{1}{\blueText{-2}}{1} & = & 
+    \arrayTwo{\fuchsiaText{-10}}{9}{-4}{10} \\
     \left[
       \begin{array}{rrr}
         2 & 3 & 1 \\ -1 & 2 & 1
@@ -506,16 +508,16 @@
   \frametitle{Double Tank Problem}
 
   \begin{columns}
-    \column{.4\textwidth}
+    \column{.35\textwidth}
     {\includegraphics[width=1.5\textwidth]{img/introLinearAlgebraTankProblem}}    
 
-    \column{.6\textwidth}
-    {\includegraphics[width=1.5\textwidth]{img/introLinearAlgebraTankProblem}}   
-    \column{.4\textwidth}
+    \column{.65\textwidth}
 
-    $x$ is the amount of salt in tank 1 (in g).
+    Define:
 
-    $y$ is the amount of salt in tank 2 (in g).
+    $x(t)$ is the \redText{amount} of salt in tank 1 (in \blueText{g}).
+
+    $y(t)$ is the \redText{amount} of salt in tank 2 (in \blueText{g}).
     \vspace{3cm}
   \end{columns}
 \end{frame}
@@ -523,21 +525,34 @@
 \begin{frame}
   \frametitle{Double Tank Problem}
 
-    $x$ is the amount of salt in tank 1 (in g), and $y$ is the amount of salt in tank 2 (in g).
+    $x(t)$ is the amount of salt in tank 1 (in g), and $y(t)$ is the amount of salt in tank 2 (in g).
 
     \vfill
 
-    The rates of change for the amounts (in g) can now be expressed as 
+    The rates of change for the amounts (in g) can now be expressed as
+    the following for tank one:
     \begin{tabular}{l@{\hspace{2em}}l}
       rate in, tank 1:  & 4 l/min $\times$ 4 g/l + $\frac{y~g}{100~l} \times$ 2 l/min,\\
       rate out, tank 1: & 6 l/min $\times \frac{x~g}{200~l}$,\\
+    \end{tabular}
+
+    \vfill
+
+    The rates of change for the amounts (in g) can now be expressed as
+    the following for tank two:
+    \begin{tabular}{l@{\hspace{2em}}l}
       rate in, tank 2:  & 6 l/min $\times \frac{x~g}{200~l}$,\\
       rate out, tank 2: & 4 l/min $\times \frac{y~g}{100~l}$ + 2 l/min $\times \frac{y~g}{100~l}.$
     \end{tabular}
 
     \vfill
 
-    This leads to a \textit{system} of differential equations,
+
+\end{frame}
+
+\begin{frame}{System of Differential Equations}
+  
+  This leads to a \textit{system} of differential equations,
     \begin{eqnarray*}
       \dot{x} & = & 16 + \frac{2y}{100} - \frac{6x}{200}, \\
       \dot{y} & = &  \frac{6x}{200} - \frac{6y}{100}. \\
@@ -567,7 +582,7 @@
       & = & 
       \left[
         \begin{array}{ll}
-          \frac{-6x}{200} & \frac{2}{100}  \\ 
+          \frac{-6}{200} & \frac{2}{100}  \\ 
           \frac{6}{200}   & \frac{-6}{100} 
         \end{array}
       \right]
