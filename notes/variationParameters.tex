@@ -85,22 +85,22 @@
   \end{eqnarray*}}
 
   \begin{enumerate}
-    \item[Step 1] Assume {\color{blue}$y_h=t^r$} is the homogeneous solution. Then 
+    \item[Step 1] Assume {\color{blue}$y_h=t^r$} is the homogeneous solution. Then
     \begin{eqnarray*}
-      ar(r-1) +br + c & = & 0, 
+      ar(r-1) +br + c & = & 0,
     \end{eqnarray*}
     \vspace{-0.5cm}
     \begin{enumerate}
-    \item[Case 1] Two distinct roots:  
-           {\color{orange}$y_h=C_1t^{r_1}+C_2t^{r_2}$} 
-    \item[Case 2] Repeated root:  
+    \item[Case 1] Two distinct roots:
+           {\color{orange}$y_h=C_1t^{r_1}+C_2t^{r_2}$}
+    \item[Case 2] Repeated root:
             {\color{orange}$y_h=C_1t^{r}+C_2t^{r}\ln(t)$ }
     \end{enumerate}
 
-    \item[Step 2] Assume {\color{blue}$y_p=At^d$}. Find $d$. 
-    \item[Step 3] The general solution {\color{red}$y=y_h+y_p$}. 
+    \item[Step 2] Assume {\color{blue}$y_p=At^d$}. Find $d$.
+    \item[Step 3] The general solution {\color{red}$y=y_h+y_p$}.
    \end{enumerate}
- 
+
 
 
 \end{frame}
@@ -118,7 +118,7 @@
   Note that the coefficient for $y''(t)$ is 1. If the equation is not
   in this form you must take the algebraic steps to convert it into
   this form.
-  
+
 \end{frame}
 
 \begin{frame}
@@ -137,7 +137,7 @@
       \blueText{y_p} & \blueText{=} & \blueText{v_1(t) y_1(t) + v_2(t) y_2(t)}.
     \end{eqnarray*}
   \item[Step 3] Substitute $y_p$ into (\ref{eqn1}) and solve  for $v_1(t), v_2(t)$.
-  \item[Step 4] The general solution is 
+  \item[Step 4] The general solution is
     \begin{eqnarray*}
       y & = & \redText{y_h}+\blueText{y_p}, \\
         & = & \redText{C_1 y_1(t) + C_2 y_2(t)} + \blueText{v_1(t) y_1(t) + v_2(t) y_2(t)}.
@@ -156,7 +156,7 @@
     y_p & = & v_1(t) y_1(t) + v_2(t) y_2(t),
   \end{eqnarray*}
   has two unknown functions, $v_1(t)$ and $v_2(t)$.
-  
+
   \vfill
 
   \uncover<2->{%
@@ -195,7 +195,7 @@
 
         \vfill
 
- 
+
  }\fi
 
  \ifnum\value{clickerQuiz}=2{%
@@ -327,7 +327,7 @@
   \begin{eqnarray*}
     v_1 & = & \int \frac{-\sin^2(t)}{\cos(t)} ~ dt \\
     & = & -\ln\lp\sec(t)+\tan(t)\rp + \sin(t) + C_1. \\
-    v_2 & = & \int \sin(t) ~ dt \\ 
+    v_2 & = & \int \sin(t) ~ dt \\
     & = & -\cos(t) + C_2.
   \end{eqnarray*}
 
@@ -340,7 +340,7 @@
   \begin{eqnarray*}
     y & = & v_1 y_1 + v_2 y_2 \\
     & = & \lp -\ln\lp\sec(t)+\tan(t)\rp + \sin(t) + C_1 \rp \cos(t) \\
-    & & 
+    & &
     + \lp -\cos(t) + C_2 \rp \sin(t) \\
     & = & - \ln\lp\sec(t)+\tan(t)\rp \cos(t) + C_1 \cos(t) + C_2 \sin(t)
   \end{eqnarray*}
@@ -351,17 +351,17 @@
 \subsection{General Derivation}
 
 \begin{frame}
-General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$  
+General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
   \frametitle{The other equation}
 
-  We find the homogeneous solution 
+  We find the homogeneous solution
   \begin{eqnarray*}
-    y_h & = & C_1  y_1 + C_1 y_2. 
+    y_h & = & C_1  y_1 + C_1 y_2.
   \end{eqnarray*}
   Assume we have a particular solution
   \begin{eqnarray*}
     y_p & = & v_1 y_1 + v_2 y_2, \\
-    y_p' & = & v_1' y_1 + v_1 y_1' + v_2' y_2 + v_2 y_2'. 
+    y_p' & = & v_1' y_1 + v_1 y_1' + v_2' y_2 + v_2 y_2'.
   \end{eqnarray*}
 
   Yuck, that is too messy. We want a first order equation in the end
@@ -375,12 +375,12 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
 
 
 \begin{frame}
-General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$  
+General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
   \frametitle{The other equation}
 
-  We find the homogeneous solution 
+  We find the homogeneous solution
   \begin{eqnarray*}
-    y_h & = & C_1  y_1 + C_1 y_2. 
+    y_h & = & C_1  y_1 + C_1 y_2.
   \end{eqnarray*}
   Assume  a particular solution and assume an extra condition
   \begin{eqnarray*}
@@ -393,7 +393,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
   \begin{eqnarray*}
     y_p   & = & v_1 y_1 + v_2 y_2, \\
     y_p'  & = & v_1 y_1' + v_2 y_2', \\
-    y_p'' & = & v_1' y_1' + v_1 y_1'' + v_2' y_2' + v_2 y_2''. 
+    y_p'' & = & v_1' y_1' + v_1 y_1'' + v_2' y_2' + v_2 y_2''.
   \end{eqnarray*}
 
 
@@ -432,7 +432,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
     + \blueText{v_2 y_2'' + p(t) v_2 y_2' + q(t) v_2 y_2} & = & f(t)
   \end{eqnarray*}
 
-  or 
+  or
 
   \begin{eqnarray*}
     v_1' y_1' + v_2' y_2'  & & \\
@@ -440,7 +440,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
     + v_2 \lp \blueText{y_2'' + p(t) y_2' + q(t) y_2} \rp & = & f(t)
   \end{eqnarray*}
 
-  Since $y_1$ and $y_2$ are homogeneous solutions this reduces to 
+  Since $y_1$ and $y_2$ are homogeneous solutions this reduces to
   \begin{eqnarray}
     \label{eqn:secondConstraint}
     v_1' y_1' + v_2' y_2'  & = & f(t).
@@ -493,7 +493,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
     \fuchsiaText{v_1'} & = & - \frac{y_1 f(t)}{y_1 y_2'-y_2 y_1'} \cdot \frac{y_2}{y_1}, \\
     \fuchsiaText{v_1'} & = & \frac{ -y_2 f(t)}{y_1 y_2'-y_2 y_1'}. \\
   \end{eqnarray*}
-  
+
 
 
 \end{frame}
@@ -511,7 +511,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
   \begin{eqnarray*}
       y_p & = & v_1(t) y_1(t) + v_2(t) y_2(t)
     \end{eqnarray*}
-  form a particular solution.   
+  form a particular solution.
 \end{frame}
 
 \subsection{Examples}
@@ -524,14 +524,14 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
    \ifnum\value{clickerQuiz}=1{%
     Find the homogeneous solution to the following differential equation:
         \begin{eqnarray*}
-          y'' + 3y' + 2y & = & \frac{1}{1+e^{2t}} 
+          y'' + 3y' + 2y & = & \frac{1}{1+e^{2t}}
         \end{eqnarray*}
 
         \begin{tabular}{ll}
           A: & $y_h  =  C_1 e^{2t} + C_2 e^{t}$\\ [12pt]
           B: & $y_h  =  C_1 e^{-2t} + C_2 e^{-t}$ \\ [12pt]
           C: & $y_h  =  C_1 e^{2t} + C_2 e^{-t}$\\ [12pt]
-          D: & $y_h  =  C_1 e^{-2t} + C_2 e^{t}$ 
+          D: & $y_h  =  C_1 e^{-2t} + C_2 e^{t}$
         \end{tabular}
         \vfill
 
@@ -541,13 +541,13 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
  \ifnum\value{clickerQuiz}=2{%
     Find the homogeneous solution to the following differential equation:
         \begin{eqnarray*}
-          y'' + 3y' + 2y & = & \frac{1}{1+e^{2t}} 
+          y'' + 3y' + 2y & = & \frac{1}{1+e^{2t}}
         \end{eqnarray*}
 
         \begin{tabular}{ll}
           A: & $y_h  =  C_1 e^{-2t} + C_2 e^{-t}$ \\ [12pt]
           B: & $y_h  =  C_1 e^{2t} + C_2 e^{t}$  \\ [12pt]
-          C: & $y_h  =  C_1 e^{-2t} + C_2 e^{t}$  \\ [12pt] 
+          C: & $y_h  =  C_1 e^{-2t} + C_2 e^{t}$  \\ [12pt]
           D: & $y_h  =  C_1 e^{2t} + C_2 e^{-t}$
         \end{tabular}
 
@@ -559,7 +559,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
  \ifnum\value{clickerQuiz}=3{%
     Find the homogeneous solution to the following differential equation:
         \begin{eqnarray*}
-          y'' + 3y' + 2y & = & \frac{1}{1+e^{2t}} 
+          y'' + 3y' + 2y & = & \frac{1}{1+e^{2t}}
         \end{eqnarray*}
 
         \begin{tabular}{ll}
@@ -577,11 +577,11 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
 
 \begin{frame}
   \frametitle{Example 2}
-  Find the general solution to the following DE: 
+  Find the general solution to the following DE:
   \begin{eqnarray*}
           y'' + 3y' + 2y & = & \frac{1}{1+e^{2t}}.
   \end{eqnarray*}
- 
+
   \uncover<2->
   {
     Find the homogeneous solution:
@@ -648,7 +648,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
   We now have two equations and two unknowns
   \begin{eqnarray*}
     v_1'e^{-2t} + v_2' e^{-t}& = & 0 \\
-    -2 v_1' e^{-2t}  - v_2' e^{-t} & = & \frac{1}{1+e^{2t}}. 
+    -2 v_1' e^{-2t}  - v_2' e^{-t} & = & \frac{1}{1+e^{2t}}.
   \end{eqnarray*}
 
 \end{frame}
@@ -666,7 +666,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
 
 \begin{frame}
   \frametitle{Integrate}
-  
+
   \begin{eqnarray*}
     v_1 & = & \int \frac{-e^{2t}}{1+e^{2t}} ~ dt, \\
     & = & -\half \ln\lp 1 + e^{2t} \rp + C_1 \\
@@ -696,7 +696,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
         \begin{tabular}{ll}
           A: & $y_h  =  C_1 t^4 + C_2 t^{-1}$ \\ [12pt]
           B: & $y_h  =  C_1 \ln(4t) + C_2 \ln(-t)$\\ [12pt]
-          C: & $y_h  =  C_1 e^{(1-\sqrt{5})t} + C_2 e^{(1+\sqrt{5})t}$ 
+          C: & $y_h  =  C_1 e^{(1-\sqrt{5})t} + C_2 e^{(1+\sqrt{5})t}$
         \end{tabular}
     \vfill
 
@@ -712,7 +712,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
         \begin{tabular}{ll}
           A: & $y_h  =  C_1 \ln(4t) + C_2 \ln(-t)$\\ [12pt]
           B: & $y_h  =  C_1 t^4 + C_2 t^{-1}$ \\ [12pt]
-          C: & $y_h  =  C_1 e^{(1-\sqrt{5})t} + C_2 e^{(1+\sqrt{5})t}$ 
+          C: & $y_h  =  C_1 e^{(1-\sqrt{5})t} + C_2 e^{(1+\sqrt{5})t}$
         \end{tabular}
     \vfill
 
@@ -749,7 +749,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
   \uncover<2->
   {
 
-    The homogeneous solution is 
+    The homogeneous solution is
     \begin{eqnarray*}
       y & = & C_1 t^4 + C_2 t^{-1}, \\
       y_1 & = & t^4, \\
@@ -758,7 +758,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
 
     Rewrite it in the proper form:
     \begin{eqnarray*}
-      y'' - \frac{2}{t} y' - \frac{4}{t^2} & = & \frac{1}{t^2} \ln(t), \\
+      y'' - \frac{2}{t} y' - \frac{4}{t^2} y& = & \frac{1}{t^2} \ln(t), \\
       f(t) & = & \frac{1}{t^2} \ln(t).
     \end{eqnarray*}
 
@@ -775,7 +775,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
     v_2' & = & \frac{t^4 \frac{1}{t^2} \ln(t)}{-5t^2}, \\
     & = & \frac{-1}{5} \ln(t).
   \end{eqnarray*}
-  
+
 
 \end{frame}
 

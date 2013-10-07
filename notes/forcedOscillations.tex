@@ -82,7 +82,7 @@
   \frametitle{Solve for the Constants}
 
   \begin{eqnarray*}
-    x & = & C_1 \cos\lp\sqrt{\frac{k}{m}}t\rp + C_2 \sin\lp\sqrt{\frac{k}{m}}t\rp+ 
+    x & = & C_1 \cos\lp\sqrt{\frac{k}{m}}t\rp + C_2 \sin\lp\sqrt{\frac{k}{m}}t\rp+
            \frac{F_0}{m\lp\frac{k}{m}-\omega^2\rp} \cos(\omega t).
   \end{eqnarray*}
 
@@ -99,17 +99,17 @@
   \frametitle{Satisfy the Velocity}
 
   \begin{eqnarray*}
-    x' & = & - C_1 \sqrt{\frac{k}{m}} \sin\lp\sqrt{\frac{k}{m}}t\rp + C_2 \sqrt{\frac{k}{m}} \cos\lp\sqrt{\frac{k}{m}}t\rp \\ 
+    x' & = & - C_1 \sqrt{\frac{k}{m}} \sin\lp\sqrt{\frac{k}{m}}t\rp + C_2 \sqrt{\frac{k}{m}} \cos\lp\sqrt{\frac{k}{m}}t\rp \\
     & & - \frac{\omega F_0}{m\lp\frac{k}{m}-\omega^2\rp} \sin(\omega t), \\
     \Rightarrow C_2 & = & 0.
   \end{eqnarray*}
 
   \uncover<2->
   {
-    The solution is 
+    The solution is
     \redText{
       \begin{eqnarray*}
-        x & = & \frac{-F_0}{m\lp\frac{k}{m}-\omega^2\rp} \cos\lp\sqrt{\frac{k}{m}}t\rp 
+        x & = & \frac{-F_0}{m\lp\frac{k}{m}-\omega^2\rp} \cos\lp\sqrt{\frac{k}{m}}t\rp
         + \frac{F_0}{m\lp\frac{k}{m}-\omega^2\rp} \cos(\omega t).
       \end{eqnarray*}
     }
@@ -129,8 +129,8 @@
 
   Our solution can be written in the form
   \begin{eqnarray*}
-    x(t) & = & \frac{-F_0}{m\lp\frac{k}{m}-\omega^2\rp} \sin\lp\redText{\lp\omega-\sqrt{\frac{k}{m}}\rp t}\rp
-                                                        \sin\lp\blueText{\lp\omega+\sqrt{\frac{k}{m}}\rp t}\rp
+    x(t) & = & \frac{2F_0}{m\lp\frac{k}{m}-\omega^2\rp} \sin\lp\redText{\frac{\lp\sqrt{\frac{k}{m}}-\omega\rp t}{2}}\rp
+                                                        \sin\lp\blueText{\frac{\lp\sqrt{\frac{k}{m}}+\omega\rp t}{2}}\rp
   \end{eqnarray*}
 
   Plots of the function are given on pages 262-267 in your book.
@@ -190,7 +190,7 @@
         \vfill
 
      }\fi
-   
+
      \ifnum\value{clickerQuiz}=3{%
          Determine the homogeneous solution to the differential equation
         \begin{eqnarray*}
@@ -210,15 +210,15 @@
         \vfill
 
     }\fi
-  
+
 
 \end{frame}
 }
 
 
-\begin{frame}                   
-  \frametitle{The problem}      
-                                
+\begin{frame}
+  \frametitle{The problem}
+
   A two kilogram mass is attached to a spring with constant ten N/m on
   a horizontal table. The mass is driven with a periodic force of
   \begin{eqnarray*}
@@ -243,7 +243,7 @@
     x'(0) & = & 0.
   \end{eqnarray*}
 
-  The solution is 
+  The solution is
   \begin{eqnarray*}
     x(t) & = & -\frac{3}{2}\cos(\sqrt{5} t) + \frac{3}{2} \cos(2 t), \\
          & = & \frac{3}{2} \left[ -\cos(\sqrt{5} t) + \cos(2 t) \right], \\
@@ -251,7 +251,7 @@
            & = & 3 \sin\lp\frac{2-\sqrt{5}}{2}t\rp \sin\lp\frac{2+\sqrt{5}}{2} t\rp.\\
          }
          \only<2->{%
-           & = & 3 \sin\lp\underbrace{\frac{2-\sqrt{5}}{2}}_{\mathrm{long~wave}}t\rp 
+           & = & 3 \sin\lp\underbrace{\frac{2-\sqrt{5}}{2}}_{\mathrm{long~wave}}t\rp
                    \sin\lp\underbrace{\frac{2+\sqrt{5}}{2}}_{\mathrm{short~wave}} t\rp.
          }
   \end{eqnarray*}
@@ -271,8 +271,8 @@
 
 
 \begin{frame}
-  \frametitle{The problem}      
-                                
+  \frametitle{The problem}
+
   A two kilogram mass is attached to a spring with constant ten N/m on
   a horizontal table. The mass is driven with a periodic force of
   \begin{eqnarray*}
@@ -297,7 +297,7 @@
     x'(0) & = & 0.
   \end{eqnarray*}
 
-  The homogeneous solution is 
+  The homogeneous solution is
   \begin{eqnarray*}
     x_h & = & C_1 \cos(\sqrt{5} t) + C_2 \sin(\sqrt{5} t).
   \end{eqnarray*}
@@ -342,10 +342,10 @@
   \end{eqnarray*}
   The roots are $r=-1$ and $r=-3$ so the homogeneous solution is
   \begin{eqnarray*}
-    x & = & C_1 t^{-3} + C_2 t^{-2}.
+    x & = & C_1 t^{-3} + C_2 t^{-1}.
   \end{eqnarray*}
-  
-  
+
+
 \end{frame}
 
 \begin{frame}{Bonus Problem (continued)}
@@ -358,29 +358,29 @@
 
   Make the following definitions:
   \begin{eqnarray*}
-    y_1 & = & t^{-3}, \\
-    y_2 & = & t^{-1}, \\
+    x_1 & = & t^{-3}, \\
+    x_2 & = & t^{-1}, \\
     f(t) & = & \frac{1}{t^2} \cos(2t).
   \end{eqnarray*}
-  
+
 \end{frame}
 
 \begin{frame}{Bonus Problem (continued)}
 
   Now apply the variation of parameters formulae:
   \begin{eqnarray*}
-    v_1' & = & \frac{-y_2 f}{y_2' y_1 - y_2 y_1'}, \\
+    v_1' & = & \frac{-x_2 f}{x_2' x_1 - x_2 x_1'}, \\
     & = & \frac{-t^{-1} \frac{1}{t^2} \cos(2t)}{-t^{-2} t^{-3} - (-3t^{-4}) t^{-1}}, \\
-    & = & \half t^2 \cos(2t).
+    & = & -\half t^2 \cos(2t).
   \end{eqnarray*}
 
   \begin{eqnarray*}
-    v_2' & = & \frac{y_1 f}{y_2' y_1 - y_2 y_1'}, \\
+    v_2' & = & \frac{x_1 f}{x_2' x_1 - x_2 x_1'}, \\
     & = & \frac{t^{-3} \frac{1}{t^2} \cos(2t)}{-t^{-2} t^{-3} - (-3t^{-4}) t^{-1}}, \\
     & = & \half \cos(2t).
   \end{eqnarray*}
 
-  
+
 \end{frame}
 
 
@@ -388,28 +388,27 @@
 
   Integrate to determine the functions:
   \begin{eqnarray*}
-    v_1 & = & \int \half t^2 \cos(2t) ~ dt, \\
-    & = & \frac{1}{4} t^2 \sin(2t) - \frac{1}{8} \sin(2t) + \frac{1}{4} t \cos(2t) + C_1. \\
+    v_1 & = & \int -\half t^2 \cos(2t) ~ dt, \\
+    & = & -\frac{1}{4} t^2 \sin(2t) + \frac{1}{8} \sin(2t) - \frac{1}{4} t \cos(2t) + C_1. \\
     ~ \\
     v_2 & = & \int \half \cos(2t) ~ dt, \\
     & = & \frac{1}{4} \sin(2t) + C_2.
   \end{eqnarray*}
 
-  
+
 \end{frame}
 
 \begin{frame}{Bonus Problem (continued)}
 
   Get the final answer:
   \begin{eqnarray*}
-    x & = & v_1 y_1 + v_2 y_2 , \\
-    & = & \lp \frac{1}{4} t^2 \sin(2t) - \frac{1}{8} \sin(2t) + \frac{1}{4} t \cos(2t) + C_1 \rp t^{-3} + \\
-    & & \lp \frac{1}{4} \sin(2t) + C_2 \rp t^{-2}, \\
-    & = & \frac{1}{4} t^{-1} \sin(2t) - \frac{1}{8} t^{-3} \sin(2t) + \frac{1}{4} t^{-2} \cos(2t) + C_1 t^{-3} + \\
-    & &   \frac{1}{4} t^{-2} \sin(2t) + C_2 t^{-2}. \\
+    x & = & v_1 x_1 + v_2 x_2 , \\
+    & = & \lp -\frac{1}{4} t^2 \sin(2t) + \frac{1}{8} \sin(2t) - \frac{1}{4} t \cos(2t) + C_1 \rp t^{-3} + \\
+    & & \lp \frac{1}{4} \sin(2t) + C_2 \rp t^{-1}, \\
+    & = &   \frac{1}{8} t^{-3} \sin(2t) - \frac{1}{4} t^{-2} \cos(2t) + C_1 t^{-3} + C_2 t^{-1}. \\
   \end{eqnarray*}
 
-  
+
 \end{frame}
 
 
