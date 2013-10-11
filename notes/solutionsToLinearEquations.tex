@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Solutions to Linear Systems}
-\date{26 Sep 2012}
+\date{16 October 2012}
 
 \begin{frame}
   \titlepage
@@ -69,7 +69,10 @@
   \begin{eqnarray*}
     3x + y & = & 4 \\
     -2x + y & = & 2 \\
-    \\
+  \end{eqnarray*}
+  Multiply the first equation by $\frac{1}{3}$ to get a leading
+  coefficient of one:
+  \begin{eqnarray*}
     \Rightarrow
     x + \frac{1}{3}y & = & \frac{4}{3} \\
     -2x + y & = & 2 \\
@@ -110,18 +113,23 @@
 
   \begin{eqnarray*}
     \arrayTwo{3}{1}{-2}{1} \vecTwo{x}{y} & = & \vecTwo{4}{2} \\
-    \uncover<1->{
+    \uncover<2->{
       \Rightarrow
       \stateTwo{R_1/3}{~}
       \arrayTwo{1}{\frac{1}{3}}{-2}{1} \vecTwo{x}{y} & = & \vecTwo{\frac{4}{3}}{2} \\
     }
-    \uncover<1->{
+    \uncover<3->{
       \Rightarrow
       \stateTwo{~}{2R_1+R2}
-      \arrayTwo{1}{\frac{1}{3}}{0}{\frac{5}{3}} \vecTwo{x}{y} & = & \vecTwo{\frac{4}{3}}{\frac{14}{3}}
+      \arrayTwo{1}{\frac{1}{3}}{0}{\frac{5}{3}} \vecTwo{x}{y} & = & \vecTwo{\frac{4}{3}}{\frac{14}{3}} \\
+    }
+    \uncover<4->{
+      \Rightarrow
+      \stateTwo{~}{3/5 R2}
+      \arrayTwo{1}{\frac{1}{3}}{0}{1} \vecTwo{x}{y} & = & \vecTwo{\frac{4}{3}}{\frac{14}{5}}
     }
   \end{eqnarray*}
-  \uncover<1->{Exactly the same thing only I am using matrices to
+  \uncover<5->{Exactly the same thing only I am using matrices to
     track the coefficients.}
 
 \end{frame}
@@ -209,7 +217,16 @@
 }
 
 
+\begin{frame}{Example}
 
+  Express the following system of equations in matrix/vector notation:
+  \begin{eqnarray*}
+    2x + 4y - z & = & 6 \\
+    x + y + z & = & 2 \\
+    -3x + y + 2z & = & 7
+  \end{eqnarray*}
+
+\end{frame}
 
 
 \begin{frame}
@@ -323,7 +340,7 @@
   \end{eqnarray*}
 
   \uncover<1-> { If one row comes out with zeros except in the last
-    column we say that the system is ``not consistent.''}
+    column we say that the system is \redText{\textit{not consistent}.}}
 
 \end{frame}
 
@@ -361,7 +378,7 @@
 
   \uncover<1->{If you get all zeros across all of the columns of one
     row so that you have less than ``n'' non-zero rows then the system
-    is called ``underdetermined.''}
+    is called \redText{\textit{under-determined}.}}
 
 \end{frame}
 
@@ -400,7 +417,7 @@
 
   \begin{eqnarray*}
     \vecThree{x}{y}{z} & = & \vecThree{4 - \frac{5}{3}z}{-\frac{2}{3}z}{z} \\
-    & = & \vecThree{4}{0}{0} + z \vecThree{\frac{-5}{3}}{\frac{-2}{3}}{1}
+    & = & \vecThree{4}{0}{0} + z \vecThree{-\frac{5}{3}}{-\frac{2}{3}}{1}
   \end{eqnarray*}
 
   For any $z$!
@@ -417,7 +434,7 @@
 
         \begin{eqnarray*}
           \vecThree{x}{y}{z} & = & \vecThree{4 - \frac{5}{3}z}{-\frac{2}{3}z}{z} \\
-          & = & \vecThree{4}{0}{0} + z \vecThree{\frac{-5}{3}}{\frac{-2}{3}}{1}
+          & = & \vecThree{4}{0}{0} + z \vecThree{-\frac{5}{3}}{-\frac{2}{3}}{1}
         \end{eqnarray*}
 
         How many solutions are there to the system?
@@ -439,7 +456,7 @@
 
         \begin{eqnarray*}
           \vecThree{x}{y}{z} & = & \vecThree{4 - \frac{5}{3}z}{-\frac{2}{3}z}{z} \\
-          & = & \vecThree{4}{0}{0} + z \vecThree{\frac{-5}{3}}{\frac{-2}{3}}{1}
+          & = & \vecThree{4}{0}{0} + z \vecThree{-\frac{5}{3}}{-\frac{2}{3}}{1}
         \end{eqnarray*}
 
         How many solutions are there to the system?
@@ -462,7 +479,7 @@
 
         \begin{eqnarray*}
           \vecThree{x}{y}{z} & = & \vecThree{4 - \frac{5}{3}z}{-\frac{2}{3}z}{z} \\
-          & = & \vecThree{4}{0}{0} + z \vecThree{\frac{-5}{3}}{\frac{-2}{3}}{1}
+          & = & \vecThree{4}{0}{0} + z \vecThree{-\frac{5}{3}}{-\frac{2}{3}}{1}
         \end{eqnarray*}
 
         How many solutions are there to the system?
@@ -494,36 +511,30 @@
   \frametitle{Another Way to Express The Solution}
 
   \begin{eqnarray*}
-    \arrayThree{2}{4}{6}{1}{-1}{1}{4}{2}{8} \vecThree{-5/3}{-2/3}{1}
-    & = & \vecThree{0}{0}{0}
-  \end{eqnarray*}
-
-  The homogeneous solution is
-  \begin{eqnarray*}
-    \vec{x}_h & = & \vecThree{-5/3}{-2/3}{1}.
-  \end{eqnarray*}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Another Way to Express The Solution}
-
-  \begin{eqnarray*}
     \arrayThree{2}{4}{6}{1}{-1}{1}{4}{2}{8} \vecThree{4}{0}{0}
     & = & \vecThree{8}{4}{16}
   \end{eqnarray*}
 
-  The particular solution is
-  \begin{eqnarray*}
-    \vec{x}_p & = & \vecThree{4}{0}{0}
-  \end{eqnarray*}
+  \only<1>{
+    The particular solution is
+    \begin{eqnarray*}
+      \vec{x}_p & = & \vecThree{4}{0}{0}
+    \end{eqnarray*}
 
-  \uncover<1->{The solution is
+    The homogeneous solution is
+    \begin{eqnarray*}
+      \vec{x}_h & = & \vecThree{-5/3}{-2/3}{1}
+    \end{eqnarray*}
+  }
+
+  \only<2->{The solution is
     \begin{eqnarray*}
       \vec{x} & = & \vec{x}_p + C \vec{x}_h
     \end{eqnarray*}
-    where $C$ can be any real number.
+    where $C$ can be \redText{\textbf{any}} real number.
   }
+
+  \vfill
 
 \end{frame}
 
