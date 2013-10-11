@@ -28,7 +28,7 @@
 %
 \newtoggle{clicker}
 \toggletrue{clicker}
-\togglefalse{clicker}
+%\togglefalse{clicker}
 \newcounter{clickerQuiz} % Create a counter to determine which clicker quiz to give
 \setcounter{clickerQuiz}{1} % Set the counter to 1, 2, or 3 for the section number
 
@@ -55,9 +55,9 @@
 %\includeonly{forcedOscillations}
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Start of linear algebra
-\includeonly{introLinearAlgebra}
+%\includeonly{introLinearAlgebra}
 %\includeonly{solutionsToLinearEquations}
-%\includeonly{matrices}
+\includeonly{matrices}
 %\includeonly{determinants}
 %\includeonly{spanOfVectors}
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -105,11 +105,6 @@
 
 \include{complexI}
 \include{complexII}
-\include{introLinearAlgebra}
-\include{solutionsToLinearEquations}
-\include{matrices}
-\include{determinants}
-\include{spanOfVectors}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -127,7 +122,11 @@
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Back to eigen values and linear algebrea
-
+\include{introLinearAlgebra}
+\include{solutionsToLinearEquations}
+\include{matrices}
+\include{determinants}
+\include{spanOfVectors}
 \include{eigenValues}
 \include{solvingSystems}
 \include{solvingSystemsII}
