@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Determinants}
-\date{3 Oct 2012}
+\date{21 Oct 2013}
 
 \begin{frame}
   \titlepage
@@ -284,7 +284,7 @@
     \left| A \right| & = & \sum^n_{j=1} a_{ij} c_{ij}.
   \end{eqnarray*}
   This is the determinant by expansion along the $i^{\mathrm{th}}$
-  row.
+  row. It is the same for any $i$ where $1\leq i \leq n$.
 
   An equivalent definition:
   \begin{eqnarray*}
@@ -507,7 +507,8 @@
 \begin{frame}
   \frametitle{Example - Quadratic Functions}
 
-  The set of quadratic functions is a vector space:
+  The set of polynomials of at most degree 2 (the quadratic functions)
+  is a vector space:
 
   \uncover<1->{%
     \begin{eqnarray*}
@@ -517,25 +518,25 @@
     where $a$, $b$, $c$, $d$, $e$, and $f$ are real numbers.
   }
 
-  \only<1>{%
+  \only<2>{%
     \color{red}{Addition:}{~}
     \begin{eqnarray*}
       h(x)+g(x) & = & (a+d) x^2 + (b+e) x + (c+f)
     \end{eqnarray*}
-    is a quadratic function.
+    is a polynomial of at most degree 2.
   }
 
-  \only<1>{%
+  \only<2>{%
     \color{red}{Scalar multiplication}, if $r$ is a real number:
     \begin{eqnarray*}
       r h(x) & = & ra x^2 + rb x + rc
     \end{eqnarray*}
-    is a quadratic.
+    is a polynomial of at most degree 2.
   }
 
-  \only<1>{%
-    The function $h(x) =  0$ 
-    is a quadratic and is the \color{red}{``zero vector.''}
+  \only<2>{%
+    The function $h(x) = 0$ is a polynomial of at most degree 2 and is
+    the \color{red}{``zero vector.''}  
   }
 
 
@@ -545,15 +546,17 @@
 \begin{frame}
   \frametitle{Counter Example}
 
-  The set of straight lines through $(0,1)$ is not a vector space:
-  \uncover<1->{%
+  The set of straight lines through $(0,1)$ is not a vector space.
+
+  \uncover<2->{%
+    Any polynomial, $h(x)$ or $g(x)$, can be expressed as
     \begin{eqnarray*}
       h(x) & = & ax + 1 \\
       g(x) & = & bx + 1
     \end{eqnarray*}
   }
 
-  \uncover<1->{%
+  \uncover<2->{%
     It fails the addition test:
     \begin{eqnarray*}
       h(x) + g(x) & = & (a+b)x + 2
