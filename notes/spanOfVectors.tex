@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Span of Vectors}
-\date{5 Oct 2012}
+\date{23 Oct 2013}
 
 \begin{frame}
   \titlepage
@@ -153,7 +153,7 @@
 
   In general, given a \textbf{\underline{set}} of vectors, $\vec{v_1}$, $\vec{v_2}$, $\vec{v_3}$,
   $\ldots$, $\vec{v_n}$ then the \textbf{\underline{set}} of vectors
-  that can be written in the form
+  that \redText{\underline{can}} be written in the form
   \begin{eqnarray*}
     c_1 \vec{v_1} + c_2 \vec{v_2} + c_3 \vec{v_3} + \cdots + c_n \vec{v_n}
   \end{eqnarray*}
@@ -165,8 +165,9 @@
     {\color{blue}
      \begin{eqnarray*}
       \mathrm{span}\{\vec{v_1}, \vec{v_2}, \vec{v_3},\ldots, \vec{v_n} \}
-    = \{c_1 \vec{v_1} + c_2 \vec{v_2} + c_3 \vec{v_3} + \cdots + c_n \vec{v_n}\}
+    = c_1 \vec{v_1} + c_2 \vec{v_2} + c_3 \vec{v_3} + \cdots + c_n \vec{v_n}
     \end{eqnarray*}
+    for all possible values of $c_1$, $c_2$, $c_3$, $\ldots$, $c_n$.
     }
   }
 
@@ -477,7 +478,7 @@
         \vfill
 
         \begin{tabular}{ll}
-          A: & $x_1=0$, $x_2=0$ \\
+          A: & Only $x_1=0$, $x_2=0$ \\
           B: & The solution is not unique.
         \end{tabular}
 
@@ -498,7 +499,7 @@
         \vfill
 
         \begin{tabular}{ll}
-          A: & $x_1=0$, $x_2=0$ \\
+          A: & Only $x_1=0$, $x_2=0$ \\
           B: & The solution is not unique.
         \end{tabular}
 
@@ -518,7 +519,7 @@
         \vfill
 
         \begin{tabular}{ll}
-          A: & $x_1=0$, $x_2=0$ \\
+          A: & Only $x_1=0$, $x_2=0$ \\
           B: & The solution is not unique.
         \end{tabular}
 
@@ -669,7 +670,13 @@
   \begin{eqnarray*}
     W & = & 
     \mathrm{det}
-    \arrayThree{t^2-1}{t^2+1}{t^2-2}{\frac{d}{dt}\lp t^2-1\rp}{\frac{d}{dt}\lp t^2+1\rp}{\frac{d}{dt}\lp t^2-2\rp}{\frac{d^2}{dt^2}\lp t^2-1\rp}{\frac{d^2}{dt^2}\lp t^2+1\rp}{\frac{d^2}{dt^2}\lp t^2-2\rp}  \\
+    \left[
+    \begin{array}{rrr}
+      t^2-1 & t^2+1 & t^2-2 \\ [10pt]
+      \frac{d}{dt}\lp t^2-1\rp & \frac{d}{dt}\lp t^2+1\rp & \frac{d}{dt}\lp t^2-2\rp \\ [10pt]
+      \frac{d^2}{dt^2}\lp t^2-1\rp & \frac{d^2}{dt^2}\lp t^2+1\rp & \frac{d^2}{dt^2}\lp t^2-2\rp  \\ 
+    \end{array}
+    \right] \\ [10pt]
     \uncover<1->
     {
     & = & 
@@ -698,10 +705,10 @@
     W & = & \mathrm{det}
     \left[
       \begin{array}{rrcr}
-        f_1 & f_2 & \cdot & f_n \\
-        f_1' & f_2' & \cdot & f_n' \\
-        f_1'' & f_2'' & \cdot & f_n'' \\
-        \vdots & \vdots & & \vdots \\
+        f_1 & f_2 & \cdots & f_n \\ [10pt]
+        f_1' & f_2' & \cdots & f_n' \\ [10pt]
+        f_1'' & f_2'' & \cdots & f_n'' \\ [10pt]
+        \vdots & \vdots & & \vdots \\ [10pt]
         f_1^{(n-1)} & f_2^{(n-1)} & \cdots & f_n^{(n-1)}
       \end{array}
     \right]
@@ -709,50 +716,21 @@
 
 \end{frame}
 
-\iftoggle{clicker}{%
 \begin{frame}
-  \frametitle{Clicker Quiz}
+  \frametitle{Example}
 
-       \ifnum\value{clickerQuiz}=1{%
-
-        \vfill
-       
-        
-       }\fi
-
-       \ifnum\value{clickerQuiz}=2{%
-
-       \vfill
-        
-         
-       }\fi
-
-      \ifnum\value{clickerQuiz}=3{%
-
-        \vfill
   Are the functions $\{t^2,t,1\}$ linearly independent?
 
-%  \begin{eqnarray*}
-%    W & = & \mathrm{det}
-%    \arrayThree{t^2}{t}{1}{2t}{1}{0}{2}{0}{0} \\
-%    & = & -2 \\
-%    & \neq & 0
-%  \end{eqnarray*}
-%  Yes. The functions $\{t^2,t,1\}$ are linearly independent.
-       \vfill
-
-        \begin{tabular}{ll}
-          A: & Yes \\
-          B: & No
-        \end{tabular}
-
-        \vfill
-
-     }\fi
+  \begin{eqnarray*}
+    W & = & \mathrm{det}
+    \arrayThree{t^2}{t}{1}{2t}{1}{0}{2}{0}{0} \\
+    & = & -2 \\
+    & \neq & 0
+  \end{eqnarray*}
+  Yes. The functions $\{t^2,t,1\}$ are linearly independent.
+  \vfill
 
 \end{frame}
-
-}
 
 % LocalWords:  Clarkson pausesection hideothersubsections Meh RREF Wronksian det
 % LocalWords:  Wronskian
