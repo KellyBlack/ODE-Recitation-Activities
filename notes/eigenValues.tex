@@ -5,7 +5,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Eigenvalues and eigenvectors}
-\date{24 October 2012}
+\date{30 October 2013}
 
 \begin{frame}
   \titlepage
@@ -44,17 +44,33 @@
     \frac{d}{dt} \vec{v} & = & A \vec{v}, \\
     & = & \lambda \vec{v}.
   \end{eqnarray*}
-  
-  This implies that
-  \begin{eqnarray*}
-    \deriv{x_1}{t} & = & \lambda x_1, \\
-    \deriv{x_2}{t} & = & \lambda x_2, \\
-    \deriv{x_3}{t} & = & \lambda x_3, \\
-    \vdots         &   & \vdots \\
-    \deriv{x_n}{t} & = & \lambda x_n
-  \end{eqnarray*}
 
-  We can solve each one of these equations separately!
+  \only<1>%
+  {
+    But,
+    \begin{eqnarray*}
+      \vec{v} & = & 
+      \left[
+        \begin{array}{r}
+          x_1 \\ x_2 \\ x_3 \\ \vdots \\ x_n
+        \end{array}
+      \right].
+    \end{eqnarray*}
+  }
+  
+  \only<2>%
+  {
+    This implies that
+    \begin{eqnarray*}
+      \deriv{x_1}{t} & = & \lambda x_1, \\
+      \deriv{x_2}{t} & = & \lambda x_2, \\
+      \deriv{x_3}{t} & = & \lambda x_3, \\
+      \vdots         &   & \vdots \\
+      \deriv{x_n}{t} & = & \lambda x_n
+    \end{eqnarray*}
+
+    We can solve each one of these equations separately!
+  }
 
 \end{frame}
 
@@ -62,11 +78,14 @@
 \begin{frame}
   \frametitle{Eigenvalues and Eigenvectors}
 
-  Definition: Given a square matrix, $A$, an eigenvector, $\vec{v}$, and an
-  eigenvalue, $\lambda$, satisfy
-  \begin{eqnarray*}
-    A \vec{v} & = & \lambda \vec{v}.
-  \end{eqnarray*}
+  \begin{definition}
+    Given a square matrix, $A$, an \blueText{eigenvector}, $\vec{v}$,
+    and an associated \blueText{eigenvalue}, $\lambda$, satisfy
+    \begin{eqnarray*}
+      A \vec{v} & = & \lambda \vec{v}.
+    \end{eqnarray*}
+  \end{definition}
+
 
 
 \end{frame}
@@ -150,9 +169,12 @@
   \begin{eqnarray*}
     A \vec{v} & = & \lambda \vec{v}, \\
     A \vec{v} - \lambda \vec{v} & = & 0, \\
-    A \vec{v} - \lambda I \vec{v} & = & 0, \\
+    A \vec{v} - \lambda \redText{I} \vec{v} & = & 0, \\
     \lp A - \lambda I \rp \vec{v} & = & 0.
   \end{eqnarray*}
+
+  \only<1>{\textit{Remember $\vec{v}$ is a vector and $A$ is an array. We cannot
+    add them!}}
 
   \uncover<2->{\redText{One solution is $\vec{v}=\vec{0}$.}} 
   \uncover<3->{\blueText{We do not like this solution.}}
@@ -176,12 +198,15 @@
     \begin{eqnarray*}
       \det\lp A - \lambda I \rp & = & 0.
     \end{eqnarray*}
-  \item Solve the equation for the values of $\lambda$.
-  \item Find the eigenvector associated with each value of $\lambda$,
+  \item Solve the equation for the \blueText{values} of $\lambda$,
+    call them $\lambda_j$.
+  \item Find the eigenvector associated with each value of $\lambda_j$,
     \begin{eqnarray*}
       \lp A - \lambda_j I \rp \vec{v}_j & = & \vec{0}.
     \end{eqnarray*}
-    (Note that there will be infinitely many solutions for $\vec{v}$.) Solving linear systems means dealing with RREF. Wheeeee!
+    (Note that there will be infinitely many solutions for each
+    $\vec{v}_j$.) Solving linear systems means dealing with
+    RREF. Woohoo!!
   \end{enumerate}
 
 \end{frame}
@@ -344,8 +369,12 @@
 \begin{frame}
   \frametitle{Theorem - Distinct Eigenvalues Makes Life Easier}
 
-  Theorem: If the eigenvalues of an $n\times n$ matrix include $n$
-  distinct values then the eigenvectors are linearly independent.
+  \begin{theorem}
+    If the eigenvalues of an $n\times n$ matrix include \blueText{\textbf{$n$}}
+    \blueText{distinct} values then the eigenvectors are linearly
+    independent.
+  \end{theorem}
+
 
   \vfill
 
@@ -645,3 +674,4 @@
 
 
 % LocalWords:  Clarkson pausesection hideothersubsections Eigen eigen
+%  LocalWords:  Eigenvectors eigenvector eigenvectors RREF
