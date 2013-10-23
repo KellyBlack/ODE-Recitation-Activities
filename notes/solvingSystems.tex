@@ -5,7 +5,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Solving Systems of Differential Equations}
-\date{31 October 2012}
+\date{1 November 2013}
 
 \begin{frame}
   \titlepage
@@ -27,8 +27,8 @@
   \centerline{\includegraphics[width=7cm]{img/doubleSpringMass}}
 
   \begin{eqnarray*}
-    \deriv{~}{t} \lp m \vec{v_1} \rp & = & \sum_j \vec{F}_{1j} \\
-    \deriv{~}{t} \lp m \vec{v_2} \rp & = & \sum_j \vec{F}_{2j} 
+    \deriv{~}{t} \lp m_1 \vec{v_1} \rp & = & \sum_j \vec{F}_{1j} \\
+    \deriv{~}{t} \lp m_2 \vec{v_2} \rp & = & \sum_k \vec{F}_{2k} 
   \end{eqnarray*}
 
   \uncover<2->{%
@@ -39,18 +39,18 @@
 
 
 \begin{frame}
-  \frametitle{Vicini - He Told Me to Go Back To The Beginning}
+  \frametitle{Vicini Told Me to Go Back To The Beginning}
 
   \begin{eqnarray*}
-    \deriv{~}{t} x_1  & = & a_{11} x_1 + a_{12} x_2 + f_1(t), \\
-    \deriv{~}{t} x_2  & = & a_{21} x_1 + a_{22} x_2 + f_2(t).
+    \deriv{~}{t} x_1  & = & a_{11} x_1 + a_{12} x_2 + f(t), \\
+    \deriv{~}{t} x_2  & = & a_{21} x_1 + a_{22} x_2 + g(t).
   \end{eqnarray*}
 
   Writing the system in matrix/vector form we get
   \begin{eqnarray*}
     \deriv{~}{t} \vecTwo{x_1}{x_2} & = & 
     \arrayTwo{a_{11}}{a_{12}}{a_{21}}{a_{22}} \vecTwo{x_1}{x_2} + 
-    \vecTwo{f_1}{f_2}.
+    \vecTwo{f(t)}{g(t)}.
   \end{eqnarray*}
 
 \end{frame}
@@ -61,19 +61,20 @@
 
   \begin{eqnarray*}
     \deriv{~}{t} \vec{x}(t) & = & A(t) \vec{x}(t) + \vec{f}(t), \\
-    \deriv{~}{t} \vec{x} & = & A \vec{x} + \vec{f}, \\
+    \mathrm{or}~~\deriv{~}{t} \vec{x} & = & A \vec{x} + \vec{f}, \\
     \vec{x}(t_0) & = & \vec{c} 
   \end{eqnarray*}
 
   If $\vec{f}=\vec{0}$ then the system of equations is
-  {\color{red}homogeneous}. 
-  Otherwise, the system is {\color{red}nonhomogeneous}.
+  {\color{red}homogeneous}, otherwise, the system is
+  {\color{red}nonhomogeneous}.
 
   {\color{blue}Remark:} 
   \begin{itemize}
   \item Solutions are the sum of homogeneous and particular solutions.
   \item Solutions are found by assuming a general form and then
-    searching for the ``right answer.''
+    searching for the ``right answer.'' \textit{(Hint: exponential
+      functions served us well in the past.)}
   \end{itemize}
 
 \end{frame}
@@ -254,6 +255,103 @@
   \end{enumerate}
 
 \end{frame}
+
+\begin{frame}
+  \frametitle{The Phase Plane}
+
+  In our example, the solution looks like
+  \begin{eqnarray*}
+    \vec{x}(t) & = & \vecTwo{x(t)}{y(t)}.
+  \end{eqnarray*}
+  This is a path in the plane.
+
+  At any time, $t$, you get a position in the $xy$-plane. 
+
+  \only<1>{%
+    \begin{picture}(100,100)
+      \put(0, 50){ \line(1, 0){100} }
+      \put(50, 0){ \line(0, 1){100} }
+      \put(75,80){\circle*{3}}
+      \put(80,85){$\vec{x}(0)$}
+      \put(95,45){$x$}
+      \put(45,95){$y$}
+    \end{picture}
+  }
+
+  \only<2>{%
+    \begin{picture}(100,100)
+      \put(0, 50){ \line(1, 0){100} }
+      \put(50, 0){ \line(0, 1){100} }
+      \put(75,80){\circle*{3}}
+      \put(80,85){$\vec{x}(0)$}
+      \put(77,75){\circle*{3}}
+      \put(82,73){$\vec{x}(0.1)$}
+      \put(95,45){$x$}
+      \put(45,95){$y$}
+    \end{picture}
+  }
+
+
+  \only<3>{%
+    \begin{picture}(100,100)
+      \put(0, 50){ \line(1, 0){100} }
+      \put(50, 0){ \line(0, 1){100} }
+      \put(75,80){\circle*{3}}
+      \put(80,85){$\vec{x}(0)$}
+      \put(77,75){\circle*{3}}
+      \put(82,73){$\vec{x}(0.1)$}
+      \put(73,69){\circle*{3}}
+      \put(77,64){$\vec{x}(0.2)$}
+      \put(95,45){$x$}
+      \put(45,95){$y$}
+    \end{picture}
+  }
+
+
+  \only<4>{%
+    \begin{picture}(100,100)
+      \put(0, 50){ \line(1, 0){100} }
+      \put(50, 0){ \line(0, 1){100} }
+      \put(75,80){\circle*{3}}
+      \put(80,85){$\vec{x}(0)$}
+      \put(77,75){\circle*{3}}
+      \put(82,73){$\vec{x}(0.1)$}
+      \put(73,69){\circle*{3}}
+      \put(77,64){$\vec{x}(0.2)$}
+      \put(68,60){\circle*{3}}
+      \put(72,54){$\vec{x}(0.3)$}
+      \put(95,45){$x$}
+      \put(45,95){$y$}
+    \end{picture}
+  }
+
+  \only<5>{%
+    \begin{picture}(100,100)
+      \put(0, 50){ \line(1, 0){100} }
+      \put(50, 0){ \line(0, 1){100} }
+      \put(75,80){\circle*{3}}
+      \put(80,85){$\vec{x}(0)$}
+      \put(77,75){\circle*{3}}
+      \put(82,73){$\vec{x}(0.1)$}
+      \put(73,69){\circle*{3}}
+      \put(77,64){$\vec{x}(0.2)$}
+      \put(68,60){\circle*{3}}
+      \put(72,54){$\vec{x}(0.3)$}
+      \qbezier(75,80)(76.5,77.5)(77,75)
+      \qbezier(77,75)(75,72)(73,69)
+      \qbezier(73,69)(70.5,64.5)(68,60)
+      \put(95,45){$x$}
+      \put(45,95){$y$}
+    \end{picture}
+
+    When you draw \textit{every} point you get a \textbf{path}. This
+    is all of the points that you move through as you go through
+    time. (It is the footprints you leave behind.)
+  }
+
+
+\end{frame}
+
 
 \begin{frame}
   \frametitle{The Phase Plane}
