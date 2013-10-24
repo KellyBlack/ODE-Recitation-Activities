@@ -47,7 +47,7 @@
   This means that we can go back to the previous equation to get
   \begin{eqnarray*}
     \arrayTwo{3}{1}{2}{1} \vecTwo{x}{y} & = & \vecTwo{4}{-1}, \\
-    \arrayTwo{1}{-1}{-2}{3} \arrayTwo{3}{1}{2}{1} \vecTwo{x}{y} & = & 
+    \arrayTwo{1}{-1}{-2}{3} \arrayTwo{3}{1}{2}{1} \vecTwo{x}{y} & = &
           \arrayTwo{1}{-1}{-2}{3}\vecTwo{4}{-1}, \\
     \arrayTwo{1}{0}{0}{1} \vecTwo{x}{y} & = & \vecTwo{5}{-11}, \\
     \vecTwo{x}{y} & = & \vecTwo{5}{-11}.
@@ -63,7 +63,7 @@
 
   \begin{eqnarray*}
     A & = & \arrayTwo{3}{1}{2}{1} \\
-    B & = & \arrayTwo{1}{-1}{-2}{3} 
+    B & = & \arrayTwo{1}{-1}{-2}{3}
   \end{eqnarray*}
 
   Then
@@ -78,14 +78,14 @@
   \frametitle{The Inverse}
 
   \begin{definition}[The Matrix Inverse]
-    
-    {\color{red}If} two matrices satisfy
+
+    {\color{red}If two matrices satisfy
     \begin{eqnarray*}
       A\cdot B & = & I
     \end{eqnarray*}
     then $B$ is the \textit{\redText{inverse}} of $A$.
 
-    It is denoted as $\redText{A^{-1}}$.
+    It is denoted as $\redText{A^{-1}}$.}
   \end{definition}
 
 
@@ -110,7 +110,7 @@
     \stopRowOps
   \end{eqnarray*}
 
-  {\color{blue}We put thisi $[A | I]$ in RREF.} 
+  {\color{blue}We put this $[A | I]$ in RREF.}
   If we can make the left half look like the
   identity matrix then the right half is the inverse.
 
@@ -120,14 +120,14 @@
 \begin{frame}
 
   \begin{eqnarray*}
-    \stateTwo{1/3 R_1}{~} 
+    \stateTwo{1/3 R_1}{~}
     \startRowOpsTwo
     \oneRowOpsTwo{1}{1/3}{1/3}{0}
     \oneRowOpsTwo{2}{1}{0}{1}
     \stopRowOps \\
     \uncover<2->
     {
-      \stateTwo{~}{-2R_1+R_2} 
+      \stateTwo{~}{-2R_1+R_2}
       \startRowOpsTwo
       \oneRowOpsTwo{1}{1/3}{1/3}{0}
       \oneRowOpsTwo{0}{1/3}{-2/3}{1}
@@ -135,11 +135,11 @@
     }
     \uncover<3->
     {
-      \stateTwo{~}{3R_2} 
+      \stateTwo{~}{3R_2}
       \startRowOpsTwo
       \oneRowOpsTwo{1}{1/3}{1/3}{0}
       \oneRowOpsTwo{0}{1}{-2}{3}
-      \stopRowOps 
+      \stopRowOps
     }
   \end{eqnarray*}
 
@@ -147,24 +147,24 @@
 
 \begin{frame}
   \begin{eqnarray*}
-      \stateTwo{~}{3R_2} 
+      \stateTwo{~}{3R_2}
       \startRowOpsTwo
       \oneRowOpsTwo{1}{1/3}{1/3}{0}
       \oneRowOpsTwo{0}{1}{-2}{3}
       \stopRowOps \\
     \uncover<2->
     {
-      \stateTwo{-1/3R_2+R_1}{~} 
+      \stateTwo{-1/3R_2+R_1}{~}
       \startRowOpsTwo
       \oneRowOpsTwo{1}{0}{1}{-1}
       \oneRowOpsTwo{0}{1}{-2}{3}
-      \stopRowOps 
+      \stopRowOps
     }
   \end{eqnarray*}
 
   \uncover<3->
   {
-    The inverse of the matrix is 
+    The inverse of the matrix is
     \begin{eqnarray*}
       A^{-1} & = & \arrayTwo{1}{-1}{-2}{3}
     \end{eqnarray*}
@@ -225,7 +225,7 @@
         \oneRowOpsThree{1}{2}{2}{1/2}{0}{0}
         \oneRowOpsThree{0}{-1}{0}{-1/2}{1}{0}
         \oneRowOpsThree{0}{-1}{2}{0}{0}{1}
-        \stopRowOps 
+        \stopRowOps
       }
     \end{eqnarray*}
 
@@ -258,7 +258,7 @@
       \oneRowOpsThree{1}{2}{2}{1/2}{0}{0}
       \oneRowOpsThree{0}{1}{0}{1/2}{-1}{0}
       \oneRowOpsThree{0}{0}{2}{1/2}{-1}{1}
-      \stopRowOps 
+      \stopRowOps
     }
   \end{eqnarray*}
 \end{frame}
@@ -290,7 +290,7 @@
       \oneRowOpsThree{1}{2}{0}{0}{1}{-1}
       \oneRowOpsThree{0}{1}{0}{1/2}{-1}{0}
       \oneRowOpsThree{0}{0}{1}{1/4}{-1/2}{1/2}
-      \stopRowOps 
+      \stopRowOps
     }
   \end{eqnarray*}
 \end{frame}
@@ -311,7 +311,7 @@
       \oneRowOpsThree{1}{0}{0}{-1}{3}{-1}
       \oneRowOpsThree{0}{1}{0}{1/2}{-1}{0}
       \oneRowOpsThree{0}{0}{1}{1/4}{-1/2}{1/2}
-      \stopRowOps 
+      \stopRowOps
     }
   \end{eqnarray*}
 
@@ -331,11 +331,11 @@
 \begin{frame}{Quick Check}
 
   \begin{eqnarray*}
-    \arrayThree{ 2}{4}{ 4}{  1}{ 1}{2}{  0}{  -1}{  2} \cdot 
-    \arrayThree{-1}{3}{-1}{1/2}{-1}{0}{1/4}{-1/2}{1/2} & = & 
+    \arrayThree{ 2}{4}{ 4}{  1}{ 1}{2}{  0}{  -1}{  2} \cdot
+    \arrayThree{-1}{3}{-1}{1/2}{-1}{0}{1/4}{-1/2}{1/2} & = &
     \arrayThree{1}{0}{0}{0}{1}{0}{0}{0}{1}
   \end{eqnarray*}
-  
+
 \end{frame}
 
 \subsection{Algebraic Properties}
@@ -348,9 +348,9 @@
   the product of the two matrices exists and
   {\color{orange}$(AB)^{-1} = B^{-1}A^{-1}$}.\\
 
-  \textit{{\color{blue}Proof.}} Since $A^{-1}$ and $B^{-1}$ exist,  
-   \begin{equation*} 
-     A \cdot A^{-1} = I, B \cdot B^{-1}  =  I. 
+  \textit{{\color{blue}Proof.}} Since $A^{-1}$ and $B^{-1}$ exist,
+   \begin{equation*}
+     A \cdot A^{-1} = I, B \cdot B^{-1}  =  I.
    \end{equation*}
    Then the following product reduces to the identity matrix:
    \begin{eqnarray*}
@@ -373,7 +373,7 @@
     A \vec{x} & = & \vec{b}.
   \end{eqnarray*}
 
-  \textbf{If} $A^{-1}$ exists then 
+  \textbf{If} $A^{-1}$ exists then
   \begin{eqnarray*}
     A^{-1} A \vec{x} & = & A^{-1} \vec{b}, \\
     \vec{x} & = & A^{-1} \vec{b}.
@@ -398,13 +398,13 @@
   If $A$ is invertible then the homogeneous solution is the
   zero vector.
   }
-  {\color{red}Why?} 
+  {\color{red}Why?}
    The homogeneous solution is a solution to the following system:
   \begin{eqnarray*}
     A \vec{x}_h & = & \vec{0}.
   \end{eqnarray*}
 
-  \textbf{If} $A^{-1}$ exists then 
+  \textbf{If} $A^{-1}$ exists then
   \begin{eqnarray*}
     A^{-1} A \vec{x}_h & = & A^{-1} \vec{0}, \\
     \vec{x}_h & = & A^{-1} \vec{0}, \\
