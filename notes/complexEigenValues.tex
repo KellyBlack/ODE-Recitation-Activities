@@ -3,9 +3,9 @@
 \section{Complex Eigenvalues}
 
 
-\title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 11, Day 1}
-\date{5 November 2012}
+\title{Complex Valued Eigenvalues}
+\subtitle{Spiral Solutions}
+\date{6 November 2013}
 
 \begin{frame}
   \titlepage
@@ -23,20 +23,24 @@
 \begin{frame}
   \frametitle{Complex Valued Eigenvalues}
 
-  First, recall:
+  Recall:
   \begin{eqnarray*}
     e^{a+bi} & = & e^a e^{bi}, \\
     & = & e^a \lp \cos(b) + i \sin(b) \rp.
   \end{eqnarray*}
 
-  Also, the complex conjugate:
+  \vfill
+
+  The complex conjugate:
   \begin{eqnarray*}
     \overline{a+ib} & = & a-i b.
   \end{eqnarray*}
 
-  Note: If A is a real valued matrix with complex valued eigenvalues,
-  then the eigenvalues and eigenvectors come in complex conjugates
-  pairs.
+  \vfill
+
+  If A is a real valued matrix with complex valued eigenvalues, then
+  the eigenvalues and eigenvectors come in \blueText{complex
+    conjugates pairs}.
 
 \end{frame}
 
@@ -45,34 +49,37 @@
   \frametitle{Clicker Quiz}
 
    \ifnum\value{clickerQuiz}=1{%
-     Express $\frac{1}{3-i}$ in rectangular form: \\ [12pt]
-     \begin{tabular}{ll}
-       A: & $\frac{1}{3} - i$ \\ [12pt]
-       B: & $\frac{3}{10} + \frac{1}{10} i$ \\ [12pt]
-       C: & $\frac{3}{10} - \frac{1}{10} i$ 
-     \end{tabular}
+   Given $A=\arrayTwo{-8}{30}{-3}{10}$. Find the eigenvalues. \\ [12pt]
+
+   \begin{tabular}{ll}
+     A: & $\lambda_{1,2} = 1 \pm 3i.$ \\ [12pt]
+     B: & $\lambda_{1} = 4, \lambda_2 = -2.$ \\ [12pt]
+     C: & $\lambda_{1,2} = 1.$ 
+   \end{tabular}
 
      \vfill
    }\fi
 
    \ifnum\value{clickerQuiz}=2{%
-     Express $\frac{1}{3-i}$ in rectangular form: \\ [12pt]
-     \begin{tabular}{ll}
-       A: & $\frac{1}{3} - i$ \\ [12pt]
-       B: & $\frac{3}{10} - \frac{1}{10} i$ \\ [12pt]
-       C: & $\frac{3}{10} + \frac{1}{10} i$ 
-     \end{tabular}
+   Given $A=\arrayTwo{-8}{30}{-3}{10}$. Find the eigenvalues. \\ [12pt]
+
+   \begin{tabular}{ll}
+     A: & $\lambda_{1,2} = 1 \pm 3i.$ \\ [12pt]
+     B: & $\lambda_{1} = 4, \lambda_2 = -2.$ \\ [12pt]
+     C: & $\lambda_{1,2} = 1.$ 
+   \end{tabular}
 
 
    \vfill
    }\fi
 
   \ifnum\value{clickerQuiz}=3{%
-   Given $A=\arrayTwo{-8}{30}{-3}{10}$. Find the eigenvalues.
+   Given $A=\arrayTwo{-8}{30}{-3}{10}$. Find the eigenvalues. \\ [12pt]
+
    \begin{tabular}{ll}
-     A: & $\lambda_{1,2} = 1 \pm 3i.$ \\
-     B: & $\lambda_{1} = 4, \lambda_2 = -2.$ \\
-     C: & $\lambda_{1,2} = 1.$ \\
+     A: & $\lambda_{1,2} = 1 \pm 3i.$ \\ [12pt]
+     B: & $\lambda_{1} = 4, \lambda_2 = -2.$ \\[12pt]
+     C: & $\lambda_{1,2} = 1.$ 
    \end{tabular}
 
   \vfill
@@ -143,12 +150,49 @@
     \uncover<3->
     {
       & = & 
-        C_1 e^{t} \lp \cos(3t)\vecTwo{3}{1} - \sin(3t)\vecTwo{-1}{0} \rp  \\
-      &  & +  C_2 e^{t} \lp\cos(3t) \vecTwo{-1}{0}+\sin(3t)\vecTwo{3}{1}\rp 
+        e^{t} \lp A \redText{e^{3it}} \lp\vec{p}+i\vec{q}\rp +  
+                 B \blueText{e^{-3it}} \lp\vec{p}-i\vec{q}\rp \rp \\ [12pt]
+     }
+    \uncover<4->
+    {
+      & = & 
+        e^{t} \lp A \redText{\lp\cos(3t)+i\sin(3t)\rp} \lp\vec{p}+i\vec{q}\rp +  \right. \\
+      & & \left. B \blueText{\lp\cos(3t)-i\sin(3t)\rp} \lp\vec{p}-i\vec{q}\rp \rp \\
      }
   \end{eqnarray*}
 
 
+\end{frame}
+
+\begin{frame}{The Solution}
+
+  \begin{eqnarray*}
+    \vec{x} & = & e^{t} \lp A \redText{\lp\cos(3t)+i\sin(3t)\rp \lp\vec{p}+i\vec{q}\rp} +  \right. \\
+            & & \left. B \blueText{\lp\cos(3t)-i\sin(3t)\rp \lp\vec{p}-i\vec{q}\rp} \rp \\ [12pt]
+    \uncover<2->{%
+      & = & e^{t} \lp \redText{A \cos(3t) \vec{p} + i A \sin(3t) \vec{p} + iA\cos(3t) \vec{q} - A \sin(3t) \vec{q}} \right. \\
+      & & \left. + \blueText{B \cos(3t) \vec{p} - i B \sin(3t) \vec{p} - iB\cos(3t) \vec{q} - B \sin(3t) \vec{q}} \rp  \\ [12pt]
+    }
+    \only<3>
+    {
+      & = & 
+      e^{t} \redText{(A+B)} \lp \cos(3t)\vec{p} - \sin(3t)\vec{q} \rp  \\
+      &  & + e^{t} \blueText{(A-B)} \lp\cos(3t) \vec{q}+\sin(3t)\vec{p} \rp  \\ [12pt]
+     }
+    \uncover<4->
+    {
+      & = & 
+         e^{t} \redText{C_1} \lp \cos(3t)\vec{p} - \sin(3t)\vec{q} \rp  \\
+      &  & +  e^{t} \blueText{C_2} \lp\cos(3t) \vec{q}+\sin(3t)\vec{p} \rp  \\ [12pt]
+     }
+    \uncover<5->
+    {
+      & = & 
+        C_1 e^{t} \lp \cos(3t)\vecTwo{3}{1} - \sin(3t)\vecTwo{-1}{0} \rp  \\
+      &  & +  C_2 e^{t} \lp\cos(3t) \vecTwo{-1}{0}+\sin(3t)\vecTwo{3}{1}\rp 
+     }
+   \end{eqnarray*}
+  
 \end{frame}
 
 \begin{frame}
@@ -216,9 +260,17 @@
 \begin{frame}
   \frametitle{Definition of the Nullclines}
 
-  The set of points, $\vecTwo{x}{y}$ where $x'(t)=0$ is called the v-nullcline. (Vertical slope.)
+  \begin{definition}[Zero Vertical Change]
+    The set of points, $\vecTwo{x}{y}$ where $x'(t)=0$ is called the
+    v-nullcline. 
+  \end{definition}
 
-  The set of points, $\vecTwo{x}{y}$ where $y'(t)=0$ is called the h-nullcline. (Horizontal slope.)
+
+  \begin{definition}[Zero Horizontal Change]
+    The set of points, $\vecTwo{x}{y}$ where $y'(t)=0$ is called the
+    h-nullcline.
+  \end{definition}
+
 
 \end{frame}
 
