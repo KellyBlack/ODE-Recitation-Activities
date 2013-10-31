@@ -5,7 +5,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Solutions to Systems of Differential Equations}
-\date{2 November 2012}
+\date{4 November 2013}
 
 \begin{frame}
   \titlepage
@@ -32,8 +32,15 @@
     ``Looks'' like a first order, linear equation. The exponential has
     served us well in the past. Let's give it a try? Assume that 
     \begin{eqnarray*}
-      \vec{x} & = & c e^{\lambda t} \vec{v}.
+      \vec{x} & = & \redText{c e^{\lambda t}} \vec{v}.
     \end{eqnarray*}
+
+    \vfill
+    Note that
+    \begin{eqnarray*}
+      \redText{c e^{\lambda t}}
+    \end{eqnarray*}
+    are \blueText{scalar} numbers.
   }
 
 
@@ -45,15 +52,17 @@
 
   The left hand Side:
   \begin{eqnarray*}
-    \deriv{~}{t} \vec{x} & = & c \lambda e^{\lambda t} \vec{v} \\
+    \deriv{~}{t} \vec{x} & = & \redText{c \lambda e^{\lambda t}} \vec{v} \\
   \end{eqnarray*}
 
   \uncover<2->
   {
     The right hand Side:
     \begin{eqnarray*}
-      A \vec{x} & = & c e^{\lambda t} A \vec{v}.
+      A \vec{x} & = &  A \lp \redText{c e^{\lambda t}} \vec{v} \rp \\
+      & = & \redText{c e^{\lambda t}} A \vec{v}.
     \end{eqnarray*}
+    (Remember that $\redText{c e^{\lambda t}}$ are scalars.)
   }
 
   \uncover<3->
@@ -81,8 +90,8 @@
     \deriv{~}{t} \vec{x} & = & A \vec{x},
   \end{eqnarray*}
   where $A$ is an $n\times n$ matrix, find the eigenvalues and
-  eigenvectors. \textbf{If} there are \redText{$n$ linearly independent}
-  eigenvectors then
+  eigenvectors. \blueText{\textbf{If}} there are \redText{$n$ linearly
+    independent} eigenvectors then
   \begin{eqnarray*}
     \vec{x} & = & c_1 e^{\lambda_1 t} \vec{v}_1 + c_2 e^{\lambda_2 t} \vec{v}_2 +
     \cdot + c_n e^{\lambda_n t} \vec{v}_n.
@@ -353,7 +362,7 @@
 \begin{frame}
   \frametitle{Solution Behaviors and Nomenclature}
 
-% \includegraphics[width=7cm]{img/phasePlaneSink}
+  \includegraphics[width=7cm]{img/phasePlaneSink}
  
 \end{frame}
 
@@ -459,16 +468,18 @@
   worked. We will try that again...
   Assume that
   \begin{eqnarray*}
-    \vec{x} & = & t e^{\lambda t} \vec{v} + e^{\lambda t} \vec{u}.
+    \vec{x} & = & \redText{t e^{\lambda t} \vec{v}} + \blueText{e^{\lambda t} \vec{u}}.
   \end{eqnarray*}
 
   \uncover<2->
   {
     Substitute back into the equation:
     \begin{eqnarray*}
-      \deriv{~}{t} \vec{x} & = & \lambda t e^{\lambda t} \vec{v} + e^{\lambda t} \vec{v} 
-         + \lambda e^{\lambda t} \vec{u}, \\
-      A\vec{x} & = & t e^{\lambda t} A \vec{v} + e^{\lambda t} A \vec{u}.
+      \deriv{~}{t} \vec{x} & = & \redText{\lambda t e^{\lambda t} \vec{v} +  
+        e^{\lambda t} \vec{v} }
+         + \blueText{\lambda e^{\lambda t} \vec{u}}, \\
+      A\vec{x} & = & \redText{t e^{\lambda t} A \vec{v}} + 
+                     \blueText{e^{\lambda t} A \vec{u}}.
     \end{eqnarray*}
   }
   
@@ -614,7 +625,7 @@
 
   \begin{eqnarray*}
     \deriv{x}{t} & = & 0\times 2 - 
-    \frac{x}{100}\times 3 + \frac{y}{50}\times 2 \\
+    \frac{x}{100}\times 3 + \frac{y}{50}\times 1 \\
     \deriv{y}{t} & = & \frac{x}{100} \times 3 -
     \frac{y}{50} \times 1 - \frac{y}{50}\times 2.
   \end{eqnarray*}
@@ -622,7 +633,7 @@
   Written as a system we get
   \begin{eqnarray*}
     \deriv{~}{t} \vecTwo{x}{y} & = & 
-    \arrayTwo{-3/100}{2/50}{3/100}{-3/50} \vecTwo{x}{y}.
+    \arrayTwo{-3/100}{1/50}{3/100}{-3/50} \vecTwo{x}{y}.
   \end{eqnarray*}
   
 \end{frame}
