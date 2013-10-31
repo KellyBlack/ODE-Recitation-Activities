@@ -13,9 +13,9 @@
    height="1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="traceDeterminant.svg"
-   inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/traceDeterminant.png"
+   inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/traceDeterminantExample6.png"
    inkscape:export-xdpi="885.34998"
    inkscape:export-ydpi="885.34998">
   <defs
@@ -27,11 +27,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.5005284"
-     inkscape:cx="272.33806"
-     inkscape:cy="743.85339"
+     inkscape:zoom="2.1523175"
+     inkscape:cx="276.55348"
+     inkscape:cy="755.13042"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer10"
      showgrid="true"
      inkscape:window-width="1426"
      inkscape:window-height="1021"
@@ -113,25 +113,25 @@
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="125"
-       y="392.36218"
+       x="105"
+       y="387.36218"
        id="text3805"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3807"
-         x="125"
-         y="392.36218">Saddle</tspan></text>
+         x="105"
+         y="387.36218">Saddle</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="290"
-       y="392.36218"
+       x="340"
+       y="387.36218"
        id="text3805-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3807-0"
-         x="290"
-         y="392.36218">Saddle</tspan></text>
+         x="340"
+         y="387.36218">Saddle</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
@@ -146,44 +146,44 @@
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="182"
-       y="227.36218"
+       x="140"
+       y="202.36218"
        id="text3805-8"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3807-4"
-         x="182"
-         y="227.36218">Spiral</tspan><tspan
+         x="140"
+         y="202.36218">Spiral</tspan><tspan
          sodipodi:role="line"
-         x="182"
-         y="252.36218"
+         x="140"
+         y="227.36218"
          id="tspan3868">Sink</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="280"
-       y="227.36218"
+       x="310"
+       y="202.36218"
        id="text3805-3"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3807-43"
-         x="280"
-         y="227.36218">Spiral </tspan><tspan
+         x="310"
+         y="202.36218">Spiral </tspan><tspan
          sodipodi:role="line"
-         x="280"
-         y="252.36218"
+         x="310"
+         y="227.36218"
          id="tspan3866">Source</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="330"
-       y="297.36218"
+       x="335"
+       y="302.36218"
        id="text3805-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3807-6"
-         x="330"
-         y="297.36218">Source</tspan></text>
+         x="335"
+         y="302.36218">Source</tspan></text>
   </g>
   <g
      inkscape:label="Layer 1"
@@ -234,5 +234,90 @@
          id="tspan3803"
          x="268.58008"
          y="161.93457">D</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Point 1"
+     style="display:none">
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3016"
+       sodipodi:cx="337.5"
+       sodipodi:cy="284.86218"
+       sodipodi:rx="2.5"
+       sodipodi:ry="2.5"
+       d="m 340,284.86218 a 2.5,2.5 0 1 1 -5,0 2.5,2.5 0 1 1 5,0 z"
+       transform="translate(18.332967,-13.632206)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="Point 2"
+     style="display:none">
+    <path
+       transform="translate(-15.127303,41.195858)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3016-7"
+       sodipodi:cx="337.5"
+       sodipodi:cy="284.86218"
+       sodipodi:rx="2.5"
+       sodipodi:ry="2.5"
+       d="m 340,284.86218 a 2.5,2.5 0 1 1 -5,0 2.5,2.5 0 1 1 5,0 z" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="line 1"
+     style="display:none">
+    <path
+       style="fill:none;stroke:#0efcff;stroke-width:2.29999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 295,182.36218 0,285"
+       id="path3020"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="Line 2"
+     style="display:none">
+    <path
+       style="fill:none;stroke:#0efcff;stroke-width:2.29999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 195,312.36218 0.61537,156.1077"
+       id="path3020-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="line 3"
+     style="display:none">
+    <path
+       style="fill:none;stroke:#0efcff;stroke-width:2.29999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 215,182.36218 0,285"
+       id="path3020-0-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/traceDeterminantExample5.png"
+       inkscape:export-xdpi="885.34998"
+       inkscape:export-ydpi="885.34998" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer10"
+     inkscape:label="line 4">
+    <path
+       style="fill:none;stroke:#0efcff;stroke-width:2.29999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 410,257.36218 -310,0"
+       id="path3020-0-6-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/traceDeterminantExample5.png"
+       inkscape:export-xdpi="885.34998"
+       inkscape:export-ydpi="885.34998" />
   </g>
 </svg>
