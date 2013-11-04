@@ -3,9 +3,9 @@
 \section{Laplace Transforms}
 
 
-\title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 12, Day 2}
-\date{14 November 2012}
+\title{Laplace Transforms}
+\subtitle{Converting A Differential Equation into an Algebra Problem}
+\date{15 November 2013}
 
 \begin{frame}
   \titlepage
@@ -264,7 +264,11 @@
     
     The Laplace transform is
     \begin{eqnarray*}
-      \laplace{f} & = & \redText{\frac{3}{s}} + \blueText{\frac{5}{s^2}} - \fuchsiaText{\frac{16}{s^3}}.
+      \begin{array}{rclclcl}
+      \laplace{f} & = & \redText{\laplace{3}}  & + & \blueText{\laplace{5t}}  & + &  \fuchsiaText{\laplace{-8t^2}}, \\
+                  & = & \redText{3\laplace{1}} & + &  \blueText{5\laplace{t}} & - & \fuchsiaText{8\laplace{t^2}}, \\
+                  & = & \redText{\frac{3}{s}}  & + &  \blueText{\frac{5}{s^2}} & - & \fuchsiaText{\frac{16}{s^3}}.
+                \end{array}
     \end{eqnarray*}
 
   }
@@ -316,7 +320,11 @@
 
     The Laplace transform is
     \begin{eqnarray*}
-      \laplace{f} & = & \redText{\frac{4}{s}} - \blueText{\frac{3}{s^2}} + \fuchsiaText{\frac{14}{s^3}}.
+      \begin{array}{rclclcl}
+      \laplace{f} & = & \redText{\laplace{4}} & - & \blueText{\laplace{3t}} & + & \fuchsiaText{\laplace{7t^2}}, \\
+                  & = & \redText{4\laplace{1}} & - & \blueText{3\laplace{t}} & + & \fuchsiaText{7\laplace{t^2}}, \\
+                  & = & \redText{\frac{4}{s}} & - & \blueText{\frac{3}{s^2}} & + & \fuchsiaText{\frac{14}{s^3}}.
+      \end{array}
     \end{eqnarray*}
 
   }
@@ -348,7 +356,11 @@
 
     The Laplace transform is
     \begin{eqnarray*}
-      \laplace{f} & = & \redText{5 \frac{3!}{s^4}} - \blueText{17 \frac{5!}{s^6}}.
+      \begin{array}{rclcl}
+      \laplace{f} & = & \redText{\laplace{5 t^3}} & - & \blueText{\laplace{17 t^5}}, \\
+                  & = & \redText{5\laplace{t^3}} & - & \blueText{17\laplace{t^5}}, \\
+                  & = & \redText{5 \frac{3!}{s^4}} & - & \blueText{17 \frac{5!}{s^6}}.
+    \end{array}
     \end{eqnarray*}
 
   }
@@ -408,9 +420,15 @@
 
   \begin{eqnarray*}
     \laplace{e^{at}} & = & \int^\infty_0 e^{at} e^{-st} ~ dt, \\
-    & = & \int^\infty_0 e^{(a-s)t} ~ dt, \\
-    \Rightarrow \laplace{e^{at}} & = & \frac{1}{s-a}.
+    \only<2->{
+      & = & \int^\infty_0 e^{(a-s)t} ~ dt, \\
+      & = & \lim_{M\rightarrow\infty}\int^M_0 e^{(a-s)t} ~ dt, \\
+      & = & \lim_{M\rightarrow\infty}  \frac{1}{(a-s)}e^{(a-s)t} \bigg|^M_0, \\
+      & = & \lim_{M\rightarrow\infty}  \frac{1}{(a-s)}e^{(a-s)M} - \frac{1}{(a-s)}\bigg|^M_0, \\
+      \Rightarrow \laplace{e^{at}} & = & \frac{1}{s-a}.
+    }
   \end{eqnarray*}
+  (Assume that $s$ is greater than $a$.)
 
 \end{frame}
 
@@ -561,9 +579,9 @@
   Note that
   \begin{eqnarray*}
     \laplace{e^{iat}} & = & \frac{1}{s-ai}, \\
-    & = & \frac{s+ai}{(s-ai)(s+ai)}, \\
-    & = & \frac{s+ai}{s^2+a^2}, \\
-    \only<2>{& = & \frac{s}{s^2+a^2} + i \frac{a}{s^2+a^2}. \\}
+    & = & \frac{\redText{s}+\blueText{ai}}{(s-ai)(s+ai)}, \\
+    & = & \frac{\redText{s}+\blueText{ai}}{s^2+a^2}, \\
+    \only<2>{& = & \redText{\frac{s}{s^2+a^2}} + i \blueText{\frac{a}{s^2+a^2}}. \\}
     \uncover<3->{& = & \redText{\frac{s}{s^2+a^2}} + i \blueText{\frac{a}{s^2+a^2}}.}
   \end{eqnarray*}
 
@@ -573,7 +591,7 @@
 
     At the same time, though,
     \begin{eqnarray*}
-      \laplace{e^{iat}} & = & \laplace{\cos(at) + i \sin(at)}, \\
+      \laplace{e^{iat}} & = & \laplace{\redText{\cos(at)} + i \blueText{\sin(at)}}, \\
       & = & \redText{\laplace{\cos(at)}} + i \blueText{\laplace{\sin(at)}}.
     \end{eqnarray*}
 
@@ -622,8 +640,8 @@
   \frametitle{More Identities}
 
   \begin{eqnarray*}
-    \laplace{t f(t)} & = & \int^\infty_0 t f(t) e^{-st} ~ dt, \\
-    & = & \int^\infty_0 f(t) \lp -\deriv{~}{s} e^{-st} \rp ~ dt, \\
+    \laplace{\blueText{t} f(t)} & = & \int^\infty_0 ~\blueText{t} f(t) \blueText{e^{-st}} ~ dt, \\
+    & = & \int^\infty_0 f(t) \blueText{\lp -\deriv{~}{s} e^{-st} \rp} ~ dt, \\
     & = & -\deriv{~}{s} \int^\infty_0 f(t) e^{-st}  ~ dt, \\
     & = & -\deriv{~}{s} \laplace{f}(s).
   \end{eqnarray*}
@@ -676,14 +694,14 @@
 
     \column{.9\textwidth}
     \begin{eqnarray*}
-      \laplace{e^{at} f(t)} & = & \int^\infty_0 e^{at} f(t) e^{-st} ~ dt, \\
+      \laplace{\blueText{e^{at}} f(t)} & = & \int^\infty_0 ~\blueText{e^{at}} f(t) \redText{e^{-st}} ~ dt, \\
       \uncover<2->
       {
-        & = & \int^\infty_0 f(t) e^{-(s-a)t} ~ dt, \\
+        & = & \int^\infty_0 f(t) \blueText{e^{-(s-a)t}} ~ dt, \\
       }
       \uncover<3->
       {
-        & = & \laplace{f}(s-a).
+        & = & \laplace{f}(\blueText{s-a}).
       }
     \end{eqnarray*}
   \end{columns}
@@ -804,8 +822,9 @@
 
   (We will see why soon.)
 
-  But mostly it is because \textbf{some engineers like to use it}. You
+  But mostly it is because \textbf{some engineers like to use it}\footnote{If you do not believe me ask your adviser.}. You
   have to be prepared to come across this in the future.
+
   
 \end{frame}
 
