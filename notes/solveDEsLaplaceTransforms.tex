@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Solving ODEs with Laplace Transforms}
-\date{19 Nov 2012}
+\date{22 November 2013}
 
 \begin{frame}
   \titlepage
@@ -24,12 +24,24 @@
 
   Yet another identity:
   \begin{eqnarray*}
-    \laplace{y'} & = & \int^\infty_0 y'(t) e^{-st} ~ dt, \\
-    & = & \lim_{M\rightarrow\infty} \int^M_0 y'(t) e^{-st} ~ dt, \\
-    & = & \lim_{M\rightarrow\infty} y(t)e^{-st} \bigg|^M_0 + \int^M_0 s e^{-st} y(t)~dt, \\
-    & = & \lim_{M\rightarrow\infty} y(M)e^{-sM} - y(0) + s \int^M_0 y(t) e^{-st} ~dt, \\
-    & = & -y(0) + s \laplace{y}.
-  \end{eqnarray*}
+    \laplace{\redText{y'}} & = & \int^\infty_0 \redText{y'(t)} e^{-st} ~ dt, \\
+    & = & \lim_{M\rightarrow\infty} \int^M_0 \redText{y'(t)} e^{-st} ~ dt, \\
+    \end{eqnarray*}
+    \only<2-3>{%
+      We can integrate by parts:
+      \begin{eqnarray*}
+        u= e^{-st}, & & v=\only<3>{y(t)}, \\
+        du= \only<3>{-se^{-st}\;dt}, & & dv=y'(t)dt, \\
+      \end{eqnarray*}
+    }
+
+    \only<4->{%
+      \begin{eqnarray*}
+        \laplace{\redText{y'}}  & = & \lim_{M\rightarrow\infty} \redText{y(t)}e^{-st} \bigg|^M_0 + \int^M_0 s e^{-st} \redText{y(t)}~dt, \\
+        & = & \lim_{M\rightarrow\infty} y(M)e^{-sM} - \redText{y(0)} + s \int^M_0 \redText{y(t)} e^{-st} ~dt, \\
+        & = & -\redText{y(0)} + s \laplace{\redText{y}}.
+      \end{eqnarray*}
+    }
 
 \end{frame}
 
@@ -41,13 +53,24 @@
   \end{block}
 \end{frame}
 
+\begin{frame}{Algebra, Algebra, Algebra }
+
+  \vfill
+
+  Why do we do this? There will not be any more integrals for the rest
+  of the slides! Only algebra.
+
+  \vfill
+  
+\end{frame}
+
 \begin{frame}
   \frametitle{The Second Derivative}
 
   \begin{eqnarray*}
     \laplace{y'} & = & -y(0) + s \laplace{y}, \\
-    \laplace{y''} & = & -y'(0) + s \laplace{y'}, \\
-    & = & -y'(0) + s \lp -y(0) + s \laplace{y} \rp, \\
+    \laplace{y''} & = & -y'(0) + s \laplace{\redText{y'}}, \\
+    & = & -y'(0) + s \lp \redText{-y(0) + s \laplace{y}} \rp, \\
     & = & -y'(0) - s y(0) + s^2 \laplace{y}.
   \end{eqnarray*}
 
@@ -450,6 +473,19 @@
     \end{eqnarray*}
   }
 
+\end{frame}
+
+
+\begin{frame}{Algebra, Algebra, Algebra }
+
+  \vfill
+
+  Again, the thing to note is that after the first identity was
+  established we solved differential equations using algebra and no
+  calculus.
+
+  \vfill
+  
 \end{frame}
 
 
