@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{The Unit Step Function}
-\date{19 Nov 2012}
+\date{4 November 2013}
 
 \begin{frame}
   \titlepage
@@ -44,15 +44,15 @@
   \begin{columns}
   
     \column{.5\textwidth}
-    If I am given $f(t)$....\\
-    \centerline{\includegraphics[width=4cm]{img/unshifted}}
+    If I am given $f(t)$....\\ [1.8em]
+    \centerline{\includegraphics[width=6cm]{img/unshifted}}
 
     \column{.5\textwidth}
     \uncover<2->
     {%
 
       I can shift it to the right by translating the domain, $f(t-a)$:\\
-      \centerline{\includegraphics[width=4cm]{img/shifted}}
+      \centerline{\includegraphics[width=6cm]{img/shifted}}
 
     }
 
@@ -64,7 +64,7 @@
 \begin{frame}
   \frametitle{The Unit Step Function}
 
-  \centerline{\includegraphics[width=3cm]{img/unitStepFunction}}
+  \centerline{\includegraphics[width=5cm]{img/unitStepFunction}}
 
   A new name for an old function:
   \begin{eqnarray*}
@@ -97,7 +97,7 @@
 \begin{frame}
   \frametitle{Shifted Version}
 
-  \centerline{\includegraphics[width=3cm]{img/unitStepAta}}
+  \centerline{\includegraphics[width=5cm]{img/unitStepAta}}
 
     The function shifted $a$ units to the right is
     \begin{eqnarray*}
@@ -166,9 +166,26 @@
    }\fi
 
   \ifnum\value{clickerQuiz}=3{%
+     Express the function
+     \begin{eqnarray*}
+       f(t) & = & 
+       \left\{
+         \begin{array}{r@{\hspace{2em}}rcl}
+           5 & t & \geq & 0 \\
+           0 & t & < & 0
+         \end{array}
+       \right.
+     \end{eqnarray*}
+     in terms of the unit step function.
 
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & step(t) \\ [12pt]
+       B: & $5\cdot$step(t) \\ [12pt]
+       C: & step(t-5)
+     \end{tabular}
 
-  \vfill
+     \vfill
  }\fi
 \end{frame}
 }
@@ -252,8 +269,26 @@
 
   \ifnum\value{clickerQuiz}=3{%
 
+     Express the function
+     \begin{eqnarray*}
+       f(t) & = & 
+       \left\{
+         \begin{array}{r@{\hspace{2em}}rcl}
+           0 & t & \geq & 0 \\
+           1 & t & < & 0
+         \end{array}
+       \right.
+     \end{eqnarray*}
+     in terms of the unit step function.
 
-  \vfill
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & -step(t) \\ [12pt]
+       B: & $1-$step(t) \\ [12pt]
+       C: & step(t-1)
+     \end{tabular}
+
+    \vfill
  }\fi
 \end{frame}
 }
@@ -327,7 +362,8 @@
   {
     \begin{eqnarray*}
       f(t) & = & 2(t-3)\cdot\mathrm{step}(t-3) -
-      2(t-3)\cdot\mathrm{step}(t-5) + 4\cdot\mathrm{step}(t-5).
+                 2(t-3)\cdot\mathrm{step}(t-5) + \\
+           &   & 4\cdot\mathrm{step}(t-5).
     \end{eqnarray*}
   }
 
@@ -360,7 +396,7 @@
 
   \uncover<3->
   {
-    Assume that $t\geq 0$:
+    If we assume that $t\geq 0$:
     \begin{eqnarray*}
       f(t) & = & \sin(t) - \sin(t)\mathrm{step}(t-2\pi).
     \end{eqnarray*}
@@ -404,14 +440,14 @@
   \frametitle{The Laplace Transform of the Unit Step Function}
 
   \begin{eqnarray*}
-    \laplace{f(t-a)\mathrm{step(t-a)}} & = & 
-           \int^\infty_0 f(t-a)\mathrm{step(t-a)} ~ e^{-st} ~ dt, \\
-    & = &  \int^\infty_a f(t-a) e^{-st} ~ dt, \\
-    & = & \int^\infty_a f(t-a) e^{-s(t-a+a)} ~ dt, \\
-    & = & \int^\infty_a f(t-a) e^{-s(t-a)}e^{-as} ~ dt, \\
-    & = & e^{-as} \int^\infty_a f(t-a) e^{-s(t-a)} ~ dt, \\
-    & = & e^{-as} \int^\infty_0 f(u) e^{-su} ~ du, \\
-    & = & e^{-as} \laplace{f} \\
+    \laplace{f(\redText{t-a})\mathrm{step(\redText{t-a})}} & = & 
+           \int^\infty_0 f(\redText{t-a})\mathrm{step(\redText{t-a})} ~ e^{-st} ~ dt, \\
+    & = &  \int^\infty_{\fuchsiaText{a}} f(\redText{t-a}) e^{-st} ~ dt, \\
+    & = & \int^\infty_{\fuchsiaText{a}} f(\redText{t-a}) e^{-s(\redText{t-a}+a)} ~ dt, \\
+    & = & \int^\infty_{\fuchsiaText{a}} f(\redText{t-a}) e^{-s(\redText{t-a})}\blueText{e^{-as}} ~ dt, \\
+    & = & \blueText{e^{-as}} \int^\infty_{\fuchsiaText{a}} f(\redText{t-a}) e^{-s(\redText{t-a})} ~ dt, \\
+    & = & \blueText{e^{-as}} \int^\infty_0 f(u) e^{-su} ~ du, \\
+    & = & \blueText{e^{-as}} \laplace{f} \\
   \end{eqnarray*}
 
 \end{frame}
@@ -445,9 +481,22 @@
   \frametitle{Example}
 
   \begin{eqnarray*}
-    \laplace{f} & = & e^{-2s}\frac{1}{(s-4)^2}, \\
-    \Rightarrow f & = & e^{4(t-2)}(t-2) \cdot \mathrm{step}(t-2).
+    \laplace{f} & = & e^{-2s}\frac{1}{(s-4)^2}.
   \end{eqnarray*}
+
+  \only<2->{%
+    If 
+    \begin{eqnarray*}
+      \laplace{g} & = & \frac{1}{(s-4)^2},
+    \end{eqnarray*}
+    then $g=te^{4t}$.
+
+    Which means that
+    \begin{eqnarray*}
+      \laplace{f} & = & e^{-2s}\frac{1}{(s-4)^2}, \\
+      \Rightarrow f & = & (t-2)e^{4(t-2)} \cdot \mathrm{step}(t-2).
+    \end{eqnarray*}
+  }
 
 \end{frame}
 
@@ -495,17 +544,18 @@
   \uncover<2->
   {
     \begin{eqnarray*}
-      \laplace{q} & = & \frac{1/2}{s(2s+1)} - \frac{1/2}{s(2s+1)} e^{-6s}, \\
-      & = & \half \frac{1}{s} - \half \frac{1}{s+\half}
-      - \half \frac{1}{s} e^{-6s} + \half \frac{1}{s+\half} e^{-6s}.
+      \laplace{q} & = & \blueText{\frac{1/2}{s(2s+1)}} \redText{- \frac{1/2}{s(2s+1)} e^{-6s}}, \\
+      & = & \blueText{\half \frac{1}{s} - \half \frac{1}{s+\half}}
+      \redText{- \half \frac{1}{s} e^{-6s} + \half \frac{1}{s+\half} e^{-6s}}.
     \end{eqnarray*}
   }
 
   \uncover<3->
   {
     \begin{eqnarray*}
-      q & = & \half - \half e^{-t/2} - \half\cdot\mathrm{step}(t-6)
-      + \half e^{-(t-6)/2}\cdot\mathrm{step}(t-6).
+      q & = & \blueText{\half - \half e^{-t/2}} \\
+      & & \redText{- \half\cdot\mathrm{step}(t-6)
+                   + \half e^{-(t-6)/2}\cdot\mathrm{step}(t-6)}.
     \end{eqnarray*}
   }
 

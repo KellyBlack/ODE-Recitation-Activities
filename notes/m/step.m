@@ -22,7 +22,7 @@ set(gca,'YTickLabelMode','manual')
 set(gca,'YTick',[0 0.7])
 set(gca,'YTickLabel',{'0';'1'})
 
-print -dpng 'unitStepAta.png' '-r 600'
+print -dpng 'unitStepAta.png' '-r 500'
 
 
 clf
@@ -37,16 +37,17 @@ hold on
 x = -3:0.01:5;
 y = exp(-x.*x*0.5);
 plot(x,y,'r','LineWidth',4.0);
+plot([0 0],[0 2],'k--')
 
 set(gca,'XTickLabelMode','manual')
-set(gca,'XTick',[0 1])
+set(gca,'XTick',[0 2])
 set(gca,'XTickLabel',{'0';'a'})
 
 set(gca,'YTickLabelMode','manual')
 set(gca,'YTick',[0])
 set(gca,'YTickLabel',{' '})
 
-print -dpng 'unshifted.png' '-r 600'
+print -dpng 'unshifted.png' '-r 500'
 
 
 
@@ -56,23 +57,24 @@ set(gca,'LineWidth',3.0);
 set(gca,'FontSize',14);
 xlabel('Time','FontSize',16);
 ylabel('f(t)','FontSize',16);
-title('Unshifted Function');
+title('Shifted Function');
 
 hold on
 x = -3:0.01:5;
-y = exp(-(x-1).*(x-1)*0.5);
+y = exp(-(x-2).*(x-2)*0.5);
 plot(x,y,'r','LineWidth',4.0);
-plot([1 1],[0 2],'k--')
+plot([2 2],[0 2],'k--')
 
 set(gca,'XTickLabelMode','manual')
-set(gca,'XTick',[0 1])
+set(gca,'XTick',[0 2])
 set(gca,'XTickLabel',{'0';'a'})
 
 set(gca,'YTickLabelMode','manual')
 set(gca,'YTick',[0])
 set(gca,'YTickLabel',{' '})
 
-print -dpng 'shifted.png' '-r 600'
+print -dpng 'shifted.png' '-r 500'
+
 
 
 clf
@@ -97,7 +99,7 @@ set(gca,'YTickLabelMode','manual')
 set(gca,'YTick',[0 1])
 set(gca,'YTickLabel',{'0';'1'})
 
-print -dpng 'unitStepFunction.png' '-r 600'
+print -dpng 'unitStepFunction.png' '-r 500'
 
 
 clf
@@ -121,7 +123,7 @@ set(gca,'YTickLabelMode','manual')
 set(gca,'YTick',[0 2])
 set(gca,'YTickLabel',{'0';'2'})
 
-print -dpng 'stepEx1.png' '-r 600'
+print -dpng 'stepEx1.png' '-r 500'
 
 
 clf
@@ -148,7 +150,7 @@ set(gca,'YTickLabelMode','manual')
 set(gca,'YTick',[0 2])
 set(gca,'YTickLabel',{'0';'2'})
 
-print -dpng 'stepEx2.png' '-r 600'
+print -dpng 'stepEx2.png' '-r 500'
 
 
 clf
@@ -176,7 +178,7 @@ set(gca,'YTickLabelMode','manual')
 set(gca,'YTick',[-1 0 1])
 set(gca,'YTickLabel',{'-1';'0';'1'})
 
-print -dpng 'stepEx3.png' '-r 600'
+print -dpng 'stepEx3.png' '-r 500'
 
 
 clf
@@ -199,7 +201,7 @@ set(gca,'YTickLabelMode','manual')
 set(gca,'YTick',[0 4])
 set(gca,'YTickLabel',{'0';'4'})
 
-print -dpng 'stepEx4.png' '-r 600'
+print -dpng 'stepEx4.png' '-r 500'
 
 
 clf
@@ -222,7 +224,7 @@ set(gca,'YTickLabelMode','manual')
 set(gca,'YTick',[-1 0 1])
 set(gca,'YTickLabel',{'-1';'0';'1'})
 
-print -dpng 'stepEx5.png' '-r 600'
+print -dpng 'stepEx5.png' '-r 500'
 
 
 
@@ -250,4 +252,4 @@ set(gca,'YTickLabelMode','manual')
 set(gca,'YTick',[0 7])
 set(gca,'YTickLabel',{'0';'7'})
 
-print -dpng 'stepEx6.png' '-r 600'
+print -dpng 'stepEx6.png' '-r 500'
