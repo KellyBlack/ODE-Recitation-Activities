@@ -1,0 +1,100 @@
+Received: from spamfilter.clarkson.edu (128.153.5.37) by intmail.clarkson.edu
+ (10.90.2.37) with Microsoft SMTP Server id 14.2.347.0; Sun, 3 Nov 2013
+ 00:13:36 -0400
+X-ASG-Debug-ID: 1383452015-05af7f22da385800001-vAIE2s
+Received: from nm4-vm1.bullet.mail.ne1.yahoo.com
+ (nm4-vm1.bullet.mail.ne1.yahoo.com [98.138.91.44]) by spamfilter.clarkson.edu
+ with ESMTP id 4G4zPjZ7pt18HHxe for <kblack@clarkson.edu>; Sun, 03 Nov 2013
+ 00:13:36 -0400 (EDT)
+X-Barracuda-Envelope-From: jhagy@yahoo.com
+X-Barracuda-Apparent-Source-IP: 98.138.91.44
+X-Barracuda-User-Whitelist: kblack@clarkson.edu
+X-Barracuda-IPDD: Level1 [yahoo.com/98.138.91.44]
+Received: from [98.138.226.180] by nm4.bullet.mail.ne1.yahoo.com with NNFMP;
+ 03 Nov 2013 04:13:35 -0000
+X-Barracuda-IPDD: Level1 [yahoo.com/98.138.91.44]
+Received: from [98.138.104.116] by tm15.bullet.mail.ne1.yahoo.com with NNFMP;
+ 03 Nov 2013 04:13:35 -0000
+Received: from [127.0.0.1] by smtp225.mail.ne1.yahoo.com with NNFMP; 03 Nov
+ 2013 04:13:35 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s1024; t=1383452015; bh=gZde/HbJH7zr5nCY5evH1ZnlKtlHBoUxUo1IlN3LEo4=; h=X-Yahoo-Newman-Id:X-Yahoo-Newman-Property:X-YMail-OSG:X-Yahoo-SMTP:X-Rocket-Received:Content-Type:Content-Transfer-Encoding:Subject:References:From:In-Reply-To:Message-Id:Date:To:Mime-Version:X-Mailer; b=M7jaTaViTL8fO2817blvnyhIxv8XAKkLcTQRjgorqevDXMCpi3EMS9vG9DVtwXrLXHwOxEJk78M9t/omzp+zoq5ngWS4EtvBjUV0Ndhja/uDSZNqRGqSQFxozQ0LffO83EwYgEiY583ygUWe/CFIMYZKfVygtwf3R49togqfmfg=
+X-Yahoo-Newman-Id: 788758.49310.bm@smtp225.mail.ne1.yahoo.com
+X-Yahoo-Newman-Property: ymail-3
+X-YMail-OSG: psMv2qQVM1mdbZNROcmXbzDnoxwd9GOGGDa1p8GpX1xlAZ.
+ vI7_FPOnlXyXF9XvwzUTrNnFmzzjggSLkjTtGh6BakrXN_Nq7GHEIopLw0TI
+ 7PS3vfZzgb9b0Lm2.ANce8mXZ2R3rbOESjXbT0Vd_hmJR4FQhwKBINGwnZ67
+ 5NucCA3EAD68KPovaX515TEXS69SX4W1nJ7bgDIRNbAQojLEaKBYA2kT76.K
+ 9We49at8cxuD9dDJEr0vM2_GR5xYRiWG8_S2wTtIXLyenFq2vlX_WzP32Ows
+ eNy7vjd_G4I9HGGtiz6IoTWNxttjj9rAoFepTEN3eaN1glUJJweF4AWGJsCF
+ SpmvFydzn2DDIDWYBAPZ_Wu9cufkphSLlN2uGjBAI7B_YY1TT4YippvWi2Ds
+ .AN.gEjZBBrmxZwKNpxDleLv.H7h3_piOg7l5RLoOaF4vJ7kXDjFCMgNuisR
+ xphH19qySgja57Dy3k2Iwn2XHkmfKrFtNWEBcXDXgbO_69AqUBYO3tA6iPlH
+ Hfp6JwOmBkn_qnOZ7rUMQW2iJeBWI39INCRPMSxrCQqQuXsVhBcuSFXJNcL0
+ JOONV0Oy0XHYaUuRHYg2TZl1S9VIYCctI6kuXocQjijpp7sxPyhnv.m_d5XY
+ _QYkHNQJ.7pLL.aYidTlTq4l7uRKR.DPoCsIdw2x0xIotZJF5RBrpofQveMi
+ Gw.gd3NDMzNMej3UFrQE2ZsRMirvEOtF1P6NKKfjTDkRAbObhAtg1TuAIa2i
+ 1n.E8xxTtPaVp_UlMsJA-
+X-Yahoo-SMTP: 9ie7uBSswBBhjnHKTBKsaqr7
+X-Rocket-Received: from [21.194.77.66] (jhagy@66.87.113.66 with )
+        by smtp225.mail.ne1.yahoo.com with SMTP; 03 Nov 2013 04:13:35 +0000 UTC
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Subject: Re: Use of a diagram in a mathematics class
+References: <5275359E.2050800@clarkson.edu>
+X-ASG-Orig-Subj: Re: Use of a diagram in a mathematics class
+From: Jessica Hagy <jhagy@yahoo.com>
+In-Reply-To: <5275359E.2050800@clarkson.edu>
+Message-ID: <892CDB04-49A6-4037-B91B-78FD6E8A7909@yahoo.com>
+Date: Sat, 2 Nov 2013 20:17:07 -0700
+To: "<kblack@clarkson.edu>" <kblack@clarkson.edu>
+X-Mailer: iPhone Mail (10A523)
+X-Barracuda-Connect: nm4-vm1.bullet.mail.ne1.yahoo.com[98.138.91.44]
+X-Barracuda-Start-Time: 1383452015
+X-Barracuda-URL: http://spamfilter.clarkson.edu:80/cgi-mod/mark.cgi
+X-Virus-Scanned: by bsmtpd at clarkson.edu
+X-Barracuda-BRTS-Status: 1
+Return-Path: jhagy@yahoo.com
+X-MS-Exchange-Organization-AuthSource: exch05.ad.clarkson.edu
+X-MS-Exchange-Organization-AuthAs: Anonymous
+MIME-Version: 1.0
+
+Go for it!
+Need higher resolution files? 
+And thank you for asking! 
+
+-jessica
+
+Sent from my iPhone
+
+On Nov 2, 2013, at 10:25 AM, Kelly Black <kblack@clarkson.edu> wrote:
+
+> Dear Jessica Hagy,
+> 
+> I am an avid follower of your website and enjoy your diagrams. We are
+> teaching an introductory differential equations class, and one of your
+> diagrams would be a great addition to one of our sections on the
+> importance of communication and the problem solving process:
+> 
+> http://thisisindexed.com/2013/10/just-tell-me-whats-the-matter/
+> 
+> We would like to use this in our class. The issue is that we make our
+> notes publicly available,
+> https://github.com/KellyBlack/ODE-Recitation-Activities
+> 
+> and we make the notes freely available under a Creative Commons
+> Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+> 
+> Would it be possible to add this diagram to our notes? If so it would
+> mean that it would be put in our repository and would likely be used in
+> a variety of other ways that we cannot predict given the nature of this
+> license and the Internet in general.
+> 
+> Sincerely,
+> Kelly Black
+> 
+> -- 
+> _______________________________________________________          __o
+> Kelly Black                     Phone: (315) 268-3831  \       _`\<,_
+> Department of Math. and C.S.    FAX:   (315) 268-2371   \_____(_)/ (_)
+> Clarkson University             e-mail: kjblack@gmail.com
+> Potsdam NY 13699-5815
