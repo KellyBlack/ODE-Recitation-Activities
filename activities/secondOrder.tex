@@ -10,14 +10,55 @@
 
   \begin{subproblem}
   \item Show that $y=e^{4t}$ is a solution.
-    \vspace{4cm}
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y & = & e^{4t}, \\
+          y' & = & 4 e^{4t}, \\
+          y'' & = & 16 e^{4t}, \\
+          \Rightarrow y'' - y' - 12y & = & 16 e^{4t} - 4 e^{4t} - 12 e^{4t}, \\
+          & = & 0.
+        \end{eqnarray*}
+        
+      }{
+        \vspace{4cm}
+      }
   \item Show that $y=e^{-3t}$ is a solution.
-    \vspace{4cm}
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y & = & e^{-3t}, \\
+          y' & = & -3 e^{-3t}, \\
+          y'' & = & 9 e^{-3t}, \\
+          \Rightarrow y'' - y' - 12y & = & 9 e^{-3t} + 3 e^{-3t} - 12 e^{-3t}, \\
+          & = & 0.
+        \end{eqnarray*}
+        
+      }{
+        \vspace{4cm}
+      }
+
   \item Show that $y=C_1 e^{4t} + C_2 e^{-3t}$ is a solution for
     any constants $C_1$ and $C_2$. Will the solution grow or
     decay?
 
-    \vfill
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y & = & C_1 e^{4t} + C_2 e^{-3t}, \\
+          y' & = & C_1 4 e^{4t} - C_2 3 e^{-3t}, \\
+          y'' & = & C_1 16 e^{4t} + C_2 9 e^{-3t}, \\
+          \Rightarrow y'' - y' - 12y & = & C_1 16 e^{4t} + C_2 9 e^{-3t} 
+                                         - C_1 4 e^{4t} + C_2 3 e^{-3t} 
+                                         - C_1 12 e^{4t} + 12 C_2 e^{-3t}, \\
+          & = & 0.
+        \end{eqnarray*}
+        
+      }{
+        \vfill
+      }
 
   \end{subproblem}
 
@@ -35,16 +76,61 @@
     \begin{subproblem}
     \item Assume that the solution is in the form $y=Ae^{rt}$. Find
       the first and second derivatives of this function.
-      \vfill
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y & = & A e^{rt}, \\
+          y' & = & A r e^{rt}, \\
+          y'' & = & A r^2 e^{rt}, \\
+        \end{eqnarray*}
+        
+      }{
+        \vfill
+      }
+
 
     \item Substitute the previous results into the differential equation.
-      \vfill
+      
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          y'' + 3 y' + 2y & = & A r^2 e^{rt} + 3 A r e^{rt} + 2 A e^{rt}.
+        \end{eqnarray*}
+        
+      }{
+        \vfill
+      }
+
       
     \item Factor the $Ae^{rt}$ and solve for $r$.
-      \vfill
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          A r^2 e^{rt} + 3 A r e^{rt} + 2 A e^{rt} 
+          & = & A e^{rt} \lp r^2 + 3r + 2 \rp.
+        \end{eqnarray*}
+        
+      }{
+        \vfill
+      }
 
     \item Determine the general solution to the differential equation.
-      \vfill
+
+      \iftoggle{solutions}{%
+
+        \begin{eqnarray*}
+          r^2 + 3r + 2 & = & 0, \\
+          r & = & \frac{-3\pm\sqrt{9-8}}{2}, \\
+          & = & -2, -1, \\
+          \Rightarrow y & = & C_1 e^{-t} + C_2 e^{-2t}.
+        \end{eqnarray*}
+        
+      }{
+        \vfill
+      }
+
     
     \end{subproblem}
 
@@ -61,7 +147,29 @@
     determine the answer to the question of stability by only looking
     at the roots of the characteristic equation? If so how?
 
-    \vfill
+      \iftoggle{solutions}{%
+        Assume that $y=Ae^{rt}$, then substitute back into the equation:
+        \begin{eqnarray*}
+          y'' + 3y' - 10y & = & 0, \\
+          A e^{rt} \lp r^2 + 3r - 10 \rp & = & 0, \\
+          \Rightarrow \lp r^2 + 3r - 10 \rp & = & 0, \\
+          r & = & \frac{-3 \pm \sqrt{9+40}}{2}, \\
+          r & = & 2,~ -5, \\
+          \Rightarrow y & = & C_1 e^{2t} + C_2 e^{-5t}.
+        \end{eqnarray*}
+
+        The solution will grow like $e^{2t}$.
+
+        The roots of the characteristic equation indicate the
+        coefficient in the exponential term. If both roots are
+        negative the solution will decay. Otherwise at least one root
+        will be positive, and the solution will grow
+        exponentially. Here the roots are 2 and -5, so the solution
+        will grow like $e^{2t}$.
+        
+      }
+
+      \vfill
 
   \clearpage
 
@@ -74,7 +182,31 @@
     determine the answer to the question of stability by only looking
     at the roots of the characteristic equation? If so how?
 
-    \vfill
+      \iftoggle{solutions}{%
+
+        Assume that $y=Ae^{rt}$, then substitute back into the equation:
+        \begin{eqnarray*}
+          y'' + 4y' + 2y & = & 0, \\
+          A e^{rt} \lp r^2 + 4r + 2 \rp & = & 0, \\
+          \Rightarrow \lp r^2 + 4r + 2 \rp & = & 0, \\
+          r & = & \frac{-4 \pm \sqrt{16-8}}{2}, \\
+          r & = & -2+\sqrt{2}, -2-\sqrt{2}, \\
+          \Rightarrow y & = & C_1 e^{\lp -2+\sqrt{2}\rp t} + C_2 e^{\lp -2-\sqrt{2}\rp t}.
+        \end{eqnarray*}
+
+        The solution will decay like $e^{\lp -2+\sqrt{2}\rp t}$.
+
+        The roots of the characteristic equation indicate the
+        coefficient in the exponential term. If both roots are
+        negative the solution will decay. Otherwise at least one root
+        will be positive, and the solution will grow exponentially. In
+        this case both roots are negative so the solution decays.
+
+        
+      }{
+        \vfill
+      }
+
   \end{problem}
 
 
@@ -89,29 +221,107 @@
     \begin{subproblem}
       \item Show that $y=C_1 e^{i2t} + C_2 e^{-i2t}$ is a solution to
         the differential equation.
+
+      \iftoggle{solutions}{%
+
+        Assume that $y=C_1 e^{i2t} + C_2 e^{-i2t}$, and the derivatives are
+        \begin{eqnarray*}
+          y  & = & C_1 e^{i2t} + C_2 e^{-i2t}, \\
+          y' & = & 2i C_1 e^{i2t} - 2i C_2 e^{-i2t}, \\
+          y''& = & -4 C_1 e^{i2t} - 4 C_2 e^{-i2t}.
+        \end{eqnarray*}
+        Substitute this back into the original equation to get
+        \begin{eqnarray*}
+          y'' + 4y & = & -4 C_1 e^{i2t} - 4 C_2 e^{-i2t} + 4 C_1 e^{i2t} + 4 C_2 e^{-i2t}, \\
+          & = & 0.
+        \end{eqnarray*}
+
+        
+      }{
         \vfill
+      }
+
 
       \item Use Euler's formula to write the solution, $y=C_1 e^{i2t}
         + C_2 e^{-i2t}$, in terms of sines and cosines.
-        \vfill
+
+        \iftoggle{solutions}{%
+        
+          Assume that $y=C_1 e^{i2t} + C_2 e^{-i2t}$ and substitute the
+          exponential terms using Euler's formula:
+          \begin{eqnarray*}
+            y  & = & C_1 e^{i2t} + C_2 e^{-i2t}, \\
+            & = & C_1 \lp \cos(2t) + i \sin(2t) \rp +
+                  C_2 \lp \cos(-2t) + i \sin(-2t) \rp.
+          \end{eqnarray*}
+
+        }{
+          \vfill
+        }
+
 
         \clearpage
 
       \item Simplify the terms so that the sine and cosine terms are
         only expressed in terms of $\sin(2t)$ and $\cos(2t)$.
 
-        \vfill
+        \iftoggle{solutions}{%
+
+          From the previous page we have that
+          \begin{eqnarray*}
+            y  & = & C_1 e^{i2t} + C_2 e^{-i2t}, \\
+            & = & C_1 \lp \cos(2t) + i \sin(2t) \rp +
+                  C_2 \lp \cos(-2t) + i \sin(-2t) \rp, \\
+            & = & C_1 \lp \cos(2t) + i \sin(2t) \rp +
+                  C_2 \lp \cos(2t) - i \sin(2t) \rp. \\
+          \end{eqnarray*}
+
+        }{
+          \vfill
+        }
 
       \item Collect all the sine terms and the cosine terms so that
         the solution is in the form
         \begin{eqnarray}
           y & = & \#_1 \cos(2t) + \#_2 \sin(2t).
         \end{eqnarray}
-        \vfill
+
+        \iftoggle{solutions}{%
+
+          From the previous step we have that
+          \begin{eqnarray*}
+            C_1 \lp \cos(2t) + i \sin(2t) \rp +
+            C_2 \lp \cos(2t) - i \sin(2t) \rp 
+            & = & \lp C_1 + C_2 \rp \cos(2t) + i (C_1 - C_2) \sin(2t).
+          \end{eqnarray*}
+
+        }{
+          \vfill
+        }
 
       \item Show that $y=k_1 \cos(2t) + k_2 \sin(2t)$ is a solution to
         the original differential equation.
-        \vfill
+        \iftoggle{solutions}{%
+
+          Assume that $y=k_1 \cos(2t) + k_2 \sin(2t)$ and the derivatives are
+          \begin{eqnarray*}
+            y   & = & k_1 \cos(2t) + k_2 \sin(2t), \\
+            y'  & = & -2 k_1 \sin(2t) + 2 k_2 \cos(2t), \\
+            y'' & = & -4 k_1 \cos(2t) - 4 k_2 \sin(2t). \\
+          \end{eqnarray*}
+
+          Substitute this back into the original equation and
+          simplify. The result is the following:
+          \begin{eqnarray*}
+            y'' + 4y & = & k_1 \cos(2t) + k_2 \sin(2t)
+            -4 k_1 \cos(2t) - 4 k_2 \sin(2t), \\
+            & = & 0.
+          \end{eqnarray*}
+
+        }{
+          \vfill
+        }
+
         
 
     \end{subproblem}
