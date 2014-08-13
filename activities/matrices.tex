@@ -3,7 +3,7 @@
 
 \begin{problem} 
 \item Multiply the following matrices ($A*B$ and $B*A$):
-  \begin{eqnarray*}
+  \begin{eqnarray}
     A & = & 
     \left[
       \begin{array}{rr}
@@ -18,7 +18,7 @@
          1 & -3
       \end{array}
     \right] \\
-  \end{eqnarray*}
+  \end{eqnarray}
 
   \iftoggle{solutions}{%
 
@@ -68,7 +68,7 @@
   }
 
   \item Solve the following system of equations using matrix techniques:
-  \begin{eqnarray*}
+  \begin{eqnarray}
     \left[
       \begin{array}{rr}
         3 & 4 \\ 
@@ -82,7 +82,7 @@
         0
       \end{array}
     \right]
-  \end{eqnarray*}
+  \end{eqnarray}
 
   \iftoggle{solutions}{%
 
@@ -125,7 +125,7 @@
   \vfill
 
   \item Solve the following system of equations using matrix techniques:
-  \begin{eqnarray*}
+  \begin{eqnarray}
     \left[
       \begin{array}{rr}
         3 & 4 \\ 
@@ -139,7 +139,7 @@
         1
       \end{array}
     \right]
-  \end{eqnarray*}
+  \end{eqnarray}
 
   \iftoggle{solutions}{%
 
@@ -187,9 +187,9 @@
   \actTitle{Inverse of a matrix}
   \begin{problem}
   \item Given the following matrix
-    \begin{eqnarray*}
+    \begin{eqnarray}
       A & = & \arrayTwo{1}{2}{1}{-4}
-    \end{eqnarray*}
+    \end{eqnarray}
     \begin{subproblem}
       \item Does the inverse exist? (Determine the answer without
         finding the inverse.)
@@ -206,9 +206,9 @@
 
         \vfill
       \item Is there a unique solution to the equation
-        \begin{eqnarray*}
+        \begin{eqnarray}
           A \vec{x} & = & \vec{b}
-        \end{eqnarray*}
+        \end{eqnarray}
         for any vector $\vec{b}$?
 
         \iftoggle{solutions}{%
@@ -234,7 +234,7 @@
     \end{subproblem}
 
     \clearpage
-  \item Find the inverse of the matrix.
+  \item Find the inverse of the matrix $A$.
 
     \iftoggle{solutions}{%
 
@@ -270,28 +270,121 @@
   \end{problem}
 
 
-  \actTitle{Linear Dependence}
+  \actTitle{Determinants and Linear Dependence}
   \begin{problem}
 
-    \item Determine whether or not the set of functions whose first
-      derivative is zero at $x=0$ is a vector space.
+  \item The matrix C is defined to be
+    \begin{eqnarray}
+      C & = & \left[
+        \begin{array}{rr}
+           a &  2\\
+           0 &  8
+        \end{array}
+      \right].
+    \end{eqnarray}
+    Determine the values of $a$ that will insure that the determinant
+    of the matrix $C$ is zero.
+
+    \vfill
+
+  \item The matrix D is defined to be
+    \begin{eqnarray}
+      D & = & \left[
+        \begin{array}{rr}
+           a &  2\\
+           1 &  a-4
+        \end{array}
+      \right].
+    \end{eqnarray}
+    Determine the values of $a$ that will insure that the determinant
+    of the matrix $D$ is zero.
+
+    \vfill
+
+    \clearpage
+
+  \item The matrix M is defined to be
+    \begin{eqnarray}
+      M & = & \left[
+        \begin{array}{rr}
+           x &  1\\
+           y &  4
+        \end{array}
+      \right].
+    \end{eqnarray}
+    Determine the values of $x$ and $y$ that will insure that the
+    determinant of the matrix $M$ is zero. Plot the resulting values
+    in the $x-y$ plane.
+
+    \vfill
+
+  \item The matrix P is defined to be
+    \begin{eqnarray}
+      P & = & \left[
+        \begin{array}{rr}
+           x &  4\\
+           2 &  x-y
+        \end{array}
+      \right].
+    \end{eqnarray}
+    Determine the values of $x$ and $y$ that will insure that the
+    determinant of the matrix $P$ is zero. Plot the resulting values
+    in the $x-y$ plane.
+
+    \vfill
+
+  \clearpage
+
+  \item The matrix A is defined to be
+    \begin{eqnarray}
+      A & = & \left[
+        \begin{array}{rr}
+          -2 & -3 \\
+           0 &  4
+        \end{array}
+      \right].
+    \end{eqnarray}
+    Suppose that a vector $\vec{v}$ satisfies
+    $A\vec{v}=-2\vec{v}$. Determine the matrix $B$ that satisfies
+    \begin{eqnarray}
+      B \vec{v} & = & \left[ \begin{array}{r} 0 \\ 0 \end{array} \right].
+    \end{eqnarray}
+    (i.e. manipulate the equation $A\vec{v}=-2\vec{v}$ so that it is
+    in the form given above.)
+
+    \vfill
+
+  \item If the vector $\vec{v}$ is not a zero vector what must be true
+    about the determinate of $B$?
+
+    \vspace*{4em}
+
+  \item How many solutions for $\vec{v}$ are there?
+
+    \vspace*{4em}
+
+
+      \clearpage
+
+    \item (Optional) Determine whether or not the set of functions
+      whose first derivative is zero at $x=0$ is a vector space.
 
       \iftoggle{solutions}{%
 
         Let $V$ be the set of functions that satisfy $f'(0)=0$.
 
         Addition: suppose that $f$ and $g$ are in $V$. Is $f+g$ also in V?
-        \begin{eqnarray*}
+        \begin{eqnarray}
           \deriv{~}{t} (f+g) & = & f'+g', \\
           f'(0)+g'(0) & = & 0,
-        \end{eqnarray*}
+        \end{eqnarray}
         so $f+g$ are in $V$.
 
         Scalar multiplication: for any real number, $c$, is $c\cdot f(t)$ in $V$?
-        \begin{eqnarray*}
+        \begin{eqnarray}
           \deriv{~}{t} (c\cdot f(t)) & = & c \cdot f'(t), \\
           c \cdot f(0) & = & 0,
-        \end{eqnarray*}
+        \end{eqnarray}
         so $c \cdot f(t)$ is in $V$.
 
         The derivative of the function $f(t)=0$ is zero so it is in $V$.
@@ -304,8 +397,8 @@
 
       \vfill
 
-    \item Determine whether or not the set of functions that are equal
-      to one at $x=0$ is a vector space.
+    \item (Optional) Determine whether or not the set of functions
+      that are equal to one at $x=0$ is a vector space.
 
       \iftoggle{solutions}{%
 
@@ -319,13 +412,14 @@
 
       \clearpage
 
-  \item Are the following vectors linearly independent? If not find a
-    way to express one of the vectors in terms of the others
+    \item (Optional) Are the following vectors linearly independent?
+      If not find a way to express one of the vectors in terms of the
+      others
 
-    \begin{eqnarray*}
+    \begin{eqnarray}
       \vecFour{1}{2}{-1}{-2},~\vecFour{3}{6}{-3}{-6},~\vecFour{-4}{-10}{5}{11},
       ~\vecFour{2}{7}{-3}{-9}
-    \end{eqnarray*}
+    \end{eqnarray}
 
     \iftoggle{solutions}{%
       
@@ -352,36 +446,6 @@
     }
 
   \vfill
-
-  \clearpage
-
-  \item The matrix A is defined to be
-    \begin{eqnarray*}
-      A & = & \left[
-        \begin{array}{rr}
-          -2 & -3 \\
-           0 &  4
-        \end{array}
-      \right].
-    \end{eqnarray*}
-    Suppose that a vector $\vec{v}$ satisfies
-    $A\vec{v}=-2\vec{v}$. Determine the matrix $B$ that satisfies
-    \begin{eqnarray*}
-      B \vec{v} & = & \left[ \begin{array}{r} 0 \\ 0 \end{array} \right].
-    \end{eqnarray*}
-    (i.e. manipulate the equation $A\vec{v}=-2\vec{v}$ so that it is
-    in the form given above.)
-
-    \vfill
-
-  \item If the vector $\vec{v}$ is not a zero vector what must be true
-    about the determinate of $B$?
-
-    \vspace*{4em}
-
-  \item How many solutions for $\vec{v}$ are there?
-
-    \vspace*{4em}
 
 
 \end{problem}

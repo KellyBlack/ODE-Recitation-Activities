@@ -6,21 +6,21 @@
 
   \begin{subproblem}
   \item 
-    \begin{eqnarray*}
+    \begin{eqnarray}
       \int^\infty_0 e^{-3t} dt 
-    \end{eqnarray*}
+    \end{eqnarray}
     \vfill
 
   \item 
-    \begin{eqnarray*}
+    \begin{eqnarray}
       \int^\infty_0 t e^{-3t} ~ dt
-    \end{eqnarray*}
+    \end{eqnarray}
     \vfill
     
   \item (In the  integral that follows $a$ is a positive constant.)
-    \begin{eqnarray*}
+    \begin{eqnarray}
       \int^\infty_0 e^{-at} dt 
-    \end{eqnarray*}
+    \end{eqnarray}
     \vfill
 
   \end{subproblem}
@@ -32,23 +32,23 @@
   the following integrals:
   \begin{subproblem}
   \item 
-    \begin{eqnarray*}
+    \begin{eqnarray}
       \int^\infty_0 e^{-st} ~ dt
-    \end{eqnarray*}
+    \end{eqnarray}
     \vfill
 
   \item 
-    \begin{eqnarray*}
+    \begin{eqnarray}
       \int^\infty_0 te^{-st} ~ dt
-    \end{eqnarray*}
+    \end{eqnarray}
     \vfill
 
 
   \item In the following problem the parameter $a$ is a constant and
     $s>a$:
-    \begin{eqnarray*}
+    \begin{eqnarray}
       \int^\infty_0 e^{at} e^{-st} ~ dt & = & ?
-    \end{eqnarray*}
+    \end{eqnarray}
     \vfill
 
   \end{subproblem}
@@ -63,17 +63,17 @@
   \item In the last problem on the previous page replace the
     constant $a$ with $a=i\omega$. Using the previous result
     determine the value of
-    \begin{eqnarray*}
+    \begin{eqnarray}
       \laplace{e^{i\omega t}} & = & \int^\infty_0 e^{i\omega t} e^{-st} ~ dt.
-    \end{eqnarray*}
+    \end{eqnarray}
     \vfill
 
   \item \label{laplace:leftHandSide} In the previous problem expand
     the left hand side using Euler's formula into real and imaginary
     components:
-    \begin{eqnarray*}
+    \begin{eqnarray}
       \laplace{e^{i\omega t}} & = & \laplace{?} + i \laplace{?}.
-    \end{eqnarray*}
+    \end{eqnarray}
     \vfill
 
   \item \label{laplace:rightHandSide} Expand the right hand side
@@ -101,10 +101,10 @@
 
 \item Given any function, $f(t)$, we can define the following
   operation 
-  \begin{eqnarray*}
+  \begin{eqnarray}
     \laplace{ f(\cdot) } & = & 
     \int^\infty_0 f(t) e^{-st} ~ dt.
-  \end{eqnarray*}
+  \end{eqnarray}
 
   \begin{subproblem}
   \item Determine $\laplace{ 1 }$.
@@ -163,7 +163,7 @@ Properties of the Laplace transform:
 
 Table of Laplace Transforms:
 
-\begin{eqnarray*}
+\begin{eqnarray}
   \laplace{f(t)}  & = & \int^\infty_0 f(t) e^{-st} ~ dt \\ [10pt]
   \laplace{1}      & = & \frac{1}{s} \\ [10pt]
   \laplace{t^n}    & = & \frac{n!}{s^{n+1}} \\ [10pt]
@@ -179,7 +179,7 @@ Table of Laplace Transforms:
   \laplace{y'(t)} & = & -y(0) + s \laplace{y(t)} \\ [10pt]
   \laplace{y''(t)}& = & s^2 Y(s) - sy(0) - y'(0) \\ [10pt]
   \laplace{\mathrm{step}(t-a)f(t-a)} & = & e^{-sa}F(s) \\ [10pt]
-\end{eqnarray*}
+\end{eqnarray}
 
 
 
