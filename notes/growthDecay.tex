@@ -231,14 +231,15 @@
     
       \ifnum\value{clickerQuiz}=1{%
 
-        A bank promises 5\% interest compounded annually. What is the governing equation?
+        A bank promises 5\% interest compounded annually and
+        continuously. What is the interest rate?
 
        \vfill
 
        \begin{tabular}{l@{\hspace{3em}}l}
-         A: & $A' = A_0 e^{0.05t}$. \\
-         B: & $A'= 0.05A$. \\
-         C: & $A'=-0.05A$. \\
+         A: & $.05$. \\
+         B: & $\ln(0.05)$. \\
+         C: & $\ln(1.05)$. \\
          D: & What is up with Hank Williams?
        \end{tabular}
 
@@ -246,14 +247,15 @@
 
      \ifnum\value{clickerQuiz}=2{%
 
-        A bank promises 5\% interest compounded annually. What is the governing equation?
+        A bank promises 5\% interest compounded annually and
+        continuously. What is the interest rate?
 
        \vfill
 
        \begin{tabular}{l@{\hspace{3em}}l}
-         A: & $A' = A_0 e^{0.05t}$. \\
-         B: & $A'= 0.05A$. \\
-         C: & $A'=-0.05A$. \\
+         A: & $0.05$. \\
+         B: & $\ln(0.05)$. \\
+         C: & $\ln(1.05)$. \\
          D: & What is up with Hank Williams?
        \end{tabular}
 
@@ -261,16 +263,17 @@
      }\fi
 
       \ifnum\value{clickerQuiz}=3{%
-      A bank promises 8\% interest compounded annually. 
-      What is the governing equation?
+
+        A bank promises 5\% interest compounded annually and
+        continuously. What is the interest rate?
 
        \vfill
 
        \begin{tabular}{l@{\hspace{3em}}l}
-         A: & $A' = A_0 e^{0.08t}$. \\
-         B: & $A'= 0.08A$. \\
-         C: & $A'=-0.08A$. \\
-         D: & $A'= e^{0.08t}$.
+         A: & $0.08$. \\
+         B: & $1.08$. \\
+         C: & $\ln(0.08)$. \\
+         D: & $\ln(1.08)$.
        \end{tabular}
 
 
@@ -292,18 +295,26 @@
 
   \uncover<2->{%
     \begin{eqnarray*}
-      A(t) & = & A_0 e^{0.05t} 
+      A(t) & = & A_0 e^{rt} 
     \end{eqnarray*}
   }
 
-  \uncover<3->{When does $A(t)=2A_0$?}
+  \uncover<3->{%
+    What is $r$?
+    \begin{eqnarray*}
+      1.05 A_0 & = & A_0 e^{r\cdot 1}, \\
+      r & = & \ln(1.05).
+    \end{eqnarray*}
+  }
+
+  \uncover<4->{When does $A(t)=2A_0$?}
 
   \begin{eqnarray*}
     \uncover<4->{
-      2A_0 & = & A_0 e^{0.05T}, \\
-      2 & = & e^{0.05T} \\
-      \ln(2) & = & .05T \\
-      T & = & \frac{\ln(2)}{.05}
+      2A_0 & = & A_0 e^{T\ln(1.05)}, \\
+      2 & = & e^{T\ln(1.05)} \\
+      \ln(2) & = & T\ln(1.05) \\
+      T & = & \frac{\ln(2)}{\ln(1.05)}
     }
   \end{eqnarray*}
 
