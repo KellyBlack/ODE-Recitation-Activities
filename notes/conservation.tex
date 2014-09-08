@@ -3,8 +3,8 @@
 \section{Conservation}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 3, Day 1}
-\date{9 Sep 2013}
+\subtitle{Conservation of ``stuff''}
+\date{10 Sep 2014}
 
 \begin{frame}
   \titlepage
@@ -24,54 +24,80 @@
 \begin{frame}
   \frametitle{Example}
 
-  {\color{red}Brine is pumped into a tank at 50 liters per hour and has .5 kg per
-  liter of salt.} {\color{blue}The volume of the tank is 500 liters, and initially
-  the tank contains pure water.} {\color{purple}The well mixed solution is pumped out
-  at 50 liters per hour.}
+  \only<1>{%
+    {Brine is pumped into a tank at 50 liters per hour and has .5 kg per
+      liter of salt.} {The volume of the tank is 500 liters, and initially
+      the tank contains pure water.} {The well mixed solution is pumped out
+      at 50 liters per hour.}
+  }
+
+  \only<2>{%
+    {\color{red}Brine is pumped into a tank at 50 liters per hour and has .5 kg per
+      liter of salt.} {\color{blue}The volume of the tank is 500 liters, and initially
+      the tank contains pure water.} {\color{green}The well mixed solution is pumped out
+      at 50 liters per hour.}
+  }
+  
 
   What is the concentration of the solution in the tank at any time?
 
 \end{frame}
 
 
-\begin{frame}{Collect the Given Information}
+\begin{frame}{Step 1: Draw a picture}
 
-  \only<1>{\includegraphics[width=8cm]{img/singleTank}}
-  \only<2>{\includegraphics[width=8cm]{img/singleTankAnnotated}}
+  \includegraphics[width=8cm]{img/singleTank}
   
 \end{frame}
 
+\begin{frame}{Step 2: Collect the Given Information}
+
+  \includegraphics[width=8cm]{img/singleTankAnnotated}
+  
+\end{frame}
+
+
 \begin{frame}
-  \frametitle{Conservation of Mass}
+  \frametitle{Step 3: Identify Basic Principle}
 
-  Mass is conserved.
+  Mass is conserved. (Conservation of mass)
 
-  \uncover<2->{Let $A(t)$ be the amount of ``stuff'' in the tank (kg).}
+  \vfill
+
+  \uncover<2->{
+    \redText{Step 4: Identify variables: }
+
+    Let $A(t)$ be the amount of ``stuff'' in the tank \blueText{(kg)}.
+  }
+
+  \vfill
 
   \uncover<3->{
 
     \begin{eqnarray*}
       \Rightarrow ~ \frac{dA}{dt} & = & \mathrm{{\color{red}Rate ~ it ~ changes} ~
-        (kg/hr)} \\
+        \blueText{(kg/hr)}} \\
       & = & \mathrm{{\color{red}rate ~ in ~ - ~ rate ~ out}}.
     \end{eqnarray*}
 
   }
 
+  \vfill
+
 \end{frame}
 
 
 \begin{frame}
-
+  \frametitle{Step 5: Apply the Principle}
   \begin{eqnarray*}
-    \mathrm{rate~in~kg/hr} & = & \uncover<2->{.5 \frac{kg}{l} \cdot 50 \frac{l}{hr} \\
+    \mathrm{rate~in~\blueText{(kg/hr)}} & = & \uncover<2->{.5 \frac{kg}{l} \cdot 50 \frac{l}{hr} \\
     & = & 25 \frac{kg}{hr}}
   \end{eqnarray*}
 
   \uncover<3->{
 
     \begin{eqnarray*}
-      \mathrm{rate~out~kg/hr} & = & \uncover<4->{A(t)~kg \cdot
+      \mathrm{rate~out~\blueText{(kg/hr)}} & = & \uncover<4->{A(t)~kg \cdot
         \frac{1}{500~l} \cdot 50 \frac{l}{hr} \\
         & = & \frac{1}{10}A(t)}
     \end{eqnarray*}
@@ -91,13 +117,21 @@
 
 
 \begin{frame}
-
+  \frametitle{Step 6: Solve}
   \begin{eqnarray*}
     \frac{1}{25 - \frac{1}{10}A} A' & = & 1, \\
     \int \frac{1}{25 - \frac{1}{10}A} A' ~ dt & = & \int 1 ~ dt, \\
     -10 \ln\lp25 - \frac{1}{10}A\rp & = & t + c \\
      \ln\lp25 - \frac{1}{10}A\rp & = & -\frac{t + c}{10} \\
      25 - \frac{1}{10} A & = & ke^{-t/10}, \\
+     A & = & 250 - 10ke^{-t/10}, \\
+  \end{eqnarray*}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Step 6: Solve}
+  \begin{eqnarray*}
      A & = & 250 - 10ke^{-t/10}, \\
      A(0) & = & 0 \\
      & = & 250-10k, \\
@@ -107,11 +141,12 @@
 
 \end{frame}
 
-\begin{frame}
 
+\begin{frame}
+  \frametitle{Step 7: Answer the Original Question!}
   Concentration:
   \begin{eqnarray*}
-    C(t) & = & A(t)/500 \\
+    C(t) & = & A(t)\mathrm{~kg}/500\mathrm{~l} \\
     & = & \frac{1}{2} - \frac{1}{2} e^{-t/10}.
   \end{eqnarray*}
 
@@ -120,15 +155,27 @@
 \begin{frame}
   \frametitle{Example}
 
-  {\color{red}A 2000 liter tank initially contains water with a solution of 0.2 kg
-  per liter of salt.} {\color{blue} Brine is pumped in at a rate of 100 liters per
-  hour with a concentration of 0.3 kg per liter.} {\color{purple}The well mixed
-  solution is pumped out at a rate of 100 liters per hour.} Determine
-  the amount of salt in the tank at any time.
+  \only<1>{%
+    {A 2000 liter tank initially contains water with a solution of 0.2 kg
+      per liter of salt.} {Brine is pumped in at a rate of 100 liters per
+      hour with a concentration of 0.3 kg per liter.} {The well mixed
+      solution is pumped out at a rate of 100 liters per hour.} Determine
+    the amount of salt in the tank at any time.
+  }
+
+  \only<2>{%
+    {\color{red}A 2000 liter tank initially contains water with a solution of 0.2 kg
+      per liter of salt.} {\color{blue} Brine is pumped in at a rate of 100 liters per
+      hour with a concentration of 0.3 kg per liter.} {\color{green}The well mixed
+      solution is pumped out at a rate of 100 liters per hour.} Determine
+    the amount of salt in the tank at any time.
+  }
 
   \vspace{1cm}
-  Let $A(t)$ be the amount of salt in the tank at time $t$.
+  Let $A(t)$ be the \blueText{amount} of salt (\blueText{kg}) in the tank at time $t$.
 \end{frame}
+
+
 
 
 \iftoggle{clicker}{%
@@ -301,11 +348,22 @@
 \begin{frame}
   \frametitle{Example}
 
-  {\color{red}A 500 liter tank is initially full and contains fresh water.} 
-  {\color{blue}Brine with a concentration of 0.1 kg per liter is pumped into 
-  the tank at a rate of 20 liters per hour.} {\color{purple}The well mixed 
-  solution is pumped out at a rate of 30 liters per hour.}  
-  What will the concentration be at the moment the tank is half full?
+  \only<1>{%
+    {A 500 liter tank is initially full and contains fresh water.} 
+    {Brine with a concentration of 0.1 kg per liter is pumped into 
+      the tank at a rate of 20 liters per hour.} {The well mixed 
+      solution is pumped out at a rate of 30 liters per hour.}  
+    What will the concentration be at the moment the tank is half
+    full?
+  }
+
+  \only<2>{%
+    {\color{red}A 500 liter tank is initially full and contains fresh water.} 
+    {\color{blue}Brine with a concentration of 0.1 kg per liter is pumped into 
+      the tank at a rate of 20 liters per hour.} {\color{green}The well mixed 
+      solution is pumped out at a rate of 30 liters per hour.}  
+    What will the concentration be at the moment the tank is half full?
+  }
 
 \end{frame}
 
@@ -381,31 +439,35 @@
 \subsection{Newton's Law of Cooling}
 
 \begin{frame}
-  \frametitle{Newton's Law of Cooling}
+  \frametitle{Newton's Law of Cooling \\
+    \blueText{(Time Permitting - Read at home!)}}
 
   {\color{red}The rate of change of the temperature of an object is 
   proportional to the difference between the temperature of the 
   object and the temperature of the surroundings.}
+
+  \vfill
 
   Let M be the ambient (the surroundings) temperature.  
 
   Let $T(t)$ be the temperature of the object at time $t$. 
 
   \begin{eqnarray*}
-    T'(t) & = & k (M-T)
+    \Rightarrow T'(t) & = & k (M-T)
   \end{eqnarray*}
 
 
 \end{frame}
 
-\subsection{Examples of Newton's Law of Cooling}
+\subsection{Examples of Newton's Law of Cooling }
 
 \begin{frame}
-  \frametitle{Example}
+  \frametitle{Example \\
+    \blueText{(Time Permitting - Read at home!)}}
 
   {\color{red}A brick is pulled out of a furnace and is 350 degrees Celsius.} 
   {\color{blue}It is placed outside where the air temperature is 20 degrees Celsius.} 
-  {\color{purple}After one hour the temperature of the brick is 280
+  {\color{green}After one hour the temperature of the brick is 280
     degrees Celsius.}  
   What will the temperature of the brick be after 6 hours from when it
   was first pulled out of the furnace?
@@ -462,7 +524,8 @@
 
 
 \begin{frame}
-  \frametitle{Example}
+  \frametitle{Example \\
+    \blueText{(Time Permitting - Read at home!)}}
 
   A cup of coffee is found. {\color{red}The temperature when it is found is 70
   degrees Celsius.} {\color{blue}Thirty minutes later its temperature is 65 degrees
