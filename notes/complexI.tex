@@ -3,8 +3,8 @@
 \section{Complex Numbers}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 4, Day 1}
-\date{16 September 2013}
+\subtitle{Introduction to Complex Numbers}
+\date{15 September 2014}
 
 \begin{frame}
   \titlepage
@@ -22,12 +22,15 @@
 \begin{frame}
   \frametitle{The Letter i}
 
-  Definition:
-  \begin{eqnarray*}
-    i & = & \sqrt{-1}
-  \end{eqnarray*}
 
-  Which means....
+  \begin{definition}
+    We define the unit $i$ to be
+    \begin{eqnarray*}
+      i & = & \sqrt{-1}
+    \end{eqnarray*}
+  \end{definition}
+
+  This implies that
   \begin{eqnarray*}
     i^2 & = & -1
   \end{eqnarray*}
@@ -116,11 +119,6 @@
     found by reversing the sign of the imaginary part.
   \end{definition}
 
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> 5aff3be819a5e3e45e415346143eb989565538b4
   Example:
   For each of the numbers given below:
   \begin{eqnarray*}
@@ -144,6 +142,10 @@
     & = & a^2 +abi - abi - b^2 i^2 \\
     & = & a^2 + b^2
   \end{eqnarray*}
+
+  \uncover<2->{%
+    This number is always a non-negative, real number.
+  }
 
 \end{frame}
 
@@ -187,13 +189,30 @@
   \only<1>{\centerline{\includegraphics[width=4cm]{img/complexPlane}}}
   \only<2>{\centerline{\includegraphics[width=4cm]{img/complexPlanePolar}}}
 
-  \begin{eqnarray*}
-    a & = & r\cos(\theta) \\
-    b & = & r\sin(\theta) \\
-    r & = & \sqrt{a^2+b^2} \\
-    \tan(\theta) & = & \frac{b}{a}
-  \end{eqnarray*}
-  (Be careful about the arctangent. Your calculator lies!)
+  \begin{columns}
+    \column{.50\textwidth}
+    \uncover<2->{%
+      \begin{eqnarray*}
+        a & = & r\cos(\theta) \\
+        b & = & r\sin(\theta) 
+      \end{eqnarray*}
+    }
+    \column{.50\textwidth}
+    \uncover<2->{%
+      \begin{eqnarray*}
+        r & = & \sqrt{a^2+b^2} \\
+        \tan(\theta) & = & \frac{b}{a}
+      \end{eqnarray*}
+    }
+  \end{columns}
+
+  \vfill
+
+  \uncover<2->{%
+    (Be careful about the arctangent. Your calculator lies!)
+  }
+
+  \vfill
 
 \end{frame}
 
@@ -202,11 +221,7 @@
   \frametitle{Example}
 
   \begin{eqnarray*}
-<<<<<<< HEAD
-    z & = & 2 + 2i
-=======
     z & = &  2 + 2i
->>>>>>> 5aff3be819a5e3e45e415346143eb989565538b4
   \end{eqnarray*}
 
   \uncover<2->
@@ -271,17 +286,10 @@
 
 
           \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
-<<<<<<< HEAD
             A: & $r=2$, & $\theta= -\pi/4$ \\
             B: & $r=2$, & $\theta= 3\pi/4$ \\
             C: & $r=2\sqrt{2}$, & $\theta= -\pi/4$ \\
             D: & $r=2\sqrt{2}$, & $\theta= 3\pi/4$ \\
-=======
-            A: &  $r=2$, & $\theta= -\pi/4$ \\
-            B: &  $r=2$, & $\theta= 3\pi/4$ \\
-            C: &  $r=2\sqrt{2}$, & $\theta= -\pi/4$ \\
-            D: &  $r=2\sqrt{2}$, & $\theta= 3\pi/4$ \\ 
->>>>>>> 5aff3be819a5e3e45e415346143eb989565538b4
           \end{tabular}
 
 
