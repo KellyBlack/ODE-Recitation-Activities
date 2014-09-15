@@ -3,8 +3,8 @@
 \section{Complex Numbers II}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 4, Day 2}
-\date{18 September 2013}
+\subtitle{Complex Numbers, part deux}
+\date{17 September 2014}
 
 \begin{frame}
   \titlepage
@@ -198,7 +198,6 @@
     z^3 & = & e^{i4\pi}
   \end{eqnarray*}
   
-  % TODO - add a picture of the point in the complex plane
 \end{frame}
 
 \begin{frame}
@@ -251,7 +250,8 @@
   \frametitle{Example}
 
   Find the fourth roots of 16.
-  \only<2->{%
+  \only<2>{\centerline{\includegraphics[width=6cm]{img/complex16}}}
+  \uncover<3->{%
     Express 16 four different ways:
     \begin{eqnarray*}
       z & = & R e^{i\alpha}, \\
@@ -260,7 +260,7 @@
     \end{eqnarray*}
   }
 
-  \only<3->{%
+  \uncover<4->{%
     Then
     \begin{eqnarray*}
       R & = & 2 \\
@@ -268,7 +268,7 @@
     \end{eqnarray*}
   }
 
-  \only<4->{%
+  \uncover<5->{%
     \begin{eqnarray*}
       z & = & 2 e^{i0},~2e^{i\pi/2},~2e^{i\pi},~2e^{i3\pi/2}, \\
       & = & 2,~2i,~-2,~-2i.
@@ -283,8 +283,8 @@
   \frametitle{Example}
 
   Find the cubic roots of $2+2i$.
-
-  \uncover<2->{%
+  \only<2>{\centerline{\includegraphics[width=6cm]{img/complex2-2i}}}
+  \uncover<3->{%
     \begin{eqnarray*}
       2 + 2i & = & 2\sqrt{2} e^{i\pi/4}
     \end{eqnarray*}
@@ -333,10 +333,10 @@
         %\end{eqnarray*}
 
           \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
-            A: &  $\sqrt{2}e^{i\frac{\pi}{12}}$, & $\sqrt{2} e^{i\frac{13\pi}{12}}$ \\
-            B: &  $\sqrt{2}e^{i\frac{\pi}{6}}$, & $\sqrt{2}e^{i\frac{13\pi}{6}}$ \\
-            C: &  $2e^{i\frac{\pi}{12}}$, & $2e^{i\frac{13\pi}{12}}$ \\
-            D: &  $2e^{i\frac{\pi}{6}}$, & $2e^{i\frac{13\pi}{6}}$ \\ 
+            A: &  $\sqrt{2}e^{i{\pi}/{12}}$, & $\sqrt{2} e^{i{13\pi}/{12}}$ \\
+            B: &  $\sqrt{2}e^{i{\pi}/{6}}$, & $\sqrt{2}e^{i{13\pi}/{6}}$ \\
+            C: &  $2e^{i{\pi}/{12}}$, & $2e^{i{13\pi}/{12}}$ \\
+            D: &  $2e^{i{\pi}/{6}}$, & $2e^{i{13\pi}/{6}}$ \\ 
           \end{tabular}
 
           \vfill
@@ -367,10 +367,10 @@
 
 
         \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
-          A: &  $\sqrt{2}e^{i\frac{\pi}{3}}$, & $\sqrt{2}e^{i\frac{7\pi}{3}}$ \\
-          B: &  $\sqrt{2}e^{i\frac{\pi}{6}}$, & $\sqrt{2} e^{i\frac{7\pi}{6}}$ \\
-          C: &  $2e^{i\frac{\pi}{3}}$, & $2e^{i\frac{7\pi}{3}}$ \\ 
-          D: &  $2e^{i\frac{\pi}{6}}$, & $2e^{i\frac{7\pi}{6}}$ \\
+          A: &  $\sqrt{2}e^{i{\pi}/{3}}$, & $\sqrt{2}e^{i{7\pi}/{3}}$ \\
+          B: &  $\sqrt{2}e^{i{\pi}/{6}}$, & $\sqrt{2} e^{i{7\pi}/{6}}$ \\
+          C: &  $2e^{i{\pi}/{3}}$, & $2e^{i{7\pi}/{3}}$ \\ 
+          D: &  $2e^{i{\pi}/{6}}$, & $2e^{i{7\pi}/{6}}$ \\
         \end{tabular}
 
         \vfill
@@ -399,10 +399,10 @@
 
 
         \begin{tabular}{l@{\hspace{3em}}l@{\hspace{1em}}l}
-          A: &  $\sqrt{2}e^{i\frac{\pi}{6}}$, & $\sqrt{2}e^{i\frac{7\pi}{6}}$ \\
-          B: &  $\sqrt{2}e^{i\frac{\pi}{12}}$, & $\sqrt{2} e^{i\frac{13\pi}{12}}$ \\
-          C: &  $2e^{i\frac{\pi}{6}}$, & $2e^{i\frac{7\pi}{6}}$ \\
-          D: &  $2e^{i\frac{\pi}{12}}$, & $2e^{i\frac{13\pi}{12}}$ \\
+          A: &  $\sqrt{2}e^{i{\pi}/{6}}$, & $\sqrt{2}e^{i{7\pi}/{6}}$ \\
+          B: &  $\sqrt{2}e^{i{\pi}/{12}}$, & $\sqrt{2} e^{i{13\pi}/{12}}$ \\
+          C: &  $2e^{i{\pi}/{6}}$, & $2e^{i{7\pi}/{6}}$ \\
+          D: &  $2e^{i{\pi}/{12}}$, & $2e^{i{13\pi}/{12}}$ \\
         \end{tabular}
 
      }\fi
