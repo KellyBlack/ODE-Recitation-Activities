@@ -13,7 +13,7 @@
    height="1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="springMass.svg"
    inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/springMassDynamicVectors.png"
    inkscape:export-xdpi="508.47"
@@ -67,7 +67,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
+     inkscape:zoom="1.15"
      inkscape:cx="269.58218"
      inkscape:cy="624.30687"
      inkscape:document-units="px"
@@ -147,13 +147,13 @@
     <text
        xml:space="preserve"
        style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="340"
+       x="424"
        y="422.36218"
        id="text3761"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3763"
-         x="340"
+         x="424"
          y="422.36218">m</tspan></text>
     <text
        xml:space="preserve"
@@ -191,17 +191,6 @@
     <text
        xml:space="preserve"
        style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="290"
-       y="542.36218"
-       id="text3840"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3842"
-         x="290"
-         y="542.36218">x=0</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="568.51947"
        y="490.49203"
        id="text3844"
@@ -210,6 +199,33 @@
          id="tspan3846"
          x="568.51947"
          y="490.49203">x</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 398,476.36218 0,30"
+       id="path3838-6"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"
+       x="270"
+       y="552.36218"
+       id="text3840"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3842"
+         x="270"
+         y="552.36218">x=0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"
+       x="378"
+       y="552.36218"
+       id="text3840-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3842-6"
+         x="378"
+         y="552.36218">x(t)</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
