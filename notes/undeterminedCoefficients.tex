@@ -3,9 +3,8 @@
 \section{Undetermined Coefficients}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Week 8, Day 1}
-%\subtitle{Math 232 - Method of Undetermined Coefficients}
-\date{2 Oct 2013}
+\subtitle{Math 232 - Method of Undetermined Coefficients}
+\date{5 Oct 2014}
 
 \begin{frame}
   \titlepage
@@ -28,11 +27,9 @@
   Example: An horizontal spring/mass system that has a constant force
   of 1N to the right.
 
-  \begin{center}
-    mass $\times$ accelaration = $F_{\text{restoring}} + F_{\text{dampling}}
-   + F_{\text{external}}.$
-  \end{center}
   \begin{eqnarray*}
+    \frac{d}{dt} \left( \mathrm{mass} \times \mathrm{accelaration} \right) & = & 
+      F_{\text{restoring}} + F_{\text{dampling}} + F_{\text{external}}, \\ [12pt]
     m x'' & = & -b v_x - kx + 1, \\
     m x'' + bx' + kx & = & 1.
   \end{eqnarray*}
@@ -41,27 +38,6 @@
 
 
 \end{frame}
-
-
-%\begin{frame}
-%  \frametitle{Solutions to Linear Equations}
-%  General non-homogeneous, constant coefficients, 2nd order DEs:
-%  \begin{eqnarray*}
-%    ay'' + by' +cy & = & f(t)
-%  \end{eqnarray*}
-%  These are linear differential equations. If $y_h(t)$ is a solution
-%  to the homogeneous problem:
-%  \begin{eqnarray*}
-%    ay^{''}_{h} + by^{'}_h +cy_h & = & 0
-%  \end{eqnarray*}
-%  and $y_p(t)$ is a particular solution to the DE:
-%  \begin{eqnarray*}
-%    ay^{''}_{p} + by^{'}_p +cy_p & = & f(t)
-%  \end{eqnarray*}
-%  Then ${\color{red}y=y_h(t) + y_p(t)}$  is the general solution to the DE.
-%
-%
-%\end{frame}
 
 
 \begin{frame}
@@ -80,12 +56,12 @@
     \begin{eqnarray*}
       a y_p'' + by_p' + cy_p & = & f(t).
     \end{eqnarray*}
-  \item Form the general solution
-   {\color{red} \begin{eqnarray*}
-      y(t) & = & y_h(t) + y_p(t).
-    \end{eqnarray*}}
+  \item Form the \blueText{general solution}
+    \begin{eqnarray*}
+      \blueText{y(t)} & = & \redText{y_h(t) + y_p(t).}
+    \end{eqnarray*}
   \item Determine the constants if initial values are given. \\
-    (Do this last!)
+    \textbf{\redText{(Do this last!)}}
   \end{enumerate}
 
 

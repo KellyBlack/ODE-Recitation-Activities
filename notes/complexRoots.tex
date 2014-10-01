@@ -3,8 +3,8 @@
 \section{Ordinary Differential Equations}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Complex Values Roots}
-\date{27 September 2013}
+\subtitle{Math 232 - Complex Valued Roots}
+\date{1 October 2014}
 
 \begin{frame}
   \titlepage
@@ -96,7 +96,7 @@ Formula 1:
   {\color{brown}
   \begin{eqnarray*}
   \sqrt{-3} & = & i\sqrt{3}\\
-  \sqrt{-c} & = & i\sqrt{c}, c \text{ is a positive number}
+  \sqrt{-c} & = & i\sqrt{c}
   \end{eqnarray*}
   }
 
@@ -168,8 +168,8 @@ Formula 3:
     {\color{blue}r} & = & {\color{blue}\frac{-b\pm\sqrt{b^2-4ac}}{2a}}.
   \end{eqnarray*}
 
-  Three cases: two distinct real roots, one repeated real root, and
-  {\color{blue}two complex roots}.
+  Three cases: {\color{fuchsia} two distinct real roots}, \blueText{one
+    repeated real root}, \redText{\framebox{two complex roots}}.
 
 \end{frame}
 
@@ -363,29 +363,41 @@ Formula 3:
   \frametitle{An LRC Circuit}
 
   An LRC circuit has a 30,0000 ohm resistor, a $5\times 10^{-6}$ F
-  capacitor, and a 2000 Henries Inductor. Find the general equation
-  describing  the charge in the capacitor at any time.
+  capacitor, and a 2000 Henries Inductor. The capacitor is given a
+  large charge, and there is no voltage source. Find the general
+  equation describing the charge in the capacitor at any time.
 
-  \only<1>
-  {
-    \input{img/LRCcircuit}
-  }
+  \begin{columns}
+    \column{.3\textwidth}
+    \input{img/LRCcircuit} 
 
-  \uncover<2->
-  {
-    \begin{eqnarray*}
-      2000 Q'' + 30,000 Q' + \frac{Q}{5\times 10^{-6}} & = & 0 \\
-      Q'' + 15 Q' + 100 Q & = & 0 \\
-      r^2 + 15 r + 100 & = & 0
-    \end{eqnarray*}
-    \begin{eqnarray*}
-      r & = & \frac{-15\pm\sqrt{15^2-400}}{2} \\
-      r & = & \frac{-15}{2} \pm i\frac{5\sqrt{7}}{2} \\
-      Q & = & e^{-15/2 t}
-      \lp A_1 \cos\lp \frac{5\sqrt{7}}{2} t\rp + A_2 \sin\lp \frac{5\sqrt{7}}{2} t \rp \rp.
-    \end{eqnarray*}
+    \column{.7\textwidth}
 
-  }
+    \only<2> {
+      \begin{eqnarray*}
+        2000 Q'' + 30,000 Q' + \frac{Q}{5\times 10^{-6}} & = & 0 \\
+        Q'' + 15 Q' + 100 Q & = & 0 \\
+        r^2 + 15 r + 100 & = & 0
+      \end{eqnarray*}
+    }
+    \only<3> {
+      \begin{eqnarray*}
+        r & = & \frac{-15\pm\sqrt{15^2-400}}{2} \\
+        r & = & \frac{-15}{2} \pm i\frac{5\sqrt{7}}{2} 
+      \end{eqnarray*}
+    }
+    \only<4-> {
+      Decays like $e^{-15/2 t}$ and oscillates with period $4\pi/(5\sqrt{7})$
+    }
+  \end{columns}
+
+    \only<4-> {
+      \begin{eqnarray*}
+        Q & = & e^{-15/2 t}
+        \lp A_1 \cos\lp \frac{5\sqrt{7}}{2} t\rp + 
+            A_2 \sin\lp \frac{5\sqrt{7}}{2} t \rp \rp.
+      \end{eqnarray*}
+    }
 
 \end{frame}
 

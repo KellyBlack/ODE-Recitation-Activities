@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Solutions to Second Order, Linear, Constant Coef. Equations}
-\date{25 September 2013}
+\date{26 September 2014}
 
 \begin{frame}
   \titlepage
@@ -25,14 +25,14 @@
 
   Solutions to
   \begin{eqnarray*}
-    a y'' + by' + cy & = & 0.
+    a y'' + by' + cy & = & {\color{red} 0}.
   \end{eqnarray*}
 
   \uncover<2->
   {
     Assume
     \begin{eqnarray*}
-      \only<2->{ {\color{green} y} & {\color{green}=} & {\color{green}A e^{rt},} \\}
+      \only<2->{ {\color{blue} y} & {\color{blue}=} & {\color{blue}A e^{rt},} \\}
       \uncover<3->{%
         {\color{red}y'} & {\color{red}=} & {\color{red}r A e^{rt},} \\
         {\color{red}y''} & {\color{red}=} & {\color{red}r^2 A e^{rt}.}
@@ -75,7 +75,7 @@
 
   \uncover<5->
   {
-    Three cases: distinct real, repeated roots, complex roots.
+    \blueText{Three cases: distinct real, repeated roots, complex roots.}
   }
 
 \end{frame}
@@ -99,6 +99,7 @@
   \begin{eqnarray*}
     y'' - 5y' + 6y & = & 0.
   \end{eqnarray*}
+
 
   \only<2>
   {
@@ -134,6 +135,8 @@
     \end{eqnarray*}
     The dominant term is $e^{3t}$. Exponential growth.
   }
+
+
 
 \end{frame}
 
@@ -221,7 +224,7 @@
     y'' - 2y' - 8y & = & 0.
   \end{eqnarray*}
 
-  \uncover<2->
+  \only<2->
   {
     \begin{eqnarray*}
       r^2 - 2r - 8 & = & 0, \\
@@ -258,13 +261,20 @@
   \frametitle{Case 2: Repeated Roots}
 
   \begin{eqnarray*}
-    \only<1>{
+    a y'' + by' + cy & = & 0, \\
+    \Rightarrow a r^2 + b r + c & = & 0, \\
+    \Rightarrow r & = & \frac{-b \pm \sqrt{b^2-4ac}}{2a}, \\
+    \uncover<2->{b^2-4ac & = & 0.}
+  \end{eqnarray*}
+
+  \begin{eqnarray*}
+    \only<3>{
       y & = & C_1 e^{\blueText{r}t} + C_2 t e^{\blueText{r}t} \\
     }
-    \only<2>{
+    \only<4>{
       y & = & C_1 e^{\blueText{r}t} + C_2 \redText{t} e^{\blueText{r}t} \\
     }
-    \only<3>{
+    \only<5>{
       y & = & C_1 e^{\blueText{r}t} + \redText{C_2 t e^{\blueText{r}t}} \\
     }
   \end{eqnarray*}
@@ -280,7 +290,7 @@
     y'' + 6y' + 9y & = & 0.
   \end{eqnarray*}
 
-  \uncover<2->
+  \only<2->
   {
     \begin{eqnarray*}
       r^2 + 6r + 9 & = & 0, \\
@@ -324,7 +334,7 @@
     y'(0) & = & 3.
   \end{eqnarray*}
 
-  \uncover<2->
+  \only<2->
   {
     \begin{eqnarray*}
       r^2 + 4r + 4 & = & 0, \\
@@ -452,7 +462,7 @@
     y'' + 10 y' + 24y & = & 0.
   \end{eqnarray*}
 
-  \uncover<2->
+  \only<2->
   {
     \begin{eqnarray*}
       r^2 + 10r + 24 & = & 0, \\
@@ -565,7 +575,7 @@
   Assume that $y=Ae^{rt}$:
   \begin{eqnarray*}
     r^3 + 2 r^2 - r + 2 & = & 0, \\
-    \uncover<2->
+    \only<2->
     {
       (r+2)(r-1)(r+1) & = & 0.
     }
@@ -599,7 +609,7 @@
   Assume that $y=Ae^{rt}$:
   \begin{eqnarray*}
     r^3 + 11 r^2 + 38 r + 40 & = & 0, \\
-    \uncover<2->
+    \only<2->
     {
       (r+2)(r+4)(r+5) & = & 0.
     }
@@ -634,7 +644,7 @@
   Assume that $y=Ae^{rt}$:
   \begin{eqnarray*}
     r^3 + 3 r^2 - 4 & = & 0, \\
-    \uncover<2->
+    \only<2->
     {
       (r+2)^2(r-1) & = & 0.
     }
@@ -669,7 +679,7 @@
     y'(0) & = & 3.
   \end{eqnarray*}
 
-  \uncover<2->
+  \only<2->
   {
     \begin{eqnarray*}
       r^2 + 7r + 10 & = & 0, \\
@@ -763,7 +773,7 @@
     y'(0) & = & 4.
   \end{eqnarray*}
 
-  \uncover<2->
+  \only<2->
   {
     \begin{eqnarray*}
       2r^2 + 7r + 3 & = & 0, \\
