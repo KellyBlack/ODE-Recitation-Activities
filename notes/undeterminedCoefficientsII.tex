@@ -3,8 +3,8 @@
 \section{More Undetermined Coefficients}
 
 \title{Ordinary Differential Equations}
-\subtitle{Math 232 - Revenge of the Method of Undetermined Coefficients}
-\date{4 Oct 2013}
+\subtitle{The Method of Undetermined Coefficients Strikes Back}
+\date{6 Oct 2014}
 
 \begin{frame}
   \titlepage
@@ -308,8 +308,8 @@
     Assume that the solution is in the form of
     \begin{eqnarray*}
       y & = & A t^r \\
-      y' & = & A r t^{r-1} \\
-      y'' & = & A r (r-1) t^{r-2}
+      y' & = & A r t^{\redText{r-1}} \\
+      y'' & = & A r \redText{(r-1)} t^{r-2}
     \end{eqnarray*}
   }
 
@@ -327,10 +327,10 @@
   \uncover<2->{%
     Substitute back into the equation to get
     \begin{eqnarray*}
-      a t^2 A r (r-1) t^{r-2} + b t A r t^{r-1} + c A t^r & = & 0, \\
-      a A r (r-1) t^{r} + b A r t^{r} + c A t^r & = & 0,  \\
-      A t^r \lp a r (r-1) + br + c \rp & = & 0, \\
-      a r (r-1) + br + c & = & 0.
+      a t^2 A r \redText{(r-1)} t^{r-2} + b t A r t^{r-1} + c A t^r & = & 0, \\
+      a A r \redText{(r-1)} t^{r} + b A r t^{r} + c A t^r & = & 0,  \\
+      A t^r \lp a r \redText{(r-1)} + br + c \rp & = & 0, \\
+      a r \redText{(r-1)} + br + c & = & 0.
     \end{eqnarray*}
   }
 
@@ -536,7 +536,8 @@
   \begin{eqnarray*}
     a \redText{v'} y_1 + 2 a \redText{v} y_1' + b \redText{v} y_1 & = & f(t).
   \end{eqnarray*}
-  This is a first order, linear equation! We can solve this!
+  This is a first order, linear equation! We can solve this! (Then
+  integrate to determine the function $u(t)$.)
 
 
 \end{frame}
