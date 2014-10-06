@@ -2,9 +2,9 @@
 \lecture{Variation of Parameters}{Variation-of-Parameters}
 \section{Variation of Parameters}
 
-\title{Ordinary Differential Equations}
-\subtitle{Math 232 - Variation of Parameters}
-\date{7 October 2013}
+\title{Variation of Parameters}
+\subtitle{Using the Homogeneous Solution to Get the Particular Solution}
+\date{8 October 2014}
 
 \begin{frame}
   \titlepage
@@ -115,9 +115,9 @@
     y'' + p(t) y' + q(t) y & = & f(t).
   \end{eqnarray}
 
-  Note that the coefficient for $y''(t)$ is 1. If the equation is not
-  in this form you must take the algebraic steps to convert it into
-  this form.
+  Note that \redText{the coefficient for $y''(t)$ is 1}. If the
+  equation is not in this form \blueText{you must take the algebraic
+    steps to convert it into this form}.
 
 \end{frame}
 
@@ -292,8 +292,11 @@
   \frametitle{Substitute Into the Original DE}
 
   \begin{eqnarray*}
-    - v_1' \sin(t) - v_1 \cos(t) + v_2' \cos(t) - v_2 \sin(t) & & \\
-    + v_1 \cos(t) + v_2 \sin(t) & = & \tan(t).
+    \begin{array}{rccccccc}
+    - & v_1' \sin(t) & - & v_1 \cos(t) & + & v_2' \cos(t) & - & v_2 \sin(t) \\
+    & & + & v_1 \cos(t)  & & & + & v_2 \sin(t) 
+  \end{array}
+  & = & \tan(t).
   \end{eqnarray*}
 
   \uncover<2->{%
@@ -351,8 +354,8 @@
 \subsection{General Derivation}
 
 \begin{frame}
-General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
-  \frametitle{The other equation}
+  \frametitle{The General Idea}
+  General derivation of particular solution to $$y''+p(t)y'+q(t)y=f(t):$$
 
   We find the homogeneous solution
   \begin{eqnarray*}
@@ -375,7 +378,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
 
 
 \begin{frame}
-General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
+General derivation of particular solution to $$y''+p(t)y'+q(t)y=f(t):$$
   \frametitle{The other equation}
 
   We find the homogeneous solution
@@ -406,17 +409,18 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
   \frametitle{Substitute Back Into the Original DE}
 
   \begin{eqnarray*}
-    v_1' y_1' + \redText{v_1 y_1''} + v_2' y_2' + \blueText{v_2 y_2''} & & \\
-    + p(t) \lp \redText{v_1 y_1'} + \blueText{v_2 y_2'} \rp & & \\
-    + q(t) \lp \redText{v_1 y_1} + \blueText{v_2 y_2} \rp & = & f(t)
+      v_1' \cdot y_1' + \redText{v_1 \cdot y_1''} + v_2' \cdot y_2' + \blueText{v_2 \cdot y_2''} & & \\
+    + p(t) \cdot \lp \redText{v_1 \cdot y_1'} + \blueText{v_2 \cdot y_2'} \rp & & \\
+    + q(t) \cdot \lp \redText{v_1 \cdot y_1} + \blueText{v_2 \cdot y_2} \rp & = & f(t)
   \end{eqnarray*}
 
   Collect the like terms:
   \begin{eqnarray*}
-    v_1' y_1' + v_2' y_2'  & & \\
-    + \redText{v_1 y_1''} + \blueText{v_2 y_2''} & & \\
-    p(t) \lp \redText{v_1 y_1'} + \blueText{v_2 y_2'} \rp & & \\
-    q(t) \lp \redText{v_1 y_1}  + \blueText{v_2 y_2} \rp & = & f(t)
+    \begin{array}{rccccrcrcl}
+    & v_1' \cdot y_1' & + & v_2' \cdot y_2'  & + & \redText{v_1 \cdot y_1''} & + & \blueText{v_2 \cdot y_2''} & & \\
+    & & & & & \redText{v_1 \cdot p(t) \cdot y_1'} & + & \blueText{v_2 \cdot p(t) \cdot y_2'}  & & \\
+    & & & & & \redText{v_1 \cdot q(t) \cdot y_1}  & + & \blueText{v_2 \cdot q(t) \cdot y_2}  & = & f(t)
+  \end{array}
   \end{eqnarray*}
 
 
@@ -427,23 +431,23 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
   \frametitle{Factor the Terms}
 
   \begin{eqnarray*}
-    v_1' y_1' + v_2' y_2'  & & \\
-    + \redText{ v_1 y_1'' + p(t) v_1 y_1' + q(t) v_1 y_1} & & \\
-    + \blueText{v_2 y_2'' + p(t) v_2 y_2' + q(t) v_2 y_2} & = & f(t)
+    v_1' \cdot y_1' + v_2' \cdot y_2'  & & \\
+    + \redText{ v_1 \cdot y_1'' + v_1 \cdot p(t) \cdot y_1' + v_1 \cdot q(t) \cdot y_1} & & \\
+    + \blueText{v_2 \cdot y_2'' + v_2 \cdot p(t) \cdot y_2' + v_2 \cdot q(t) \cdot y_2} & = & f(t)
   \end{eqnarray*}
 
   or
 
   \begin{eqnarray*}
-    v_1' y_1' + v_2' y_2'  & & \\
-    + v_1 \lp  \redText{y_1'' + p(t) y_1' + q(t) y_1} \rp & & \\
-    + v_2 \lp \blueText{y_2'' + p(t) y_2' + q(t) y_2} \rp & = & f(t)
+    v_1' \cdot y_1' + v_2' \cdot y_2'  & & \\
+    + v_1 \cdot \lp  \redText{y_1'' + p(t) y_1' + q(t) y_1} \rp & & \\
+    + v_2 \cdot \lp \blueText{y_2'' + p(t) y_2' + q(t) y_2} \rp & = & f(t)
   \end{eqnarray*}
 
   Since $y_1$ and $y_2$ are homogeneous solutions this reduces to
   \begin{eqnarray}
     \label{eqn:secondConstraint}
-    v_1' y_1' + v_2' y_2'  & = & f(t).
+    v_1' \cdot y_1' + v_2' \cdot y_2'  & = & f(t).
   \end{eqnarray}
 
 
@@ -586,7 +590,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
   {
     Find the homogeneous solution:
     \begin{eqnarray*}
-      y & = & C_1 e^{-2t} + C_2 e^{-t}.
+      y_h & = & C_1 e^{-2t} + C_2 e^{-t}.
     \end{eqnarray*}
   }
 
@@ -615,7 +619,7 @@ General derivation of particular solution to $$y''+p(t)y'+q(t)=f(t):$$
     y' & = & v_1'e^{-2t} -2 v_1 e^{-2t} + v_2' e^{-t} - v_2 e^{-t}.
   \end{eqnarray*}
 
-  Make a completely crazy and insane assumption
+  Make a seemingly arbitrary declaration
   \begin{eqnarray*}
     \redText{v_1'e^{-2t} + v_2' e^{-t}} & \redText{=} & \redText{0}.
   \end{eqnarray*}
