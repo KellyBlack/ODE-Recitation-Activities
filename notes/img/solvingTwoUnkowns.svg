@@ -13,11 +13,11 @@
    height="1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="solvingTwoUnkowns.svg"
    inkscape:export-filename="/home/black/write/class/de/math232-12/ODE-Recitation-Activities/notes/img/solvingTwoUnkowns.png"
-   inkscape:export-xdpi="287.32001"
-   inkscape:export-ydpi="287.32001">
+   inkscape:export-xdpi="287.31671"
+   inkscape:export-ydpi="287.31671">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
+     inkscape:zoom="0.83039936"
      inkscape:cx="190.29839"
-     inkscape:cy="659.79631"
+     inkscape:cy="727.94477"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -91,7 +91,7 @@
     <text
        xml:space="preserve"
        style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="303.75"
+       x="345.75"
        y="53.612183"
        id="text3779"
        sodipodi:linespacing="125%"
@@ -100,10 +100,10 @@
        inkscape:export-ydpi="287.32001"><tspan
          sodipodi:role="line"
          id="tspan3781"
-         x="303.75"
+         x="345.75"
          y="53.612183">y</tspan></text>
     <path
-       style="fill:none;stroke:#ff0000;stroke-width:2.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#ff0000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="M 460,52.362183 121.61522,669.53376"
        id="path3783"
        inkscape:connector-curvature="0"
@@ -126,7 +126,7 @@
          x="479.4184"
          y="65.241119">-2x+y=4</tspan></text>
     <path
-       style="fill:none;stroke:#0038ff;stroke-width:2.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;stroke:#0038ff;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="M 320,72.362183 480,672.36218"
        id="path3789"
        inkscape:connector-curvature="0"

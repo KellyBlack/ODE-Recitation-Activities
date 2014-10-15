@@ -2,9 +2,9 @@
 \lecture{Linear Systems}{Linear-Systems}
 \section{Linear Systems}
 
-\title{Ordinary Differential Equations}
-\subtitle{Math 232 - Solutions to Linear Systems}
-\date{16 October 2012}
+\title{Solutions to Linear Systems}
+\subtitle{Math 232 - Solving Linear Systems}
+\date{15 October 2014}
 
 \begin{frame}
   \titlepage
@@ -22,45 +22,35 @@
 \begin{frame}
   \frametitle{What is a solution to a linear system?}
 
-  \begin{eqnarray*}
-    3x + y & = & 4 \\
-    -2x + y & = & 2
-  \end{eqnarray*}
+  \begin{columns}
+    \column{.5\textwidth}
+    \begin{eqnarray*}
+      3x + y & = & 4 \\
+      -2x + y & = & 2
+    \end{eqnarray*}
 
-  What is the value of $x$ and $y$?
+    What is the value of $x$ \underline{\redText{and}} $y$?
 
-  \only<2->{%
+    \column{.5\textwidth}
+    \only<2>{%
+      Geometric Interpretation:
 
-    Geometric Interpretation:
-
-    \centerline{\includegraphics[width=4cm]{img/solvingTwoUnkowns}}
-
+      \centerline{\includegraphics[width=4cm]{img/solvingTwoUnkowns}}
     }
-
+    \only<3>{%
+      How can solve this analytically?
+      \begin{itemize}
+      \item Solve for $x$, substitute into the second equation, solve
+        for $y$, and then substitute that result back in to the first
+        equation.
+      \item What if you have hundreds of equations and hundreds of
+        unknowns?
+      \item We need a better way!
+      \end{itemize}
+    }
+  \end{columns}
 \end{frame}
 
-
-\begin{frame}
-  \frametitle{What is a solution to a linear system?}
-
-  \begin{eqnarray*}
-    3x + y & = & 4 \\
-    -2x + y & = & 2
-  \end{eqnarray*}
-
-  What is the value of $x$ and $y$?
-
-  How can solve this analytically?
-  \begin{itemize}
-  \item Solve for $x$, substitute into the second equation, solve
-    for $y$, and then substitute that result back in to the first
-    equation.
-  \item What if you have hundreds of equations and hundreds of
-    unknowns?
-  \item We need a better way!
-  \end{itemize}
-
-\end{frame}
 
 
 \begin{frame}
@@ -96,13 +86,19 @@
     y & = & \frac{14}{5}.
   \end{eqnarray*}
 
-  Now substitute back into the first equation to get
-  \begin{eqnarray*}
-    x & = & \frac{4}{3} - \frac{1}{3} y \\
-    & = & \frac{2}{5}
-  \end{eqnarray*}
 
-  The two lines meet at the point $x=\frac{2}{5}$ and $y=\frac{14}{5}$.
+  \uncover<2->{%
+    Now substitute back into the first equation to get
+    \begin{eqnarray*}
+      x & = & \frac{4}{3} - \frac{1}{3} y \\
+      \mathrm{or}~x& = & \frac{2}{5}
+    \end{eqnarray*}
+  }
+
+  \uncover<3->{%
+    The two lines meet at the point $x=\frac{2}{5}$ and
+    $y=\frac{14}{5}$.
+  }
 
 \end{frame}
 
@@ -339,7 +335,7 @@
       }
   \end{eqnarray*}
 
-  \uncover<1-> { If one row comes out with zeros except in the last
+  \uncover<2-> { If one row comes out with zeros except in the last
     column we say that the system is \redText{\textit{not consistent}.}}
 
 \end{frame}
@@ -350,7 +346,7 @@
   Suppose instead the system looks like the following:
 
   \begin{eqnarray*}
-    2x + 4y + 6x & = & 8 \\
+    2x + 4y + 6z & = & 8 \\
     x - y + z & = & 4 \\
     4x + 2y + 8z & = & 16 \\
     ~ \\
@@ -417,10 +413,11 @@
 
   \begin{eqnarray*}
     \vecThree{x}{y}{z} & = & \vecThree{4 - \frac{5}{3}z}{-\frac{2}{3}z}{z} \\
+    & = & \vecThree{4}{0}{0} +   \vecThree{-z\frac{5}{3}}{-z\frac{2}{3}}{z}, \\
     & = & \vecThree{4}{0}{0} + z \vecThree{-\frac{5}{3}}{-\frac{2}{3}}{1}
   \end{eqnarray*}
 
-  For any $z$!
+  For \redText{any} $z$!
 
 \end{frame}
 
@@ -554,9 +551,9 @@
     \left[
       \begin{array}{rrrrr|r}
         1 & 0 & 2 & 0 & 0 & 2 \\
-        0 & 1 & -1 & 0 & 1 & 1 \\
-        0 & 0 & 0 & 0 & 0 & 0 \\
+        0 & 1 & -1 & 0 & 1 & 1 \\\
         0 & 0 & 0 & 1 & 2 & 3 \\
+        0 & 0 & 0 & 0 & 0 & 0 \\
         0 & 0 & 0 & 0 & 0 & 0
       \end{array}
     \right]
@@ -598,7 +595,7 @@
     + x_5 \left[ \begin{array}{r}0\\-1\\0\\-2\\1\end{array}\right]
   \end{eqnarray*}
 
-  where $x_3$ and $x_5$ can be any number.
+  where both $x_3$ and $x_5$ can be \redText{any} real number.
 
 
 \end{frame}
