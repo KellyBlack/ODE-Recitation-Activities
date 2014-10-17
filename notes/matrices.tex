@@ -4,7 +4,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Math 232 - Matrices}
-\date{18 October 2013}
+\date{20 October 2014}
 
 \begin{frame}
   \titlepage
@@ -41,14 +41,14 @@
 
   Note that
   \begin{eqnarray*}
-    \arrayTwo{1}{-1}{-2}{3} \arrayTwo{3}{1}{2}{1}  & = & \arrayTwo{1}{0}{0}{1}.
+    \redText{\arrayTwo{1}{-1}{-2}{3}} \arrayTwo{3}{1}{2}{1}  & = & \arrayTwo{1}{0}{0}{1}.
   \end{eqnarray*}
 
   This means that we can go back to the previous equation to get
   \begin{eqnarray*}
     \arrayTwo{3}{1}{2}{1} \vecTwo{x}{y} & = & \vecTwo{4}{-1}, \\
-    \arrayTwo{1}{-1}{-2}{3} \arrayTwo{3}{1}{2}{1} \vecTwo{x}{y} & = &
-          \arrayTwo{1}{-1}{-2}{3}\vecTwo{4}{-1}, \\
+    \redText{\arrayTwo{1}{-1}{-2}{3}} \arrayTwo{3}{1}{2}{1} \vecTwo{x}{y} & = &
+          \redText{\arrayTwo{1}{-1}{-2}{3}}\vecTwo{4}{-1}, \\
     \arrayTwo{1}{0}{0}{1} \vecTwo{x}{y} & = & \vecTwo{5}{-11}, \\
     \vecTwo{x}{y} & = & \vecTwo{5}{-11}.
   \end{eqnarray*}
@@ -79,25 +79,60 @@
 
   \begin{definition}[The Matrix Inverse]
 
-    {\color{red}If two matrices satisfy
+    If two matrices satisfy
     \begin{eqnarray*}
-      A\cdot B & = & I
+      B\cdot A & = & I
     \end{eqnarray*}
     then $B$ is the \textit{\redText{inverse}} of $A$.
-
-    It is denoted as $\redText{A^{-1}}$.}
+    It is denoted as $\redText{A^{-1}}$.
   \end{definition}
 
-
+  \vfill
   \uncover<2->{%
     Note most matrices do not have an inverse! If $A^{-1}$ exists then
-    we say that $A$ is \textit{invertible}.
+    we say that $A$ is \textit{\redText{invertible}}.
   }
 
-
+  \vfill
 \end{frame}
 
 \subsection{Calculating the Inverse}
+
+\begin{frame}
+  \frametitle{Calculating the Inverse}
+
+  \only<1>{%
+    Go back to
+    \begin{eqnarray*}
+      A & = & \arrayTwo{3}{1}{2}{1}.
+    \end{eqnarray*}
+  }
+
+  \only<2->{%
+    We want a matrix (if it exists) that satisfies 
+  \begin{eqnarray*}
+    \arrayTwo{3}{1}{2}{1} \cdot \arrayTwo{\redText{b_{11}}}{\blueText{b_{12}}}{\redText{b_{21}}}{\blueText{b_{22}}}
+    & = & 
+    \arrayTwo{\redText{1}}{\blueText{0}}{\redText{0}}{\blueText{1}}.
+  \end{eqnarray*}
+  }
+
+  \only<3->{ %
+    We are looking for two column vectors that satisfy
+    \begin{eqnarray*}
+      \arrayTwo{3}{1}{2}{1} \redText{\vecTwo{b_{11}}{b_{21}}} & = & \redText{\vecTwo{1}{0}},
+    \end{eqnarray*}
+    and
+    \begin{eqnarray*}
+      \arrayTwo{3}{1}{2}{1} \blueText{\vecTwo{b_{12}}{b_{22}}} & = & \blueText{\vecTwo{0}{1}}.
+    \end{eqnarray*}
+
+    $\vec{b}_1$ is the first column of the inverse (if it exists) and
+    $\vec{b}_2$ is the second column.
+  }
+
+\end{frame}
+
 
 \begin{frame}
   \frametitle{Calculating the Inverse}
