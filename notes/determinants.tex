@@ -2,9 +2,9 @@
 \lecture{Determinants}{Determinants}
 \section{Determinants}
 
-\title{Ordinary Differential Equations}
-\subtitle{Math 232 - Determinants}
-\date{21 Oct 2013}
+\title{Determinants}
+\subtitle{Math 232 - Do Solutions Exist?}
+\date{22 Oct 2014}
 
 \begin{frame}
   \titlepage
@@ -252,7 +252,7 @@
     \right]
   \end{eqnarray*}
 
-  The \textbf{minor}, $M_{ij}$ of a matrix is found by removing row
+  The \textbf{\redText{minor}}, $M_{ij}$ of a matrix is found by \textit{removing} row
   $i$ and column $j$.
 
 \end{frame}
@@ -283,15 +283,16 @@
   \begin{eqnarray*}
     \left| A \right| & = & \sum^n_{j=1} a_{ij} c_{ij}.
   \end{eqnarray*}
-  This is the determinant by expansion along the $i^{\mathrm{th}}$
-  row. It is the same for any $i$ where $1\leq i \leq n$.
+  This is the determinant by \redText{expansion along the
+    $i^{\mathrm{th}}$ row}. It is the same for any $i$ where $1\leq i
+  \leq n$.
 
   An equivalent definition:
   \begin{eqnarray*}
     \left| A \right| & = & \sum^n_{i=1} a_{ij} c_{ij}.
   \end{eqnarray*}
-  This is the determinant by expansion along the $j^{\mathrm{th}}$
-  column.
+  This is the determinant by \redText{expansion along the
+    $j^{\mathrm{th}}$ column}.
 
 
 
@@ -466,6 +467,8 @@
 
   See p. 168 for definition and properties.
 
+  The vector space, V, is a \redText{set of objects.}
+
 \end{frame}
 
 \begin{frame}
@@ -474,7 +477,7 @@
   $\mathbb{R}^2$ is a vector space.
   \only<1->{Suppose that $x$,  $y$, $u$, $v$, and $c$ are real numbers.}
   \begin{eqnarray*}
-    \only<1->{\vecTwo{x}{y} & \in & \mathbb{R}^2} \\
+    \only<1->{\vecTwo{x}{y},~\vecTwo{u}{v} & \in & \mathbb{R}^2} \\
     \only<1->{\vecTwo{x}{y} + \vecTwo{u}{v} & = & \vecTwo{x+u}{y+v}} \\
     \only<1->{c \vecTwo{x}{y} & = & \vecTwo{cx}{cy}} \\
     \only<1->{\vec{0} & = & \vecTwo{0}{0}} \\
@@ -484,24 +487,24 @@
 \end{frame}
 
 
-\begin{frame}
-  \frametitle{Example - Continuous Functions}
-
-  The set of continuous functions ($C_0$) is a vector space.
-  Suppose $f(t),~g(t)~\in~C_o$:
-  \begin{itemize}
-  \item<1-> $f(t)+g(t)$ is continuous.
-  \item<1-> $c f(t)$ is continuous if $c$ is a real number.
-  \item<1-> $h(t)=0$ is the zero vector.
-  \item<1-> For any function
-    \begin{eqnarray*}
-      f(t) + (-1)f(t) & = & (1 + (-1))f(t), \\
-      & = & 0 f(t), \\
-      & = & 0.
-    \end{eqnarray*}
-  \end{itemize}
-
-\end{frame}
+%\begin{frame}
+%  \frametitle{Example - Continuous Functions}
+%
+%  The set of continuous functions ($C_0$) is a vector space.
+%  Suppose $f(t),~g(t)~\in~C_o$:
+%  \begin{itemize}
+%  \item<1-> $f(t)+g(t)$ is continuous.
+%  \item<1-> $c f(t)$ is continuous if $c$ is a real number.
+%  \item<1-> $h(t)=0$ is the zero vector.
+%  \item<1-> For any function
+%    \begin{eqnarray*}
+%      f(t) + (-1)f(t) & = & (1 + (-1))f(t), \\
+%      & = & 0 f(t), \\
+%      & = & 0.
+%    \end{eqnarray*}
+%  \end{itemize}
+%
+%\end{frame}
 
 
 \begin{frame}
@@ -518,6 +521,8 @@
     where $a$, $b$, $c$, $d$, $e$, and $f$ are real numbers.
   }
 
+  \vfill
+
   \only<2>{%
     \color{red}{Addition:}{~}
     \begin{eqnarray*}
@@ -526,7 +531,7 @@
     is a polynomial of at most degree 2.
   }
 
-  \only<2>{%
+  \only<3>{%
     \color{red}{Scalar multiplication}, if $r$ is a real number:
     \begin{eqnarray*}
       r h(x) & = & ra x^2 + rb x + rc
@@ -534,7 +539,7 @@
     is a polynomial of at most degree 2.
   }
 
-  \only<2>{%
+  \only<4>{%
     The function $h(x) = 0$ is a polynomial of at most degree 2 and is
     the \color{red}{``zero vector.''}
   }
@@ -544,7 +549,7 @@
 
 
 \begin{frame}
-  \frametitle{Counter Example}
+  \frametitle{Example - The Set of Straight Lines}
 
   The set of straight lines through $(0,1)$ is not a vector space.
 
