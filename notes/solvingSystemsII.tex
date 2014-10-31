@@ -3,9 +3,9 @@
 \section{Solutions to Systems of DEs}
 
 
-\title{Ordinary Differential Equations}
-\subtitle{Math 232 - Solutions to Systems of Differential Equations}
-\date{4 November 2013}
+\title{Solutions to Systems of Differential Equations}
+\subtitle{Determining the Solutions and Their Stability}
+\date{5 November 2014}
 
 \begin{frame}
   \titlepage
@@ -40,7 +40,7 @@
     \begin{eqnarray*}
       \redText{c e^{\lambda t}}
     \end{eqnarray*}
-    are \blueText{scalar} numbers.
+    is a \blueText{scalar} number.
   }
 
 
@@ -94,68 +94,12 @@
     independent} eigenvectors then
   \begin{eqnarray*}
     \vec{x} & = & c_1 e^{\lambda_1 t} \vec{v}_1 + c_2 e^{\lambda_2 t} \vec{v}_2 +
-    \cdot + c_n e^{\lambda_n t} \vec{v}_n.
+    \cdots + c_n e^{\lambda_n t} \vec{v}_n.
   \end{eqnarray*}
 
 \end{frame}
 
 \subsection{Examples}
-
-\iftoggle{clicker}{%
-\begin{frame}
-  \frametitle{Clicker Quiz}
-
-   \ifnum\value{clickerQuiz}=1{%
-
-     Given matrix 
-     \begin{eqnarray*}
-       A & = & \arrayTwo{5}{24}{-2}{-9}.
-     \end{eqnarray*}
-     Find the eigenvalues of $A$. \\
-     \begin{tabular}{ll}
-       A: & $\lambda_1  = 5, \lambda_2 = -9$ \\
-       B: & $\lambda_1  = 2, \lambda_2 = -2$ \\
-       C: & $\lambda_1  = -1, \lambda_2 = -3$ 
-     \end{tabular}
-
-     \vfill
-
-
- }\fi
-
- \ifnum\value{clickerQuiz}=2{%
-
-     Given matrix 
-     \begin{eqnarray*}
-       A & = & \arrayTwo{5}{24}{-2}{-9}.
-     \end{eqnarray*}
-     Find the eigenvalues of $A$. \\
-     \begin{tabular}{ll}
-       A: & $\lambda_1  = -1, \lambda_2 = -3$ \\
-       B: & $\lambda_1  = 2, \lambda_2 = -2$ \\
-       C: & $\lambda_1  = 5, \lambda_2 = -9$ 
-     \end{tabular}
-
-     \vfill
-
- }\fi
-
- \ifnum\value{clickerQuiz}=3{%
-  Given matrix 
-  \begin{eqnarray*}
-    A & = & \arrayTwo{5}{24}{-2}{-9}.
-  \end{eqnarray*}
-  Find the eigenvalues of $A$. \\
-  \begin{tabular}{ll}
-          A: & $\lambda_1  = 5, \lambda_2 = -9$ \\
-          B: & $\lambda_1  = -1, \lambda_2 = -3$ \\
-          C: & $\lambda_1  = 2, \lambda_2 = -2$ \\
-        \end{tabular}
-
-  \vfill
- }\fi
-\end{frame}
-}
 
 
 \begin{frame}
@@ -218,6 +162,73 @@
 
 \end{frame}
 
+\iftoggle{clicker}{%
+
+  \begin{frame}
+    \frametitle{Clicker Quiz}
+
+    \ifnum\value{clickerQuiz}=1{%
+
+      Given the solution
+      \begin{eqnarray*}
+        \vec{x}(t) & = & c_1 e^{-t} \vecTwo{-4}{1} + c_2 e^{-3t} \vecTwo{-3}{1}.
+      \end{eqnarray*}
+
+      Does the solution grow or decay in time?
+
+      \begin{tabular}{ll}
+        A: & Grow \\
+        B: & Decay \\
+        C: & Neither
+      \end{tabular}
+
+      \vfill
+
+
+    }\fi
+
+    \ifnum\value{clickerQuiz}=2{%
+
+      Given the solution
+      \begin{eqnarray*}
+        \vec{x}(t) & = & c_1 e^{-t} \vecTwo{-4}{1} + c_2 e^{-3t} \vecTwo{-3}{1}.
+      \end{eqnarray*}
+
+      Does the solution grow or decay in time?
+
+      \begin{tabular}{ll}
+        A: & Grow \\
+        B: & Decay \\
+        C: & Neither
+      \end{tabular}
+
+      \vfill
+
+    }\fi
+
+    \ifnum\value{clickerQuiz}=3{%
+
+      Given the solution
+      \begin{eqnarray*}
+        \vec{x}(t) & = & c_1 e^{-t} \vecTwo{-4}{1} + c_2 e^{-3t} \vecTwo{-3}{1}.
+      \end{eqnarray*}
+
+      Does the solution grow or decay in time?
+
+      \begin{tabular}{ll}
+        A: & Grow \\
+        B: & Decay \\
+        C: & Neither
+      \end{tabular}
+
+      \vfill
+
+    }\fi
+  \end{frame}
+}
+
+
+
 \begin{frame}
   \frametitle{Example}
 
@@ -250,54 +261,6 @@
     The eigenvalues are $\lambda_1=-2$ and $\lambda_2=-3$.
 
 \end{frame}
-
-\iftoggle{clicker}{%
-\begin{frame}
-  \frametitle{Clicker Quiz}
-
-   \ifnum\value{clickerQuiz}=1{%
-    \begin{eqnarray*}
-      \arrayTwo{0}{1}{-6}{-5} \vec{x}.
-    \end{eqnarray*}
-
-     For  $\lambda_1 = -2$, find the corresponding eigenvectors.
-     \begin{tabular}{ll}
-       A: & $\vec{v}_1  =  \vecTwo{1}{-2}.$ \\
-       B: & $\vec{v}_1  =  \vecTwo{1}{2}.$ \\
-       C: & $\vec{v}_1  =  \vecTwo{2}{1}.$ 
-     \end{tabular}
-     \vfill
-     
-
-   }\fi
-
-   \ifnum\value{clickerQuiz}=2{%
-     \begin{eqnarray*}
-       \arrayTwo{0}{1}{-6}{-5} \vec{x}.
-     \end{eqnarray*}
-
-     For  $\lambda_1 = -2$, find the corresponding eigenvectors.
-     \begin{tabular}{ll}
-       A: & $\vec{v}_1  =  \vecTwo{2}{1}.$ \\
-       B: & $\vec{v}_1  =  \vecTwo{1}{2}.$ \\
-       C: & $\vec{v}_1  =  \vecTwo{1}{-2}.$ 
-     \end{tabular}
-     \vfill
-   }\fi
-
-  \ifnum\value{clickerQuiz}=3{%
-   For  $\lambda_1 = -2$, find the corresponding eigenvectors.
-   \begin{tabular}{ll}
-          A: & $\vec{v}_1  =  \vecTwo{1}{-2}.$ \\
-          B: & $\vec{v}_1  =  \vecTwo{2}{1}.$ \\
-          C: & $\vec{v}_1  =  \vecTwo{1}{2}.$ \\
-        \end{tabular}
-
-  \vfill
- }\fi
-\end{frame}
-}
-
 
 \begin{frame}
   \frametitle{Find the eigenvectors}
@@ -337,15 +300,87 @@
     \vec{x}(t) & = & \redText{c_1 e^{-2t} \vecTwo{1}{-2}} + \blueText{c_2 e^{-3t} \vecTwo{1}{-3}}.
   \end{eqnarray*}
 
-  \uncover<2->
-  {
-    The Phase Plane:\\
-    \centerline{\includegraphics[width=4cm]{img/phasePlaneExample}}
-
-  }
-  
 
 \end{frame}
+
+\iftoggle{clicker}{%
+
+  \begin{frame}
+    \frametitle{Clicker Quiz}
+
+    \ifnum\value{clickerQuiz}=1{%
+
+      Given the solution
+      \begin{eqnarray*}
+        \vec{x}(t) & = & c_1 e^{-2t} \vecTwo{1}{-2} + c_2 e^{-3t} \vecTwo{1}{-3}.
+      \end{eqnarray*}
+
+      Does the solution grow or decay in time?
+
+      \begin{tabular}{ll}
+        A: & Grow \\
+        B: & Decay \\
+        C: & Neither
+      \end{tabular}
+
+      \vfill
+
+
+    }\fi
+
+    \ifnum\value{clickerQuiz}=2{%
+
+      Given the solution
+      \begin{eqnarray*}
+        \vec{x}(t) & = & c_1 e^{-2t} \vecTwo{1}{-2} + c_2 e^{-3t} \vecTwo{1}{-3}.
+      \end{eqnarray*}
+
+      Does the solution grow or decay in time?
+
+      \begin{tabular}{ll}
+        A: & Grow \\
+        B: & Decay \\
+        C: & Neither
+      \end{tabular}
+
+      \vfill
+
+    }\fi
+
+    \ifnum\value{clickerQuiz}=3{%
+
+      Given the solution
+      \begin{eqnarray*}
+        \vec{x}(t) & = & c_1 e^{-2t} \vecTwo{1}{-2} + c_2 e^{-3t} \vecTwo{1}{-3}.
+      \end{eqnarray*}
+
+      Does the solution grow or decay in time?
+
+      \begin{tabular}{ll}
+        A: & Grow \\
+        B: & Decay \\
+        C: & Neither
+      \end{tabular}
+
+      \vfill
+
+    }\fi
+  \end{frame}
+}
+
+\begin{frame}
+  \frametitle{Assemble the Solution}
+
+  \begin{eqnarray*}
+    \vec{x}(t) & = & \redText{c_1 e^{-2t} \vecTwo{1}{-2}} + \blueText{c_2 e^{-3t} \vecTwo{1}{-3}}.
+  \end{eqnarray*}
+
+  The Phase Plane:\\
+  \centerline{\includegraphics[width=4cm]{img/phasePlaneExample}}
+
+
+\end{frame}
+
 
 
 %\begin{frame}
@@ -598,6 +633,12 @@
 
 \subsection{Coupled Tank Problems}
 
+\begin{frame}{If Time}
+  \vfill
+  If we cannot cover this in class you should work through it
+  yourself.
+  \vfill
+\end{frame}
 
 \begin{frame}
   \frametitle{Coupled Tank}
