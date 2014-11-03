@@ -5,7 +5,7 @@
 
 \title{Complex Valued Eigenvalues}
 \subtitle{Spiral Solutions}
-\date{6 November 2013}
+\date{5 November 2014}
 
 \begin{frame}
   \titlepage
@@ -49,37 +49,44 @@
   \frametitle{Clicker Quiz}
 
    \ifnum\value{clickerQuiz}=1{%
-   Given $A=\arrayTwo{-8}{30}{-3}{10}$. Find the eigenvalues. \\ [12pt]
+     Determine the complex conjugate of $1-2i$. \\ [12pt]
 
    \begin{tabular}{ll}
-     A: & $\lambda_{1,2} = 1 \pm 3i.$ \\ [12pt]
-     B: & $\lambda_{1} = 4, \lambda_2 = -2.$ \\ [12pt]
-     C: & $\lambda_{1,2} = 1.$ 
+     A: & $1+2i$ \\ [12pt]
+     B: & $2-1i$ \\ [12pt]
+     C: & $1-2i$ 
    \end{tabular}
 
      \vfill
    }\fi
 
    \ifnum\value{clickerQuiz}=2{%
-   Given $A=\arrayTwo{-8}{30}{-3}{10}$. Find the eigenvalues. \\ [12pt]
+     Determine the complex conjugate of $1-2i$. \\ [12pt]
 
    \begin{tabular}{ll}
-     A: & $\lambda_{1,2} = 1 \pm 3i.$ \\ [12pt]
-     B: & $\lambda_{1} = 4, \lambda_2 = -2.$ \\ [12pt]
-     C: & $\lambda_{1,2} = 1.$ 
+     A: & $1+2i$ \\ [12pt]
+     B: & $2-1i$ \\ [12pt]
+     C: & $1-2i$ 
    \end{tabular}
-
 
    \vfill
    }\fi
 
   \ifnum\value{clickerQuiz}=3{%
-   Given $A=\arrayTwo{-8}{30}{-3}{10}$. Find the eigenvalues. \\ [12pt]
+     Determine the complex conjugate of 
+     \begin{eqnarray*}
+       \vec{v} = \left[
+         \begin{array}{r}
+           1-2i \\ 3+4i
+         \end{array}
+       \right]
+     \end{eqnarray*}
 
    \begin{tabular}{ll}
-     A: & $\lambda_{1,2} = 1 \pm 3i.$ \\ [12pt]
-     B: & $\lambda_{1} = 4, \lambda_2 = -2.$ \\[12pt]
-     C: & $\lambda_{1,2} = 1.$ 
+     A: & $\bar{\vec{v}} = \left[ \begin{array}{r} 1-2i \\ 3+4i \end{array} \right] $ \\ [12pt]
+     B: & $\bar{\vec{v}} = \left[ \begin{array}{r} 1-2i \\ -3-4i \end{array} \right] $ \\ [12pt]
+     C: & $\bar{\vec{v}} = \left[ \begin{array}{r} 1+2i \\ 3-4i \end{array} \right] $ \\ [12pt]
+     C: & $\bar{\vec{v}} = \left[ \begin{array}{r} 1+2i \\ 3+4i \end{array} \right] $
    \end{tabular}
 
   \vfill
@@ -177,22 +184,43 @@
     {
       & = & 
       e^{t} \redText{(A+B)} \lp \cos(3t)\vec{p} - \sin(3t)\vec{q} \rp  \\
-      &  & + e^{t} \blueText{(A-B)} \lp\cos(3t) \vec{q}+\sin(3t)\vec{p} \rp  \\ [12pt]
+      &  & + e^{t} \blueText{(A-B)i} \lp\cos(3t) \vec{q}+\sin(3t)\vec{p} \rp  \\ [12pt]
      }
     \uncover<4->
     {
       & = & 
-         e^{t} \redText{C_1} \lp \cos(3t)\vec{p} - \sin(3t)\vec{q} \rp  \\
-      &  & +  e^{t} \blueText{C_2} \lp\cos(3t) \vec{q}+\sin(3t)\vec{p} \rp  \\ [12pt]
+      e^{t} \underbrace{\redText{(A+B)}}_{C_1} \lp \cos(3t)\vec{p} - \sin(3t)\vec{q} \rp  \\
+      &  & + e^{t} \underbrace{\blueText{(A-B)i}}_{C_2} \lp\cos(3t) \vec{q}+\sin(3t)\vec{p} \rp  \\ [12pt]
      }
     \uncover<5->
+    {
+      & = & 
+         e^{t} C_1 \lp \cos(3t)\vec{p} - \sin(3t)\vec{q} \rp  \\
+      &  & +  e^{t} C_2 \lp\cos(3t) \vec{q}+\sin(3t)\vec{p} \rp  \\ [12pt]
+     }
+   \end{eqnarray*}
+  
+\end{frame}
+
+\begin{frame}{The Solution}
+  
+  \begin{eqnarray*}
+    \vec{x} & = & e^{t} \lp A \redText{\lp\cos(3t)+i\sin(3t)\rp \lp\vec{p}+i\vec{q}\rp} +  \right. \\
+            & & \left. B \blueText{\lp\cos(3t)-i\sin(3t)\rp \lp\vec{p}-i\vec{q}\rp} \rp \\ [12pt]
+    \uncover<2->
+    {
+      & = & 
+         e^{t} C_1 \lp \cos(3t)\vec{p} - \sin(3t)\vec{q} \rp  \\
+      &  & +  e^{t} C_2 \lp\cos(3t) \vec{q}+\sin(3t)\vec{p} \rp  \\ [12pt]
+     }
+    \uncover<3->
     {
       & = & 
         C_1 e^{t} \lp \cos(3t)\vecTwo{3}{1} - \sin(3t)\vecTwo{-1}{0} \rp  \\
       &  & +  C_2 e^{t} \lp\cos(3t) \vecTwo{-1}{0}+\sin(3t)\vecTwo{3}{1}\rp 
      }
    \end{eqnarray*}
-  
+
 \end{frame}
 
 \begin{frame}
@@ -207,13 +235,17 @@
 \begin{frame}
   \frametitle{Remark}
 
+  The solution has eigen values $\lambda_{1,2}=a\pm bi$, and the eigen
+  vectors are $\vec{p}\pm \vec{q}i$.
+
   \begin{eqnarray*}
     \vec{x} & = & Ae^{(a+bi)t} \lp \vec{p} + i \vec{q} \rp 
              + Be^{(a-bi)t}\lp \vec{p} - i \vec{q} \rp \\
     & = & Ae^{at} \lp \cos(bt) + i \sin(bt) \rp \lp \vec{p} + i \vec{q} \rp \\
     & & + Be^{at}\lp \cos(bt) - i \sin(bt) \rp \lp \vec{p} - i \vec{q} \rp \\
-  & = & C_1 e^{at} \lp \cos(bt) \vec{p} - \sin(bt) \vec{q} \rp
-  + C_2 e^{at} \lp \cos(bt) \vec{q} + \sin(bt) \vec{p} \rp.
+    \redText{\vec{x}} & = & 
+    \redText{C_1 e^{at} \lp \cos(bt) \vec{p} - \sin(bt) \vec{q} \rp} \\
+    &   & \redText{+ C_2 e^{at} \lp \cos(bt) \vec{q} + \sin(bt) \vec{p} \rp}.
   \end{eqnarray*}
 
 \end{frame}
@@ -244,14 +276,14 @@
 \begin{frame}
   \frametitle{Nullclines}
 
-  Given a solution to a differential equation,
+  We are given a solution to a differential equation,
   \begin{eqnarray*}
-    \vec{x} & = & \vecTwo{x(t)}{y(t)},
+    \vec{x} & = & \vecTwo{x(t)}{y(t)}.
   \end{eqnarray*}
-  if
+  Suppose that at some given time, $t_0$, 
   \begin{itemize}
-  \item $x'(t)=0$ then the trajectory is ``vertical'' at time $t$,
-  \item $y'(t)=0$ then the trajectory is ``horizontal'' at time $t$.
+  \item if $x'(t_0)=0$ then the trajectory is ``vertical'' at time $t_0$,
+  \item if $y'(t_0)=0$ then the trajectory is ``horizontal'' at time $t_0$.
   \end{itemize}
 
 \end{frame}
@@ -315,7 +347,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Extra Example}
+  \frametitle{Extra Example (If Time Permits)}
 
   Determine the solution to the system of equations given by
   \begin{eqnarray*}
