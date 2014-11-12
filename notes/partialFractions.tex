@@ -5,7 +5,7 @@
 
 \title{Partial Fractions}
 \subtitle{It Is Not Just For Integration Any More}
-\date{13 November 2013}
+\date{14 November 2014}
 
 \begin{frame}
   \titlepage
@@ -17,9 +17,9 @@
 \end{frame}
 
 
-\subsection{The Project and the Test}
+\subsection{Test is Soon!}
 
-\begin{frame}{The Project and the Test}
+\begin{frame}{Test on 18 November!}
   \centerline{\includegraphics[width=5cm]{img/skilledEngineers}}
 
   {\tiny
@@ -27,7 +27,8 @@
     \url{http://thisisindexed.com/2013/10/just-tell-me-whats-the-matter/})
   }
 
-  It is coming up!
+  There is a reason why we stress how you approach a problem!
+
 \end{frame}
 \subsection{Partial Fractions}
 
@@ -96,7 +97,8 @@
       \frac{6}{x-3} - \frac{4}{x-2} & = & 
       \uncover<3->
       {
-        \frac{6(x-2)}{(x-2)(x-3)} - \frac{4(x-3)}{(x-2)(x-3)}\\
+        \frac{6\redText{(x-2)}}{\redText{(x-2)}(x-3)} - 
+        \frac{4\blueText{(x-3)}}{(x-2)\blueText{(x-3)}}\\
         & = & \frac{2x}{x^2-5x+6}
       }
     \end{eqnarray*}
@@ -108,16 +110,22 @@
 \begin{frame}
   \frametitle{Integration}
 
+  We have 
   \begin{eqnarray*}
-    \int \frac{2x}{x^2-5x+6} ~ dx & = & \int \frac{6}{x-3} - \frac{4}{x-2} ~ dx \\
+    \frac{6}{x-3} - \frac{4}{x-2} & = &  \frac{2x}{x^2-5x+6}.
+  \end{eqnarray*}
+
+  We can integrate
+  \begin{eqnarray*}
+    \int \frac{2x}{x^2-5x+6} ~ dx & = & \int \frac{6}{x-3} - \frac{4}{x-2} ~ dx, \\
     & = & 6\ln(x-3) - 4\ln(x-2) + C.
   \end{eqnarray*}
 
   \uncover<2->
   {
-    Question: How do we do this backwards?
+    \redText{Question: How do we do this backwards?}
 
-    Answer: Expand in terms of unknown coefficients and ``do the algebra.''
+    \blueText{Answer: Expand in terms of unknown coefficients and ``do the algebra.''}
   }
 
 \end{frame}
@@ -146,7 +154,7 @@
     \uncover<2->
     {
       \frac{2x}{(x-3)(x-2)}, \\
-      & = & \frac{a}{x-3} + \frac{b}{x-2}.
+      & = & \frac{\redText{a}}{x-3} + \frac{\blueText{b}}{x-2}.
     }
   \end{eqnarray*}
 
@@ -155,14 +163,15 @@
     Multiply both sides by $(x-3)(x-2)$:
     \begin{eqnarray*}
       \lefteqn{\frac{2x}{(x-3)(x-2)} \cdot (x-3)(x-2)  } \\
-      & = & \lp \frac{a}{x-3} + \frac{b}{x-2} \rp \cdot (x-3)(x-2), \\
+      & = & \lp \frac{\redText{a}}{x-3} + \frac{\blueText{b}}{x-2} \rp \cdot (x-3)(x-2), \\
       \uncover<4->
       {
-        & = &  \frac{a}{x-3} \cdot (x-3)(x-2) + \frac{b}{x-2} \cdot (x-3)(x-2), \\
+        & = &  \frac{\redText{a}}{x-3} \cdot (x-3)(x-2) + 
+               \frac{\blueText{b}}{x-2} \cdot (x-3)(x-2), \\
       }
       \uncover<5->
       {
-        2x & = & a (x-2) + b(x-3)
+        2x & = & \redText{a} (x-2) + \blueText{b}(x-3).
       }
     \end{eqnarray*}
   }
@@ -176,19 +185,19 @@
   \vspace*{-1em}
   We have:
   \begin{eqnarray*}
-    2x & = & a (x-2) + b(x-3).
+    2x & = & \redText{a} (x-2) + \blueText{b} (x-3).
   \end{eqnarray*}
 
   Let $x=2$:
   \begin{eqnarray*}
-    2(2) & = & a ((2)-2) + b((2)-3) \\
-    \Rightarrow 4 & = & -b.
+    2(2) & = & \redText{a} ((2)-2) + \blueText{b} ((2)-3) \\
+    \Rightarrow 4 & = & -\blueText{b}.
   \end{eqnarray*}
 
   Let $x=3$:
   \begin{eqnarray*}
-    2(3) & = & a ((3)-2) + b((3)-3) \\
-    \Rightarrow 6 & = & a.
+    2(3) & = & \redText{a} ((3)-2) + \blueText{b} ((3)-3) \\
+    \Rightarrow 6 & = & \redText{a}.
   \end{eqnarray*}
 
   \uncover<2->
@@ -207,22 +216,22 @@
 
   \begin{eqnarray*}
     \frac{5x}{x^2+4x-32} & = & \uncover<2->{ \frac{5x}{(x-4)(x+8) }} \\
-    \uncover<3->{ & = & \frac{a}{x-4} + \frac{b}{x+8} } \\
-    \uncover<4->{ 5x & = & a (x+8) + b (x-4).}
+    \uncover<3->{ & = & \frac{\redText{a}}{x-4} + \frac{\blueText{b}}{x+8} } \\
+    \uncover<4->{ 5x & = & \redText{a} (x+8) + \blueText{b} (x-4).}
   \end{eqnarray*}
 
   \uncover<5->
   {
     Let $x=-8$:
     \begin{eqnarray*}
-      -40 & = & -12b, \\
-      b & = & \frac{10}{3}.
+      -40 & = & -12\blueText{b}, \\
+      \blueText{b} & = & \frac{10}{3}.
     \end{eqnarray*}
 
     Let $x=4$:
     \begin{eqnarray*}
-      20 & = & 12a, \\
-      a  & = & \frac{5}{3}.
+      20 & = & 12\redText{a}, \\
+      \redText{a}  & = & \frac{5}{3}.
     \end{eqnarray*}
 
   }
@@ -297,8 +306,14 @@
 
   Note that
   \begin{eqnarray*}
-    \frac{2}{x+2} + \frac{4}{(x+2)^2} & = & \frac{2(x+2)+4}{(x+2)^2}, \\
-    & = & \frac{2x+8}{x^2+4x+4}.
+    \frac{2}{x+2} + \frac{4}{(x+2)^2} & = & 
+    \uncover<2->{%
+          \frac{2\redText{(x+2)}}{(x+2)\redText{(x+2)}} + \frac{4}{(x+2)^2}, \\
+        }
+    \uncover<3->{%
+      & = & \frac{2(x+2)+4}{(x+2)^2}, \\
+      & = & \frac{2x+8}{x^2+4x+4}.
+    }
   \end{eqnarray*}
 
 \end{frame}
@@ -309,20 +324,20 @@
 
   \begin{eqnarray*}
     \frac{2x+8}{x^2+4x+4} & = & \uncover<2->{ \frac{2x+8}{(x+2)^2}} \\
-    \uncover<3->{ & = & \frac{a}{x+2} + \frac{b}{(x+2)^2} } \\
-    \uncover<4->{ 2x+8 & = & a (x+2) + b.}
+    \uncover<3->{ & = & \frac{\redText{a}}{x+2} + \frac{\blueText{b}}{(x+2)^2} } \\
+    \uncover<4->{ 2x+8 & = & \redText{a} (x+2) + \blueText{b}.}
   \end{eqnarray*}
 
   \uncover<5->
   {
     Let $x=-2$:
     \begin{eqnarray*}
-      4 & = & b.
+      4 & = & \blueText{b}.
     \end{eqnarray*}
 
     Let $x=0$:
     \begin{eqnarray*}
-      8 & = & 2a+b, \\
+      8 & = & 2\redText{a}+\blueText{b}, \\
       a  & = & 2.
     \end{eqnarray*}
 
@@ -348,21 +363,21 @@
 
   \begin{eqnarray*}
     \frac{3x+1}{x^2+6x+9} & = & \uncover<2->{ \frac{3x+1}{(x+3)^2}} \\
-    \uncover<3->{ & = & \frac{a}{x+3} + \frac{b}{(x+3)^2} } \\
-    \uncover<4->{ 3x+1 & = & a (x+3) + b.}
+    \uncover<3->{ & = & \frac{\redText{a}}{x+3} + \frac{\blueText{b}}{(x+3)^2} } \\
+    \uncover<4->{ 3x+1 & = & \redText{a} (x+3) + \blueText{b}.}
   \end{eqnarray*}
 
   \uncover<5->
   {
     Let $x=-3$:
     \begin{eqnarray*}
-      -8 & = & b.
+      -8 & = & \blueText{b}.
     \end{eqnarray*}
 
     Let $x=0$:
     \begin{eqnarray*}
-      1 & = & 3a+b, \\
-      a  & = & 3.
+      1 & = & 3\redText{a}+\blueText{b}, \\
+      \redText{a}  & = & 3.
     \end{eqnarray*}
 
   }
@@ -387,25 +402,26 @@
 
   \begin{eqnarray*}
     \frac{4x^2+1}{x^3-3x^2-4x} & = & \uncover<2->{ \frac{4x^2+1}{x(x-4)(x+1)}} \\
-    \uncover<3->{ & = & \frac{a}{x} + \frac{b}{x-4} + \frac{c}{x+1} } \\
-    \uncover<4->{ 4x^2+1 & = & a (x-4)(x+1) + bx(x+1) + cx(x-4).}
+    \uncover<3->{ & = & \frac{\redText{a}}{x} + \frac{\blueText{b}}{x-4} + 
+      \frac{\fuchsiaText{c}}{x+1} } \\
+    \uncover<4->{ 4x^2+1 & = & \redText{a} (x-4)(x+1) + \blueText{b}x(x+1) + \fuchsiaText{c}x(x-4).}
   \end{eqnarray*}
 
   \uncover<5->
   {
     Let $x=4$:
     \begin{eqnarray*}
-      b & = & \frac{13}{4}.
+      \blueText{b} & = & \frac{13}{4}.
     \end{eqnarray*}
 
     Let $x=-1$:
     \begin{eqnarray*}
-      c & = & 1.
+      \fuchsiaText{c} & = & 1.
     \end{eqnarray*}
 
     Let $x=0$:
     \begin{eqnarray*}
-      a & = & \frac{-1}{4}.
+      \redText{a} & = & \frac{-1}{4}.
     \end{eqnarray*}
 
   }
@@ -430,7 +446,9 @@
 
   \begin{eqnarray*}
     \frac{2x^2+3x-2}{x^3-3x+2} & = & \uncover<2->{ \frac{2x^2+3x-2}{(x-1)^2(x+2)}} \\
-    \uncover<3->{ & = & \frac{a}{x-1} + \frac{b}{(x-1)^2} + \frac{c}{x+2} } \\
+    \uncover<3->{ & = & \frac{\redText{a}}{x-1} + 
+                        \frac{\blueText{b}}{(x-1)^2} + 
+                        \frac{\fuchsiaText{c}}{x+2} } \\
     \uncover<4->{ 2x^2+3x-2 & = & a (x-1)(x+2) + b(x+2) + c(x-1)^2.}
   \end{eqnarray*}
 
@@ -438,17 +456,17 @@
   {
     Let $x=1$:
     \begin{eqnarray*}
-      b & = & 1.
+      \blueText{b} & = & 1.
     \end{eqnarray*}
 
     Let $x=-2$:
     \begin{eqnarray*}
-      c & = & 0.
+      \fuchsiaText{c} & = & 0.
     \end{eqnarray*}
 
     Let $x=0$:
     \begin{eqnarray*}
-      a & = & 2.
+      \redText{a} & = & 2.
     \end{eqnarray*}
 
   }
@@ -473,7 +491,8 @@
 
   \begin{eqnarray*}
     \frac{x+3}{x^2+x+4} - \frac{1}{x-2} & = & 
-    \frac{(x+3)(x-2)}{(x-2)(x^2+x+4)} - \frac{x^2+x+4}{(x-2)(x^2+x+4)}, \\
+    \frac{(x+3)\redText{(x-2)}}{(x^2+x+4)\redText{(x-2)}} - 
+    \frac{\blueText{(x^2+x+4)}}{(x-2)\blueText{(x^2+x+4)}}, \\
     & = & \frac{x^2+x-6-(x^2+x+4)}{(x-2)(x^2+x+4)}, \\
     & = & \frac{-10}{(x-2)(x^2+x+4)}. \\
   \end{eqnarray*}
@@ -485,26 +504,27 @@
   
   Given
   \begin{eqnarray*}
-    \frac{-10}{(x-2)(x^2+x+4)} & = & \frac{a}{x-2} + \frac{bx+c}{x^2+x+4}, \\
-    \Rightarrow -10 & = & a(x^2+x+4) + (bx+c)(x-2).
+    \frac{-10}{(x-2)(x^2+x+4)} & = & \frac{\redText{a}}{x-2} + 
+                                     \frac{\blueText{b}x+\fuchsiaText{c}}{x^2+x+4}, \\
+    \Rightarrow -10 & = & \redText{a}(x^2+x+4) + (\blueText{b}x+\fuchsiaText{c})(x-2).
   \end{eqnarray*}
 
   \uncover<2->
   {
     Let $x=2$:
     \begin{eqnarray*}
-      a & = & -1.
+      \redText{a} & = & -1.
     \end{eqnarray*}
 
     %%%%%%%%%%%%%%%%%%%%
     Let $x=0$:
     \begin{eqnarray*}
-      c & = & 3.
+      \fuchsiaText{c} & = & 3.
     \end{eqnarray*}
  
     Let $x=1$:
     \begin{eqnarray*}
-      b & = & 1.
+      \blueText{b} & = & 1.
     \end{eqnarray*}
 
     Substitute back in to get
