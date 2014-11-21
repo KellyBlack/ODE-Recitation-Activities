@@ -5,7 +5,7 @@
 
 \title{Laplace Transforms}
 \subtitle{Converting A Differential Equation into an Algebra Problem}
-\date{15 November 2013}
+\date{19 November 2013}
 
 \begin{frame}
   \titlepage
@@ -104,13 +104,30 @@
   \end{eqnarray*}
   (Assume that $s>0$.)
 
-  \uncover<3->
-  {%
-    Note that this is not a function of $t$. 
-  }
   
 
 \end{frame}
+
+\iftoggle{clicker}{%
+\begin{frame}
+  \frametitle{Clicker Quiz}
+
+     Is the integral 
+     \begin{eqnarray*}
+       \int^\infty_0 e^{-st} ~ dt
+     \end{eqnarray*}
+     a function of $t$?
+
+     \vspace{2em}
+     \begin{tabular}{ll}
+       A: & Yes \\ [12pt]
+       B: & No
+     \end{tabular}
+
+     \vfill
+\end{frame}
+}
+
 
 
 \begin{frame}
@@ -195,7 +212,7 @@
 \begin{frame}
   \frametitle{Properties of the Laplace Transform}
 
-  The Laplace transform of the sum:
+  The Laplace transform of a sum:
   \begin{eqnarray*}
     \laplace{f+g} & = & \int^\infty_0 \lp f(t) + g(t) \rp e^{-st} ~ dt, \\
     & = & \int^\infty_0 f(t) e^{-st} ~ dt + \int^\infty_0 g(t) e^{-st} ~ dt, \\
@@ -203,7 +220,9 @@
   \end{eqnarray*}
 
   
-  The Laplace transform of a constant times the function. Suppose $a$ is a constant, then
+  The Laplace transform of a constant times a  function:
+
+  Suppose $a$ is a constant, then
   \begin{eqnarray*}
     \laplace{a f} & = & \int^\infty_0 a f(t) e^{-st} ~ dt, \\
     & = & a \int^\infty_0 f(t) e^{-st} ~ dt, \\
@@ -425,7 +444,7 @@
       & = & \lim_{M\rightarrow\infty}\int^M_0 e^{(a-s)t} ~ dt, \\
       & = & \lim_{M\rightarrow\infty}  \frac{1}{(a-s)}e^{(a-s)t} \bigg|^M_0, \\
       & = & \lim_{M\rightarrow\infty}  \frac{1}{(a-s)}e^{(a-s)M} - \frac{1}{(a-s)}\bigg|^M_0, \\
-      \Rightarrow \laplace{e^{at}} & = & \frac{1}{s-a}.
+      \Rightarrow \redText{\laplace{e^{at}}} & \redText{=} & \redText{\frac{1}{s-a}}.
     }
   \end{eqnarray*}
   (Assume that $s$ is greater than $a$.)
@@ -715,12 +734,12 @@
 
    \ifnum\value{clickerQuiz}=1{%
 
-     Was that Billy Idol?
+     Are there any more identities?
 
      \begin{tabular}{ll}
        A: & Yes \\ [12pt]
-       B: & Who? \\ [12pt]
-       C: & No, that would be lame.
+       B: & No, that would be lame, \\ [12pt]
+       C: & Golly, jeepers I hope so!
      \end{tabular}
 
      \vfill
@@ -728,25 +747,25 @@
 
    \ifnum\value{clickerQuiz}=2{%
 
-     Was that Billy Idol?
+     Are there any more identities?
 
      \begin{tabular}{ll}
        A: & Yes \\ [12pt]
-       B: & Who? \\ [12pt]
-       C: & No, that would be lame.
+       B: & No, that would be lame, \\ [12pt]
+       C: & Golly, jeepers I hope so!
      \end{tabular}
-
 
    \vfill
    }\fi
 
   \ifnum\value{clickerQuiz}=3{%
-    Was that Billy Idol?
+
+     Are there any more identities?
 
      \begin{tabular}{ll}
        A: & Yes \\ [12pt]
-       B: & Who? \\ [12pt]
-       C: & No, that would be lame.
+       B: & No, that would be lame, \\ [12pt]
+       C: & Golly, jeepers I hope so!
      \end{tabular}
 
   \vfill

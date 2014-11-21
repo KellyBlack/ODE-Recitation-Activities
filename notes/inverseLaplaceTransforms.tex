@@ -5,7 +5,7 @@
 
 \title{Ordinary Differential Equations}
 \subtitle{Inverse Laplace Transforms}
-\date{20 November 2013}
+\date{24 November 2014}
 %\subtitle{Inverse Laplace Transforms}
 
 \begin{frame}
@@ -137,6 +137,17 @@
 
   \uncover<2->
   {
+    Note that
+    \begin{eqnarray*}
+      \laplace{e^{-3t}} & = & \frac{1}{s+3}, \\
+      \laplace{e^{5t}}  & = & \frac{1}{s-5}.
+    \end{eqnarray*}
+  }
+
+
+  \uncover<3->
+  {
+    This implies that
     \begin{eqnarray*}
       f & = & 4 e^{-3t} - 2 e^{5t}.
     \end{eqnarray*}
@@ -324,7 +335,7 @@
     \uncover<3->
     {
       \begin{eqnarray*}
-        g(t) & = & e^{-t}\lp \redText{\cos(4t)} - \blueText{\frac{1}{4}\sin(4t)}\rp.
+        g(t) & = & \redText{e^{-t} \cos(4t)} - \blueText{\frac{1}{4}e^{-t}\sin(4t)}.
       \end{eqnarray*}
     }
   
