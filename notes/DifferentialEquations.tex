@@ -85,7 +85,9 @@
   \setbeameroption{hide notes}
 }
 
+
 \mode<handout>{
+ 
   \usepackage{pgfpages}
   \pgfpagesuselayout{4 on 1}[letterpaper, border shrink=5mm]
   \pgfpagesuselayout{resize to}[letterpaper,border shrink=5mm]
@@ -99,9 +101,10 @@
   % http://www.guidodiepen.nl/2009/07/creating-latex-beamer-handouts-with-notes/
 
 
+
 \pgfpagesdeclarelayout{3 on 1 with notes} {
-    \edef\pgfpageoptionheight{\the\paperheight}
-    \edef\pgfpageoptionwidth{\the\paperwidth}
+    \edef\pgfpageoptionheight{11in} %\the\paperheight}
+    \edef\pgfpageoptionwidth{8.5in} %\the\paperwidth}
     \edef\pgfpageoptionborder{0pt}
  }
  {
@@ -118,21 +121,21 @@
           border shrink=\pgfpageoptionborder,%
           resized width=.5\pgfphysicalwidth,%
           resized height=.33\pgfphysicalheight,%
-          center=\pgfpoint{.3\pgfphysicalwidth}{.83\pgfphysicalheight}%
+          center=\pgfpoint{.25\pgfphysicalwidth}{.82\pgfphysicalheight}%
         }%
         \pgfpageslogicalpageoptions{2}
         {%
           border shrink=\pgfpageoptionborder,%
           resized width=.5\pgfphysicalwidth,%
           resized height=.33\pgfphysicalheight,%
-          center=\pgfpoint{.3\pgfphysicalwidth}{.5\pgfphysicalheight}%
+          center=\pgfpoint{.25\pgfphysicalwidth}{.47\pgfphysicalheight}%
         }%
         \pgfpageslogicalpageoptions{3}
         {%
           border shrink=\pgfpageoptionborder,%
           resized width=.5\pgfphysicalwidth,%
           resized height=.33\pgfphysicalheight,%
-          center=\pgfpoint{.3\pgfphysicalwidth}{.17\pgfphysicalheight}%
+          center=\pgfpoint{.25\pgfphysicalwidth}{.17\pgfphysicalheight}%
         }%
 
 	
@@ -141,7 +144,7 @@
       border shrink=\pgfpageoptionborder,%
       resized width=.5\pgfphysicalwidth,%
       resized height=.33\pgfphysicalheight,%
-      center=\pgfpoint{.75\pgfphysicalwidth}{.83\pgfphysicalheight},%
+      center=\pgfpoint{.85\pgfphysicalwidth}{.85\pgfphysicalheight},%
       copy from=4
     }%
     \pgfpageslogicalpageoptions{5}
@@ -149,7 +152,7 @@
       border shrink=\pgfpageoptionborder,%
       resized width=.5\pgfphysicalwidth,%
       resized height=.33\pgfphysicalheight,%
-      center=\pgfpoint{.75\pgfphysicalwidth}{.50\pgfphysicalheight},%
+      center=\pgfpoint{.85\pgfphysicalwidth}{.50\pgfphysicalheight},%
       copy from=5
     }%
     \pgfpageslogicalpageoptions{6}
@@ -157,7 +160,7 @@
       border shrink=\pgfpageoptionborder,%
       resized width=.5\pgfphysicalwidth,%
       resized height=.33\pgfphysicalheight,%
-      center=\pgfpoint{.75\pgfphysicalwidth}{.17\pgfphysicalheight},%
+      center=\pgfpoint{.85\pgfphysicalwidth}{.17\pgfphysicalheight},%
       copy from=6
     }%
     
@@ -165,26 +168,26 @@
       \newbox\notesbox
       \setbox\notesbox=\vbox{
         \hsize=\paperwidth
-        \vskip-2cm\hskip-5cm\vbox{
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
-        \textcolor{light-gray}{\hrule width 12.5cm\vskip0.5cm}
+        \vskip-2.5cm\hskip-5cm\vbox{
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
+        \textcolor{light-gray}{\hrule width 12.6cm\vskip0.5cm}
 
         \vspace*{-9.75cm}
         \textcolor{light-gray}{\rule[-1.0cm]{1pt}{9.25cm}\hskip0.5cm}
@@ -220,7 +223,6 @@
   \pgfpagesuselayout{3 on 1 with notes}
 
 }
-
 
 \begin{document}
 
